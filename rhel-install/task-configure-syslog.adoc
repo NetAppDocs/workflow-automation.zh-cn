@@ -1,0 +1,24 @@
+---
+permalink: rhel-install/task-configure-syslog.html 
+sidebar: sidebar 
+keywords: configure, syslog 
+summary: 您可以将 OnCommand Workflow Automation （ WFA ）配置为将日志数据发送到特定的系统日志服务器，以用于事件日志记录和日志信息分析等目的。 
+---
+= 配置系统日志
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将 OnCommand Workflow Automation （ WFA ）配置为将日志数据发送到特定的系统日志服务器，以用于事件日志记录和日志信息分析等目的。
+
+您必须已将系统日志服务器配置为接受来自 WFA 服务器的数据。
+
+.步骤
+. 以管理员身份通过 Web 浏览器登录到 WFA 。
+. 单击 * 设置 * ，然后在 * 维护 * 下单击 * 系统日志 * 。
+. 选中 * 启用系统日志 * 复选框。
+. 输入系统日志主机名并选择系统日志日志日志级别。
+. 单击 * 保存 * 。
+

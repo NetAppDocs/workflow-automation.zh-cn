@@ -1,0 +1,50 @@
+---
+permalink: help/reference-new-template-dialog-box.html 
+sidebar: sidebar 
+keywords: new, template, dialog box, enable, create, new 
+summary: '通过 " 新建模板 " 对话框，您可以创建新模板。' 
+---
+= 新建模板对话框
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过 " 新建模板 " 对话框，您可以创建新模板。
+
+* * 名称 *
++
+用于输入模板的名称。
+
+* * 类型 *
++
+用于从列表中选择词典对象。
+
+* * 实体版本 *
++
+用于输入模板的版本号，格式为 `major.minor.revision` 格式—例如 1.0.0 。
+
+* * 问题描述 *
++
+用于输入模板的问题描述 。
+
+* * 属性 *
++
+显示选定词典对象的属性，并可用于为每个属性输入一个值，例如枚举和函数。
+
+
+
+
+
+== 命令按钮
+
+* * 保存 *
++
+保存模板并关闭对话框。
+
+* * 取消 *
++
+不保存模板并关闭对话框。
+
+

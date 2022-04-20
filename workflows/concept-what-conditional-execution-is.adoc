@@ -1,0 +1,38 @@
+---
+permalink: workflows/concept-what-conditional-execution-is.html 
+sidebar: sidebar 
+keywords: condition, execution, help, design, workflows, execute, commands, specified, meet 
+summary: 条件执行可帮助您设计工作流，以便在满足指定条件时执行命令。 
+---
+= 什么是条件执行
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+条件执行可帮助您设计工作流，以便在满足指定条件时执行命令。
+
+在工作流中执行命令可以是动态的。您可以指定在工作流中执行每个命令或一行命令的条件。例如，您可能希望仅在找到特定数据集时执行 "`Add volume to dataset` " 命令，而如果未找到数据集，则您不希望工作流失败。在这种情况下，您可以启用 "`Add volume to dataset` " 命令来搜索特定数据集，如果未找到该数据集，您可以在工作流中禁用该命令。
+
+在 `命令` 对话框的参数中的 `Dictionary object` 选项卡和高级选项卡中，可以找到有条件执行命令的选项。
+
+您可以中止工作流或禁用工作流中的特定命令。此外，您还可以使用以下选项之一设置要执行的命令：
+
+* 无任何条件
+* 找到您指定的变量后
+* 未找到您指定的变量时
+* 指定的表达式为 true 时
+
+
+您也可以设置一个命令，以便等待特定的时间间隔。
+
+
+
+== 预定义工作流中的条件执行示例
+
+您可以在设计器中打开以下预定义工作流的命令详细信息，了解如何使用命令的条件执行：
+
+* 创建基本集群模式 Data ONTAP 卷
+* 创建集群模式 Data ONTAP NFS 卷
+

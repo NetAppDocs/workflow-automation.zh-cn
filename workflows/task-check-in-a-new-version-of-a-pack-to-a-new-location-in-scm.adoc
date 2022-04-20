@@ -1,0 +1,33 @@
+---
+permalink: workflows/task-check-in-a-new-version-of-a-pack-to-a-new-location-in-scm.html 
+sidebar: sidebar 
+keywords: update, version, pack, oncommand, workflow, automation, check, new, location, source, control, management, server 
+summary: 您可以在 OnCommand Workflow Automation （ WFA ）中更新软件包版本，然后将更新后的软件包签入源控制管理（ SCM ）服务器中的新位置。 
+---
+= 签入新版本的 WFA 工作流软件包
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 OnCommand Workflow Automation （ WFA ）中更新软件包版本，然后将更新后的软件包签入源控制管理（ SCM ）服务器中的新位置。
+
+必须设置 SCM ，并且您必须具有管理员或架构师凭据。
+
+.步骤
+. 通过 Web 浏览器登录到 * WFA* 窗口。
+. 单击 * 内容管理 * > * 包 * 。
+. 单击 * 编辑软件包 * 图标。
+. 在 * 软件包 <pack name>* 对话框的 * 版本 * 字段中，更新软件包的版本。
+. 单击 * 保存 * 。
+. 在软件包级别单击 * 导出到服务器 * 图标。
+. 在 * 导出到服务器文件夹 * 对话框的 * 服务器系统中的文件夹位置 * 字段中，输入新的文件系统位置。
++
+如果该软件包先前保存在 `C ： \p4\cdot\1.0.0` 文件系统位置，则现在将其保存在 `C ： \p4\cdot\2.0.0` 位置。
+
+. 在 SCM 客户端位置，将软件包内容检入 SCM 服务器中的新位置。
++
+如果该软件包先前保存在 SCM 服务器的 ` //store/WFA/Packs/cdot/1.0.0` 路径中，则可以将其保存在其他位置，例如 ` //store/WFA/Packs/cdot/2.0.0 。`
+
+

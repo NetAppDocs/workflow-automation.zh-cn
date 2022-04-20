@@ -1,0 +1,137 @@
+---
+permalink: help/task-set-up-a-data-source.html 
+sidebar: sidebar 
+keywords: set up, connection, data, source, oncommand, source, workflow, autumation, acquire 
+summary: 您必须在 OnCommand Workflow Automation （ WFA ）中设置与数据源的连接，才能从数据源获取数据。 
+---
+= 设置数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须在 OnCommand Workflow Automation （ WFA ）中设置与数据源的连接，才能从数据源获取数据。
+
+* 您需要的内容 *
+
+* 对于 6.0 之前的 Active IQ Unified Manager 版本，您必须已在 Unified Manager 服务器上运行最新版本的 ocsetup 工具，才能启用和配置对数据库的远程只读访问。
+* 对于 Active IQ Unified Manager 6.0 及更高版本，您必须已在 Unified Manager 服务器上创建数据库用户帐户。
++
+有关 OnCommand 详细信息，请参见 _Unified Manager 联机帮助。
+
+* Unified Manager 服务器上用于传入连接的 TCP 端口必须处于打开状态。
++
+有关详细信息，请参见防火墙上的文档。
+
++
+以下是默认 TCP 端口号：
+
++
+[cols="3*"]
+|===
+| TCP 端口号 | Unified Manager 服务器版本 | Description 
+
+
+ a| 
+2638
+ a| 
+5.x
+ a| 
+Sybase SQL Anywhere 数据库服务器
+
+
+
+ a| 
+3306
+ a| 
+6.x
+ a| 
+MySQL 数据库服务器
+
+|===
+* 对于 Performance Advisor ，您必须已创建一个至少具有 GlobalRead 角色的 Active IQ Unified Manager 用户帐户。
++
+有关 OnCommand 详细信息，请参见 _Unified Manager 联机帮助。
+
+* VMware vCenter Server 上用于传入连接的 TCP 端口必须处于打开状态。
++
+默认 TCP 端口号为 443 。有关详细信息，请参见防火墙上的文档。
+
+
+
+* 关于此任务 *
+
+您可以使用此操作步骤 向 WFA 添加多个 Unified Manager 服务器数据源。但是，如果要将操作步骤 服务器 6.3 及更高版本与 WFA 配对并使用 Unified Manager 服务器中的保护功能，则不能使用此 Unified Manager 。
+
+有关将 WFA 与 OnCommand 服务器 6.x 配对的详细信息，请参见 _Unified Manager 联机帮助。
+
+
+NOTE: 在使用 WFA 设置数据源时，您必须注意， WFA 4.0 版已弃用 Active IQ Unified Manager 6.0 ， 6.1 和 6.2 数据源类型，未来版本将不支持这些数据源类型。
+
+.步骤
+. 使用 Web 浏览器访问 WFA 。
+. 单击 * 设置 * ，然后在 * 设置 * 下单击 * 数据源 * 。
+. 选择相应的操作：
++
+[cols="2*"]
+|===
+| 至 ... | 执行此操作 ... 
+
+
+ a| 
+创建新数据源
+ a| 
+单击 image:../media/new_wfa_icon.gif["新建图标"] 在工具栏上。
+
+
+
+ a| 
+如果已升级 WFA ，请编辑已还原的数据源
+ a| 
+选择现有数据源条目，然后单击 image:../media/edit_wfa_icon.gif["编辑图标"] 在工具栏上。
+
+|===
++
+如果已将 Unified Manager 服务器数据源添加到 WFA 中，然后升级了 Unified Manager 服务器的版本，则 WFA 将无法识别升级后的 Unified Manager 服务器版本。您必须删除 Unified Manager 服务器的先前版本，然后将 Unified Manager 服务器的升级版本添加到 WFA 。
+
+. 在 * 新建数据源 * 对话框中，选择所需的数据源类型，然后输入数据源的名称和主机名。
++
+根据选定的数据源类型，端口，用户名，密码和超时字段可能会自动填充默认数据（如果有）。您可以根据需要编辑这些条目。
+
+. 选择适当的操作：
++
+[cols="2*"]
+|===
+| 针对 ... | 执行此操作 ... 
+
+
+ a| 
+Active IQ Unified Manager 6.0 之前的版本
+ a| 
+输入在运行 ocsetup 工具时用于覆盖默认凭据的用户名和密码。
+
+
+
+ a| 
+Active IQ Unified Manager 6.3 及更高版本
+ a| 
+输入您在 Unified Manager 服务器上创建的数据库用户帐户的凭据。有关创建数据库用户帐户的详细信息，请参见 _Unified OnCommand Manager 联机帮助。
+
+
+
+ a| 
+Performance Advisor （ Active IQ Unified Manager 6.0 之前的版本）
+ a| 
+输入至少具有 GlobalRead 角色的 Active IQ Unified Manager 用户的凭据。
+
+[NOTE]
+====
+您不能提供使用命令行界面或 ocsetup 工具创建的 Active IQ Unified Manager 数据库用户帐户的凭据。
+
+====
+|===
+. 单击 * 保存 * 。
+. * 可选： * 在数据源表中，选择数据源，然后单击 image:../media/acquire_now_wfa_icon.gif["立即获取图标"] 在工具栏上。
+. 验证数据采集过程的状态。
+

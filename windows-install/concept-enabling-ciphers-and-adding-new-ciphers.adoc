@@ -1,0 +1,36 @@
+---
+permalink: windows-install/concept-enabling-ciphers-and-adding-new-ciphers.html 
+sidebar: sidebar 
+keywords: enable ciphers, add new ciphers, ciphers 
+summary: OnCommand Workflow Automation 5.1 支持多个即装即用的密码。此外，您还可以根据需要添加其他密码。 
+---
+= 启用密码并添加新密码
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation 5.1 支持多个即装即用的密码。此外，您还可以根据需要添加其他密码。
+
+以下密码可以即装即用：
+
+[listing]
+----
+enabled-cipher-suites=
+"TLS_DHE_DSS_WITH_AES_128_GCM_SHA256,TLS_DHE_DSS_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,
+TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
+TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256,
+TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384,
+TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384"
+----
+可以在 `standalis-full.xml` 文件中将其他密码添加到此配置中。此文件位于： ` <installdir>/jboss/standalone 或 configuration/standstandstandalone Full.xml` 。
+
+可以对该文件进行修改，以支持其他密码，如下所示：
+
+[listing]
+----
+<https-listener name="https" socket-binding="https" max-post-size="1073741824" security-realm="SSLRealm"
+enabled-cipher-suites="**< --- add additional ciphers here ---\>**
+enabled-protocols="TLSv1.1,TLSv1.2"/>
+----

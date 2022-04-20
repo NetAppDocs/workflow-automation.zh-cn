@@ -1,0 +1,70 @@
+---
+permalink: workflows/task-export-oncommand-workflow-automation-content.html 
+sidebar: sidebar 
+keywords: save, user-created, oncommand, workflow, automation, content, file, share, users, include, entire, specific, items, finders, commands, dictionary, terms 
+summary: 您可以将用户创建的 OnCommand Workflow Automation （ WFA ）内容另存为 .dar 文件，并与其他用户共享该内容。WFA 内容可以包括用户创建的整个内容或特定项目，例如工作流，查找器，命令和词典术语。 
+---
+= 导出 OnCommand Workflow Automation 内容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将用户创建的 OnCommand Workflow Automation （ WFA ）内容另存为 ` .dar` 文件，并与其他用户共享该内容。WFA 内容可以包括用户创建的整个内容或特定项目，例如工作流，查找器，命令和词典术语。
+
+.您需要什么？ #8217 ；将需要什么
+* 您必须有权访问要导出的 WFA 内容。
+* 如果要导出的内容包含对认证内容的引用，则在导入此内容时，系统上必须提供相应的认证内容包。
++
+这些软件包可从 Storage Automation Store 下载。
+
+
+
+.关于此任务
+* 您不能导出以下类型的认证内容：
++
+** image:../media/netapp_certified.gif[""] — NetApp 认证的内容
+** image:../media/ps_certified_icon_wfa.gif[""] —由专业服务（ PS ）开发的内容，仅适用于由 PS 自定义安装的内容
+** image:../media/community_certification.gif[""] —用户开发的软件包
+
+
+* 依赖于导出对象的所有对象也会导出。
++
+例如，导出工作流还会导出此工作流的相关命令，筛选器和查找器。
+
+* 您可以导出锁定的对象。
++
+当其他用户导入对象时，这些对象将保持锁定状态。
+
+
+
+.步骤
+. 通过 Web 浏览器登录到 WFA 。
+. 导出所需内容：
++
+[cols="2*"]
+|===
+| 如果您要 ... | 执行此操作 ... 
+
+
+ a| 
+将所有用户创建的内容导出为一个 ` .dar` 文件
+ a| 
+.. 单击 * 设置 * ，然后在 * 维护 * 下单击 * 导出所有工作流 * 。
+.. 为 ` .dar` 文件指定文件名，然后单击 * 导出 * 。
+
+
+
+
+ a| 
+导出特定内容
+ a| 
+.. 导航到要从中导出内容的窗口。
+.. 从窗口中选择一个或多个项目，然后单击 image:../media/export_wfa_icon.gif["导出图标"]。
+.. 在导出为对话框中，指定 ` .dar` 文件的文件名，然后单击 * 导出 * 。
+
+
+|===
+. 在 * 另存为 * 对话框中，指定要保存 ` .dar` 文件的位置，然后单击 * 保存 * 。
+

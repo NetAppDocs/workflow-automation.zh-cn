@@ -1,0 +1,49 @@
+---
+permalink: workflows/reference-perl-database-modules-bundled-with-windows.html 
+sidebar: sidebar 
+keywords: perl, modules, bundle, windows, active, state, distribution, oncommand, workflow, automation, use, code, writing, commands 
+summary: 某些 Perl 模块与适用于 OnCommand Workflow Automation （ WFA ）的 Windows Active state Perl 分发版捆绑在一起。只有在这些 Perl 模块与 Windows 捆绑在一起的情况下，您才能在 Perl 代码中使用这些 Perl 模块来编写命令。 
+---
+= Windows 附带的 Perl 模块
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+某些 Perl 模块与适用于 OnCommand Workflow Automation （ WFA ）的 Windows Active state Perl 分发版捆绑在一起。只有在这些 Perl 模块与 Windows 捆绑在一起的情况下，您才能在 Perl 代码中使用这些 Perl 模块来编写命令。
+
+下表列出了与 Windows for WFA 捆绑在一起的 Perl 数据库模块。
+
+[cols="2*"]
+|===
+| 数据库模块 | Description 
+
+
+ a| 
+DBD ：： mysql
+ a| 
+Perl5 数据库接口驱动程序，用于连接到 MySQL 数据库。
+
+
+
+ a| 
+尝试：：微型
+ a| 
+利用评估块最大限度地减少常见错误。
+
+
+
+ a| 
+XML ：： libxml
+ a| 
+libxml2 的接口，可通过 DOM ， SAX 和 XlReader 接口提供 XML 和 HTML 解析程序。
+
+
+
+ a| 
+DBD ：： Cassandra
+ a| 
+适用于 Cassandra 的 Perl5 数据库接口驱动程序，使用 CQL3 查询语言。
+
+|===

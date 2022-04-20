@@ -1,0 +1,29 @@
+---
+permalink: windows-install/task-add-an-upgraded-unified-manager-server-data-source.html 
+sidebar: sidebar 
+keywords: add, upgraded, unified manager server, data source 
+summary: 如果将 Unified Manager 服务器（ 5.x 或 6.x ）作为数据源添加到 WFA 中，然后升级 Unified Manager 服务器， 您必须将升级后的 Unified Manager 服务器添加为数据源，因为与升级后的版本关联的数据不会填充到 WFA 中，除非手动将其添加为数据源。 
+---
+= 将升级后的 Unified Manager 服务器添加为数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果将 Unified Manager 服务器（ 5.x 或 6.x ）作为数据源添加到 WFA 中，然后升级 Unified Manager 服务器， 您必须将升级后的 Unified Manager 服务器添加为数据源，因为与升级后的版本关联的数据不会填充到 WFA 中，除非手动将其添加为数据源。
+
+.步骤
+. 以管理员身份登录到 WFA Web 图形用户界面。
+. 单击 * 设置 * ，然后在 * 设置 * 下，单击 * 数据源 * 。
+. 单击 image:../media/new_wfa_icon.gif["新建图标"] 在工具栏上。
+. 在新建数据源对话框中，选择所需的数据源类型，然后输入数据源的名称和主机名。
++
+根据选定的数据源类型，端口，用户名，密码和超时字段可能会自动填充默认数据（如果有）。您可以根据需要编辑这些条目。
+
+. 单击 * 保存 * 。
+. 选择 Unified Manager 服务器的先前版本，然后单击 image:../media/delete_wfa_icon.gif["删除图标"] 在工具栏上。
+. 在删除数据源类型确认对话框中，单击 * 是 * 。
+. 在数据源表中，选择数据源，然后单击 image:../media/acquire_now_wfa_icon.gif["立即获取图标"] 在工具栏上。
+. 在历史记录表中验证数据采集状态。
+

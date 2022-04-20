@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-creating-building-blocks-for-workflows.html 
+sidebar: sidebar 
+keywords: workflow, automation, include, several, building, blocks, use, construct, workflow, create, require 
+summary: Workflow Automation （ WFA ）包括多个组件，用于构建工作流。您可以创建工作流所需的 WFA 构建块。 
+---
+= 为工作流创建组件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Workflow Automation （ WFA ）包括多个组件，用于构建工作流。您可以创建工作流所需的 WFA 构建块。

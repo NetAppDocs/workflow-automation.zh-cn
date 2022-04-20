@@ -1,0 +1,156 @@
+---
+permalink: workflows/reference-guidelines-for-error-handling.html 
+sidebar: sidebar 
+keywords: aware, guidelines, error, handling, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 您必须了解为 OnCommand Workflow Automation （ WFA ）编写 PowerShell 或 Perl 脚本时的错误处理准则。 
+---
+= 错误处理准则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须了解为 OnCommand Workflow Automation （ WFA ）编写 PowerShell 或 Perl 脚本时的错误处理准则。
+
+
+
+== PowerShell 错误处理
+
+[cols="2*"]
+|===
+| 准则 | 示例 
+
+
+ a| 
+PowerShell 运行时添加到 cmdlet 的常见参数包括错误处理参数，例如 ErrorAction 和 WarningAction ：
+
+* ErrorAction 参数用于确定 cmdlet 应如何对命令中的非终止错误做出响应。
+* WarningAction 参数用于确定 cmdlet 应如何对命令发出的警告做出响应。
+* "ErrorAction" 和 "WarningAction" 参数的有效值为 "stop" ， "SilentlyContinuu" ， "INquire " 和 "Continu继续 " 。
+
+
+有关详细信息，您可以在 PowerShell CLI 中使用 `Get-Help About _CommonParameters` 命令。
+ a| 
+ErrorAction ：以下示例显示了如何将非终止错误作为终止错误进行处理：
+
+[listing]
+----
+New-NcIgroup-Name $IgroupName-Protocol $Protocol-Type$OSType-ErrorActionstop
+----
+WarningAction
+
+[listing]
+----
+New-VM-Name $VMName-VM $SourceVM-DataStore$DataStoreName-VMHost$VMHost-WarningActionSilentlyContinue
+----
+
+
+ a| 
+如果传入异常的类型未知，请使用常规 "`try/catch` " 语句。
+ a| 
+[listing]
+----
+try
+{
+"In Try/catch block"
+}
+catch
+{
+"Got exception"
+}
+----
+
+
+ a| 
+如果已知传入异常的类型，请使用特定的 "`try/catch` " 语句。
+ a| 
+[listing]
+----
+try
+{
+"In Try/catch block"
+}
+catch[System.Net.WebExceptional], [System.IO.
+IOException]
+{
+"Got exception"
+}
+----
+
+
+ a| 
+使用 "`finally` " 语句释放资源。
+ a| 
+[listing]
+----
+try
+{
+"In Try/catch block"
+}
+catch
+{
+"Got exception"
+}
+finally
+{
+"Release resources"
+}
+----
+
+
+ a| 
+使用 PowerShell 自动变量访问有关异常的信息。
+ a| 
+[listing]
+----
+try
+{
+Get-WFALogger -Info -message $("Creating
+Ipspace: " + $Ipspace)
+New-NaNetIpspace-Name $Ipspace
+}
+catch
+{
+Throw "Failed to create Ipspace. Message:
+" + $_.Exception.Message;
+}
+----
+|===
+
+
+== Perl 错误处理
+
+[cols="2*"]
+|===
+| 准则 | 示例 
+
+
+ a| 
+Perl 不支持 try/catch 块的原生 语言。使用评估块检查和处理错误。请尽可能小地保留评估块。
+ a| 
+[listing]
+----
+eval {
+
+$wfa_util->sendLog('INFO',
+"Quiescing the relationship :
+$DestinationCluster://$DestinationVserver
+/$DestinationVolume"
+    );
+$server->snapmirror_quiesce(
+'destination-vserver' => $DestinationVserver,
+'destination-volume'  => $DestinationVolume
+    );
+$wfa_util->sendLog('INFO', 'Quiesce operation
+started successfully.');
+};
+
+$wfa_util->checkEvalFailure(
+"Failed to quiesce the SnapMirror relationship
+$DestinationCluster://$DestinationVserver
+/$DestinationVolume",
+    $@
+);
+----
+|===

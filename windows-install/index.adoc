@@ -1,0 +1,12 @@
+---
+permalink: windows-install/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 《 Windows ® 安装和设置指南》
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

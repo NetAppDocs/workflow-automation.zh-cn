@@ -1,0 +1,71 @@
+---
+permalink: workflows/concept-how-commands-work.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, commands, execution, blocks, step 
+summary: OnCommand Workflow Automation 命令是工作流的执行块。您可以对工作流中的每个步骤使用命令。 
+---
+= 命令的工作原理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation 命令是工作流的执行块。您可以对工作流中的每个步骤使用命令。
+
+WFA 命令使用 PowerShell 和 Perl 脚本编写。PowerShell 命令使用 Data ONTAP PowerShell 工具包和 VMware PowerCLI （如果已安装此软件包）。Perl 命令使用 WFA 服务器上安装的 Perl 分发软件包和 Perl 模块。如果您在一个命令中包含多种脚本语言，例如 PowerShell 和 Perl ，则 WFA 将根据安装该脚本的操作系统以及您在 WFA 配置菜单中指定的首选语言顺序来选择相应的脚本。
+
+WFA 命令的脚本包括多个参数。这些参数可能会映射到词典条目属性。
+
+请注意，每个 WFA 命令都可以包含多个 Data ONTAP 命令。
+
+某些 WFA 命令称为 wait 命令，因为它们可以等待长时间运行的操作并定期轮询，例如， * 等待多个卷移动 * 命令。可以配置执行轮询命令的等待间隔，以检查操作是否已完成。
+
+WFA 命令由 WFA 在工作流处于执行阶段时启动。WFA 按从左到右以及从上到下的顺序按顺序执行这些命令。工作流规划可确认为命令提供的参数的可用性和有效性。在执行命令之前， WFA 服务器会提供命令所需的所有参数。
+
+命令的参数将在工作流规划期间最终确定。然后，工作流会在执行期间将这些参数传递给命令。这些命令无法将参数传递回工作流。但是，如果要在工作流中的命令之间交换执行期间获取的信息，则可以使用指定的 WFA PowerShell cmdlet 或 Perl 函数。
+
+WFA PowerShell 命令不会对 PowerShell cmdlet 使用 -ErrorAction 停止标志；因此，即使 cmdlet 因错误而失败，也会继续执行工作流。如果您希望在特定命令中包含 -ErrorAction stop 标志，则可以克隆该命令并修改 PowerShell 脚本以添加此标志。
+
+以下是 WFA 中包含的 PowerShell cmdlet 和 Perl 函数，用于在命令之间交换信息：
+
+[cols="2*"]
+|===
+| PowerShell cmdlet | Perl 函数 
+
+
+ a| 
+Add-WfaWorkflowParameter
+ a| 
+添加 WfaWorkflowParameter
+
+
+
+ a| 
+Get-WfaWorkflowParameter
+ a| 
+getWfaWorkflowParameter
+
+|===
+通过 "`add` " cmdlet 或函数添加到命令中的参数可以通过随后执行的命令进行检索，该命令使用 "`get` " cmdlet 或函数。例如，在 PowerShell WFA 命令中，您可以在代码中使用以下命令添加名为 volumeId 的参数： `Add-WfaWorkflowParameter -Name "VolumeUUUID" -Value "12345 " -AddAsReturnParameter $true` 。然后，您可以在后续命令中使用以下命令检索 volumeId 的值： ` $volumeId = Get-WfaWorkflowParameter -Name volumeId` 。
+
+WFA 命令可以查询 WFA 数据库并获取所需的结果。这样，您就可以在不使用筛选器和查找器的情况下构建命令。您可以使用以下功能查询数据库：
+
+[cols="2*"]
+|===
+| PowerShell cmdlet | Perl 函数 
+
+
+ a| 
+Invoke-MySqlQuery 例如： `invoke-MySqlQuery -Query "select cluster.name as "Cluster Name" from cm_storage.cluster"`
+ a| 
+InvokeMySqlQuery
+
+|===
+* 相关信息 *
+
+xref:task-create-a-filter.adoc[创建筛选器]
+
+xref:task-create-a-finder.adoc[创建查找器]
+
+xref:task-create-a-command.adoc[创建命令]

@@ -1,0 +1,147 @@
+---
+permalink: help/reference-templates-window.html 
+sidebar: sidebar 
+keywords: template, window, display, available, alphabetical, order, collection, settings, workflows, quickly 
+summary: 模板窗口按字母顺序显示可用模板。模板是一组设置，可在创建工作流时使用。您可以使用模板快速创建工作流。 
+---
+= 模板窗口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+模板窗口按字母顺序显示可用模板。模板是一组设置，可在创建工作流时使用。您可以使用模板快速创建工作流。
+
+
+NOTE: 根据您的角色和帐户权限，可能不会显示此窗口。
+
+* 模板表
+* 工具栏
+
+
+
+
+== 模板表
+
+模板表列出了可用的模板。每个条目都标识为以下项之一：
+
+* image:../media/community_certification.gif[""] —用户创建的内容
+* image:../media/ps_certified_icon_wfa.gif[""] —由专业服务（ PS ）开发的内容，仅适用于由 PS 自定义安装的内容
+* image:../media/community_certification.gif[""] —用户开发的软件包
+* image:../media/lock_icon_wfa.gif[""] —由锁定的用户创建的内容
+* image:../media/netapp_certified.gif[""] — NetApp 认证的内容
+
+
+您可以使用每个列可用的筛选和排序功能以及重新排列列顺序来自定义表显示。
+
+* image:../media/filter_icon_wfa.gif["筛选器图标"] 启用或禁用筛选整个表。如果禁用了筛选，则图标上方会显示一个红色的 "x" 。
+* 双击 image:../media/filter_icon_wfa.gif["筛选器图标"] 清除并重置筛选选项。
+* image:../media/wfa_filter_icon.gif["筛选器图标"] 在每个列标题上，您可以根据列的内容进行筛选。单击 image:../media/wfa_filter_icon.gif["筛选器图标"] 在列中，您可以从下拉列表中筛选特定项目或所有可用项目。
+* 单击列标题可在排序的升序和降序之间切换。您可以通过排序箭头（image:../media/wfa_sortarrow_up_icon.gif["\"Sort Up \" 图标"] 用于升序和 image:../media/wfa_sortarrow_down_icon.gif["\" 向下排序 \" 图标"] 降序）。
+* 要重新排列列的位置，您可以拖放列，将其按任何所需顺序放置。但是，您不能隐藏或删除其中任何列。
+* 单击 * 搜索 * 筛选器文本框可搜索特定内容。此外，您还可以使用支持的运算符搜索适用的列类型，即字母或数字。
+
+
+模板表包含以下列：
+
+* * 认证 *
++
+指示模板是否由用户创建（image:../media/community_certification.gif[""]）， PS （image:../media/ps_certified_icon_wfa.gif[""]），社区（image:../media/community_certification.gif[""]），用户锁定（image:../media/lock_icon_wfa.gif[""]）或 NetApp 认证的（image:../media/netapp_certified.gif[""]）。
+
++
+您可以通过从筛选器列表中选择所需的复选框来搜索模板。
+
+* * 名称 *
++
+显示模板的名称。
+
+* * 方案 *
++
+显示与模板关联的方案。方案表示系统的数据模型。例如， VC 方案包含与虚拟环境相关的数据，例如虚拟机，主机和数据存储库。
+
+* * 类型 *
++
+显示模板的词典对象类型，例如 volume 和 Snapshot_Policy 。
+
+* * 实体版本 *
++
+以 `major.minor.revision` format —例如 1.0.0 显示对象的版本号。
+
+* * 问题描述 *
++
+显示模板的问题描述 。
+
+* * 上次更新时间 *
++
+显示上次更新模板的日期和时间。
+
+* * 更新者 *
++
+显示更新模板的用户的名称。
+
+* * 锁定者 *
++
+显示锁定模板的用户的名称。
+
+
+
+
+
+== 工具栏
+
+工具栏位于列标题上方。您可以使用工具栏中的图标执行各种操作。也可以从窗口中的右键单击菜单访问这些操作。
+
+* *image:../media/new_wfa_icon.gif["新建图标"] （新增） *
++
+打开新模板对话框，在此可以创建新模板。
+
+* *image:../media/edit_wfa_icon.gif["编辑图标"] （编辑） *
++
+打开模板 < 模板名称 > 对话框，在此可以修改选定模板的设置。您也可以双击该模板以打开模板 <template_name> 对话框。
+
+* *image:../media/clone_wfa_icon.gif["克隆图标"] （克隆） *
++
+打开新模板 < 模板名称 > - 复制对话框，在此可以创建选定模板的克隆或副本。
+
+* *image:../media/lock_wfa_icon.gif["锁定图标"] （锁定） *
++
+打开锁定模板确认对话框，在此可以锁定选定模板。只有您创建的模板才会启用此选项。
+
+* *image:../media/unlock_wfa_icon.gif["解除锁定图标"] （解锁） *
++
+打开解锁模板确认对话框，在此可以解锁选定模板。只有被您锁定的模板才会启用此选项。但是，管理员可以解锁其他用户锁定的模板。
+
+* *image:../media/delete_wfa_icon.gif["删除图标"] （删除） *
++
+打开删除模板确认对话框，在此可以删除选定用户创建的模板。
+
++
+
+NOTE: 您不能删除示例模板。
+
+* *image:../media/export_wfa_icon.gif["导出图标"] （导出） *
++
+用于导出选定用户创建的模板。
+
++
+
+NOTE: 您不能导出示例模板。
+
+* *image:../media/add_to_pack.png["添加到软件包图标"] （添加到软件包） *
++
+打开添加到软件包模板对话框，在此可以将模板及其可靠实体添加到软件包中，该软件包是可编辑的。
+
++
+
+NOTE: 只有证书设置为 * 无 * 的模板才会启用添加到软件包功能
+
+* *image:../media/remove_from_pack.png["从软件包中删除图标"] （从软件包中删除） *
++
+打开选定模板的从软件包模板中删除对话框，在此可以删除或删除该模板。
+
++
+
+NOTE: 只有证书设置为 * 无 * 的模板才会启用从软件包中删除功能
+
+

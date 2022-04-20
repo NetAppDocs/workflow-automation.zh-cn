@@ -1,0 +1,40 @@
+---
+permalink: windows-install/task-restore-full-the-oncommand-workflow-automation-database-using-rest-apis.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, wfa, database, rest, apis 
+summary: 您可以使用 REST API 完全还原 OnCommand Workflow Automation （ WFA ）数据库。在完全还原中，您可以还原 WFA 数据库， WFA 配置和密钥。 
+---
+= 使用 REST API 还原（完全） WFA 数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 REST API 完全还原 OnCommand Workflow Automation （ WFA ）数据库。在完全还原中，您可以还原 WFA 数据库， WFA 配置和密钥。
+
+* 您必须已为 WFA 数据库创建 .zip 备份。
+* 您必须具有管理员或架构师凭据。
+* 如果要在迁移操作步骤 中还原数据库，则必须执行完全还原。
+
+
+.步骤
+. 在 REST 客户端浏览器中输入以下 URL ： ` +WFA server/rest/backups 的 https://IP address ？ full=true+`
+. 在备份窗口中，选择 * 发布 * 方法。
+. 在 * 部件 * 下拉列表中，选择 * 多部件正文 * 。
+. 在 * 文件 * 字段中，输入以下信息：
++
+.. 在 * 内容类型 * 下拉列表中，选择 * 多部件 / 表单数据 * 。
+.. 在 * 字符集 * 下拉列表中，选择 * 。 ISO-8859-1* 。
+.. 在 * 文件名 * 字段中，输入您创建并要还原的备份文件的名称。
+.. 单击 * 浏览 * 。
+.. 选择 .zip 备份文件的位置。
+
+
+. 导航到 wfa_install_location\wfA\bin 目录，然后重新启动 WFA 服务：
+. 重新启动 * NetApp WFA 数据库 * 和 * NetApp WFA Server* 服务：
++
+`WFA -restart`
+
+. 验证还原操作是否成功以及 WFA 是否可访问。
+

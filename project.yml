@@ -1,0 +1,37 @@
+---
+settings:
+  name: OnCommand Workflow Automation 5.1
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: zh-cn,us-en,ja-jp,ko-kr
+sidebar:
+  entries:
+  - title: OnCommand Workflow Automation 5.1 文档
+    url: "/index.html"
+  - title: 发行说明
+    url: "/reference-releasenotes.html"
+  - section: rhel-install
+  - section: windows-install
+  - section: workflow
+  - section: help
+  - title: 法律声明
+    url: "/reference-legal-notices.html"
+homepage:
+  tiles:
+  - title: 入门
+    links:
+    - title: 发行说明
+      url: reference-releasenotes.html
+  - title: Install and setup
+    links:
+    - title: 在 Linux 系统上安装 OnCommand Workflow Automation
+      url: rhel-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html
+    - title: 在 Windows 上安装 OnCommand Workflow Automation
+      url: windows-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html
+  - title: 构建和管理工作流
+    links:
+    - title: 管理工作流
+      url: workflows/concept-managing-workflows.html

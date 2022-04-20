@@ -1,0 +1,133 @@
+---
+permalink: rhel-install/reference-prerequisites-for-installing-workflow-automation.html 
+sidebar: sidebar 
+keywords: prerequisites, install, workflow, automation 
+summary: 在安装 OnCommand Workflow Automation （ WFA ）之前，您必须确保已获得所需信息并已完成某些任务。 
+---
+= 安装 Workflow Automation 的前提条件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安装 OnCommand Workflow Automation （ WFA ）之前，您必须确保已获得所需信息并已完成某些任务。
+
+在系统上安装 WFA 之前，您必须已完成以下任务：
+
+* 从 NetApp 支持站点下载 WFA 安装文件，并将该文件复制到要安装 WFA 的服务器
++
+
+NOTE: 您必须具有有效凭据才能登录到 NetApp 支持站点。如果您没有有效的凭据，则可以在 NetApp 支持站点上注册以获取这些凭据。
+
+* 验证系统是否有权访问以下内容（如果适用）：
++
+** 存储控制器
+** Active IQ Unified Manager
+
+
+
+
+[NOTE]
+====
+如果您的环境需要安全 Shell （ SSH ）可访问性，则必须确保在目标控制器上启用了 SSH 。
+
+====
+* 验证是否已安装 Perl v5.10.1
+
+
+
+
+== 所需的配置信息
+
+[cols="3*"]
+|===
+| 单元或系统 | 详细信息 | 目的 
+
+
+ a| 
+阵列
+ a| 
+* IP 地址
+* 用户名和密码
+
+ a| 
+在存储系统上执行操作
+
+[NOTE]
+====
+存储（阵列）需要 root 或 admin 帐户凭据。
+
+====
+
+
+ a| 
+外部存储库，例如 OnCommand Balance 和自定义数据库
+ a| 
+* IP 地址
+* 只读用户帐户的用户名和密码
+
+ a| 
+获取数据要从外部存储库获取数据，您必须创建相关的 WFA 内容，例如，外部存储库的词典条目和缓存查询。
+
+
+
+ a| 
+邮件服务器
+ a| 
+* IP 地址
+* 用户名和密码
+
+
+
+NOTE: 如果邮件服务器需要身份验证，则需要用户名和密码。
+ a| 
+通过电子邮件接收 WFA 通知
+
+
+
+ a| 
+AutoSupport 服务器
+ a| 
+* 邮件主机
+
+ a| 
+通过 SMTP 发送 AutoSupport 消息如果未配置邮件主机，则可以使用 HTTP 或 HTTPS 发送 AutoSupport 消息。
+
+
+
+ a| 
+Microsoft Active Directory （ AD ） LDAP 服务器
+ a| 
+* IP 地址
+* 用户名和密码
+* 组名称
+
+ a| 
+使用 AD LDAP 或 AD LDAPS 进行身份验证和授权
+
+
+
+ a| 
+SNMP 管理应用程序
+ a| 
+* IP 地址
+* Port
+
+ a| 
+接收 WFA SNMP 通知
+
+
+
+ a| 
+系统日志服务器
+ a| 
+* IP 地址
+
+ a| 
+发送日志数据
+
+|===
+* 相关信息 *
+
+https://mysupport.netapp.com/site/["NetApp 支持"^]

@@ -1,0 +1,14 @@
+---
+permalink: rhel-install/reference-configuring-a-database-user-on-datafabric-manager.html 
+sidebar: sidebar 
+keywords: configure, database, user, datafabric, manager 
+summary: 您必须在 DataFabric Manager 5.x 上创建一个数据库用户，才能配置对 OnCommand Workflow Automation 的 DataFabric Manager 5.x 数据库的只读访问权限。 
+---
+= 在 DataFabric Manager 上配置数据库用户
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须在 DataFabric Manager 5.x 上创建一个数据库用户，才能配置对 OnCommand Workflow Automation 的 DataFabric Manager 5.x 数据库的只读访问权限。

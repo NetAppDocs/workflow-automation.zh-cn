@@ -1,0 +1,28 @@
+---
+permalink: workflows/concept-working-with-the-building-blocks-in-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: workflow, automation, consist, several, building, blocks, include, library, predefined, provide, create, requirements, organization 
+summary: Workflow Automation （ WFA ）工作流包含多个组件， WFA 包含一个预定义组件库。您可以使用 WFA 提供的组件创建符合组织要求的工作流。 
+---
+= 使用 OnCommand Workflow Automation 中的组件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Workflow Automation （ WFA ）工作流包含多个组件， WFA 包含一个预定义组件库。您可以使用 WFA 提供的组件创建符合组织要求的工作流。
+
+WFA 为存储自动化流程提供了结构。WFA 的灵活性取决于使用工作流组件构建工作流的方式。
+
+WFA 组件如下：
+
+* 词典条目
+* 命令
+* 筛选器
+* 查找器
+* 功能
+* 模板
+
+
+您应了解 WFA 中如何使用这些组件来帮助您创建工作流。

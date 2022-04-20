@@ -1,0 +1,53 @@
+---
+permalink: windows-install/task-configure-protocols-for-connecting-to-remote-systems.html 
+sidebar: sidebar 
+keywords: configure, protocols, connect, remote systems 
+summary: 您可以配置 OnCommand Workflow Automation （ WFA ）用来连接到远程系统的协议。您可以根据组织的安全要求以及远程系统支持的协议来配置协议。 
+---
+= 配置用于连接到远程系统的协议
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以配置 OnCommand Workflow Automation （ WFA ）用来连接到远程系统的协议。您可以根据组织的安全要求以及远程系统支持的协议来配置协议。
+
+.步骤
+. 以管理员身份通过 Web 浏览器登录到 WFA 。
+. 单击 * 数据源设计 * > * 远程系统类型 * 。
+. 执行以下操作之一：
++
+[cols="2*"]
+|===
+| 如果您要 ... | 执行此操作 ... 
+
+
+ a| 
+为新的远程系统配置协议
+ a| 
+.. 单击 image:../media/new_wfa_icon.gif["新建图标"]。
+.. 在新建远程系统类型对话框中，指定名称，问题描述 和版本等详细信息。
+
+
+
+
+ a| 
+修改现有远程系统的协议配置
+ a| 
+.. 选择并双击要修改的远程系统。
+.. 单击 image:../media/edit_wfa_icon.gif["编辑图标"]。
+
+
+|===
+. 从连接协议列表中，选择以下选项之一：
++
+** HTTPS 与回退到 HTTP （默认）
+** 仅限 HTTPS
+** 仅限 HTTP
+** 自定义
+
+
+. 指定协议，默认端口和默认超时的详细信息。
+. 单击 * 保存 * 。
+

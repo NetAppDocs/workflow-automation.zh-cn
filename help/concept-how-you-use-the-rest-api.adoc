@@ -1,0 +1,31 @@
+---
+permalink: help/concept-how-you-use-the-rest-api.html 
+sidebar: sidebar 
+keywords: rest api, workflow, automation, invoke, provide, external, portal, data, center, orchestration, software, support, xml, json, content, type 
+summary: 您可以使用 Workflow Automation （ WFA ）提供的 REST API 从外部门户和数据中心业务流程软件调用工作流。WFA 支持对所有 REST API 使用 XML 和 JSON 内容类型。 
+---
+= 如何使用 REST API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Workflow Automation （ WFA ）提供的 REST API 从外部门户和数据中心业务流程软件调用工作流。WFA 支持对所有 REST API 使用 XML 和 JSON 内容类型。
+
+WFA 允许外部服务访问各种资源集合，例如工作流，用户，筛选器和查找器， 通过 URI 路径。外部服务可以使用 HTTP 方法，例如 GET ， PUT ， POST 和 DELETE ， 在这些 URI 上，对资源执行 CRUD 操作。
+
+您可以通过 WFA REST API 执行多项操作，包括以下操作：
+
+* 访问工作流定义和元数据。
+* 执行工作流并监控其执行情况。
+* 查看用户和角色以及更改密码。
+* 执行并测试资源选择筛选器。
+* 执行并测试资源查找器。
+* 管理存储或其他数据中心对象的凭据。
+* 查看数据源和数据源类型。
+
+
+_REST documentation_has more information about REST API ：
+
+_https_ ： //`wfa_server_ip ： port/rest/docs` _wfa_server_ip_ 是 WFA 服务器的 IP 地址， `port` 是您在安装期间用于 WFA 服务器的 TCP 端口号。

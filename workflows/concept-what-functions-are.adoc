@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-what-functions-are.html 
+sidebar: sidebar 
+keywords: use, functions, workflows, complex, task, complete, during, planning, phase 
+summary: 您可以在工作流中使用某项功能来执行复杂任务，此任务必须在工作流的规划阶段完成。 
+---
+= 什么是功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在工作流中使用某项功能来执行复杂任务，此任务必须在工作流的规划阶段完成。
+
+您可以使用 MVFLEX 表达式语言（ MVEL ）写入函数。您可以使用函数将常用逻辑和更复杂的逻辑整合到命名函数中，并将其重复用作命令参数或筛选器参数的值。您可以编写一个函数一次，并在工作流中使用它。您可以使用函数来处理可能比较复杂的重复性任务和任务，例如定义复杂的命名约定。
+
+函数在执行期间可能会使用其他函数。

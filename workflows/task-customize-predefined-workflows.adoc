@@ -1,0 +1,38 @@
+---
+permalink: workflows/task-customize-predefined-workflows.html 
+sidebar: sidebar 
+keywords: customize, predefined, workflow, automation, suitable, requirement 
+summary: 如果没有适合您需求的预定义工作流，您可以自定义预定义工作流自动化（ WFA ）工作流。 
+---
+= 自定义预定义的工作流
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果没有适合您需求的预定义工作流，您可以自定义预定义工作流自动化（ WFA ）工作流。
+
+您必须已确定预定义工作流所需的修改。
+
+以下问题和支持请求必须发送给 WFA 社区：
+
+* 从 WFA 社区下载的任何内容
+* 已创建的自定义 WFA 内容
+* 已修改的 WFA 内容
+
+
+.步骤
+. 单击 * 工作流设计 * > * 工作流 * 。
+. 选择与您的要求完全匹配的预定义工作流，然后单击 image:../media/clone_wfa_icon.gif["克隆图标"] 在工具栏上。
+. 在工作流设计器中，在相应选项卡中进行所需的更改，例如编辑问题描述 ，添加或删除命令，修改命令详细信息以及修改用户输入。
+. 单击 * 预览 * ，输入所需的用户输入以预览工作流执行，然后单击 * 预览 * 以查看工作流的计划详细信息。
+. 单击 * 确定 * 以关闭预览窗口。
+. 单击 * 保存 * 。
+
+
+
+
+== 完成后
+
+您可以测试在测试环境中修改的工作流，然后将此工作流标记为可投入生产。

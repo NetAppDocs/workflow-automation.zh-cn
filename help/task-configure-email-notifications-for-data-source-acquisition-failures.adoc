@@ -1,0 +1,59 @@
+---
+permalink: help/task-configure-email-notifications-for-data-source-acquisition-failures.html 
+sidebar: sidebar 
+keywords: control, notifications, generate, oncommand, workflow, automation, data, source, acquisition, fail, configure, threshold, interval, factor, notifications 
+summary: 您可以控制在数据源采集失败时在 OnCommand Workflow Automation （ WFA ）中生成的通知。您可以配置通知的阈值和间隔因子。 
+---
+= 为数据源采集失败配置电子邮件通知
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以控制在数据源采集失败时在 OnCommand Workflow Automation （ WFA ）中生成的通知。您可以配置通知的阈值和间隔因子。
+
+* 您需要的内容 *
+
+您必须已在 OnCommand Workflow Automation （ WFA ）中配置电子邮件通知。
+
+.步骤
+. 以管理员身份通过 Web 浏览器登录到 WFA 。
+. 配置通知阈值：
++
+.. 单击 * 设置 * ，然后在 * 设置 * 下单击 * 工作流设置 * 。
+.. 向下滚动到 * 高级 * 部分。
+.. 在 * 采集通知阈值 * 字段中，输入所需的值。
++
+默认值为 2 。
+
++
+如果指定的值为 2 ，则 WFA 将等待连续两次数据源采集失败，然后再发送电子邮件通知。
+
+
+
+. 单击 * 保存 * 。
+. 配置通知间隔因子：
++
+.. 单击 * 设置 * ，然后在 * 设置 * 下单击 * 数据源 * 。
+.. 记下为所需数据源指定的间隔。
++
+默认值为 30 。您可以编辑数据源以修改间隔时间。
+
+.. 单击 * 设置 * ，然后在 * 设置 * 下单击 * 工作流设置 * 。
+.. 向下滚动到 * 高级 * 部分。
+.. 在 * 采集通知间隔系数 * 字段中，输入所需的值。
++
+默认值为 6 。
+
++
+如果为数据源指定的间隔为 30 分钟，乘数为 6 ，则在 180 分钟内未采集数据源的数据源时，系统会发送电子邮件通知。
+
++
+
+NOTE: 如果指定 12 小时或更长时间作为数据源的采集间隔，则 WFA 会将此间隔因子视为 1 ，并在数据源的指定采集间隔之后发送通知。
+
+
+
+. 单击 * 保存 * 。
+

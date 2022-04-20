@@ -1,0 +1,30 @@
+---
+permalink: windows-install/task-configure-mail.html 
+sidebar: sidebar 
+keywords: configure, email, notifications 
+summary: 您可以将 OnCommand Workflow Automation （ WFA ）配置为向您发送有关工作流操作的电子邮件通知，例如工作流已启动或工作流失败。 
+---
+= 配置电子邮件通知
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将 OnCommand Workflow Automation （ WFA ）配置为向您发送有关工作流操作的电子邮件通知，例如，工作流已启动或工作流失败。
+
+您必须已在环境中配置邮件主机。
+
+.步骤
+. 以管理员身份通过 Web 浏览器登录到 WFA 。
+. 单击 * 设置 * ，然后在 * 设置 * 下单击 * 邮件 * 。
+. 在字段中输入所需信息。
+. 执行以下步骤以测试邮件设置：
++
+.. 单击 * 发送测试邮件 * 。
+.. 在测试连接对话框中，输入要将电子邮件发送到的电子邮件地址。
+.. 单击 * 测试 * 。
+
+
+. 单击 * 保存 * 。
+

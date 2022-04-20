@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-managing-workflows.html 
+sidebar: sidebar 
+keywords: customize, predefined, workflow, create, part, managing, understand, relevant, concepts 
+summary: 您可以在管理工作流时自定义预定义工作流或创建新工作流。在开始管理工作流之前，您还必须了解相关概念。 
+---
+= 管理工作流
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在管理工作流时自定义预定义工作流或创建新工作流。在开始管理工作流之前，您还必须了解相关概念。

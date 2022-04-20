@@ -1,0 +1,16 @@
+---
+permalink: workflows/concept-what-filters-are.html 
+sidebar: sidebar 
+keywords: use, filters, workflows, select, required, resources 
+summary: 您可以在工作流中使用 WFA 筛选器来选择所需资源。 
+---
+= 什么是筛选器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在工作流中使用 WFA 筛选器来选择所需资源。
+
+WFA 筛选器是一种基于 SQL 的查询，适用于 WFA 数据库。每个筛选器都会返回特定词典类型的元素列表。返回的元素基于 SQL 查询中指定的选择条件。要创建或编辑筛选器，您必须了解 SQL 语法。

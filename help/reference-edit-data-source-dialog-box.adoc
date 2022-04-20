@@ -1,0 +1,119 @@
+---
+permalink: help/reference-edit-data-source-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, data, source, dialog box, enable, modify, existing 
+summary: 通过编辑数据源对话框，您可以修改现有数据源。 
+---
+= 编辑数据源对话框
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过编辑数据源对话框，您可以修改现有数据源。
+
+
+
+== 数据源配置属性
+
+* * 名称 *
++
+用于修改数据源的名称。
+
+* * 数据源类型 *
++
+显示数据源的数据源类型。您不能修改此字段。
+
+* * 主机名 *
++
+用于指定数据源的主机名或 IP 地址（ IPv4 或 IPv6 ）。
+
++
+
+NOTE: Active IQ Unified Manager 数据源类型不支持 IPv6 地址。
+
+* * 端口 *
++
+显示选定数据源类型的关联端口号（如果有）。您可以更改数据源的默认端口号。
+
+* * 方案 *
++
+显示与选定数据源类型关联的方案，例如 Unified Manager 6.0 （ MySQL ）的 _cm_storage_ 。
+
++
+您不能修改此属性。
+
+* * 用户名 *
++
+显示选定数据源类型的关联用户名（如果有）。
+
++
+要覆盖默认用户名，必须为此数据源指定适当的用户名：
+
++
+** 对于 6.0 之前的 Unified Manager 版本，您必须输入在运行 ocsetup 时用于覆盖默认凭据的用户名。
+** 对于 Unified Manager 6.0 及更高版本，必须输入在 Unified Manager 服务器上创建的数据库用户帐户的用户名。
+** 对于 Performance Advisor ，您必须输入至少具有 GlobalRead 角色的 Active IQ Unified Manager 用户的用户名。
+
+
+* * 密码 *
++
+用于为选定数据源类型指定密码。
+
++
+您必须指定一个密码以覆盖此数据源用户名的默认密码：
+
++
+** 对于 6.0 之前的 Unified Manager 版本，您必须输入在运行 ocsetup 时用于覆盖默认凭据的密码。
+** 对于 Unified Manager 6.0 及更高版本，必须输入在服务器上创建的数据库用户帐户的密码。
+** 对于 Performance Advisor ，您必须输入 Unified Manager 用户的密码，并且角色至少为 GlobalRead 。
+
+
+* * 数据库 *
++
+显示选定数据源类型的关联数据库名称（如果有）。
+
+* * 间隔（分钟） *
++
+用于单击该值并使用向上和向下箭头选择间隔（以分钟为单位）。
+
++
+
+NOTE: 如果间隔设置为零（ 0 ），则会禁用自动采样。
+
++
+数据采样的默认间隔为：
+
++
+** 基于脚本的数据源类型： 1440 （性能和 VC ）
+** 基于 SQL 的数据源类型： 30 （ cm_storage ， storage 和 cm_performance ）
+
+
+* * 请参见《设置说明指南》 *
++
+打开设置说明指南对话框，其中概述了设置数据源的步骤。
+
+
+
+
+
+== 命令按钮
+
+* * 重置方案 *
++
+打开重置方案确认对话框。通过此对话框，您可以重置选定方案的缓存存储，此操作将在下次数据采集期间进行。
+
++
+
+IMPORTANT: 重置过程将删除所有缓存的数据，包括所有表。整个缓存是在下次数据采集期间从头开始构建的。
+
+* * 保存 *
++
+保存配置设置并关闭对话框。
+
+* * 取消 *
++
+取消所做的更改（如果有），然后关闭对话框。
+
+

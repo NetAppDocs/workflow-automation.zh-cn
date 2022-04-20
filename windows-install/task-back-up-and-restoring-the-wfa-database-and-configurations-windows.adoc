@@ -1,0 +1,32 @@
+---
+permalink: windows-install/task-back-up-and-restore-the-wfa-database-and-configurations-windows.html 
+sidebar: sidebar 
+keywords: back up, restore, oncommand, workflow, automation, database, configurations windows 
+summary: 您可以备份和还原 OnCommand Workflow Automation （ WFA ）数据库以及支持的配置，以便在发生灾难时恢复数据。支持的配置包括数据访问， HTTP 超时和 SSL 证书。 
+---
+= 在 Windows 上备份和还原 OnCommand Workflow Automation 数据库和配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以备份和还原 OnCommand Workflow Automation （ WFA ）数据库以及支持的配置，以便在发生灾难时恢复数据。支持的配置包括数据访问， HTTP 超时和 SSL 证书。
+
+您必须具有管理员权限或架构师凭据。
+
+您必须在安全位置创建备份，因为还原备份将提供对 WFA 访问的所有存储系统的访问权限。
+
+
+NOTE: 您只能使用 CLI 命令或 REST API 在灾难恢复期间执行全面的备份和还原操作。在高可用性环境中进行灾难恢复期间，您不能使用 Web UI 创建备份。
+
+.步骤
+. 备份现有数据库和配置。
++
+link:reference-backing-up-of-the-oncommand-workflow-automation-database.html["备份 OnCommand Workflow Automation 数据库"]
+
+. 还原数据库和配置的先前备份。
++
+link:concept-restoring-the-wfa-database.html["还原 OnCommand Workflow Automation 数据库"]
+
+

@@ -1,0 +1,34 @@
+---
+permalink: help/task-configure-resource-reservation-for-workflows.html 
+sidebar: sidebar 
+keywords: configure, resource, reservation, capability, oncommand, workflow, automation, ensure, required, available, successful, execution 
+summary: 您可以为 OnCommand Workflow Automation （ WFA ）工作流配置资源预留功能，以确保所需资源可用于成功执行工作流。 
+---
+= 为工作流配置资源预留
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以为 OnCommand Workflow Automation （ WFA ）工作流配置资源预留功能，以确保所需资源可用于成功执行工作流。
+
+.步骤
+. 以管理员身份通过 Web 浏览器登录到 WFA 。
+. 单击 * 设置 * ，然后在 * 设置 * 下单击 * 工作流设置 * 。
+. 确保已选中 * 启用命令预留 * 复选框。
+. 在 * 预留到期时间（ H ） * 字段中，输入所需的值。
++
+默认值为 4 。
+
+. 单击 * 保存 * 。
+. 在每个所需工作流中启用资源预留：
++
+.. 单击所需工作流的 * 工作流 * > * 详细信息 * 。
++
+`Workflow` 是需要预留资源的工作流。
+
+.. 选择 * 考虑保留元素 * 。
+
+
+

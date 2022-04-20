@@ -1,0 +1,95 @@
+---
+permalink: help/reference-reserved-words.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, include, reserved, words, use, attribute, parameters, variable name, user, input, constants, return parameters 
+summary: OnCommand Workflow Automation （ WFA ）包含一些保留字。在工作流中，不能对变量名称，用户输入，常量和返回参数等任何属性或参数使用保留字。 
+---
+= 保留字
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation （ WFA ）包含一些保留字。在工作流中，不能对变量名称，用户输入，常量和返回参数等任何属性或参数使用保留字。
+
+下面列出了 WFA 中的保留字：
+
+[cols="3*"]
+|===
+
+
+ a| 
+* 和
+* 数组
+* 断言
+* 布尔值
+* boolean
+* 字节
+* 字节
+* 字符
+* 字符
+* 字符序列
+* 类
+* 类加载程序
+* 编译器
+* 包含
+* convertable_to
+* 定义
+* 执行
+* 双倍
+* 双倍
+* 其他
+* 空
+* false
+
+ a| 
+* 浮点
+* 浮点
+* 适用于
+* 每个
+* 功能
+* 如果
+* 导入
+* Import_static
+* 在中
+* 实例
+* 内部
+* 整型
+* 为
+* isdef
+* 长
+* 长
+* 数学
+* 新增
+* 空
+* 数字
+* 对象
+* 或
+
+ a| 
+* 产品
+* 返回
+* 运行时
+* SecurityManager
+* 简而言之
+* 简而言之
+* 类音
+* StrictMath
+* string
+* StringBuffer
+* StringBuilder
+* 简化
+* 交换机
+* 系统
+* 线程
+* ThreadLocal
+* true
+* 直到
+* 变量
+* 无效
+* 同时
+* 使用
+
+
+|===

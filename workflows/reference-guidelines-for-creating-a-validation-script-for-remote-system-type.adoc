@@ -1,0 +1,36 @@
+---
+permalink: workflows/reference-guidelines-for-creating-a-validation-script-for-remote-system-type.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, validation, scripts, use, test, remote, system, define, oncommand, workflow, automation 
+summary: 您必须了解创建验证脚本的准则，这些脚本用于测试您在 OnCommand Workflow Automation （ WFA ）中定义的远程系统类型。 
+---
+= 为远程系统类型创建验证脚本的准则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须了解创建验证脚本的准则，这些脚本用于测试您在 OnCommand Workflow Automation （ WFA ）中定义的远程系统类型。
+
+* 您创建的 Perl 脚本必须与验证脚本窗口中提供的示例脚本类似。
+* 验证脚本的输出必须与示例脚本的输出类似。
+
+
+
+
+== 验证脚本示例
+
+[listing]
+----
+# Check connectivity.
+# Return 1 on success.
+# Return 0 on failure and set $message
+sub checkCredentials {
+my ($host, $user, $passwd, $protocol, $port, $timeout) = @_;
+#
+# Please add the code to check connectivity to $host using $protocol here.
+#
+return 1;
+}
+----

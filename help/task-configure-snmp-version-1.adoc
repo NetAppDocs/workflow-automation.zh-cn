@@ -1,0 +1,33 @@
+---
+permalink: help/task-configure-snmp-version-1.html 
+sidebar: sidebar 
+keywords: configure, version 1, snmp 
+summary: 配置 SNMP 版本 1 
+---
+= 配置 SNMP 版本 1
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+.步骤
+. 以管理员用户身份通过 Web 浏览器登录到 WFA ，然后访问 WFA 服务器。
+. 单击 * 设置 * ，然后在 * 设置 * 下单击 * SNMP * 。
+. 选中 * 启用 SNMP* 复选框。
+. 在 "**Version" 下拉列表中，选择 * 版本 1* 。
+. 输入 IPv4 或 IPv6 地址或主机名以及管理主机的端口号。
++
+WFA 将 SNMP 陷阱发送到指定端口号。默认端口号为 162 。
+
+. 在 * 通知时间 * 部分中，选中以下一个或多个复选框：
++
+** 已启动工作流执行
+** 已成功完成工作流执行
+** 工作流执行失败 / 部分成功
+** 正在执行工作流，等待批准
+** 采集失败
+
+
+. 单击 * 发送测试通知 * 以验证设置。
+. 单击 * 保存 * 。
+

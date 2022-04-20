@@ -1,0 +1,25 @@
+---
+permalink: windows-install/task-add-active-directory-group-names.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, add, active directory groups 
+summary: 您可以在 OnCommand Workflow Automation （ WFA ）中添加 Active Directory 组。 
+---
+= 添加 Active Directory 组
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 OnCommand Workflow Automation （ WFA ）中添加 Active Directory 组。
+
+.步骤
+. 以管理员身份通过 Web 浏览器登录到 WFA 。
+. 单击 * 设置 * ，然后在 * 管理 * 下，单击 * Active Directory 组 * 。
+. 在 Active Directory 组窗口中，单击 * 新建 * 图标。
+. 在新建 Active Directory 组对话框中，输入所需信息。
++
+如果从 * 角色 * 下拉列表中选择 * 审批者 * ，建议提供审批者的电子邮件 ID 。如果有多个审批者，您可以在 * 电子邮件 * 字段中提供组电子邮件 ID 。选择要将通知发送到特定 Active Directory 组的工作流的不同事件。
+
+. 单击 * 保存 * 。
+

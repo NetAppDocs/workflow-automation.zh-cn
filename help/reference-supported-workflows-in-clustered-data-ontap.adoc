@@ -1,0 +1,462 @@
+---
+permalink: help/reference-supported-workflows-in-clustered-data-ontap.html 
+sidebar: sidebar 
+keywords: aware, workflow, supported, oncommand, workflow, automation, paired, different, version, unified manager, server 
+summary: 您必须了解 OnCommand Workflow Automation （ WFA ）与不同版本的 Unified Manager 服务器配对时支持的工作流。 
+---
+= ONTAP 中支持的工作流
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须了解 OnCommand Workflow Automation （ WFA ）与不同版本的 Unified Manager 服务器配对时支持的工作流。
+
+下表列出了不同 Unified Manager 服务器版本支持的工作流。
+
+[cols="3*"]
+|===
+| 工作流名称 | 在 Unified Manager Server 6.3 及更高版本中受支持 | 在 Unified Manager Server 5.x 中受支持 
+
+
+ a| 
+中止 SnapMirror 关系
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+向无限卷添加或扩展容量存储类
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+向无限卷添加或扩展性能存储类
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+中断 SnapMirror 关系
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+CIFS/SMB 服务器配置
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+HA 对的控制器和磁盘架升级
+ a| 
+是的。
+ a| 
+是的。
+
+仅支持运行 Data ONTAP 8.3 之前版本的集群。
+
+
+
+ a| 
+创建基本集群模式 Data ONTAP 卷
+ a| 
+是的。
+ a| 
+是的。
+
+
+
+ a| 
+创建集群模式 Data ONTAP NFS 卷
+ a| 
+是的。
+ a| 
+是的。
+
+
+
+ a| 
+创建集群模式 Data ONTAP qtree CIFS 共享
+ a| 
+是的。
+ a| 
+是的。
+
+
+
+ a| 
+创建集群模式 Data ONTAP 卷
+ a| 
+是的。
+ a| 
+是的。
+
+
+
+ a| 
+创建集群模式 Data ONTAP 卷 CIFS 共享
+ a| 
+是的。
+ a| 
+是的。
+
+
+
+ a| 
+创建具有 QoS 策略组的集群模式 Data ONTAP 卷
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+创建 Cron 计划
+ a| 
+是的。
+ a| 
+是的。
+
+
+
+ a| 
+创建并配置具有无限卷的 Storage Virtual Machine
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+创建和配置 NAS Storage Virtual Machine
+ a| 
+是的。
+ a| 
+是的。
+
+仅支持运行 Data ONTAP 8.3 之前版本的集群。
+
+
+
+ a| 
+创建和配置 SAN Storage Virtual Machine
+ a| 
+是的。
+ a| 
+是的。
+
+仅支持运行 Data ONTAP 8.3 之前版本的集群。
+
+
+
+ a| 
+在 8.1.x 上创建集群模式 Data ONTAP SnapMirror 关系
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+创建计划和策略
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+创建 SnapMirror 关系
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+创建计划和策略
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+依次创建 SnapMirror 和 SnapMirror 级联
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+依次创建 SnapMirror 和 SnapVault 级联
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+创建 SnapVault 关系
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+依次创建 SnapVault 和 SnapMirror 级联
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+在集群模式 Data ONTAP 存储上创建 VMware NFS 数据存储库
+ a| 
+是的。
+ a| 
+是的。
+
+
+
+ a| 
+使用 SnapMirror 关系创建，映射和保护集群模式 Data ONTAP LUN
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+建立集群对等关系
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+扩展不具有存储类的无限卷
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+修改 SnapMirror 关系
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+移动集群模式 Data ONTAP 卷
+ a| 
+是的。
+ a| 
+是的。
+
+
+
+ a| 
+多协议文件访问
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+多协议服务器配置
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+NFSv3 文件访问
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+NFSv3 服务器配置
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+使用 SnapMirror 关系保护卷
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+使用 SnapVault 关系保护卷
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+暂停 SnapMirror 关系
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+删除集群模式 Data ONTAP 卷
+ a| 
+是的。
+ a| 
+是的。
+
+
+
+ a| 
+删除 SnapMirror 关系
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+恢复 SnapMirror 关系
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+重新同步 SnapMirror 关系
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+反向重新同步 SnapMirror 关系
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+为无限卷设置数据保护
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+SMB 文件访问
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+Storage Virtual Machine 对等关系
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+Storage Virtual Machine 根卷提升
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+Storage Virtual Machine 根卷保护
+ a| 
+是的。
+ a| 
+否
+
+
+
+ a| 
+传输 SnapMirror 关系
+ a| 
+是的。
+ a| 
+否
+
+|===
+* 相关信息 *
+
+http://mysupport.netapp.com/matrix["互操作性表工具"^]

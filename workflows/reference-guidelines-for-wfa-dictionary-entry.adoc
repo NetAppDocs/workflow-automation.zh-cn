@@ -1,0 +1,117 @@
+---
+permalink: workflows/reference-guidelines-for-wfa-dictionary-entry.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, dictionary, entries, oncommand, workflow, automation 
+summary: 您必须了解在 OnCommand Workflow Automation （ WFA ）中创建词典条目的准则。 
+---
+= WFA 词典条目的准则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须了解在 OnCommand Workflow Automation （ WFA ）中创建词典条目的准则。
+
+[cols="2*"]
+|===
+| 准则 | 示例 
+
+
+ a| 
+词典条目名称只能包含字母数字字符和下划线。
+ a| 
+集群许可证
+
+switch_23
+
+
+
+ a| 
+词典条目名称必须以大写字符开头。名称中的每个词以大写字符开头，每个词以下划线（ _ ）分隔。
+ a| 
+Volume
+
+Array_License
+
+
+
+ a| 
+词典条目属性名称不应包含词典条目的名称。
+ a| 
+无
+
+
+
+ a| 
+词典条目中的属性和引用必须使用小写字符。
+ a| 
+聚合， size_mb
+
+
+
+ a| 
+使用下划线分隔词语。不允许使用空格。
+ a| 
+resource_pool
+
+
+
+ a| 
+词典条目不能包含来自不同方案的引用。如果某个词典条目要求交叉引用不同方案中的某个对象，请确保所引用对象的所有自然键都出现在该词典条目中。
+ a| 
+array_Performance 词典条目要求使用数组词典条目的所有自然键作为直接属性。
+
+
+
+ a| 
+为属性使用适当的数据类型。
+ a| 
+无
+
+
+
+ a| 
+对于大小或空间相关属性，请使用长数据类型。
+ a| 
+storage.Volume 词典条目中的 size_MB 和 available_size_MB
+
+
+
+ a| 
+如果属性具有一组固定值，请使用 Enum 。
+ a| 
+storage.Volume 词典条目中的 raid_type
+
+
+
+ a| 
+如果数据源为某个属性或引用提供了值，请将该属性或引用的 "`设置为缓存` " 设置为 true 。对于 Active IQ Unified Manager 数据源，如果数据源可以为其提供值，请添加可缓存属性。
+ a| 
+无
+
+
+
+ a| 
+如果为此属性或引用提供值的数据源可以返回 NULL ，则将 "`can be Null` " 设置为 true 。
+ a| 
+无
+
+
+
+ a| 
+为每个属性和参考提供有意义的问题描述 。设计工作流时，问题描述 将显示在命令详细信息中。
+ a| 
+无
+
+
+
+ a| 
+请勿在词典条目中使用 "`id` " 作为属性名称。它是为内部 WFA 使用预留的。
+ a| 
+无
+
+|===
+* 相关信息 *
+
+xref:reference-references-to-learning-material.adoc[参考学习材料]

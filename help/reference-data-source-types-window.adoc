@@ -1,0 +1,158 @@
+---
+permalink: help/reference-data-source-types-window.html 
+sidebar: sidebar 
+keywords: data, source, types, window, display, available, manage 
+summary: 数据源类型窗口显示可用的数据源类型。您可以从此窗口管理数据源类型。 
+---
+= 数据源类型窗口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+数据源类型窗口显示可用的数据源类型。您可以从此窗口管理数据源类型。
+
+数据源类型用于定义数据源，其中包含有关特定数据库中数据的来源以及从数据源获取数据所使用的方法的信息。例如，数据源可以是包含存储环境相关信息的 Active IQ Unified Manager 数据库，也可以是包含数据中心相关信息的 VMware 数据库。
+
+
+
+== 数据源类型表
+
+数据源类型表列出了可用的数据源类型。每个条目都标识为以下项之一：
+
+* image:../media/community_certification.gif[""] —用户创建的内容
+* image:../media/ps_certified_icon_wfa.gif[""] —由专业服务（ PS ）开发的内容，仅适用于由 PS 自定义安装的内容
+* image:../media/community_certification.gif[""] —用户开发的软件包
+* image:../media/lock_icon_wfa.gif[""] —由锁定的用户创建的内容
+* image:../media/netapp_certified.gif[""] — NetApp 认证的内容
+
+
+您可以使用每个列可用的筛选和排序功能以及重新排列列顺序来自定义表显示。
+
+* image:../media/filter_icon_wfa.gif["筛选器图标"] 启用或禁用筛选整个表。如果禁用了筛选，则图标上方会显示一个红色的 "x" 。
+* 双击 image:../media/filter_icon_wfa.gif["筛选器图标"] 清除并重置筛选选项。
+* image:../media/wfa_filter_icon.gif["筛选器图标"] 在每个列标题上，您可以根据列的内容进行筛选。单击 image:../media/wfa_filter_icon.gif["筛选器图标"] 在列中，您可以从下拉列表中筛选特定项目或所有可用项目。
+* 单击列标题可在排序的升序和降序之间切换。您可以通过排序箭头（image:../media/wfa_sortarrow_up_icon.gif["\"Sort Up \" 图标"] 用于升序和 image:../media/wfa_sortarrow_down_icon.gif["\" 向下排序 \" 图标"] 降序）。
+* 要重新排列列的位置，您可以拖放列，将其按任何所需顺序放置。但是，您不能隐藏或删除其中任何列。
+* 单击 * 搜索 * 筛选器文本框可搜索特定内容。此外，您还可以使用支持的运算符搜索适用的列类型，即字母或数字。
+
+
+数据源类型表包含以下列：
+
+* * 认证 *
++
+指示数据源类型是否为用户创建的（image:../media/community_certification.gif[""]）， PS （image:../media/ps_certified_icon_wfa.gif[""]），社区（image:../media/community_certification.gif[""]），用户锁定（image:../media/lock_icon_wfa.gif[""]）或 NetApp 认证的（image:../media/netapp_certified.gif[""]）。
+
+* * 数据源 *
++
+显示数据源类型的名称。
+
+* * 方案 *
++
+显示与数据源类型关联的方案。方案表示系统的数据模型。例如， VC 方案包含与虚拟环境相关的数据，例如虚拟机，主机和数据存储库。
+
++
+以下是默认选择的默认方案：
+
++
+** CM_performance
+** CM_storage
+** 性能
+** storage
+** vc
+
+
+* * 实体版本 *
++
+以 `major.minor.revision` format —例如 1.0.0 显示对象的版本号。
+
+* * 操作系统兼容性 *
++
+指示数据源类型是否与主机操作系统兼容。
+
+* * 上次更新时间 *
++
+显示上次更新数据源类型的日期和时间。
+
+* * 更新者 *
++
+显示更新数据源类型的用户。
+
+* * 数据源版本 *
++
+显示与数据源类型关联的数据源版本。
+
+* * 数据源驱动程序 *
++
+显示用于从数据源获取数据的驱动程序类型。
+
+* * 方法 *
++
+显示用于从数据源获取数据的方法，例如 SQL 和脚本。
+
+* * 脚本语言 *
++
+显示数据源类型使用的脚本语言。
+
+
+
+
+
+== 工具栏
+
+工具栏位于列标题上方。您可以使用工具栏中的图标执行各种操作。也可以从窗口中的右键单击菜单访问这些操作。
+
+* *image:../media/new_wfa_icon.gif["新建图标"] （新增） *
++
+打开 " 新建数据源类型 " 窗口，在此可以创建新的数据源类型。
+
+* *image:../media/edit_wfa_icon.gif["编辑图标"] （编辑） *
++
+打开选定数据源类型的 "Data Source Type <EntryName>" 窗口，在此可以编辑数据源类型。
+
+* *image:../media/clone_wfa_icon.gif["克隆图标"] （克隆） *
++
+打开新建数据源类型 < 条目名称 > 窗口，在此可以创建选定数据源类型的副本。
+
+* *image:../media/lock_wfa_icon.gif["锁定图标"] （锁定） *
++
+打开锁定数据源类型确认对话框，在此可以锁定选定的用户创建的源数据类型。
+
+* *image:../media/unlock_wfa_icon.gif["解除锁定图标"] （解锁） *
++
+打开解除数据源类型确认锁定对话框，在此可以解除选定数据源类型的锁定。只有锁定的数据源类型才会启用此选项。管理员可以解除其他用户锁定的数据源类型的锁定。
+
+* *image:../media/delete_wfa_icon.gif["删除图标"] （删除） *
++
+打开删除数据源类型确认对话框，在此可以删除选定的用户创建的数据源类型。
+
++
+
+NOTE: 您不能删除 WFA 或 PS 数据源类型。
+
+* *image:../media/export_wfa_icon.gif["导出图标"] （导出） *
++
+用于导出选定的用户创建的数据源类型。
+
++
+
+NOTE: 您不能导出 WFA 或 PS 数据源类型。
+
+* *image:../media/add_to_pack.png["添加到软件包图标"] （添加到软件包） *
++
+打开添加到数据包数据源类型对话框，在此可以将数据源类型及其可靠实体添加到可编辑的数据包中。
+
++
+
+NOTE: 只有将认证设置为无的数据源类型才会启用添加到软件包功能。
+
+* *image:../media/remove_from_pack.png["从软件包中删除图标"] （从软件包中删除） *
++
+打开选定数据源类型的 " 从数据包中删除数据源 " 对话框，在此可以从数据包中删除或删除数据源类型。
+
++
+
+NOTE: 只有将认证设置为无的数据源类型才会启用从软件包中删除功能。
+
+

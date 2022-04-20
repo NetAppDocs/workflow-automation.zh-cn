@@ -1,0 +1,34 @@
+---
+permalink: workflows/reference-general-powershell-conventions-for-wfa.html 
+sidebar: sidebar 
+keywords: must, understand, certain, powershell, perl, conventions, use, create, scripts, consistent, existing, script 
+summary: 您必须了解 WFA 中用于创建与现有脚本一致的脚本的某些 PowerShell 和 Perl 约定。 
+---
+= WFA 的一般 PowerShell 和 Perl 约定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须了解 WFA 中用于创建与现有脚本一致的脚本的某些 PowerShell 和 Perl 约定。
+
+* 使用有助于阐明您希望脚本执行的操作的变量。
+* 编写可读代码，无需注释即可理解。
+* 使脚本和命令尽可能简单。
+* 对于 PowerShell 脚本：
++
+** 尽可能使用 cmdlet 。
+** 如果没有可用的 cmdlet ，请调用 .NET 代码。
+
+
+* 对于 Perl 脚本：
++
+** `d以换行符结尾的` ie 语句。
++
+如果没有换行符，则会打印脚本行号，这对于调试 WFA 执行的 Perl 命令不有用。
+
+** 在 "`getopt` " 模块中，将命令的字符串参数设置为必填项。
+
+
+

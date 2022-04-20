@@ -1,0 +1,84 @@
+---
+permalink: windows-install/task-configure-a-database-user-by-running-ocsetup-on-linux.html 
+sidebar: sidebar 
+keywords: configure, database, user, run, ocsetup, linux 
+summary: 您可以在 DataFabric Manager 5.x 服务器上运行 ocsetup 文件，以配置对 OnCommand Workflow Automation 的 DataFabric Manager 5.x 数据库的只读访问权限。 
+---
+= 通过在 Linux 上运行 ocsetup 来配置数据库用户
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 DataFabric Manager 5.x 服务器上运行 ocsetup 文件，以配置对 OnCommand Workflow Automation 的 DataFabric Manager 5.x 数据库的只读访问权限。
+
+.步骤
+. 在终端中使用以下命令将 wfa_ocsetup.sh 文件下载到 DataFabric Manager 5.x 服务器上的主目录：
++
+` +wget https://WFA_Server_IP/download/wfa_ocsetup.sh+`[]
+
++
+WFA_SERVER_IP 是 WFA 服务器的 IP 地址（ IPv4 或 IPv6 地址）。
+
++
+如果为 WFA 指定了非默认端口，则必须包括以下端口号：
+
++
+` +wget https://wfa_server_ip:port/download/wfa_ocsetup.sh+`[]
+
++
+port 是安装期间 WFA 服务器使用的 TCP 端口号。
+
++
+如果要指定 IPv6 地址，则必须将其用方括号括起来。
+
+. 在终端中使用以下命令将 wfa_ocsetup.sh 文件更改为可执行文件： `chmod +x WFA_ocsetup.sh`
+. 在终端中输入以下命令以运行此脚本：
++
+` 。 /wfa_ocsetup.sh OpenJDK_path`
+
++
+OpenJDK_path 是 OpenJDK 的路径。
+
++
+/opt/NTAPdfm/java
+
++
+终端中将显示以下输出，表示设置成功：
+
++
+[listing]
+----
+Verifying archive integrity... All good.
+Uncompressing WFA OnCommand Setup.....
+*** Welcome to OnCommand Setup Utility for Linux ***
+    <Help information>
+*** Please override the default credentials below ***
+Override DB Username [wfa] :
+----
+. 输入用户名和密码以覆盖默认凭据。
++
+此时将创建一个可访问 DataFabric Manager 5.x 数据库的新数据库用户帐户。
+
++
+
+NOTE: 如果不创建用户帐户，则会使用默认凭据。出于安全考虑，您必须创建一个用户帐户。
+
++
+终端中将显示以下输出，表示设置成功：
+
++
+[listing]
+----
+***** Start of response from the database *****
+>>> Connecting to database
+<<< Connected
+*** Dropped existing 'wfa' user
+=== Created user 'username'
+>>> Granting access
+<<< Granted access
+***** End of response from the database *****
+***** End of Setup *****
+----
+

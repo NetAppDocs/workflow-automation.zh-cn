@@ -1,0 +1,39 @@
+---
+permalink: help/task-import-oncommand-workflow-automation-content.html 
+sidebar: sidebar 
+keywords: import, user-created, oncommand, workflow, automation, content, finders, commands, installation, downloaded, storage, community, packs, include, data, ontap, powershell, toolkits, perl, nmsdk 
+summary: 您可以导入用户创建的 OnCommand Workflow Automation （ WFA ）内容，例如工作流，查找器和命令。您还可以导入从其他 WFA 安装导出的内容，从存储自动化商店或 WFA 社区下载的内容以及软件包，包括 Data ONTAP PowerShell 工具包和 Perl NMSDK 工具包。 
+---
+= 导入 OnCommand Workflow Automation 内容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以导入用户创建的 OnCommand Workflow Automation （ WFA ）内容，例如工作流，查找器和命令。您还可以导入从其他 WFA 安装导出的内容，从存储自动化商店或 WFA 社区下载的内容以及软件包，包括 Data ONTAP PowerShell 工具包和 Perl NMSDK 工具包。
+
+* 您需要的内容 *
+
+* 您必须有权访问要导入的 WFA 内容。
+* 要导入的内容必须已在运行相同版本或早期版本 WFA 的系统上创建。
++
+例如，如果您运行的是 WFA 2.2 ，则无法导入使用 WFA 3.0 创建的内容。
+
+* 您只能将在 N-2 版本的 WFA 上开发的内容导入到 WFA 5.1 中。
+* 如果 ` .dar` 文件引用了 NetApp 认证的内容，则必须导入 NetApp 认证的内容包。
++
+NetApp 认证的内容包可从 Storage Automation Store 下载。您必须参考该软件包的文档来验证是否满足所有要求。
+
+
+
+.步骤
+. 通过 Web 浏览器登录到 WFA 。
+. 单击 * 设置 * ，然后在 * 维护 * 下单击 * 导入工作流 * 。
+. 单击 * 选择文件 * 以选择要导入的 ` .dar` 文件，然后单击 * 导入 * 。
+. 在导入成功对话框中，单击 * 确定 * 。
+
+
+* 相关信息 *
+
+http://community.netapp.com/t5/OnCommand-Storage-Management-Software-Articles-and-Resources/tkb-p/oncommand-storage-management-software-articles-and-resources/label-name/workflow%20automation%20%28wfa%29?labels=workflow+automation+%28wfa%29["NetApp 社区： OnCommand Workflow Automation"^]

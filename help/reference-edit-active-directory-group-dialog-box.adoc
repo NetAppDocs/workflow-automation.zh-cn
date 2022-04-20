@@ -1,0 +1,95 @@
+---
+permalink: help/reference-edit-active-directory-group-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, active directory, dialog box, enable, view, modify, oncommand, workflow, automation, group 
+summary: 通过编辑 Active Directory 组对话框，您可以查看和修改 OnCommand Workflow Automation Active Directory 组设置。 
+---
+= 编辑 Active Directory 组对话框
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过编辑 Active Directory 组对话框，您可以查看和修改 OnCommand Workflow Automation Active Directory 组设置。
+
+根据您的 Active Directory 组权限和角色，您可能无法访问 Active Directory 组窗口。但是，您可以通过选择 * 设置 * 来编辑 Active Directory 组的设置，然后在 * 管理 * 下单击 * Active Directory 组 * 。
+
+
+NOTE: 您可以编辑的字段取决于您的 Active Directory 组权限。
+
+* * 组名称 *
++
+显示 Active Directory 组的组名称。
+
+* * 角色 *
++
+显示为用户帐户分配的角色。
+
++
+显示为 Active Directory 组分配的以下组角色之一：
+
++
+** * 来宾 *
++
+此组只能查看工作流执行的状态，或者只能收到有关工作流执行状态更改的通知。
+
+** * 运算符 *
++
+允许此组预览和执行为其提供访问权限的工作流。
+
+** * 审批者 *
++
+允许此组预览，执行，批准和拒绝为其提供访问权限的工作流。
+
++
+
+NOTE: 您必须提供审批者的电子邮件 ID 以及要通知给审批者的工作流的状态。如果有多个审批者，您可以在 * 电子邮件 * 字段中提供组电子邮件 ID 。
+
+** * 架构师 *
++
+此组具有创建工作流的完全访问权限，但不能修改全局 WFA 服务器设置。
+
+** * 管理员 *
++
+此组可以完全访问 WFA 服务器。
+
++
+
+NOTE: 您必须至少配置一个管理组。
+
+
+
+* * 电子邮件 *
++
+指定在选择 * 通知时间 * 选项时要向其发送通知的 Active Directory 组的电子邮件。
+
+* * 通知打开 *
++
+用于选择在由 Active Directory 组触发的工作流执行期间何时应通过电子邮件通知此 Active Directory 组。您可以选择以下选项的任意组合：
+
++
+** 已启动工作流执行：在工作流执行开始时通知用户。
+** 工作流执行失败 / 部分成功：如果工作流执行失败或即使一个或多个步骤失败，工作流也成功执行，则会通知用户。
++
+执行已完成，因为已将失败的步骤配置为允许即使该步骤失败也继续执行工作流。
+
+** 已成功完成工作流执行：在工作流执行成功完成时通知用户。
+** 工作流执行正在等待批准：如果工作流执行正在等待操作员或架构师用户的批准，则根据 WFA 配置设置通知用户。
+
+
+
+
+
+
+== 命令按钮
+
+* * 保存 *
++
+保存配置设置并关闭对话框。
+
+* * 取消 *
++
+取消所做的更改（如果有），然后关闭对话框。
+
+

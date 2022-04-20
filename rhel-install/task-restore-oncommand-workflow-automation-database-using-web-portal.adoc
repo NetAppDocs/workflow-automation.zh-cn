@@ -1,0 +1,33 @@
+---
+permalink: rhel-install/task-restore-oncommand-workflow-automation-database-using-web-portal.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, wfa, database 
+summary: 您可以还原先前备份的 OnCommand Workflow Automation （ WFA ）数据库。 
+---
+= 还原 WFA 数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以还原先前备份的 OnCommand Workflow Automation （ WFA ）数据库。
+
+* 您必须已创建 WFA 数据库的备份。
+* 您必须具有管理员或架构师凭据。
+* 还原 WFA 数据库将擦除当前数据库。
+* 您只能将 WFA 数据库备份还原到运行相同或更高版本 OnCommand Workflow Automation 的系统。
++
+例如，如果您在运行 OnCommand Workflow Automation 4.2 的系统上创建了备份，则只能将备份还原到运行 OnCommand Workflow Automation 4.2 或更高版本的系统。
+
+
+
+.步骤
+. 以管理员身份登录到 WFA Web 图形用户界面。
+. 单击 * 设置 * ，然后在 * 维护 * 下，单击 * 备份和还原 * 。
+. 单击 * 选择文件 * 。
+. 在打开的对话框中，选择 WFA 备份文件，然后单击 * 打开 * 。
+. 单击 * 还原 * 。
+
+
+您可以查看已还原的内容以了解功能的完整性，例如自定义工作流的运行情况。

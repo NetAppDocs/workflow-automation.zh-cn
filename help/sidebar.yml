@@ -1,0 +1,283 @@
+---
+section: help
+title: 联机帮助
+entries:
+- title: OnCommand Workflow Automation 概述
+  url: "/help/concept-overview-of-oncommand-workflow-automation.html"
+- title: 创建本地用户
+  url: "/help/task-create-local-users.html"
+- title: 正在配置 OnCommand Workflow Automation
+  url: "/help/concept-advanced-configuring-oncommand-workflow-automation.html"
+  entries:
+  - title: 配置身份验证设置
+    url: "/help/task-configure-authentication-settings.html"
+  - title: 配置电子邮件通知
+    url: "/help/task-configure-mail.html"
+  - title: 配置 SNMP
+    url: "/help/task-configure-snmp.html"
+    entries:
+    - title: 配置 SNMP 版本 1
+      url: "/help/task-configure-snmp-version-1.html"
+    - title: 配置 SNMP 版本 3
+      url: "/help/task-configure-snmp-version-3.html"
+  - title: 配置系统日志
+    url: "/help/task-configure-syslog.html"
+  - title: 配置 AutoSupport
+    url: "/help/task-configure-autosupport.html"
+  - title: 为数据源采集失败配置电子邮件通知
+    url: "/help/task-configure-email-notifications-for-data-source-acquisition-failures.html"
+  - title: 为工作流配置资源预留
+    url: "/help/task-configure-resource-reservation-for-workflows.html"
+- title: 配置目标系统的凭据
+  url: "/help/task-configure-the-credentials-of-a-target-system.html"
+- title: 配置用于连接到远程系统的协议
+  url: "/help/task-configure-protocols-for-connecting-to-remote-systems.html"
+- title: OnCommand Workflow Automation 设计器功能
+  url: "/help/reference-oncommand-workflow-automation-designer-features.html"
+  entries:
+  - title: 重复行的工作原理
+    url: "/help/concept-how-repeat-row-works.html"
+  - title: 什么是批准点
+    url: "/help/concept-what-approval-points-are.html"
+  - title: 如何在出现故障时继续工作
+    url: "/help/concept-what-continue-on-failure-is.html"
+  - title: 资源选择的工作原理
+    url: "/help/concept-how-resource-selection-works.html"
+  - title: 预留的工作原理
+    url: "/help/concept-how-reservation-works.html"
+  - title: 什么是增量命名
+    url: "/help/concept-what-incremental-naming-is.html"
+  - title: 什么是条件执行
+    url: "/help/concept-what-conditional-execution-is.html"
+  - title: 返回参数的工作原理
+    url: "/help/concept-what-return-parameters-are.html"
+  - title: 什么是方案
+    url: "/help/concept-what-schemes-are.html"
+  - title: 什么是远程系统类型
+    url: "/help/concept-what-remote-system-types-are.html"
+  - title: 实体版本控制的工作原理
+    url: "/help/concept-how-entity-versioning-works.html"
+- title: 如何定义工作流
+  url: "/help/concept-how-you-define-workflows.html"
+- title: 如何映射命令参数
+  url: "/help/concept-how-you-map-command-parameters.html"
+- title: 如何定义用户输入
+  url: "/help/concept-how-you-define-user-input.html"
+- title: 如何定义常量
+  url: "/help/concept-how-you-define-constants.html"
+- title: 如何使用 REST API
+  url: "/help/concept-how-you-use-the-rest-api.html"
+- title: 设置数据源
+  url: "/help/task-set-up-a-data-source.html"
+  entries:
+  - title: 通过在 Windows 上运行 ocsetup 来配置数据库用户
+    url: "/help/task-configure-a-database-user-by-running-ocsetup-on-windows.html"
+  - title: 通过在 Linux 上运行 ocsetup 来配置数据库用户
+    url: "/help/task-configure-a-database-user-by-running-ocsetup-on-linux.html"
+  - title: 在 Active IQ Unified Manager 上配置数据库用户
+    url: "/help/task-configure-a-database-user-on-active-iq-unified-manager.html"
+- title: 创建工作流帮助内容
+  url: "/help/task-create-workflow-help-content.html"
+- title: 保留字
+  url: "/help/reference-reserved-words.html"
+- title: 如何查找有关 MVEL 的信息
+  url: "/help/reference-mvel-learning-material-reference.html"
+  entries:
+  - title: OnCommand Workflow Automation 中已启用 MVEL 的字段
+    url: "/help/reference-mvel-enabled-fields-in-wfa.html"
+  - title: MVEL 语法示例
+    url: "/help/reference-mvel-examples.html"
+- title: 参考学习材料
+  url: "/help/reference-references-to-learning-material.html"
+- title: ONTAP 中支持的工作流
+  url: "/help/reference-supported-workflows-in-clustered-data-ontap.html"
+- title: 导入 OnCommand Workflow Automation 内容
+  url: "/help/task-import-oncommand-workflow-automation-content.html"
+- title: 导入 OnCommand Workflow Automation 内容时的注意事项
+  url: "/help/reference-considerations-of-importing-wfa-content.html"
+- title: 导出 OnCommand Workflow Automation 内容
+  url: "/help/task-export-oncommand-workflow-automation-content.html"
+- title: 禁用词典条目的缓存采集
+  url: "/help/task-disable-cache-acquisition-for-dictionary-entries.html"
+- title: 创建 WFA 工作流软件包
+  url: "/help/task-create-a-workflow-automation-pack.html"
+- title: 删除 OnCommand Workflow Automation 软件包
+  url: "/help/task-delete-wfa-packs.html"
+- title: 添加批准点
+  url: "/help/task-add-approval-points.html"
+- title: 定义筛选器规则
+  url: "/help/task-define-filter-rules.html"
+- title: 创建方案
+  url: "/help/task-create-a-scheme.html"
+- title: 编辑方案
+  url: "/help/task-edit-a-scheme.html"
+- title: 删除方案
+  url: "/help/task-delete-a-scheme.html"
+- title: 添加新的远程系统类型
+  url: "/help/task-add-a-new-remote-system-type.html"
+- title: 日志查看器窗口
+  url: "/help/reference-log-viewer-directory-window.html"
+- title: 备份和还原窗口
+  url: "/help/reference-backup-restore-window.html"
+- title: 用户窗口
+  url: "/help/reference-user-window.html"
+  entries:
+  - title: 新建用户对话框
+    url: "/help/reference-new-user-dialog-box.html"
+  - title: 编辑用户对话框
+    url: "/help/reference-edit-user-dialog-box.html"
+- title: 首选项窗口
+  url: "/help/reference-client-preferences-dialog-box.html"
+- title: Active Directory 组窗口
+  url: "/help/reference-active-directory-groups-window.html"
+  entries:
+  - title: 新建 Active Directory 组对话框
+    url: "/help/reference-new-active-directory-group-dialog-box.html"
+  - title: 编辑 Active Directory 组对话框
+    url: "/help/reference-edit-active-directory-group-dialog-box.html"
+  - title: 批准门户窗口
+    url: "/help/reference-approval-portal.html"
+- title: 数据源窗口
+  url: "/help/reference-data-sources-window.html"
+  entries:
+  - title: 新建数据源对话框
+    url: "/help/reference-new-data-source-dialog-box.html"
+  - title: 编辑数据源对话框
+    url: "/help/reference-edit-data-source-dialog-box.html"
+- title: 凭据窗口
+  url: "/help/reference-credentials-window.html"
+  entries:
+  - title: 测试连接对话框
+    url: "/help/reference-test-connectivity-dialog-box.html"
+  - title: 新建凭据对话框
+    url: "/help/reference-new-credentials-dialog-box.html"
+  - title: 编辑凭据对话框
+    url: "/help/reference-edit-credentials-dialog-box.html"
+- title: 关于对话框
+  url: "/help/reference-about-dialog-box.html"
+- title: 工作流窗口
+  url: "/help/reference-portal-workflow-window.html"
+- title: 执行窗口
+  url: "/help/reference-execution-status-window.html"
+- title: 重复执行窗口
+  url: "/help/reference-recurring-executions-window.html"
+- title: 预留窗口
+  url: "/help/reference-reservations-window.html"
+- title: 计划窗口
+  url: "/help/reference-schedules-window.html"
+  entries:
+  - title: 新建计划对话框
+    url: "/help/reference-new-schedule-dialog-box.html"
+- title: 工作流窗口
+  url: "/help/reference-workflows-window.html"
+  entries:
+  - title: 新建工作流窗口
+    url: "/help/reference-new-workflow-window.html"
+    entries:
+    - title: 命令的参数对话框
+      url: "/help/reference-parameters-for-commands-dialog-box.html"
+    - title: 资源选择对话框
+      url: "/help/reference-resource-selection-dialog-box.html"
+    - title: 增量命名向导
+      url: "/help/reference-incremental-naming-wizard.html"
+    - title: 行重复详细信息对话框
+      url: "/help/reference-row-repetition-details-dialog-box.html"
+  - title: Workflow <Workflow name> 窗口
+    url: "/help/reference-edit-workflow-window.html"
+  - title: 执行工作流对话框
+    url: "/help/reference-execute-workflow-dialog-box.html"
+  - title: 编辑变量对话框
+    url: "/help/reference-edit-variable-dialog-box.html"
+  - title: 预览工作流对话框
+    url: "/help/reference-preview-workflow-dialog-box.html"
+  - title: 监控窗口
+    url: "/help/reference-monitoring-window.html"
+  - title: 新建批准点对话框
+    url: "/help/reference-new-approval-point-dialog-box.html"
+  - title: 编辑批准点对话框
+    url: "/help/reference-edit-approval-point-dialog-box.html"
+- title: 查找器窗口
+  url: "/help/reference-finders-window.html"
+  entries:
+  - title: 新建查找器对话框
+    url: "/help/reference-new-finder-dialog-box.html"
+  - title: 编辑查找器对话框
+    url: "/help/reference-edit-finder-dialog-box.html"
+  - title: 克隆查找器对话框
+    url: "/help/reference-clone-finder-dialog-box.html"
+- title: 筛选器窗口
+  url: "/help/reference-filters-window.html"
+  entries:
+  - title: 新建筛选器对话框
+    url: "/help/reference-new-filter-dialog-box.html"
+  - title: 编辑筛选器对话框
+    url: "/help/reference-edit-filter-dialog-box.html"
+  - title: 克隆筛选器对话框
+    url: "/help/reference-clone-filter-dialog-box.html"
+- title: 命令窗口
+  url: "/help/reference-commands-window.html"
+  entries:
+  - title: 新建命令定义对话框
+    url: "/help/reference-new-command-definition-dialog-box.html"
+  - title: 编辑命令定义对话框
+    url: "/help/reference-edit-command-definition-dialog-box.html"
+  - title: 克隆命令定义对话框
+    url: "/help/reference-clone-command-definition-dialog-box.html"
+- title: 功能窗口
+  url: "/help/reference-functions-window.html"
+- title: 模板窗口
+  url: "/help/reference-templates-window.html"
+  entries:
+  - title: 新建模板对话框
+    url: "/help/reference-new-template-dialog-box.html"
+  - title: 编辑模板对话框
+    url: "/help/reference-edit-template-dialog-box.html"
+  - title: 克隆模板对话框
+    url: "/help/reference-clone-template-dialog-box.html"
+- title: 方案窗口
+  url: "/help/reference-schemes-window.html"
+- title: 词典窗口
+  url: "/help/reference-dictionary-window.html"
+  entries:
+  - title: 新建词典条目对话框
+    url: "/help/reference-new-dictionary-entry-dialog-box.html"
+  - title: 编辑词典条目对话框
+    url: "/help/reference-edit-dictionary-entry-dialog-box.html"
+  - title: 克隆字典条目对话框
+    url: "/help/reference-clone-dictionary-entry-dialog-box.html"
+- title: 数据源类型窗口
+  url: "/help/reference-data-source-types-window.html"
+- title: 远程系统类型窗口
+  url: "/help/reference-remote-system-types-window.html"
+  entries:
+  - title: 新建远程系统类型对话框
+    url: "/help/reference-new-remote-system-type-dialog-box.html"
+  - title: 编辑远程系统类型对话框
+    url: "/help/reference-edit-remote-system-type-dialog-box.html"
+- title: 缓存查询窗口
+  url: "/help/reference-cache-queries-window.html"
+  entries:
+  - title: 添加缓存查询对话框
+    url: "/help/reference-add-cache-query-dialog-box.html"
+  - title: 编辑缓存查询对话框
+    url: "/help/reference-edit-cache-query-dialog-box.html"
+  - title: 克隆缓存查询对话框
+    url: "/help/reference-clone-cache-query-dialog-box.html"
+- title: 软件包窗口
+  url: "/help/reference-packs-window.html"
+  entries:
+  - title: 新建软件包对话框
+    url: "/help/reference-new-pack-dialog-box.html"
+  - title: 编辑软件包对话框
+    url: "/help/reference-edit-pack-dialog-box.html"
+- title: 类别窗口
+  url: "/help/reference-categories-window.html"
+  entries:
+  - title: 新建类别对话框
+    url: "/help/reference-new-category-dialog-box.html"
+  - title: 编辑类别对话框
+    url: "/help/reference-edit-category-dialog-box.html"
+  - title: 克隆类别对话框
+    url: "/help/reference-clone-category-dialog-box.html"
+- title: 存储自动化存储窗口
+  url: "/help/reference-wfa-store-window.html"

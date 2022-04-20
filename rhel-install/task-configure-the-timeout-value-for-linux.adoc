@@ -1,0 +1,24 @@
+---
+permalink: rhel-install/task-configure-the-timeout-value-for-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, configure, timeout value 
+summary: 您可以为 Workflow Automation （ WFA ） Web 图形用户界面配置超时值，而不是使用默认超时值 180 秒。 
+---
+= 配置 Workflow Automation 的超时值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以为 Workflow Automation （ WFA ） Web 图形用户界面配置超时值，而不是使用默认超时值 180 秒。
+
+您设置的超时值为绝对超时，而不是与非活动相关的超时。例如，如果将此值设置为 30 分钟，则即使您在此时间结束时处于活动状态，您也会在 30 分钟后注销。您不能从 WFA Web 图形用户界面设置超时值。
+
+.步骤
+. 以 root 用户身份登录到 WFA 主机。
+. 设置超时值：
++
+`installdir bin/wFA -s=timeout value in minutes`
+
+

@@ -1,0 +1,42 @@
+---
+permalink: workflows/task-add-entity-to-a-workflow-automation-pack.html 
+sidebar: sidebar 
+keywords: entity, workflow, pack, oncommand, automation, storage, integration, requirements 
+summary: 您可以将一个或多个实体添加到 OnCommand Workflow Automation （ WFA ）中的工作流软件包中以满足存储自动化和集成要求。 
+---
+= 将实体添加到 WFA 工作流软件包
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将一个或多个实体添加到 OnCommand Workflow Automation （ WFA ）中的工作流软件包中，以满足存储自动化和集成要求。
+
+您可以从以下实体中删除软件包：
+
+* 工作流
+* 查找器
+* 筛选器
+* 命令
+* 功能
+* 模板
+* 方案
+* 词典
+* 数据源类型
+* 远程系统类型
+* 缓存查询
+* 类别
+
+
+.步骤
+. 通过 Web 浏览器登录到 * WFA* 窗口。
+. 在 * 工作流设计门户中， * 导航到要添加的实体，然后单击 * 。
+. 在 * 实体 * 窗口中，选择要添加到软件包的实体。
+. 单击 * 添加到 Pack* 图标。
++
+只有将认证设置为 * 无 * 的实体才会启用 "`添加到软件包` "
+
+. 在 * 添加到软件包 <Entity>* 对话框中，从 * 可用软件包 * 下拉列表中选择要添加实体的软件包。
+. 单击 * 确定 * 。
+

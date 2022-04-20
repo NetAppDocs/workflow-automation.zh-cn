@@ -1,0 +1,35 @@
+---
+permalink: workflows/task-customize-the-create-volume-and-create-cifs-share-workflow.html 
+sidebar: sidebar 
+keywords: customize, workflows, requirements, example, modify, predefined, create, volume, share, include, deduplication, compression 
+summary: 您可以根据自己的需求自定义工作流。例如，您可以修改预定义的创建卷和 CIFS 共享工作流，使其包含重复数据删除和数据压缩。 
+---
+= 自定义创建卷和 CIFS 共享工作流
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以根据自己的需求自定义工作流。例如，您可以修改预定义的 _Create a Volume 和 CIFS Share_ 工作流，使其包含重复数据删除和数据压缩。
+
+此任务中的自定义和插图就是示例；您可以根据自己的要求修改 WFA 工作流。
+
+.步骤
+. 单击 * 工作流设计 * > * 工作流 * 。
+. 选择 * 创建卷和 CIFS 共享 * 工作流，然后单击 image:../media/clone_wfa_icon.gif["克隆图标"] 在工具栏上。
+. 单击 * 详细信息 * 选项卡，然后在 * 工作流名称 * 字段中编辑此工作流的问题描述 。
+. 单击 * 工作流 * 选项卡，展开 * 存储 * 架构，然后将 * 设置重复数据删除和数据压缩 * 命令拖放到 * 创建卷 * 和 * 创建 CIFS 共享 * 命令之间。
+. 将鼠标光标置于第一行的 * 设置重复数据删除和数据压缩 * 命令下方，然后单击 image:../media/add_object_wfa_icon.gif[""]。
+. 在 * 设置重复数据删除和数据压缩参数 * 对话框的 * 卷 * 选项卡中，选择 * 使用先前定义的卷 * 选项，然后在 * 定义卷 * 字段中选择 * 共享卷 * 选项，该字段是工作流中的 * 创建卷 * 命令创建的卷对象变量。
+. 单击 * 其他参数 * 选项卡并执行以下步骤：
++
+.. 在 * 开始节点 * 字段中选择 * true * 。
+.. 在 * 数据压缩 * 字段中选择 * 实时 * 。
+.. 在 * 计划 * 字段中输入 `"un-sat@1"` 表达式，该字段会计划在一周中的所有日期的凌晨 1 点执行重复数据删除和数据压缩
+
+
+. 单击 * 确定 * 。
+. 单击 * 预览 * 以确保已成功完成工作流规划，然后单击 * 确定 * 。
+. 单击 * 保存 * 。
+

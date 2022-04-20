@@ -1,0 +1,141 @@
+---
+permalink: help/reference-mvel-examples.html 
+sidebar: sidebar 
+keywords: expression, language, syntax, several, oncommand, workflows, automation, sample, review, learn, use 
+summary: 多个 OnCommand Workflow Automation （ WFA ）示例工作流使用了 MVFLEX 表达式语言（ MVEL ）语法。您应查看一些示例 MVEL 语法，了解如何在 WFA 中使用 MVEL 。 
+---
+= MVEL 语法示例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+多个 OnCommand Workflow Automation （ WFA ）示例工作流使用了 MVFLEX 表达式语言（ MVEL ）语法。您应查看一些示例 MVEL 语法，了解如何在 WFA 中使用 MVEL 。
+
+以下各节提供了 WFA 中使用的 MVEL 语法的一些示例。
+
+
+
+== 条件执行
+
+当找到的卷数小于 4 时，可以使用以下 MVEL 表达式来有条件地执行命令：
+
+[listing]
+----
+$NoOfVolumes < 4
+----
+
+
+== 增量命名
+
+以下 MVEL 表达式用于对象的增量命名：
+
+[listing]
+----
+last_volume.name+last_volume.state
+----
+此 MVEL 表达式使用上次创建的卷名称和上次创建的卷的状态来命名。
+
+
+
+== 命令中的字符串表示
+
+以下 MVEL 语法用作字符串表示：
+
+[listing]
+----
+DestinationCluster + ":" + DestinationVserver + "/" + DestinationVolume
+----
+
+
+== 模板
+
+模板使用以下 MVEL 语法：
+
+[listing]
+----
+calculateSnapReserveSize(calculateVolumeSizeFromDataSize((int)($fs_size*1.01),$snap_space),$snap_space)
+----
+此 MVEL 语法用于计算要为 Snapshot 副本预留的卷容量百分比。
+
+
+
+== 命令详细信息
+
+以下 MVEL 函数将在参数的属性部分中使用：
+
+[listing]
+----
+actualVolumeSize($VolumeSizeInGB * 1024, volume.snapshot_reserved_percent)
+----
+参数的属性部分使用以下 MVEL 语法：
+
+[listing]
+----
+$VolumeName+'test001'
+----
+
+
+== 工作流常量
+
+以下 MVEL 语法用于工作流中的常量：
+
+[listing]
+----
+convertNullToZero(infinite_volume.max_namespace_constituent_size_mb)
+----
+[listing]
+----
+$Size_TB*1048576L
+----
+
+
+== 返回参数
+
+以下 MVEL 语法用于验证是否可以分配请求的大小：
+
+[listing]
+----
+size_remaining == 0 ? '' : throwException('Not sufficient space in capacity_class_aggregate or data constituent of size less than 1 TB can not be created: Total size requested='+$Size_TB+'TB'+' ,Size remaining='+size_remaining/TB_TO_MB+'TB'+', Infinite volume name='+infinite_volume.name+', Storage class='+CAPACITY_CLASS_LABEL)
+----
+
+
+== 函数定义
+
+函数定义使用以下 MVEL 语法，用于将 null 转换为零：
+
+[listing]
+----
+def convertNullToZero (data)
+{
+  if(data == null)
+  {
+    return 0;
+  }
+  else
+  {
+    return data;
+  }
+}
+----
+
+
+== 特定行的重复
+
+以下 MVEL 表达式使用用户输入来指示创建 LUN 时必须重复一行的次数：
+
+[listing]
+----
+$NumberOfLunsToBeCreated
+----
+
+
+== 行的条件表达式
+
+以下 MVEL 表达式使用用户输入来指示是否要执行该行：
+
+[listing]
+----
+$SetupSnapMirror
+----

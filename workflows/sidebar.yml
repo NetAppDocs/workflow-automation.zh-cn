@@ -1,0 +1,193 @@
+---
+section: workflow
+title: 工作流
+entries:
+- title: OnCommand Workflow Automation 概述
+  url: "/workflows/concept-overview-of-oncommand-workflow-automation.html"
+- title: 了解 Workflow Automation 设计人员
+  url: "/workflows/concept-understanding-workflow-automation-designer.html"
+  entries:
+  - title: 使用 OnCommand Workflow Automation 中的组件
+    url: "/workflows/concept-working-with-the-building-blocks-in-oncommand-workflow-automation.html"
+    entries:
+    - title: 什么是数据源
+      url: "/workflows/concept-what-data-sources-are.html"
+    - title: 什么是词典条目
+      url: "/workflows/concept-what-dictionary-entries-are.html"
+    - title: 命令的工作原理
+      url: "/workflows/concept-how-commands-work.html"
+    - title: 什么是筛选器
+      url: "/workflows/concept-what-filters-are.html"
+    - title: 什么是查找器
+      url: "/workflows/concept-what-finders-are.html"
+    - title: 什么是功能
+      url: "/workflows/concept-what-functions-are.html"
+    - title: 什么是方案
+      url: "/workflows/concept-what-schemes-are.html"
+    - title: 什么是远程系统类型
+      url: "/workflows/concept-what-remote-system-types-are.html"
+    - title: 如何使用模板
+      url: "/workflows/concept-how-you-use-templates.html"
+    - title: 如何使用类别
+      url: "/workflows/concept-how-you-use-categories.html"
+    - title: 实体版本控制的工作原理
+      url: "/workflows/concept-how-entity-versioning-works.html"
+  - title: 什么是实践数据库
+    url: "/workflows/concept-what-a-playground-database-is.html"
+- title: 管理工作流
+  url: "/workflows/concept-managing-workflows.html"
+  entries:
+  - title: 自定义预定义的工作流
+    url: "/workflows/task-customize-predefined-workflows.html"
+    entries:
+    - title: 自定义创建卷和 CIFS 共享工作流
+      url: "/workflows/task-customize-the-create-volume-and-create-cifs-share-workflow.html"
+  - title: 创建工作流
+    url: "/workflows/concept-creating-workflows.html"
+    entries:
+    - title: 创建工作流所涉及的任务
+      url: "/workflows/concept-tasks-involved-in-creating-workflows.html"
+    - title: 如何定义工作流
+      url: "/workflows/concept-how-you-define-workflows.html"
+    - title: 如何定义用户输入
+      url: "/workflows/concept-how-you-define-user-input.html"
+    - title: 如何映射命令参数
+      url: "/workflows/concept-how-you-map-command-parameters.html"
+    - title: 如何定义常量
+      url: "/workflows/concept-how-you-define-constants.html"
+    - title: 重复行的工作原理
+      url: "/workflows/concept-how-repeat-row-works.html"
+    - title: 资源选择的工作原理
+      url: "/workflows/concept-how-resource-selection-works.html"
+    - title: 预留的工作原理
+      url: "/workflows/concept-how-reservation-works.html"
+    - title: 什么是增量命名
+      url: "/workflows/concept-what-incremental-naming-is.html"
+    - title: 什么是条件执行
+      url: "/workflows/concept-what-conditional-execution-is.html"
+    - title: 返回参数的工作原理
+      url: "/workflows/concept-what-return-parameters-are.html"
+    - title: 什么是批准点
+      url: "/workflows/concept-what-approval-points-are.html"
+    - title: 如何执行自定义 REST 端点
+      url: "/workflows/concept-how-you-execute-custom-rest-end-points.html"
+    - title: 如何在出现故障时继续工作
+      url: "/workflows/concept-what-continue-on-failure-is.html"
+    - title: 工作流要求检查清单示例
+      url: "/workflows/reference-workflow-requirements-checklist.html"
+    - title: 创建工作流
+      url: "/workflows/task-create-a-workflow.html"
+      entries:
+      - title: 创建工作流帮助内容
+        url: "/workflows/task-create-workflow-help-content.html"
+  - title: 创建 WFA 工作流软件包
+    url: "/workflows/task-create-a-workflow-automation-pack.html"
+    entries:
+    - title: 将实体添加到 WFA 工作流软件包
+      url: "/workflows/task-add-entity-to-a-workflow-automation-pack.html"
+    - title: 删除 OnCommand Workflow Automation 软件包
+      url: "/workflows/task-delete-wfa-packs.html"
+    - title: 导出 OnCommand Workflow Automation 内容
+      url: "/workflows/task-export-oncommand-workflow-automation-content.html"
+    - title: 导入 OnCommand Workflow Automation 内容
+      url: "/workflows/task-import-oncommand-workflow-automation-content.html"
+    - title: 导入 WFA 工作流软件包
+      url: "/workflows/task-import-an-oncommand-workflow-automation-pack.html"
+    - title: 导入 OnCommand Workflow Automation 内容时的注意事项
+      url: "/workflows/reference-considerations-of-importing-wfa-content.html"
+    - title: 升级期间的软件包标识
+      url: "/workflows/reference-pack-identification-during-upgrade.html"
+  - title: 将 WFA 工作流软件包与 SCM 存储库集成
+    url: "/workflows/concept-integrating-the-wfa-pack-with-scm-repository.html"
+    entries:
+    - title: 将新的工作流软件包签入 SCM
+      url: "/workflows/task-check-in-a-new-pack-to-scm.html"
+    - title: 签入新版本的 WFA 工作流软件包
+      url: "/workflows/task-check-in-a-new-version-of-a-pack-to-a-new-location-in-scm.html"
+    - title: 从 SCM 服务器更新 WFA 工作流软件包
+      url: "/workflows/task-update-the-pack-from-scm.html"
+    - title: 将现有 WFA 工作流软件包签入 SCM 服务器
+      url: "/workflows/task-check-in-an-already-existing-pack-into-scm.html"
+    - title: 从实体中删除 WFA 工作流软件包
+      url: "/workflows/task-remove-entities-from-a-pack.html"
+    - title: 在 SCM 中将 WFA 工作流软件包回滚到其先前版本
+      url: "/workflows/task-rollback-pack-to-a-previous-version-in-scm.html"
+- title: 为工作流创建组件
+  url: "/workflows/concept-creating-building-blocks-for-workflows.html"
+  entries:
+  - title: 创建数据源类型
+    url: "/workflows/task-create-a-data-source-type.html"
+  - title: 创建命令
+    url: "/workflows/task-create-a-command.html"
+    entries:
+    - title: 测试预留脚本中的命令
+      url: "/workflows/task-test-the-wfa-reservation-script-for-commands.html"
+  - title: 创建查找器
+    url: "/workflows/task-create-a-finder.html"
+  - title: 创建筛选器
+    url: "/workflows/task-create-a-filter.html"
+  - title: 创建词典条目
+    url: "/workflows/task-create-a-dictionary-entry.html"
+  - title: 创建函数
+    url: "/workflows/task-create-a-function.html"
+  - title: 创建模板
+    url: "/workflows/task-create-a-template.html"
+  - title: 创建缓存查询
+    url: "/workflows/task-create-a-cache-query.html"
+  - title: 创建重复计划
+    url: "/workflows/task-create-recurring-schedules.html"
+  - title: 定义筛选器规则
+    url: "/workflows/task-define-filter-rules.html"
+  - title: 添加批准点
+    url: "/workflows/task-add-approval-points.html"
+- title: WFA 编码准则
+  url: "/workflows/concept-coding-guidelines-for-wfa.html"
+  entries:
+  - title: 变量准则
+    url: "/workflows/reference-guidelines-for-variables.html"
+  - title: 缩进准则
+    url: "/workflows/reference-guidelines-for-indentation.html"
+  - title: 注释准则
+    url: "/workflows/reference-guidelines-for-comments.html"
+  - title: 日志记录准则
+    url: "/workflows/reference-guidelines-for-logging.html"
+  - title: 错误处理准则
+    url: "/workflows/reference-guidelines-for-error-handling.html"
+  - title: WFA 的一般 PowerShell 和 Perl 约定
+    url: "/workflows/reference-general-powershell-conventions-for-wfa.html"
+    entries:
+    - title: Windows 附带的 Perl 模块
+      url: "/workflows/reference-perl-database-modules-bundled-with-windows.html"
+  - title: 添加自定义 PowerShell 和 Perl 模块的注意事项
+    url: "/workflows/reference-guidelines-for-adding-custom-powershell-modules-to-wfa.html"
+  - title: WFA cmdlet 和功能
+    url: "/workflows/reference-wfa-powershell-functions.html"
+  - title: PowerShell 和 Perl WFA 模块
+    url: "/workflows/reference-powershell-and-perl-wfa-modules.html"
+  - title: 将 PowerShell 命令转换为 Perl 时的注意事项
+    url: "/workflows/reference-guidelines-for-other-programming-aspects.html"
+  - title: WFA 组件准则
+    url: "/workflows/reference-guidelines-for-wfa-building-blocks.html"
+    entries:
+    - title: WFA 中的 SQL 准则
+      url: "/workflows/reference-guidelines-for-sql-in-wfa.html"
+    - title: WFA 功能准则
+      url: "/workflows/reference-guidelines-for-wfa-functions.html"
+    - title: WFA 词典条目的准则
+      url: "/workflows/reference-guidelines-for-wfa-dictionary-entry.html"
+    - title: 命令准则
+      url: "/workflows/reference-guidelines-for-commands.html"
+    - title: 工作流准则
+      url: "/workflows/reference-guidelines-for-workflows.html"
+    - title: 为远程系统类型创建验证脚本的准则
+      url: "/workflows/reference-guidelines-for-creating-a-validation-script-for-remote-system-type.html"
+    - title: 创建数据源类型的准则
+      url: "/workflows/reference-guidelines-for-data-source-type.html"
+- title: 保留字
+  url: "/workflows/reference-reserved-words.html"
+- title: 如何使用 REST API
+  url: "/workflows/concept-how-you-use-the-rest-api.html"
+- title: 参考学习材料
+  url: "/workflows/reference-references-to-learning-material.html"
+- title: OnCommand Workflow Automation 的相关文档
+  url: "/workflows/reference-related-documentation-for-oncommand-workflow-automation.html"

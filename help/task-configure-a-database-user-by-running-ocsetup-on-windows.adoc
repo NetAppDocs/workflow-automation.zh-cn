@@ -1,0 +1,48 @@
+---
+permalink: help/task-configure-a-database-user-by-running-ocsetup-on-windows.html 
+sidebar: sidebar 
+keywords: run, ocsetup, file, datafabric, manager, server, configure, read-only, access, oncommand, workflow, automation 
+summary: 您可以在 DataFabric Manager 5.x 服务器上运行 ocsetup 文件，以配置对 OnCommand Workflow Automation 的 DataFabric Manager 5.x 数据库的只读访问权限。 
+---
+= 通过在 Windows 上运行 ocsetup 来配置数据库用户
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 DataFabric Manager 5.x 服务器上运行 `ocsetup` 文件，以配置对 OnCommand Workflow Automation 的 DataFabric Manager 5.x 数据库的只读访问权限。
+
+. 从以下位置将 `WFA_ocsetup.exe` 文件下载到 DataFabric Manager 5.x 服务器中的目录：
++
++https://WFA_Server_IP/download/wfa_ocsetup.exe.+
+
++
+_WFA_SERVER_IP_ 是 WFA 服务器的 IP 地址（ IPv4 或 IPv6 地址）。
+
++
+如果为 WFA 指定了非默认端口，则必须包括以下端口号：
+
++
++https://wfa_server_ip:port/download/wfa_ocsetup.exe.+
+
++
+_port_ 是您在安装期间用于 WFA 服务器的 TCP 端口号。
+
++
+如果要指定 IPv6 地址，则必须将其用方括号括起来。
+
+. 双击 `WFA_ocsetup.exe` 文件。
+. 阅读设置向导中的信息，然后单击 * 下一步 * 。
+. 浏览或键入 OpenJDK 位置，然后单击 * 下一步 * 。
+. 输入用户名和密码以覆盖默认凭据。
++
+此时将创建一个可访问 DataFabric Manager 5.x 数据库的新数据库用户帐户。
+
++
+
+NOTE: 如果不创建用户帐户，则会使用默认凭据。出于安全考虑，您必须创建一个用户帐户。
+
+. 单击 * 下一步 * 并查看结果。
+. 单击 * 下一步 * ，然后单击 * 完成 * 完成向导。
+

@@ -1,0 +1,50 @@
+---
+permalink: help/reference-backup-restore-window.html 
+sidebar: sidebar 
+keywords: backup, restore, window, enable, backup, oncommand, workflow, automation, database, contain, system, configuration, settings, cache, information, core, include, powershell, toolkits, perl toolkits, save, upgrade, reinstall 
+summary: 通过备份和还原窗口，您可以备份 OnCommand Workflow Automation （ WFA ）数据库，其中包含系统配置设置，缓存信息以及包含 PowerShell 工具包和 Perl 工具包的核心软件包。您也可以在升级或重新安装 WFA 时还原已保存的数据库。 
+---
+= 备份和还原窗口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过备份和还原窗口，您可以备份 OnCommand Workflow Automation （ WFA ）数据库，其中包含系统配置设置，缓存信息以及包含 PowerShell 工具包和 Perl 工具包的核心软件包。您也可以在升级或重新安装 WFA 时还原已保存的数据库。
+
+
+
+== 备份部分
+
+您可以通过选择 * 设置 * 来访问此窗口，然后在 * 维护 * 下单击 * 备份和还原 * 。
+
+* * 备份 *
++
+打开文件下载对话框，在此可以将当前数据库作为压缩文件保存到指定位置。
+
+
+
+
+
+== 还原部分
+
+* * 选择文件 *
++
+用于搜索备份数据库文件。
+
+* * 还原 *
++
+用于将配置设置和缓存信息从备份数据库文件恢复到当前 WFA 配置（如果适用）。
+
++
+还原操作后，可以使用最新版本的工具包和核心软件包。
+
++
+
+NOTE: 如果备份包含的软件包比系统上的软件包更新，则从备份还原后会显示更新的软件包。
+
++
+在导入核心软件包之前，您必须停止正在运行的任何工作流。
+
+

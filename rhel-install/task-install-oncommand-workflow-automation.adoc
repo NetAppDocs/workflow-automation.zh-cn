@@ -1,0 +1,188 @@
+---
+permalink: rhel-install/task-install-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, install, linux 
+summary: 您可以使用命令行界面（ CLI ）安装 OnCommand Workflow Automation （ WFA ）。 
+---
+= 在 Linux 上安装 OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用命令行界面（ CLI ）安装 OnCommand Workflow Automation （ WFA ）。
+
+* 您必须已查看安装前提条件。
++
+xref:reference-prerequisites-for-installing-workflow-automation.adoc[安装前提条件]
+
+* 您必须已从 NetApp 支持站点下载 WFA 安装程序。
+
+
+如果要在虚拟机（ VM ）上安装 WFA ，则虚拟机名称不能包含下划线（ _ ）字符。
+
+您可以在 Shell 提示符处更改默认安装位置： ` ./WFA-version_number.bin （ -i WFA_INSTALL_DIRECTORY_） 【 -d mysql_data_directory】`
+
+如果更改了默认安装位置，则在卸载 WFA 时不会删除 MySQL 数据目录。您必须手动删除此目录。
+
+
+NOTE: 在重新安装 WFA 4.2 或更高版本之前，如果已卸载 MySQL ，则必须删除 MySQL 数据目录。
+
+.步骤
+. 以 `root` 用户身份登录到 Linux 服务器。
+. 导航到可执行文件 .bin 所在的目录。
+. 选择以下方法之一来安装 WFA ：
++
+** 交互式安装
++
+... 启动交互式会话： ` ./wfa-version_number.bin`
+... 输入默认管理员用户的凭据，然后按 Enter 键。
++
+您必须记下管理员用户的凭据，并确保密码符合以下条件：
+
++
+**** 至少 8 个字符
+**** 一个大写字符
+**** 一个小写字符
+**** 一个数字
+**** 一个特殊字符
+**** 密码和发生原因 安装失败时不支持以下特殊字符：
++
+` " ； < > ， = & ｛ caret ｝ ...
+
+
+
+... 接受 WFA 配置的默认端口或提供自定义端口，然后按 Enter 键。
+... 指定您的公司名称和站点名称，然后按 Enter 键。
++
+站点名称可以包括 WFA 安装位置，例如匹兹堡，宾夕法尼亚州。
+
+... 选择以下操作之一，验证是否已成功安装 WFA ：
++
+**** 通过 Web 浏览器访问 WFA 。
+**** 验证 NetApp WFA Server 服务和 NetApp WFA 数据库服务是否正在运行：
++
+....
+service wfa-server status
+service wfa-db status
+....
+
+
+
+
+** 静默安装
++
+在 Shell 提示符处：
+
++
+` 。 /WFA-version_number.bin （ -u admin_user_name ）（ -p admin_user_password ）（ -m https_port ）（ -n http_port ）（ -c company_name ）（ -s site_name ）（ -i install_directory ）（ -d mysql_data_directory ）（ -y ）（ -b ）`
+
++
+如果要执行静默安装，必须为所有命令选项指定值。命令选项如下：
+
++
+[cols="2*"]
+|===
+| 选项 | Description 
+
+
+ a| 
+-y
+ a| 
+用于跳过的选项会跳过安装确认
+
+
+
+ a| 
+-b
+ a| 
+可选择跳过 Skips 在升级期间创建 WFA 数据库的备份
+
+
+
+ a| 
+-u
+ a| 
+管理员用户名
+
+
+
+ a| 
+-p
+ a| 
+管理员用户密码管理员用户密码必须满足以下条件：
+
+*** 至少 8 个字符
+*** 一个大写字符
+*** 一个小写字符
+*** 一个数字
+*** 一个特殊字符
+*** 不允许使用以下字符，并且发生原因 密码输入将失败：
++
+` " ； < > ， = & ｛ caret ｝ ...
+
+
+
+
+
+ a| 
+-m
+ a| 
+HTTPS 端口
+
+
+
+ a| 
+-n.
+ a| 
+HTTP 端口
+
+
+
+ a| 
+ a| 
+
+
+
+ a| 
+-s
+ a| 
+站点名称
+
+
+
+ a| 
+-c
+ a| 
+公司名称
+
+
+
+ a| 
+-I
+ a| 
+安装目录路径
+
+
+
+ a| 
+-d
+ a| 
+MySQL 数据目录
+
+
+
+ a| 
+-h
+ a| 
+显示的选项将显示帮助
+
+|===
+
+
+
+
+* 相关信息 *
+
+https://mysupport.netapp.com/site/["NetApp 支持"^]

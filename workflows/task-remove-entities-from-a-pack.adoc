@@ -1,0 +1,48 @@
+---
+permalink: workflows/task-remove-entities-from-a-pack.html 
+sidebar: sidebar 
+keywords: remove, pack, entities, oncommand, workflow, automation, check, updated, source, control, management, server 
+summary: 您可以从 OnCommand Workflow Automation 中的实体（ WFA ）中删除软件包，并将更新后的软件包签入源控制管理（ SCM ）服务器。 
+---
+= 从实体中删除 WFA 工作流软件包
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从 OnCommand Workflow Automation 中的实体（ WFA ）中删除软件包，并将更新后的软件包签入源控制管理（ SCM ）服务器。
+
+必须设置 SCM ，并且您必须具有管理员或架构师凭据。
+
+您可以从以下实体中删除软件包：
+
+* 工作流
+* 查找器
+* 筛选器
+* 命令
+* 功能
+* 模板
+* 方案
+* 词典
+* 数据源类型
+* 远程系统类型
+* 缓存查询
+* 类别
+
+
+.步骤
+. 通过 Web 浏览器登录到 * WFA* 窗口。
+. 在 * 工作流设计门户中， * 导航到要删除的实体，然后单击 * 。
+. 单击 * 从软件包中删除 * 图标。
+. 在 * 从软件包中删除 < 实体 >* 对话框中，选择要从该实体中删除的软件包。
+. 单击 * 确定 * 。
+. 单击 * 包 * 选项卡。
+. 单击 * 导出到服务器 * 图标。
+. 在 * 导出到服务器文件夹 * 对话框的 * 服务器系统中的文件夹位置 * 字段中，输入软件包保存在服务器中的服务器文件夹位置。
++
+此操作会将软件包以爆炸形式导出到创建 SCM 客户端的文件系统中。
+
+. 在 SCM 客户端位置，将软件包内容检入 SCM 服务器。
+. 使用 SCM 提供的比较工具根据软件包的 SCM 版本验证所做的更改。
+

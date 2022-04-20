@@ -1,0 +1,14 @@
+---
+permalink: windows-install/concept-setting-up-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: set up, oncommand, workflow, automation 
+summary: 安装完 OnCommand Workflow Automation （ WFA ）后，必须完成多项配置设置。您必须访问 WFA ，配置用户，设置数据源，配置凭据以及配置 WFA 。 
+---
+= 设置 OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安装完 OnCommand Workflow Automation （ WFA ）后，必须完成多项配置设置。您必须访问 WFA ，配置用户，设置数据源，配置凭据以及配置 WFA 。

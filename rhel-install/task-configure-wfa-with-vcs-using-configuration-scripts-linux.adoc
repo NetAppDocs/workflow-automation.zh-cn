@@ -1,0 +1,59 @@
+---
+permalink: rhel-install/task-configure-wfa-with-vcs-using-configuration-scripts-linux.html 
+sidebar: sidebar 
+keywords: configure, workflow, automation, vcs 
+summary: 在 VCS 中安装 Workflow Automation （ WFA ）后，您必须使用配置脚本在 VCS 中配置 WFA ，以实现高可用性。 
+---
+= 在 VCS 中配置 Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 VCS 中安装 Workflow Automation （ WFA ）后，您必须使用配置脚本在 VCS 中配置 WFA ，以实现高可用性。
+
+* 您必须已在两个集群节点上安装相同版本的 WFA 。
+* 两个节点的安装路径必须相同。
+* 您必须创建 WFA 的备份。
+
+
+.步骤
+. 登录到集群的第一个节点。
+. 使用集群管理器验证两个节点的 HA 状态是否都在运行。
+. 在 shell 提示符处，运行 ha_setup.pl 脚本将 WFA 数据移动到共享位置并为 WFA 配置 VCS 以进行故障转移： `` perl ha_setup.pl -first （ -t type_of_cluster_vcs ）（ -g cluster_group_name ）（ -e NIC_card _name ）（ -i IP_address ）（ -m netmask] ）（ -m netmask_logical ）））
++
+对于默认安装位置，该脚本位于 /opt/netapp/wfa/bin/ha/ 。
+
++
+`perl ha_setup.pl -first -t vcs -g WFA -e eth0 -i 10.238.170.3 -m 255.255.255.0 -n WFA_cluster -f /mnt/WFA_mount/ -v lun_volume -d lun_dg -l /opt/netapp/wFA`
+
+. 使用集群管理器验证是否已将 WFA 服务，挂载点，虚拟 IP ， NIC 和卷组添加到集群组。
+. 使用集群管理器将 WFA 资源移动到二级节点：
++
+.. 选择并右键单击集群组。
+.. 选择 * 切换到 * > * 二级节点 * 。
+
+
+. 验证集群的第二个节点上的数据挂载，虚拟 IP ，卷组和 NIC 卡是否已启动。
+. 使用集群管理器使 WFA 服务脱机：
++
+.. 选择 * WFA* > * 应用程序 * > * WFA-server* 。
+.. 右键单击并选择 * 脱机 * 。
+.. 选择 * WFA* > * 应用程序 * > * WFA-db* 。
+.. 右键单击并选择 * 脱机 * 。
+
+
+. 在 Shell 提示符处，在集群的二级节点上运行 ha_setup.pl 脚本，以配置 WFA 以使用共享位置的数据： `perl ha_setup.pl -join "-t type_of_cluster_vcs] （ -f mount_point_of_shared_lun ）`
++
+对于默认安装位置，该脚本位于 /opt/netapp/wfa/bin/ha/ 。
+
++
+`perl ha_setup.pl -join -t vcs -f /mnt/wfa_mount/`
+
+. 转到集群管理器，然后单击 * 集群组 * > * 联机 * > * 服务器 * 。
++
+集群管理器可能需要一段时间才能显示应用程序资源已联机。您还可以右键单击应用程序资源并验证这些资源是否联机。
+
+. 确保可通过此配置期间使用的 IP 地址访问 WFA 。
+

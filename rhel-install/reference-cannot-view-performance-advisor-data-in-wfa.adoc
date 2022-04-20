@@ -1,0 +1,22 @@
+---
+permalink: rhel-install/reference-cannot-view-performance-advisor-data-in-wfa.html 
+sidebar: sidebar 
+keywords: cannot, view, performance, advisor, data, wfa 
+summary: 如果无法在 WFA 中查看 Performance Advisor 数据，或者从 Performance Advisor 数据源采集数据失败，则应执行某些操作对问题描述 进行故障排除。 
+---
+= 无法在 WFA 中查看 Performance Advisor 数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果无法在 WFA 中查看 Performance Advisor 数据，或者从 Performance Advisor 数据源采集数据失败，则应执行某些操作对问题描述 进行故障排除。
+
+* 在 WFA 中将 Performance Advisor 配置为数据源时，请确保您已指定至少具有 GlobalRead 角色的 Active IQ Unified Manager 用户的凭据。
+* 在 WFA 中将 Performance Advisor 配置为数据源时，请确保已指定正确的端口。
++
+默认情况下， Active IQ Unified Manager 使用端口 8088 进行 HTTP 连接，使用端口 8488 进行 HTTPS 连接。
+
+* 确保 Active IQ Unified Manager 服务器收集性能数据。
+

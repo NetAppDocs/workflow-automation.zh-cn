@@ -1,0 +1,48 @@
+---
+permalink: workflows/concept-what-schemes-are.html 
+sidebar: sidebar 
+keywords: scheme, represent, data, model, system, collection, dictionary, entries, define, source, type, acquire, populate, virtual, environment, machines, hosts, datastores 
+summary: 方案表示系统的数据模型。数据模型是一组词典条目。您可以定义方案，然后定义数据源类型。数据源定义了如何获取数据以及填充方案。例如， VC 方案会获取有关虚拟环境的数据，例如虚拟机，主机和数据存储库。 
+---
+= 什么是方案
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+方案表示系统的数据模型。数据模型是一组词典条目。您可以定义方案，然后定义数据源类型。数据源定义了如何获取数据以及填充方案。例如， VC 方案会获取有关虚拟环境的数据，例如虚拟机，主机和数据存储库。
+
+此外，还可以通过为解决特定问题而自定义的工作流直接为方案填充数据。
+
+词典条目在创建时与现有方案关联。词典条目还与缓存查询相关联，缓存查询包括 SQL 查询。
+
+方案可以使用基于脚本的数据源类型或 SQL 数据源类型来获取数据。这些脚本是在创建数据源类型时定义的，而 SQL 查询则在缓存查询中定义。
+
+WFA 中包括以下方案：
+
+* * 7- 模式（存储） *
++
+通过 Active IQ Unified Manager 从 7- 模式 Data ONTAP 采集数据的方案。
+
+* * 集群模式 Data ONTAP （ cm_storage ） *
++
+通过 Active IQ Unified Manager 从集群模式 Data ONTAP 获取数据的方案。
+
+* * 7- 模式性能（性能） *
++
+通过 Performance Advisor 获取在 7- 模式下运行的 Data ONTAP 的性能数据的方案。
+
+* * 集群模式 Data ONTAP 性能（ cm_performance ） *
++
+通过 Performance Advisor 获取集群模式 Data ONTAP 性能数据的方案。
+
+* * VMware vCenter （ VC ） *
++
+从 VMware vCenter 获取数据的方案。
+
+* * 运动场（运动场） *
++
+可以直接使用数据填充的方案。
+
+

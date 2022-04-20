@@ -1,0 +1,23 @@
+---
+permalink: windows-install/task-back-up-regular-oncommand-workflow-automation-database-using-rest-api.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation 
+summary: 您可以使用 REST API 定期备份 OnCommand Workflow Automation （ WFA ）数据库。在定期备份中，只会备份 WFA 数据库。 
+---
+= 使用 REST API 定期备份 WFA 数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 REST API 定期备份 OnCommand Workflow Automation （ WFA ）数据库。在定期备份中，只会备份 WFA 数据库。
+
+您必须具有管理员，架构师或备份凭据。
+
+.步骤
+. 在 Web 浏览器中输入以下 URL ： ` +WFA server/rest/backups+ 的 https://IP 地址`
++
+有关详细信息，请参见 REST 文档。
+
+

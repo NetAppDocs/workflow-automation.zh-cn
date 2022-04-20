@@ -1,0 +1,14 @@
+---
+permalink: rhel-install/reference-troubleshooting.html 
+sidebar: sidebar 
+keywords: troubleshoot, installation, configuration issues 
+summary: 您可以对安装和配置 OnCommand Workflow Automation （ WFA ）时可能发生的问题进行故障排除。 
+---
+= 对安装和配置问题进行故障排除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以对安装和配置 OnCommand Workflow Automation （ WFA ）时可能发生的问题进行故障排除。

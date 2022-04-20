@@ -1,0 +1,46 @@
+---
+permalink: help/reference-approval-portal.html 
+sidebar: sidebar 
+keywords: approval, portal, window, enable, reject, workflow 
+summary: 通过批准门户窗口，您可以批准或拒绝工作流。 
+---
+= 批准门户窗口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过批准门户窗口，您可以批准或拒绝工作流。
+
+您可以通过电子邮件通知中提供的链接登录到批准门户窗口，以批准此工作流。
+
+* * 返回 WFA*
++
+将您从批准门户窗口返回到 WFA 应用程序。
+
+
+
+
+
+== 审批门户
+
+* * 输入注释 *
++
+用于输入批准或拒绝工作流的注释。
+
+
+
+
+
+== 命令按钮
+
+* * 批准并恢复 *
++
+用于批准工作流，从而恢复工作流。
+
+* * 拒绝和中止 *
++
+用于拒绝此工作流，从而中止此工作流。
+
+

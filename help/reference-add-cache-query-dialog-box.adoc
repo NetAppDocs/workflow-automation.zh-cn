@@ -1,0 +1,66 @@
+---
+permalink: help/reference-add-cache-query-dialog-box.html 
+sidebar: sidebar 
+keywords: add, cache, query, dialog, enable, create, new, dictionary, entry, associate, data, provide, type, specific, unified manager, version 
+summary: 通过添加缓存查询对话框，您可以为词典条目创建新的缓存查询，并将查询与数据提供类型（例如特定的 Active IQ Unified Manager 版本）关联。 
+---
+= 添加缓存查询对话框
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过添加缓存查询对话框，您可以为词典条目创建新的缓存查询，并将查询与数据提供类型（例如特定的 Active IQ Unified Manager 版本）关联。
+
+* * 词典条目 *
++
+用于选择要为其创建缓存查询的词典条目。
+
+* * 实体版本 *
++
+用于输入缓存查询的版本号，格式为 `major.minor.revision` 格式—例如 1.0.0 。
+
+* * 数据源类型 *
++
+用于选择要与缓存查询关联的数据源类型，例如 Active IQ Unified Manager_6.0 。
+
+
+
+
+
+== 表结构
+
+* * 属性选项卡 *
++
+显示与词典条目关联的属性。
+
+* * 创建表 SQL 选项卡 *
++
+显示该词典条目的 Create Table 脚本。
+
+
+
+
+
+== SQL 选择查询
+
+用于输入从指定数据提供程序的表中检索数据的 SQL 选择查询。
+
+
+
+== 命令按钮
+
+* * 测试 *
++
+用于测试在 * SQL SELECT QUERY * 字段中输入的 SQL 查询。
+
+* * 保存 *
++
+保存缓存查询并关闭对话框。
+
+* * 取消 *
++
+取消所做的更改（如果有），然后关闭对话框。
+
+

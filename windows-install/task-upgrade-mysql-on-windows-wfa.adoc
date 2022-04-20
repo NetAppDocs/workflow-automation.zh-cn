@@ -1,0 +1,42 @@
+---
+permalink: windows-install/task-upgrade-mysql-on-windows-wfa.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade mysql 
+summary: 您可以在 Windows 服务器上升级新版本的 MySQL for OnCommand Workflow Automation （ WFA ）。您可以升级到较新版本的 MySQL ，以获取 Windows 服务器上安全漏洞的修复。 
+---
+= 升级 MySQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 Windows 服务器上升级新版本的 MySQL for OnCommand Workflow Automation （ WFA ）。您可以升级到较新版本的 MySQL ，以获取 Windows 服务器上安全漏洞的修复。
+
+您必须在 WFA 服务器上拥有 Windows 管理员权限和 MySQL root 用户的密码。
+
+
+NOTE: 在重新安装 WFA 4.2 或更高版本之前，如果已卸载 MySQL ，则必须已删除 MySQL 数据目录。
+
+您应了解以下限制：
+
+* 您可以在任何版本的 MySQL 5.7 中进行升级。
++
+例如，您可以从 MySQL 5.7.1 升级到 MySQL 5.7.2 。
+
+* 您不能从 MySQL 5.7 升级到 MySQL 5.8
+
+
+.步骤
+. 以管理员用户身份登录到 WFA 主机。
+. 将适当版本的 MySQL 下载到目标系统。
+. 使用 Windows 服务控制台停止以下 WFA 服务：
++
+** NetApp WFA 数据库或 MYSQL57
+** NetApp WFA 服务器
+
+
+. 单击 MySQL msi 软件包以调用 MySQL 升级。
+. 按照屏幕上的说明完成 MySQL 安装。
+. 使用 Windows 服务控制台启动 WFA 服务。
+

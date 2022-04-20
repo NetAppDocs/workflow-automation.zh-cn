@@ -1,0 +1,46 @@
+---
+permalink: rhel-install/task-configure-an-earlier-version-of-wfa-to-high-availability.html 
+sidebar: sidebar 
+keywords: configure, earlier version, oncommand, workflow, automation, high availability 
+summary: 您可以配置 3.1 之前的 OnCommand Workflow Automation （ WFA ）版本以实现高可用性。 
+---
+= 配置早期版本的 OnCommand Workflow Automation 以实现高可用性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以配置 3.1 之前的 OnCommand Workflow Automation （ WFA ）版本以实现高可用性。
+
+.步骤
+. 将现有版本的 WFA 升级到最新可用版本的 WFA 。
++
+link:task-upgrade-from-wfa-4-2.html["升级 WFA"]
+
++
+此升级版本的 WFA 是集群的主节点。
+
+. 创建 WFA 数据库的备份。
++
+link:reference-backing-up-of-the-oncommand-workflow-automation-database.html["备份 WFA 数据库"]
+
++
+如果手动更改了任何参数，则必须创建 WFA 数据库的备份，卸载现有 WFA 安装，安装最新可用版本的 WFA ，还原备份，然后继续执行 Veritas Cluster Server （ VCS ）配置。
+
+. 配置 VCS 以在主节点上安装 WFA 。
++
+link:task-configure-vcs-to-install-wfa.html["配置 VCS 以安装 WFA"]
+
+. 在二级节点上安装最新可用版本的 WFA 。
++
+link:task-install-oncommand-workflow-automation.html["安装 WFA"]
+
+. 在 VCS 中配置 WFA 。
++
+link:task-configure-wfa-with-vcs-using-configuration-scripts-linux.html["在 VCS 中配置 WFA"]
+
++
+WFA 服务器已配置为高可用性。
+
+

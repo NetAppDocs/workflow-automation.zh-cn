@@ -1,0 +1,14 @@
+---
+permalink: windows-install/concept-upgrading-third-party-products-in-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, third-party products 
+summary: 您可以在 OnCommand Workflow Automation （ WFA ）上升级第三方产品，例如 Windows 中的 OpenJDK ， MySQL 和 ActiveState Perl 。Open JDK ， MySQL 等第三方产品会报告安全漏洞。从此版本的 WFA 开始，您现在可以自行升级第三方产品。 
+---
+= 升级第三方产品
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 OnCommand Workflow Automation （ WFA ）上升级第三方产品，例如 Windows 中的 OpenJDK ， MySQL 和 ActiveState Perl 。Open JDK ， MySQL 等第三方产品会报告安全漏洞。从此版本的 WFA 开始，您现在可以自行升级第三方产品。

@@ -1,0 +1,24 @@
+---
+permalink: workflows/reference-guidelines-for-adding-custom-powershell-modules-to-wfa.html 
+sidebar: sidebar 
+keywords: aware, certain, considerations, adding, custom, powershell, perl, modules, oncommand, workflow, automation, enable, commands, create 
+summary: 在将自定义 PowerShell 和 Perl 模块添加到 OnCommand Workflow Automation （ WFA ）之前，您必须了解某些注意事项。通过自定义 PowerShell 和 Perl 模块，您可以使用自定义命令创建工作流。 
+---
+= 添加自定义 PowerShell 和 Perl 模块的注意事项
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在将自定义 PowerShell 和 Perl 模块添加到 OnCommand Workflow Automation （ WFA ）之前，您必须了解某些注意事项。通过自定义 PowerShell 和 Perl 模块，您可以使用自定义命令创建工作流。
+
+* 在执行 WFA 命令期间，所有自定义 PowerShell 模块都会添加到 WFA 安装目录 ` /wally/modules` 中。
+* 添加到 `WFA/perl` 目录的所有自定义 Perl 模块都包含在 _@INC_ 库中。
+* 在 WFA 备份操作中，不会备份自定义 PowerShell 和 Perl 模块。
+* WFA 还原操作不会还原自定义 PowerShell 和 Perl 模块。
+
+
+您必须手动备份自定义 PowerShell 和 Perl 模块，才能将其复制到新的 WFA 安装中。
+
+模块目录中的文件夹名称必须与模块名称相同。

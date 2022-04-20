@@ -1,0 +1,54 @@
+---
+permalink: workflows/reference-guidelines-for-wfa-functions.html 
+sidebar: sidebar 
+keywords: create, functions, encapsulate, common, complex, logic, name, function, reuse, command, parameter, value, oncommand, workflow, automation 
+summary: 您可以创建一些函数来将常用且更复杂的逻辑封装在命名函数中，然后在 OnCommand Workflow Automation （ WFA ）中将该函数重复用作命令参数值或筛选参数值。 
+---
+= WFA 功能准则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以创建一些函数来将常用且更复杂的逻辑封装在命名函数中，然后在 OnCommand Workflow Automation （ WFA ）中将该函数重复用作命令参数值或筛选参数值。
+
+[cols="2*"]
+|===
+| 准则 | 示例 
+
+
+ a| 
+使用 Camel 大小写作为函数名称。
+ a| 
+计算卷大小
+
+
+
+ a| 
+变量名称应使用纯英文，并与函数的功能相关。
+ a| 
+splitByDelimiter
+
+
+
+ a| 
+请勿使用缩写词。
+ a| 
+calculateVolumeSize ， _not_ calcVolSize
+
+
+
+ a| 
+函数使用 MVFLEX 表达式语言（ MVEL ）定义。
+ a| 
+无
+
+
+
+ a| 
+应根据官方 Java 编程语言准则指定函数定义。
+ a| 
+无
+
+|===

@@ -1,0 +1,19 @@
+---
+permalink: help/reference-log-viewer-directory-window.html 
+sidebar: sidebar 
+keywords: log, viewer, window, list, available, oncommand, workflow, automation, access, select, maintenance, click, log viewer 
+summary: 日志查看器窗口列出了 OnCommand Workflow Automation 中的所有可用日志。您可以通过选择设置来访问此窗口，然后在维护下单击日志查看器。 
+---
+= 日志查看器窗口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+日志查看器窗口列出了 OnCommand Workflow Automation 中的所有可用日志。您可以通过选择 * 设置 * 来访问此窗口，然后在 * 维护 * 下单击 * 日志查看器 * 。
+
+日志查看器窗口按字母顺序列出日志文件，并包括每个文件的文件大小和生成日期。
+
+
+NOTE: Microsoft Windows Server 2003 不支持此功能。

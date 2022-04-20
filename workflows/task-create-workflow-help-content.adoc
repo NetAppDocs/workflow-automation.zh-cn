@@ -1,0 +1,47 @@
+---
+permalink: workflows/task-create-workflow-help-content.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, admins, architects, design, workflows, create, help, content, include 
+summary: 设计工作流的 OnCommand Workflow Automation （ WFA ）管理员和架构师可以为工作流创建帮助内容并将其包含在工作流中。 
+---
+= 创建工作流帮助内容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+设计工作流的 OnCommand Workflow Automation （ WFA ）管理员和架构师可以为工作流创建帮助内容并将其包含在工作流中。
+
+您必须了解如何使用 HTML 创建网页。
+
+该帮助应向执行该工作流的存储操作员提供有关该工作流和用户输入的信息。
+
+.步骤
+. 创建具有以下名称的文件夹： Workflow -help 。
+. 使用 HTML 编辑器或文本编辑器编写帮助内容，并将其保存为 `vWorkflow -help` 文件夹中的 `index.htm` 文件。
++
+您不能在帮助内容中包含 JavaScript 文件。以下是支持的文件扩展名：
+
++
+** .jpg
+** .jpeg
+** gif
+** png
+** .xml
+** .thmx
+** .htm
+** .html
+** .CSS
+
+
++
+您还可以包括由 Windows 创建的 `Thumbs.db` 文件。
+
+. 验证 `index.htm` 文件以及与帮助内容关联的其他文件（如图像）是否位于 `Workflow -Help` 文件夹中。
+. 为该文件夹创建一个 ` .zip` 文件，并确保 ` .zip` 文件的大小不超过 2 MB 。
++
+`创建 NFS volume-help.zip`
+
+. 编辑已创建帮助内容的工作流，然后单击 * 设置 * > * 帮助内容 * > * 浏览 * 上传 ` .zip` 文件。
+

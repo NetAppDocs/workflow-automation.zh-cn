@@ -1,0 +1,27 @@
+---
+permalink: windows-install/task-configure-the-timeout-value-for-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, configure, timeout value 
+summary: 您可以为 Workflow Automation （ WFA ） Web 图形用户界面配置超时值，而不是使用默认超时值。 
+---
+= 配置 Workflow Automation 的超时值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以为 Workflow Automation （ WFA ） Web 图形用户界面配置超时值，而不是使用默认超时值。
+
+WFA Web 图形用户界面的默认超时值为 180 分钟。您可以通过命令行界面配置超时值以满足您的要求。您不能从 WFA Web 图形用户界面设置超时值。
+
+
+NOTE: 您设置的超时值为绝对超时，而不是与非活动相关的超时。例如，如果将此值设置为 30 分钟，则即使您在此时间结束时处于活动状态，您也会在 30 分钟后注销。
+
+.步骤
+. 以管理员身份登录到 WFA 主机。
+. 设置超时值：
++
+`installdir bin/wFA -s=timeout value in minutes`
+
+

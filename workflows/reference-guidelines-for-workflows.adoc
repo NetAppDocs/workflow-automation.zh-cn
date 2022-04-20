@@ -1,0 +1,304 @@
+---
+permalink: workflows/reference-guidelines-for-workflows.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, modify, predefined, workflow, oncommand, workflow, automation 
+summary: 您必须了解为 OnCommand Workflow Automation （ WFA ）创建或修改预定义工作流的准则。 
+---
+= 工作流准则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须了解为 OnCommand Workflow Automation （ WFA ）创建或修改预定义工作流的准则。
+
+
+
+== 一般准则
+
+[cols="2*"]
+|===
+| 准则 | 示例 
+
+
+ a| 
+为工作流命名，使其反映存储操作员执行的操作。
+ a| 
+`创建 CIFS 共享`
+
+
+
+ a| 
+对于工作流名称，请将第一个词的首字母以及对象的每个词大写。首字母大写表示缩写词和首字母缩略语。
+ a| 
+Volume
+
+qtree
+
+创建集群模式 Data ONTAP qtree CIFS 共享
+
+
+
+ a| 
+有关工作流说明，请包括工作流的所有重要步骤，包括任何前提条件，工作流结果或执行的条件方面。
+ a| 
+请参见示例工作流的问题描述 `在集群模式 Data ONTAP 存储上创建 VMware NFS 数据存储库，` 其中包括前提条件。
+
+
+
+ a| 
+仅当工作流已准备好投入生产并可显示在门户页面中时，才将 "`Ready for 生产` " 设置为 `true` 。
+ a| 
+无
+
+
+
+ a| 
+默认情况下，将 "`consider reserved elements` " 设置为 true 。预览要执行的工作流时， WFA 规划器会考虑预留的所有对象以及缓存数据库中的现有对象。如果此选项设置为 `true ，则在规划特定工作流时会考虑其他计划工作流或并行执行的工作流的影响。`
+ a| 
+* 场景 1
++
+工作流 1 将创建一个卷，并计划在一周后执行。工作流 2 会在搜索的卷中创建 qtree 或 LUN ，如果工作流 2 在一天后执行，则应关闭工作流 2 的 "`Consider reserved elements` " ，以防止其考虑要在一周内创建的卷。
+
+* 场景 2
++
+工作流 1 使用 `Create Volume` 命令。如果计划的工作流 2 占用聚合的 100 GB 空间，则工作流 1 必须在规划期间考虑工作流 2 的要求。
+
+
+
+
+
+ a| 
+默认情况下， "`启用元素存在验证` " 设置为 `true 。`
+ a| 
+* 场景 1
++
+如果您创建的工作流首先使用命令 `Remove Volume` Only if the volume exists 按名称删除卷，然后使用另一个命令（例如 `Create Volume` 或 `Clone Volume ，` ）重新创建卷，则此工作流不应使用此标志。`Create volume` 命令无法使用删除卷的效果，从而导致工作流失败。
+
+* 场景 2
++
+在特定名称为 "`vol198` " 的工作流中使用 `Create Volume` 命令。
+
++
+如果此选项设置为 true ，则 WFA 规划器会在规划期间检查给定阵列中是否存在使用该名称的卷。如果卷存在，则在规划期间工作流将失败。
+
+
+
+
+
+ a| 
+如果在工作流中多次选择同一命令，请为命令实例提供适当的显示名称。
+ a| 
+"`使用 SnapVault` 创建，映射和保护 LUN " 示例工作流使用 `创建卷` 命令两次。但是，对于主卷和镜像目标卷，它会相应地使用显示名称 `Create Primary Volume` 和 `Create Secondary Volume` 。
+
+|===
+
+
+== 用户输入
+
+[cols="2*"]
+|===
+| 准则 | 示例 
+
+
+ a| 
+名称：
+
+* 名称以 "` $` " 字符开头。
+* 在每个词的开头使用大写字母。
+* 所有术语和缩写词均使用大写字母。
+* 请勿使用下划线。
+
+ a| 
+` $Array`
+
+` $VolumeName`
+
+
+
+ a| 
+显示名称：
+
+* 在每个词的开头使用大写字母。
+* 使用空格分隔词语。
+* 如果输入包含特定单位，请直接在显示名称的方括号中指定单位。
+
+ a| 
+`卷名称`
+
+`卷大小（ MB ）`
+
+
+
+ a| 
+说明：
+
+* 为每个用户输入提供有意义的问题描述 。
+* 根据需要提供示例。
++
+您尤其应在用户输入应采用特定格式时执行此操作。
+
+
+
+用户输入说明将在工作流执行期间显示为用户输入的工具提示。
+ a| 
+要添加到 "`iGroup` " 的启动程序。例如，启动程序的 IQN 或 WWPN 。
+
+
+
+ a| 
+Type ：如果要将输入限制为一组特定值，请选择 Enum 作为类型。
+ a| 
+协议： "`iSCSI` " ， "`FCP` " ， " `mi` "
+
+
+
+ a| 
+Type ：选择 Query 作为用户可以从 WFA 缓存中的可用值中选择的类型。
+ a| 
+$Array ：查询类型，如下所示：
+
+[listing]
+----
+SELECT
+	ip, name
+FROM
+	storage.array
+----
+
+
+ a| 
+type ：如果用户输入应限制为从查询获取的值或仅限于受支持的枚举类型，请将用户输入标记为 locked 。
+ a| 
+$Array ： Locked Query type ：只能选择缓存中的阵列。 $Protocol ： Locked Enum 类型，有效值为 iSCSI ， FCP ，混合。不支持有效值以外的其他值。
+
+
+
+ a| 
+type ： query TypeAdd additional columns as return values in the query when it helps the storage operator to make the right choice of user input.
+ a| 
+$aggregate ：提供名称，总大小和可用大小，以便操作员在选择聚合之前了解属性。
+
+
+
+ a| 
+type ：用于用户输入的查询 TypeSQL 查询可以引用之前的任何其他用户输入。这可用于根据其他用户输入限制查询结果，例如，阵列的 vFiler 单元，聚合的卷， Storage Virtual Machine （ SVM ）中的 LUN 。
+ a| 
+在示例工作流 `创建集群模式 Data ONTAP 卷，` VserverName 的查询如下：
+
+[listing]
+----
+SELECT
+    vserver.name
+FROM
+    cm_storage.cluster cluster,
+    cm_storage.vserver vserver
+WHERE
+    vserver.cluster_id = cluster.id
+    AND cluster.name = '${ClusterName}'
+    AND vserver.type = 'cluster'
+ORDER BY
+    vserver.name ASC
+----
+查询引用的是 $\ ｛ clustername ｝ ，其中 $clustername 是 $VserverName 用户输入之前的用户输入名称。
+
+
+
+ a| 
+Type ：对于本质上为布尔值的用户输入，请使用布尔类型，值为 "`true ， false` " 。这有助于在工作流设计中直接使用用户输入编写内部表达式。例如， $UserInputName 而不是 $UserInputName = "`Yes" 。
+ a| 
+` $CreateCIFSShare` ：有效值为 "`true` " 或 "`false` " 的布尔类型
+
+
+
+ a| 
+type ：对于字符串和数字类型，如果要使用特定格式验证值，请在值列中使用正则表达式。
+
+使用正则表达式输入 IP 地址和网络掩码。
+ a| 
+位置特定的用户输入可以表示为 "` A-Z ]A-Z ]\-0[1-9]` " 。此用户输入可接受 "`US-01` " ， "`NNB-02` " 等值，但不能接受 "`NB - 00` " 等值。
+
+
+
+ a| 
+type ：对于数字类型，可以在值列中指定基于范围的验证。
+ a| 
+要创建的 LUN 数量， " 值 " 列中的条目为 1-20 。
+
+
+
+ a| 
+Group ：将相关用户输入分组到相应的存储分段中并为组命名。
+ a| 
+所有与存储相关的用户输入均为 " `s存储详细信息` " 。所有与 VMware 相关的用户输入均为 `datastore Details` 。
+
+
+
+ a| 
+必填：如果要执行工作流，需要任何用户输入的值，请将用户输入标记为必填。这样可以确保用户输入屏幕能够强制接受用户输入的内容。
+ a| 
+"`创建 NFS 卷` " 工作流中的 "` $VolumeName` " 。
+
+
+
+ a| 
+默认值：如果用户输入的默认值可用于大多数工作流执行，请提供这些值。这有助于用户在执行期间提供较少的输入，前提是默认值可以满足此目的。
+ a| 
+无
+
+|===
+
+
+== 常量，变量和返回参数
+
+|===
+
+
+| 准则 | 示例 
+
+
+ a| 
+常量：使用通用值为多个命令定义参数时定义常量。
+ a| 
+`使用 SnapVault 示例工作流创建，映射和保护 LUN` 中的 _aggregate_overcommit_threshold_ 。
+
+
+
+ a| 
+常量：名称
+
+* 在每个词的开头使用大写字母。
+* 所有术语和缩写词均使用大写字母。
+* 请勿使用下划线。
+* 所有常量名称的字母均使用大写字母。
+
+ a| 
+_aggregate_used_space_threshold_
+
+_ActualVolumeSizeInMB_
+
+
+
+ a| 
+变量：为在其中一个命令参数框中定义的对象提供一个名称。变量是自动生成的名称，可以进行更改。
+ a| 
+无
+
+
+
+ a| 
+Variables ：名称对变量名称使用小写字符。
+ a| 
+卷 1
+
+cifs_share
+
+
+
+ a| 
+返回参数：如果工作流规划和执行在规划期间应返回一些已计算或选定的值，请使用返回参数。如果也从 Web 服务执行工作流，则这些值将在预览模式下可用。
+ a| 
+聚合：如果使用资源选择逻辑选择聚合，则可以将实际选定聚合定义为返回参数。
+
+|===

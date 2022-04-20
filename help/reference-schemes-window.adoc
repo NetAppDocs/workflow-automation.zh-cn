@@ -1,0 +1,167 @@
+---
+permalink: help/reference-schemes-window.html 
+sidebar: sidebar 
+keywords: scheme, window, display, available, scheme, enable, manage, oncommand, workflow, automation, acquire, data, relevant, environment 
+summary: '" 方案 " 窗口将显示可用方案，并可用于管理这些方案。OnCommand Workflow Automation （ WFA ）使用方案获取与环境相关的数据。' 
+---
+= 方案窗口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+" 方案 " 窗口将显示可用方案，并可用于管理这些方案。OnCommand Workflow Automation （ WFA ）使用方案获取与环境相关的数据。
+
+方案表示系统的数据模型。数据模型是一组词典条目。您可以定义方案，然后定义数据源类型。数据源定义了如何获取数据以及填充方案。例如， _VC 方案 _ 包含与您的虚拟环境相关的数据，例如虚拟机，主机和数据存储库。
+
+
+
+== 方案表
+
+模式表列出了可用的方案条目。每个条目都标识为以下项之一：
+
+* image:../media/community_certification.gif[""] —用户创建的内容
+* image:../media/ps_certified_icon_wfa.gif[""] —由专业服务（ PS ）开发的内容，仅适用于由 PS 自定义安装的内容
+* image:../media/community_certification.gif[""] —用户开发的软件包
+* image:../media/lock_icon_wfa.gif[""] —由锁定的用户创建的内容
+* image:../media/netapp_certified.gif[""] — NetApp 认证的内容
+
+
+您可以使用每个列可用的筛选和排序功能以及重新排列列顺序来自定义表显示。
+
+* image:../media/filter_icon_wfa.gif["筛选器图标"] 启用或禁用筛选整个表。如果禁用了筛选，则图标上方会显示一个红色的 "x" 。
+* 双击 image:../media/filter_icon_wfa.gif["筛选器图标"] 清除并重置筛选选项。
+* image:../media/wfa_filter_icon.gif["筛选器图标"] 在每个列标题上，您可以根据列的内容进行筛选。单击 image:../media/wfa_filter_icon.gif["筛选器图标"] 在列中，您可以从下拉列表中筛选特定项目或所有可用项目。
+* 单击列标题可在排序的升序和降序之间切换。您可以通过排序箭头（image:../media/wfa_sortarrow_up_icon.gif["\"Sort Up \" 图标"] 用于升序和 image:../media/wfa_sortarrow_down_icon.gif["\" 向下排序 \" 图标"] 降序）。
+* 要重新排列列的位置，您可以拖放列，将其按任何所需顺序放置。但是，您不能隐藏或删除其中任何列。
+* 单击 * 搜索 * 筛选器文本框可搜索特定内容。此外，您还可以使用支持的运算符搜索适用的列类型，即字母或数字。
+
+
+模式表包含以下列：
+
+* * 认证 *
++
+指示方案是否由用户创建（image:../media/community_certification.gif[""]）， PS （image:../media/ps_certified_icon_wfa.gif[""]），社区（image:../media/community_certification.gif[""]），用户锁定（image:../media/lock_icon_wfa.gif[""]）或 NetApp 认证的（image:../media/netapp_certified.gif[""]）。
+
+* * 名称 *
++
+显示方案的名称。
+
++
+您可以通过在 * 搜索 * 筛选器文本框中输入方案名称来搜索方案。
+
+* * 显示名称 *
++
+显示方案的名称。
+
++
+您可以通过在 * 搜索 * 筛选器文本框中输入方案名称来搜索方案。
+
+* * 实体版本 *
++
+以 `major.minor.revision` format —例如 1.0.0 显示对象的版本号。
+
++
+您可以通过在 * 搜索 * 筛选器文本框中输入版本号来搜索方案。
+
+* * 问题描述 *
++
+显示方案的问题描述 。
+
++
+您可以通过在 * 搜索 * 筛选器文本框中输入方案的问题描述 来搜索方案。
+
+* * 类型 *
++
+指示该方案是用于从远程系统采集数据，还是直接从工作流或命令采集数据。可能值包括 " 数据源采集 " 和 " 其他 " 。
+
++
+您可以通过在 * 搜索 * 筛选器文本框中输入类型来搜索方案。
+
+* * 重置标志 *
++
+指示是否在下一个数据采集周期内重置此方案。可能的值为 true 和 false 。
+
+* * 上次更新时间 *
++
+显示上次更新方案的日期和时间。
+
++
+您可以从筛选器下拉列表中选择所需的时间类别来搜索方案。
+
+* * 更新者 *
++
+显示更新方案的用户的名称。
+
++
+您可以通过在 * 搜索 * 筛选器文本框中输入用户名来搜索方案。
+
+* * 锁定者 *
++
+显示锁定方案的用户的名称。
+
++
+您可以通过在 * 搜索 * 筛选器文本框中输入用户名来搜索方案。
+
+
+
+
+
+== 工具栏
+
+工具栏位于列标题上方。您可以使用工具栏中的图标执行各种操作。也可以从窗口中的右键单击菜单访问这些操作。
+
+* *image:../media/new_wfa_icon.gif["新建图标"] （新增） *
++
+打开新建方案对话框，在此可以创建新方案。
+
+* *image:../media/edit_wfa_icon.gif["编辑图标"] （编辑） *
++
+打开选定方案的方案 <SchemeName> 对话框，在此可以编辑该方案。
+
+* *image:../media/lock_wfa_icon.gif["锁定图标"] （锁定） *
++
+打开锁定方案确认对话框，在此可以锁定选定方案。只有您创建的方案才会启用此选项。
+
+* *image:../media/unlock_wfa_icon.gif["解除锁定图标"] （解锁） *
++
+打开解锁方案确认对话框，在此可以解锁选定方案。只有您锁定的方案才会启用此选项。管理员可以解除其他用户锁定的方案的锁定。
+
+* *image:../media/delete_wfa_icon.gif["删除图标"] （删除） *
++
+打开删除方案确认对话框，在此可以删除选定的用户创建的方案。
+
++
+
+NOTE: 您不能删除 WFA 或 PS 方案。
+
+* *image:../media/export_wfa_icon.gif["导出图标"] （导出） *
++
+用于导出选定用户创建的方案。
+
++
+
+NOTE: 您不能导出 WFA 或 PS 方案。
+
+* *image:../media/reset_scheme_wfa_icon.gif["重置方案图标"] （重置方案） *
++
+用于在下一个数据采集周期中重置方案。
+
+* *image:../media/add_to_pack.png["添加到软件包图标"] （添加到软件包） *
++
+打开添加到软件包方案对话框，在此可以将该软件包及其可靠实体添加到软件包中，该软件包可编辑。
+
++
+
+NOTE: 只有在认证设置为 * 无 * 的方案中，才会启用添加到软件包功能
+
+* *image:../media/remove_from_pack.png["从软件包中删除图标"] （从软件包中删除） *
++
+打开选定方案的从软件包中删除方案对话框，在此可以从软件包中删除或删除该方案。
+
++
+
+NOTE: 只有将认证设置为 * 无 * 的方案才会启用从软件包中删除功能
+
+

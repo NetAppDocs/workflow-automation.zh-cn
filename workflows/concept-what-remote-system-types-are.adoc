@@ -1,0 +1,26 @@
+---
+permalink: workflows/concept-what-remote-system-types-are.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, communicates, remote, system, types, specifies, type, configure, data, ontap 
+summary: OnCommand Workflow Automation （ WFA ）与远程系统类型进行通信。远程系统类型指定 WFA 可以与之通信的远程系统的类型。您可以在 WFA 中配置远程系统类型。例如，可以将 Data ONTAP 系统配置为远程系统类型。 
+---
+= 什么是远程系统类型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation （ WFA ）与远程系统类型进行通信。远程系统类型指定 WFA 可以与之通信的远程系统的类型。您可以在 WFA 中配置远程系统类型。例如，可以将 Data ONTAP 系统配置为远程系统类型。
+
+远程系统类型具有以下属性：
+
+* Name
+* Description
+* version
+* 协议
+* Port
+* 超时
+
+
+您可以为每种远程系统类型创建一个 Perl 脚本，以验证远程系统的凭据。您可以存储 WFA 上配置的远程系统的凭据。您可以添加或编辑新的自定义远程系统类型。您还可以克隆现有远程系统类型。只有在没有与远程系统类型关联的系统时，才能将其删除。

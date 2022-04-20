@@ -1,0 +1,22 @@
+---
+permalink: workflows/reference-wfa-powershell-functions.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, several, powershell, cmdlets, perl, function, use, wfa commands 
+summary: OnCommand Workflow Automation （ WFA ）提供了多个 PowerShell cmdlet 以及可在 WFA 命令中使用的 PowerShell 和 Perl 功能。 
+---
+= WFA cmdlet 和功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation （ WFA ）提供了多个 PowerShell cmdlet 以及可在 WFA 命令中使用的 PowerShell 和 Perl 功能。
+
+您可以使用以下 PowerShell 命令查看 WFA 服务器提供的所有 PowerShell cmdlet 和功能：
+
+* `Get-Command -Module WFAWrapper`
+* `Get-Command -Module WFA`
+
+
+您可以在 `WFAutil.pm` 模块中查看 WFA 服务器提供的所有 Perl 功能。通过 WFA 帮助模块的帮助部分 WFA PowerShell cmdlet 帮助和 WFA Perl 方法帮助，可以访问所有 PowerShell cmdlet 和功能以及 Perl 功能。

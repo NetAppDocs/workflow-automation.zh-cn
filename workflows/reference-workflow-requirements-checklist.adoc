@@ -1,0 +1,230 @@
+---
+permalink: workflows/reference-workflow-requirements-checklist.html 
+sidebar: sidebar 
+keywords: workflow, requirements, checklist, include, details, requirements, commands, user, input, resources, planned, workflow, identify, gap 
+summary: 工作流要求检查清单包括计划工作流的详细要求，例如命令，用户输入和资源。您可以使用检查清单来规划工作流并确定需求中的差距。 
+---
+= 工作流要求检查清单示例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+工作流要求检查清单包括计划工作流的详细要求，例如命令，用户输入和资源。您可以使用检查清单来规划工作流并确定需求中的差距。
+
+
+
+== 要求检查清单示例
+
+以下示例工作流要求检查清单列出了 "`创建集群模式 Data ONTAP 卷` " 工作流的要求。您可以使用此示例检查清单作为模板来列出工作流要求。
+
+[cols="2*"]
+|===
+| 要求 | Description 
+
+
+ a| 
+工作流名称
+ a| 
+创建集群模式 Data ONTAP 卷
+
+
+
+ a| 
+类别
+ a| 
+存储配置
+
+
+
+ a| 
+Description
+ a| 
+此工作流将在特定 SVM 中创建一个新卷。此工作流适用于配置并委派卷以供日后使用的情形。
+
+
+
+ a| 
+工作流工作原理的高级问题描述
+ a| 
+* 包含卷的 SVM 由用户指定（集群， SVM 名称）。
+* 系统将根据指定大小创建卷。
+* 卷的配置将在模板中进行介绍。
+
+
+
+
+ a| 
+详细信息
+ a| 
+* 使用 * 创建 CM 卷 * 命令
+* * 创建 CM 卷 * 的命令详细信息：
++
+** 执行设置为始终
+** 卷详细信息可通过填写卷的属性来指定
+** 使用 * 空间保证设置 * 模板配置卷
+** 卷名称和大小由用户提供。
++
+此卷将作为 ` /volname` 挂载到 SVM 命名空间中（位于根命名空间下）。
+
+** 使用 * 实际卷大小 * 函数，因为快照预留将为 5% 。
+** SVM 引用使用以下资源选择逻辑进行定义：
++
+*** CM SVM by key —按名称搜索 SVM 以及用户提供的集群
+*** CM SVM by type —仅数据 SVM （ type = cluster ）
+*** 按状态划分的 SVM - （状态 = 正在运行）
+
+
+** 聚合引用使用资源选择逻辑作为预定义查找器（按空间阈值和 RAID 类型划分的 CM 聚合）进行定义：
++
+*** 按可用容量显示的 CM 聚合（容量 = 要配置的卷大小，由用户提供的集群）
+*** 按委派给 SVM 的 CM 聚合
+*** 按 RAID 类型划分的 CM 聚合（ RAID-DP ）
+*** CM 聚合不是 aggr0
+*** 按已用大小 % 划分的 CM 聚合（阈值 = 90 ，空间已配置 = 提供的大小，因为保证为卷）
+*** CM 聚合过量使用（阈值 = 300 ， spaceToBeAllocated = 要配置的卷大小）
+*** 选择可用空间最大的聚合
+
+
+
+
+
+
+|===
+[cols="3*"]
+|===
+| Name | Type | 问题描述 （数据值，验证等） 
+
+
+ a| 
+集群
+ a| 
+锁定查询（表格）
+ a| 
+* 托管 SVM 的集群
+* 查询可以采用表格形式显示，并显示集群的主地址和名称
+* 按名称的字母顺序排序
+
+
+
+
+ a| 
+SVM
+ a| 
+已锁定查询
+ a| 
+* 配置卷的 SVM
+* 查询应仅显示属于在先前输入中选择的集群的 SVM 名称
++
+仅显示集群类型 SVM ，而不显示管理或节点（ cm_storage.vserver 的 type 列）
+
+* 按字母顺序排序
+
+
+
+
+ a| 
+Volume
+ a| 
+string
+ a| 
+* 要创建的卷的名称
+
+
+
+
+ a| 
+大小（以 GB 为单位）
+ a| 
+整型
+ a| 
+* 要配置的卷的大小
+* 数据大小（应考虑快照预留）
+
+
+|===
+* 命令 *
+
+[cols="3*"]
+|===
+| Name | Description | Status 
+
+
+ a| 
+创建 CM 卷
+ a| 
+在 SVM 中创建卷
+ a| 
+现有
+
+|===
+* 返回参数 *
+
+[cols="2*"]
+|===
+| Name | 价值 
+
+
+ a| 
+Volume name
+ a| 
+已配置卷的名称
+
+
+
+ a| 
+Aggregate name
+ a| 
+选定聚合的名称
+
+
+
+ a| 
+Node name
+ a| 
+节点的名称
+
+
+
+ a| 
+Cluster name
+ a| 
+集群的名称
+
+|===
+* 差距和问题 *
+
+[cols="2*"]
+|===
+
+
+ a| 
+1.
+ a| 
+
+
+
+ a| 
+2.
+ a| 
+
+
+
+ a| 
+3.
+ a| 
+
+
+
+ a| 
+4.
+ a| 
+
+
+
+ a| 
+5.
+ a| 
+
+|===

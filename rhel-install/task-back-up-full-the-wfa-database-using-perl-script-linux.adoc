@@ -1,0 +1,38 @@
+---
+permalink: rhel-install/task-back-up-full-the-wfa-database-using-perl-script-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, wfa, database, cli 
+summary: 您可以使用 WFA 命令行界面（ CLI ）对 OnCommand Workflow Automation （ WFA ）数据库执行完整备份。在完整备份中，将备份 WFA 数据库， WFA 配置和密钥。 
+---
+= 使用命令行界面备份（完整） WFA 数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 WFA 命令行界面（ CLI ）对 OnCommand Workflow Automation （ WFA ）数据库执行完整备份。在完整备份中，将备份 WFA 数据库， WFA 配置和密钥。
+
+您必须具有管理员用户凭据或架构师凭据。
+
+在高可用性环境中，您应使用 REST API 创建计划备份。当 WFA 处于故障转移模式时，您不能使用命令行界面创建备份。
+
+有关详细信息，请参见 REST 文档。
+
+.步骤
+. 在 Shell 提示符处，导航到 WFA 服务器上的以下目录： `WFA_INSTALL_location/WFA/bin/`
++
+wfa_install_location 是 WFA 安装目录。
+
+. 备份 WFA 数据库： ` .\WFA -backup -user=user 【 -password=pass] 【 -location=path] 【 -full]`
++
+** user 是备份用户的用户名。
+** password 是备份用户的密码。
++
+如果未提供密码，则必须在出现提示时输入密码。
+
+** path 是备份文件的完整目录路径。
+
+
+. 验证备份文件是否已在指定位置创建。
+

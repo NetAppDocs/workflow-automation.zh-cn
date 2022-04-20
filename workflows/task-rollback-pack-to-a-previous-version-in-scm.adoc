@@ -1,0 +1,32 @@
+---
+permalink: workflows/task-rollback-pack-to-a-previous-version-in-scm.html 
+sidebar: sidebar 
+keywords: roll, pack, previous, version, source, control, management, import, oncommand, workflow, automation 
+summary: 您可以将软件包回滚到源控制管理（ SCM ）中的先前版本，并将其导入到 OnCommand Workflow Automation （ WFA ）中。 
+---
+= 在 SCM 中将 WFA 工作流软件包回滚到其先前版本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将软件包回滚到源控制管理（ SCM ）中的先前版本，并将其导入到 OnCommand Workflow Automation （ WFA ）中。
+
+必须设置 SCM ，并且您必须具有管理员或架构师凭据。
+
+.步骤
+. 在 SCM 客户端位置，使用 SCM 工具将软件包回滚到文件系统位置的先前版本。
++
+SCM 客户端将同步到您感兴趣的确切变更编号。
+
+. 通过 Web 浏览器登录到 WFA 窗口。
+. 将更新后的软件包导入到 WFA 中。
++
+link:task-import-an-oncommand-workflow-automation-pack.html["导入 WFA 工作流软件包"]
+
++
+
+NOTE: 此操作会将 WFA 数据库回滚到先前版本。
+
+

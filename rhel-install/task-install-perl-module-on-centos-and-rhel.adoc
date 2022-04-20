@@ -1,0 +1,171 @@
+---
+permalink: rhel-install/task-install-perl-module-on-centos-and-rhel.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, install, perl modules, centos, rhel 
+summary: 默认情况下，适用于 Linux 的 Perl 软件包不包含某些 Perl 模块。 
+---
+= 在 CentOS 和 RHEL 上安装 Perl 模块
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+默认情况下，适用于 Linux 的 Perl 软件包不包含某些 Perl 模块。
+
+在 WFA 安装期间， WFA 安装程序会验证系统中的所有 Perl 模块是否可用，然后在满足此要求后继续操作。在安装 OnCommand Workflow Automation （ WFA ）之前，必须先安装 Perl 模块。
+
+
+NOTE: 如果 perl 模块位于系统上配置的 yum 存储库中，则 WFA 安装程序会尝试自动安装 Perl 模块。如果 Perl 模块不可用，安装程序将提示用户手动安装 Perl 模块。唯一的例外是 "perl-core" 模块。即使此模块在系统上配置的 yum 存储库中可用，系统也不会自动安装此模块。这是一个已知的问题描述。
+
+[cols="2*"]
+|===
+| Perl 模块 | RPM 软件包名称 
+
+
+ a| 
+Perl 核心模块
+ a| 
+Perl 核心
+
+
+
+ a| 
+dBi
+ a| 
+Perl DBI
+
+
+
+ a| 
+XML ：： DOM
+ a| 
+Perl XML DOM
+
+
+
+ a| 
+术语：： ReadKey
+ a| 
+Perl 术语读取密钥
+
+
+
+ a| 
+http ：：：：请求
+ a| 
+perl-libwww-perl
+
+
+
+ a| 
+XML ：： libxml perl-xml-libxml
+ a| 
+perl XML — libxml
+
+
+
+ a| 
+DBD ：： mysql
+ a| 
+Perl DBD-MySQL
+
+
+
+ a| 
+URI ：： URL
+ a| 
+Perl URI
+
+
+
+ a| 
+http ：：：：：响应
+ a| 
+perl-libwww-perl
+
+
+
+ a| 
+HTTP ：：标头
+ a| 
+perl-libwww-perl
+
+
+
+ a| 
+网络： SSLeay
+ a| 
+perl-net-ssLeay
+
+
+
+ a| 
+URI ：： Escape
+ a| 
+Perl URI
+
+
+
+ a| 
+LWP ：： Protocol ：： https perl-LWP-protocol-https
+ a| 
+Perl — LWP —协议— https
+
+
+
+ a| 
+XML ：：解析器
+ a| 
+Perl XML 解析器
+
+
+
+ a| 
+LWP ：：用户代理
+ a| 
+perl-libwww-perl
+
+
+
+ a| 
+net ：： ldap
+ a| 
+Perl LDAP
+
+
+
+ a| 
+日期：：：计算
+ a| 
+Perl 日期 - 计算 XML
+
+|===
+.步骤
+. 以 `root` 用户身份登录到 Linux 服务器。
+. 验证 WFA 所需的所有 Perl 模块是否均已安装在系统上：
++
+` 。 /WFA-4.2.0.0.0.bin -l`
+
+. 如果未检测到任何 Perl 模块，请检查它们在配置的存储库中是否可用：
++
+`yum search perl 模块名称`
+
++
+如果未检测到 DBD ：： mysql 模块：
+
++
+`yum search perl-DBD-MySQL`
+
+. 如果存储库中没有任何 Perl 模块，请配置包含 Perl 模块的存储库，或者从 Internet 下载 Perl 模块。
+. 从已配置的存储库安装任何缺少的 Perl 模块：
++
+`yum -y install perl-module-name`
+
++
+从已配置的存储库安装 DBD ： mysql 模块：
+
++
+`yum -y install perl-DBD-MySQL`
+
+

@@ -1,0 +1,39 @@
+---
+permalink: windows-install/reference-related-documentation-for-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: relate, documentation, oncommand, workflow, automation 
+summary: 此外，还有其他文档和工具可帮助您学习如何对 OnCommand Workflow Automation （ WFA ）服务器执行更高级的配置。 
+---
+= OnCommand Workflow Automation 的相关文档
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此外，还有其他文档和工具可帮助您学习如何对 OnCommand Workflow Automation （ WFA ）服务器执行更高级的配置。
+
+
+
+== 其他参考资料
+
+NetApp 社区中的 Workflow Automation 空间提供了其他学习资源，包括以下内容：
+
+* * NetApp 社区 *
++
+http://community.netapp.com/t5/OnCommand-Storage-Management-Software-Articles-and-Resources/tkb-p/oncommand-storage-management-software-articles-and-resources/label-name/workflow%20automation%20%28wfa%29?labels=workflow+automation+%28wfa%29["NetApp 社区： Workflow Automation （ WFA ）"^]
+
+
+
+
+
+== 工具参考
+
+* * 互操作性表 *
++
+列出了支持的硬件组件和软件版本组合。
+
++
+http://mysupport.netapp.com/matrix/["互操作性表"^]
+
+

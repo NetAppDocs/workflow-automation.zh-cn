@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-what-dictionary-entries-are.html 
+sidebar: sidebar 
+keywords: dictionary, entries, oncommand, workflow, automation, building, blocks, use, represent, object, types, relationships, storage, environments, filters, return, value, natural, keys 
+summary: 词典条目是 OnCommand Workflow Automation （ WFA ）组件之一。您可以使用词典条目表示存储和存储相关环境中的对象类型及其关系。然后，您可以在工作流中使用筛选器返回词典条目的自然键值。 
+---
+= 什么是词典条目
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+词典条目是 OnCommand Workflow Automation （ WFA ）组件之一。您可以使用词典条目表示存储和存储相关环境中的对象类型及其关系。然后，您可以在工作流中使用筛选器返回词典条目的自然键值。
+
+词典条目是 WFA 支持的对象类型定义。每个词典条目表示一个对象类型及其在受支持的存储和存储相关环境中的关系。词典对象包含一个属性列表，这些属性可能已进行类型检查。具有完整值的词典对象用于描述类型的对象实例。此外，引用属性用于描述对象与环境的关系；例如，卷词典对象具有许多属性，例如名称， size_MB 和 volume_guarantee 。此外，卷词典对象还包括对聚合的引用，以及包含 array_id 和 aggregate_id 形式的卷的数组。
+
+对象的缓存表是一个数据库，其中包含一些或所有标记为缓存的词典条目的属性。要使词典条目包含缓存表，必须至少标记一个词典条目的属性以进行缓存。词典条目包括自然键，这些自然键是对象的唯一标识符；例如， 7- 模式卷通过其名称以及包含它们的阵列的 IP 地址进行唯一标识。qtree 由 qtree 名称，卷名称和阵列 IP 地址标识。创建词典条目时，必须确定属于词典条目的自然键的词典属性。

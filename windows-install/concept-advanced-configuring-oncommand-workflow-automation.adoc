@@ -1,0 +1,23 @@
+---
+permalink: windows-install/concept-advanced-configuring-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: configure, oncommand, workflow, automation 
+summary: 使用 OnCommand Workflow Automation （ WFA ）可以配置各种设置，例如 AutoSupport 和通知。 
+---
+= 正在配置 OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用 OnCommand Workflow Automation （ WFA ）可以配置各种设置，例如 AutoSupport 和通知。
+
+配置 WFA 时，您可以根据需要设置以下一项或多项：
+
+* AutoSupport ，用于向技术支持发送 AutoSupport 消息
+* Microsoft Active Directory 轻型目录访问协议（ Lightweight Directory Access Protocol ， LDAP ）服务器，用于对 WFA 用户进行 LDAP 身份验证和授权
+* 有关工作流操作和发送 AutoSupport 消息的电子邮件通知
+* 简单网络管理协议（ Simple Network Management Protocol ， SNMP ），用于发送有关工作流操作的通知
+* 用于远程数据日志记录的系统日志
+

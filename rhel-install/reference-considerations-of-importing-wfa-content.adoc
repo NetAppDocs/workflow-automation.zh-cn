@@ -1,0 +1,44 @@
+---
+permalink: rhel-install/reference-considerations-of-importing-wfa-content.html 
+sidebar: sidebar 
+keywords: considerations, import, oncommand, workflow, automation, content 
+summary: 导入用户创建的内容，从另一个 OnCommand Workflow Automation （ WFA ）安装导出的内容或从存储自动化商店或 WFA 社区下载的内容时，您必须了解某些注意事项。 
+---
+= 导入 OnCommand Workflow Automation 内容时的注意事项
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+导入用户创建的内容，从另一个 OnCommand Workflow Automation （ WFA ）安装导出的内容或从存储自动化商店或 WFA 社区下载的内容时，您必须了解某些注意事项。
+
+* WFA 内容会另存为 .dar 文件，并且可以包含其他系统中用户创建的全部内容或工作流，查找器，命令和词典术语等特定项。
+* 从 .dar 文件导入现有类别时，导入的内容将与此类别中的现有内容合并。
++
+例如，假设 WFA 服务器的 A 类中有两个工作流 WF1 和 WF2 。如果将类别 A 中的工作流 WF3 和 WF4 导入到 WFA 服务器，则导入后，类别 A 将包含工作流 WF1 ， WF2 ， WF3 和 W"F4 。
+
+* 如果 .dar 文件包含词典条目，则与词典条目对应的缓存表将自动更新。
++
+如果缓存表未自动更新，则 wfa.log 文件中会记录一条错误消息。
+
+* 如果导入的 .dar 文件依赖于 WFA 服务器中不存在的软件包，则 WFA 会尝试确定是否满足实体上的所有依赖关系。
++
+** 如果缺少一个或多个实体或找到较低版本的实体，导入将失败并显示错误消息。
++
+此错误消息提供了为满足依赖关系而应安装的软件包的详细信息。
+
+** 如果发现某个实体的更高版本或证书已更改，则会显示一个有关版本不匹配的通用对话框，并完成导入。
++
+版本不匹配详细信息将记录在 wfa.log 文件中。
+
+
+
+* 以下问题和支持请求必须发送到 WFA 社区：
++
+** 从 WFA 社区下载的任何内容
+** 已创建的自定义 WFA 内容
+** 已修改的 WFA 内容
+
+
+

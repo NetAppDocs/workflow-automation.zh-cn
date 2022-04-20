@@ -1,0 +1,33 @@
+---
+permalink: windows-install/task-access-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: access, oncommand, workflow, automation 
+summary: 您可以从有权访问 WFA 服务器的任何系统通过 Web 浏览器访问 OnCommand Workflow Automation （ WFA ）。 
+---
+= 访问 OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从有权访问 WFA 服务器的任何系统通过 Web 浏览器访问 OnCommand Workflow Automation （ WFA ）。
+
+您必须已为 Web 浏览器安装 Adobe Flash Player 。
+
+.步骤
+. 打开 Web 浏览器，然后在地址栏中输入以下内容之一：
++
+** ` + https://wfa_server_ip+`
++
+wfa_server_ip 是 WFA 服务器的 IP 地址（ IPv4 或 IPv6 地址）或完全限定域名（ FQDN ）。
+
+** 如果要在 WFA 服务器上访问 WFA ： ` +https://localhost/wfa+` 如果已为 WFA 指定非默认端口，则必须包括端口号，如下所示：
+** ` + https://wfa_server_ip:port+`
+** ` +https://localhost:port+` port 是您在安装期间用于 WFA 服务器的 TCP 端口号。
+
+
+. 在登录部分中，输入您在安装期间输入的管理员用户凭据。
+. 在 * 设置 * > * 设置 * 菜单中，设置凭据和数据源。
+. 将 WFA Web 图形用户界面添加到书签以方便访问。
+

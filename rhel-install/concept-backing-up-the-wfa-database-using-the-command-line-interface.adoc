@@ -1,0 +1,20 @@
+---
+permalink: rhel-install/concept-backing-up-the-wfa-database-using-the-command-line-interface.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, database, back up, cli 
+summary: 如果要频繁备份 OnCommand Workflow Automation （ WFA ）数据库，可以使用 WFA 安装包随附的 WFA 命令行界面（ CLI ）。 
+---
+= 使用命令行界面备份 WFA 数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果要频繁备份 OnCommand Workflow Automation （ WFA ）数据库，可以使用 WFA 安装包随附的 WFA 命令行界面（ CLI ）。
+
+以下是两种备份类型：
+
+* 完整备份
+* 定期备份
+

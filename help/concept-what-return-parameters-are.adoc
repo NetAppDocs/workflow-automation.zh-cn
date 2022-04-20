@@ -1,0 +1,74 @@
+---
+permalink: help/concept-what-return-parameters-are.html 
+sidebar: sidebar 
+keywords: return, parameter, available, planning, phase, workflow, values, return, debugging, understand 
+summary: 返回参数是指在工作流的规划阶段之后可用的参数。这些参数返回的值在调试工作流时非常有用。您应了解返回参数的工作原理以及哪些参数可用作调试工作流的返回参数。 
+---
+= 返回参数的工作原理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+返回参数是指在工作流的规划阶段之后可用的参数。这些参数返回的值在调试工作流时非常有用。您应了解返回参数的工作原理以及哪些参数可用作调试工作流的返回参数。
+
+您可以在工作流中指定一组参数作为返回参数，例如变量属性，表达式和用户输入值。在工作流执行期间，指定参数的值将在规划阶段填充，并开始执行工作流。然后，这些参数的值将按照在特定执行工作流时计算的方式返回。如果要对工作流进行调试，可以参考参数返回的值。
+
+如果要查看这些参数的计算值或选定值是什么，可以在工作流中指定所需的返回参数。例如，在使用资源选择逻辑选择工作流中的聚合时，您可以指定 `aggregate` 作为返回参数，以便查看在规划工作流期间选择了哪个聚合。
+
+在引用用于调试工作流的返回参数值之前，您应确认工作流的执行已完成。每个工作流执行都会设置返回参数值。如果在多次执行工作流后添加了一个返回参数，则只有在添加参数后，该参数的值才可用于执行。
+
+
+
+== 可用作返回参数的参数
+
+[cols="2*"]
+|===
+| 返回参数 | 示例 
+
+
+ a| 
+标量变量属性
+ a| 
+`volume1.name,` ，这是 "`volume name` " 变量的属性
+
+
+
+ a| 
+常量
+ a| 
+max_volume_size
+
+
+
+ a| 
+用户输入
+ a| 
+$clustername
+
+
+
+ a| 
+包含变量属性，常量和用户输入的 MVEL 表达式
+ a| 
+volume1.name+'-'+$clusterName
+
+
+
+ a| 
+命令在执行期间添加的返回参数
+ a| 
+在 PowerShell 命令中使用以下行时，会将 ` $volumeUUID` 参数添加为返回参数： `Add-WfaWorkflowParameter -Name "VolumeUUID" -Value "`12345` " -AddAsReturnParameter $true 。`
+
+|===
+
+
+== 预定义工作流中的返回参数示例
+
+如果您希望了解如何指定返回参数，可以在设计器中打开以下预定义工作流并查看指定的返回参数：
+
+* 在 vFiler 中创建 NFS 卷
+* 在 vFiler 中创建 qtree CIFS 共享
+* 创建集群模式 Data ONTAP 卷 CIFS 共享
+

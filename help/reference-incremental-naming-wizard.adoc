@@ -1,0 +1,43 @@
+---
+permalink: help/reference-incremental-naming-wizard.html 
+sidebar: sidebar 
+keywords: incremental, naming, wizard, enable, define, value, attribute, search, existing, parameter 
+summary: 通过增量命名向导，您可以根据搜索现有参数来定义属性的值。 
+---
+= 增量命名向导
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过增量命名向导，您可以根据搜索现有参数来定义属性的值。
+
+* * 现有 <dictionary objection>* 的搜索条件
++
+打开 * 资源选择 * 对话框，在此可以指定词典对象的搜索条件。
+
+* * 如果 <dictionary objection> 与上述搜索条件不匹配，请为 <attribute> 输入值 *
++
+用于在使用指定搜索条件未找到 <dictionary objection> 时为 <attribute> 指定值。
+
+* * 如果使用上述搜索条件找到 <dictionary objection> ，请为 <attribute> by * 设置值
++
+用于在使用指定搜索条件未找到 <dictionary objection> 时为 <attribute> 指定值。
+
+* * 如果 <dictionary objection> 与上述搜索条件不匹配，请为 <attribute> 输入值 *
++
+用于选择一种方法，以便在使用指定搜索条件找到 <dictionary objection> 时设置 <attribute> 的值。
+
++
+** * 提供增量值和后缀 *
++
+用于输入增量的数值，并可选择输入属性名称的后缀。
+
+** * 提供自定义表达式 *
++
+用于为属性值输入自定义表达式。您可以使用 MVFLEX 表达式语言（ MVEL ）语法指定值。
+
+
+
+

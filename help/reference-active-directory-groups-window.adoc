@@ -1,0 +1,141 @@
+---
+permalink: help/reference-active-directory-groups-window.html 
+sidebar: sidebar 
+keywords: active, directory, group, window, enable, view, create, edit, delete, oncommand, workflow, automation, access, select, settings, management, click 
+summary: 您可以通过 Active Directory 组窗口查看，创建，编辑和删除 OnCommand Workflow Automation （ WFA ） Active Directory 组。您可以通过选择设置来访问此窗口，然后在管理下单击 Active Directory 组。 
+---
+= Active Directory 组窗口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过 Active Directory 组窗口查看，创建，编辑和删除 OnCommand Workflow Automation （ WFA ） Active Directory 组。您可以通过选择 * 设置 * 来访问此窗口，然后在 * 管理 * 下单击 * Active Directory 组 * 。
+
+
+NOTE: 根据您的角色和帐户权限，可能不会显示此窗口。
+
+* Active Directory 组表
+* 工具栏
+
+
+
+
+== Active Directory 组表
+
+Active Directory 组窗口显示现有 Active Directory 组。您可以使用每个列可用的筛选和排序功能以及重新排列列顺序来自定义表显示。
+
+* image:../media/filter_icon_wfa.gif["筛选器图标"] 启用或禁用筛选整个表。如果禁用了筛选，则图标上方会显示一个红色的 "x" 。
+* 双击 image:../media/filter_icon_wfa.gif["筛选器图标"] 清除并重置筛选选项。
+* image:../media/wfa_filter_icon.gif["筛选器图标"] 在每个列标题上，您可以根据列的内容进行筛选。单击 image:../media/wfa_filter_icon.gif["筛选器图标"] 在列中，您可以从下拉列表中筛选特定项目或所有可用项目。
+* 单击列标题可在排序的升序和降序之间切换。您可以通过排序箭头（image:../media/wfa_sortarrow_up_icon.gif["\"Sort Up \" 图标"] 用于升序和 image:../media/wfa_sortarrow_down_icon.gif["\" 向下排序 \" 图标"] 降序）。
+* 要重新排列列的位置，您可以拖放列，将其按任何所需顺序放置。但是，您不能隐藏或删除其中任何列。
+* 单击 * 搜索 * 筛选器文本框可搜索特定内容。此外，您还可以使用支持的运算符搜索适用的列类型，即字母或数字。
+
+
+下表列出了 "Active Directory 组 " 表中字母和数字列支持的运算符，可从 * 搜索 * 筛选器文本框中获取。
+
+[cols="2*"]
+|===
+| 字母 | 数字 
+
+
+ a| 
+* 包含
+* 不包含
+* 开头为
+* 结尾为
+* 等于
+* 不等于
+* 重置
+
+ a| 
+* 等于
+* 不等于
+* 小于
+* 大于
+* 小于或等于
+* 大于或等于
+* 介于之间
+* 重置
+
+
+|===
+Active Directory 组表包含以下列：
+
+* * 组名称 *
++
+显示 Active Directory 的组名称。
+
+* * 角色 *
++
+显示为组分配的角色。角色可以包括以下任何一项：
+
++
+** * 来宾 *
++
+此组只能查看工作流执行的状态，或者只能收到工作流执行状态更改的通知。
+
+** * 运算符 *
++
+允许此组预览和执行为其提供访问权限的工作流。
+
+** * 审批者 *
++
+允许此组预览，执行，批准和拒绝为其提供访问权限的工作流。
+
++
+
+NOTE: 您必须提供审批者的电子邮件 ID 以及要通知给审批者的工作流的状态。如果有多个审批者，您可以在 * 电子邮件 * 字段中提供组电子邮件 ID 。
+
+** * 架构师 *
++
+此组具有创建工作流的完全访问权限，但不能修改全局 WFA 服务器设置。
+
+** * 管理员 *
++
+此组可以完全访问 WFA 服务器。
+
+
+
+* * 类别 *
++
+显示分配给操作员的工作流类别，该类别可为指定操作员提供工作流授权和权限。
+
++
+您可以通过单击 * 内容管理 * > * 类别 * 来设置此授权设置。
+
+* * 电子邮件 *
++
+显示组的电子邮件地址。您可以使用此电子邮件发送有关工作流状态的通知。
+
+* * 已启用通知 *
++
+指示组是否可以接收有关该组触发的工作流执行状态的电子邮件通知（ true 或 false ）。
+
+
+
+
+
+== 工具栏
+
+工具栏位于列标题上方。您可以使用工具栏中的图标执行各种操作。也可以从窗口中的右键单击菜单访问这些操作。
+
+* *image:../media/new_wfa_icon.gif["新建图标"] （新增） *
++
+打开新建 Active Directory 组对话框，在此可以添加新的 Active Directory 组。
+
++
+
+NOTE: 在添加 Active Directory 组之前，您需要启用或配置 Active Directory 组。
+
+* *image:../media/edit_wfa_icon.gif["编辑图标"] （编辑） *
++
+打开编辑 Active Directory 组对话框，在此可以编辑选定的 Active Directory 组。
+
+* *image:../media/delete_wfa_icon.gif["删除图标"] （删除） *
++
+打开删除 Active Directory 组对话框确认对话框，在此可以删除选定的 Active Directory 组。
+
+

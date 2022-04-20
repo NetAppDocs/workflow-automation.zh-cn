@@ -1,0 +1,28 @@
+---
+permalink: workflows/task-check-in-an-already-existing-pack-into-scm.html 
+sidebar: sidebar 
+keywords: check, existing, packs, source, control, management, scm server, oncommand, workflow, automation 
+summary: 您可以从 OnCommand Workflow Automation （ WFA ）将现有软件包签入源控制管理（ SCM ）服务器。 
+---
+= 将现有 WFA 工作流软件包签入 SCM 服务器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从 OnCommand Workflow Automation （ WFA ）将现有软件包签入源控制管理（ SCM ）服务器。
+
+必须设置 SCM ，并且您必须具有管理员或架构师凭据。
+
+.步骤
+. 通过 Web 浏览器登录到 * WFA* 窗口。
+. 单击 * 内容管理 * > * 包 * 。
+. 单击 * 导出到服务器 * 图标。
+. 在 * 导出到服务器文件夹 * 对话框的 * 服务器系统中的文件夹位置 * 字段中，输入软件包保存在服务器中的服务器文件夹位置。
++
+此操作会在创建 SCM 客户端的文件系统中以爆炸形式导出软件包。
+
+. 在 SCM 客户端位置，将软件包内容检入 SCM 服务器。
+. 使用 SCM 提供的比较工具根据软件包的 SCM 版本验证所做的更改。
+

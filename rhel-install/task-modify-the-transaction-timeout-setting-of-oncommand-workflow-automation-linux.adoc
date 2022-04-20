@@ -1,0 +1,29 @@
+---
+permalink: rhel-install/task-modify-the-transaction-timeout-setting-of-oncommand-workflow-automation-linux.html 
+sidebar: sidebar 
+keywords: modify, transaction, timeout, setting, oncommand, workflow, automation 
+summary: 默认情况下， OnCommand Workflow Automation （ WFA ）数据库事务在 300 秒内超时。在从备份还原大型 WFA 数据库时，您可以增加默认超时持续时间，以避免数据库还原可能失败。 
+---
+= 修改 OnCommand Workflow Automation 的事务超时设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+默认情况下， OnCommand Workflow Automation （ WFA ）数据库事务在 300 秒内超时。在从备份还原大型 WFA 数据库时，您可以增加默认超时持续时间，以避免数据库还原可能失败。
+
+您必须以 root 用户身份登录到 WFA 主机系统。
+
+此操作步骤 将使用默认 WFA 安装路径。如果您在安装期间更改了默认位置，则必须使用更改后的 WFA 安装路径。
+
+.步骤
+. 在 Shell 提示符处，导航到 WFA 服务器上的以下目录： wfa_install_location/wfa/bin/
+. 输入以下命令：
++
+` ./WFA -txn-timeout[=timeout] -restart=WFA`
+
++
+` ./WFA -txn-timeout=1000 -restart=WFA`
+
+

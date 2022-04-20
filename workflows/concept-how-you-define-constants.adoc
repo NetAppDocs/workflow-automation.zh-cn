@@ -1,0 +1,40 @@
+---
+permalink: workflows/concept-how-you-define-constants.html 
+sidebar: sidebar 
+keywords: create, use, constants, define, value, across, single, window, workflow, level 
+summary: 您可以创建和使用常量来定义值，该值可在单个工作流中使用。常量在工作流级别定义。 
+---
+= 如何定义常量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以创建和使用常量来定义值，该值可在单个工作流中使用。常量在工作流级别定义。
+
+在规划和执行期间，工作流中使用的常量及其值将显示在工作流的监控窗口中。您必须为常量使用唯一名称。
+
+您可以使用以下命名约定来定义常量：
+
+* 大写表示每个词的第一个字母，词之间不带下划线或空格
++
+所有术语和缩写词均应使用大写形式，例如， `ActualVolumeSizeInMB` 。
+
+* 大写表示所有字母
++
+您可以使用下划线分隔词 - 例如， `aggregate_used_space_threshold` 。
+
+
+
+您可以将以下内容作为工作流常量的值：
+
+* 数字
+* 字符串
+* MVEL 表达式
++
+表达式会在工作流的规划和执行阶段进行评估。在表达式中，不能引用环路中定义的变量。
+
+* 用户输入
+* 变量
+

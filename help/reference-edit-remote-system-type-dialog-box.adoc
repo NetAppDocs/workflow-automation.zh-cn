@@ -1,0 +1,76 @@
+---
+permalink: help/reference-edit-remote-system-type-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, remote, system, type, dialog box, enable, modify, name, description, version, protocol, default port, timeout, existing, certified 
+summary: 通过编辑远程系统类型对话框，您可以修改名称，问题描述 ，版本，协议，默认端口， 以及现有远程系统类型的默认超时。您不能修改经过 NetApp 认证的远程系统类型。 
+---
+= 编辑远程系统类型对话框
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过编辑远程系统类型对话框，您可以修改名称，问题描述 ，版本，协议，默认端口， 以及现有远程系统类型的默认超时。您不能修改经过 NetApp 认证的远程系统类型。
+
+* 详细信息选项卡
+* 验证脚本选项卡
+
+
+
+
+== 详细信息选项卡
+
+用于编辑远程系统类型的详细信息，例如名称，问题描述 ，版本和连接协议。
+
+* * 名称 *
++
+用于编辑远程系统类型的名称。
+
+* * 问题描述 *
++
+用于修改远程系统类型的问题描述 。
+
+* * 版本 *
++
+用于编辑 `major.minor.revision` format 的远程系统类型的版本号，例如 1.0.0 。
+
+* * 连接协议 *
++
+用于选择 OnCommand Workflow Automation （ WFA ）在连接到远程系统时应使用的以下协议之一：
+
++
+** HTTPS 并回退到 HTTP
++
+此连接主要使用 HTTPS 。如果通过 HTTPS 连接失败，则使用 HTTP 。如果通过 HTTP 的连接也失败，则连接尝试将被丢弃。
+
+** 仅限 HTTPS
+** 仅限 HTTP
+** 自定义
+
+
+
+
+选择连接协议时，协议，默认端口和默认超时（秒）字段将填充数据。
+
+
+
+== 验证脚本选项卡
+
+用于提供验证脚本以测试远程系统的连接。验证脚本必须以 Perl 编写，并且必须包括以下功能： checkCredentials ` （ $host ， $user ， $password ， $protocol ， $port ， $timeout ）。` 验证期间， WFA 使用为远程系统类型和连接协议配置的值调用 checkCredentials 功能。函数在成功验证连接时返回值 "`1` " ，在连接验证失败时返回值 "`0` " 。
+
+您可以单击 * 测试 Perl 脚本 * 来运行脚本以测试连接。
+
+
+
+== 命令按钮
+
+* * 保存 *
++
+保存已修改的远程系统类型配置设置并关闭对话框。
+
+* * 取消 *
++
+取消所做的更改（如果有），然后关闭对话框。
+
+

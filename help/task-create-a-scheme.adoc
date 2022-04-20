@@ -1,0 +1,36 @@
+---
+permalink: help/task-create-a-scheme.html 
+sidebar: sidebar 
+keywords: create, scheme, data, cached, new, data, source, type, store, workflows, directly, database 
+summary: 如果需要从新的数据源类型缓存数据，或者工作流需要将数据直接存储在数据库中，则必须创建方案。 
+---
+= 创建方案
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果需要从新的数据源类型缓存数据，或者工作流需要将数据直接存储在数据库中，则必须创建方案。
+
+* 您需要的内容 *
+
+* 您必须已安装 WFA 。
+* 您必须具有 WFA 的管理员权限或架构师凭据。
+
+
+* 关于此任务 *
+
+默认情况下， WFA 支持两种类型的方案：数据源采集和其他。
+
+* 数据源采集方案：这些方案中的表由为从远程系统获取数据而定义的数据源进行缓存。
+* 其他方案：这些方案中的表通过为解决特定问题而自定义的工作流填充数据。
+
+
+.步骤
+. 以管理员或架构师身份通过 Web 浏览器登录到 WFA 。
+. 单击 * 数据源设计 * > * 方案 * 。
+. 单击以创建新方案 image:../media/new_wfa_icon.gif["新建图标"] 在工具栏上。
+. 在 * 新方案 * 对话框中输入所需信息，例如方案的名称，类型，问题描述 和实体版本。
+. 单击 * 保存 * 。
+

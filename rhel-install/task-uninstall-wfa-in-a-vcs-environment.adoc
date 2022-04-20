@@ -1,0 +1,34 @@
+---
+permalink: rhel-install/task-uninstall-wfa-in-a-vcs-environment.html 
+sidebar: sidebar 
+keywords: uninstall, workflow, automation, vcs, environment 
+summary: 您可以通过从集群节点中删除所有 WFA 服务来从集群中卸载 Workflow Automation （ WFA ）。 
+---
+= 在 VCS 环境中卸载 Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过从集群节点中删除所有 WFA 服务来从集群中卸载 Workflow Automation （ WFA ）。
+
+.步骤
+. 使用集群管理器使服务脱机：
++
+.. 右键单击集群组。
+.. 选择 * 脱机 * ，然后选择节点。
+
+
+. 在第一个节点上卸载 WFA ，然后在第二个节点上卸载 WFA 。
++
+link:task-uninstall-oncommand-workflow-automation-linux.html["卸载 OnCommand Workflow Automation"]
+
+. 从集群管理器中删除集群资源：
++
+.. 右键单击集群组。
+.. 选择 * 删除 * 。
+
+
+. 手动删除共享位置中的数据。
+

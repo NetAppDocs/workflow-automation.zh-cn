@@ -1,0 +1,79 @@
+---
+permalink: help/task-define-filter-rules.html 
+sidebar: sidebar 
+keywords: define, set, rules, filtering, dictionary, entry, resources, vfiler, units, aggregates, virtual, machines, customize, existing, workflow, create 
+summary: 您可以定义一组用于筛选词典条目资源的规则，例如 vFiler 单元，聚合和虚拟机。您可以在创建现有工作流和新工作流时为其自定义规则。 
+---
+= 定义筛选器规则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以定义一组用于筛选词典条目资源的规则，例如 vFiler 单元，聚合和虚拟机。您可以在创建现有工作流和新工作流时为其自定义规则。
+
+.步骤
+. 以管理员身份通过 Web 浏览器登录到 WFA 。
+. 单击 * 工作流设计 * > * 工作流 * 。
+. 在 * 工作流 * 窗口中，双击要修改的工作流。
++
+此时将显示 Workflow < 工作流名称 > 窗口。
+
+. 选择以下选项之一，定义一组规则：
++
+[cols="2*"]
+|===
+| 如果您要 ... | 然后执行此操作 ... 
+
+
+ a| 
+重复一行中的命令后，搜索资源
+ a| 
+.. 单击行号并选择 * 重复行 * 。
+.. 在行重复对话框中，从 * 重复次数 * 下拉列表中选择 * 针对组中的每个资源 * 选项。
+.. 选择资源类型。
+.. 单击 * 输入搜索条件 * 链接。
+
+
+
+
+ a| 
+搜索命令输入中所需的资源
+ a| 
+.. 单击 image:../media/add_object_wfa_icon.gif["用于添加命令的图标"]。
+.. 在 <command_name> 的参数对话框中，从 * 定义 < 词典对象 >* 下拉列表中选择 * 通过搜索现有 <dictionary objection>* 选项。
+.. 单击 * 输入搜索条件 * 链接。
+
+
+
+
+ a| 
+在命令输入中搜索变量引用的资源
+ a| 
+.. 单击 image:../media/add_object_wfa_icon.gif["用于添加命令的图标"]。
+.. 在 <command_name> 的参数对话框中，从 * 定义 < 词典对象 >* 下拉列表中选择 * 通过填写属性 * 选项。
+.. 单击 image:../media/ellipses.gif[""] 用于标记为的字段 image:../media/resource_selection_icon_wfa.gif["参考对象图标"]。
+
+
+
+
+ a| 
+字符串类型的 name 命令输入
+ a| 
+.. 单击 image:../media/add_object_wfa_icon.gif["用于添加命令的图标"]。
+.. 在 <command_name> 的参数对话框中，从 * 定义 < 词典对象 >* 下拉列表中选择 * 通过填写属性 * 选项。
+.. 单击 image:../media/ellipses.gif["省略号图标"] 字符串字段。
+
+
+|===
+. 在 * 资源选择 * 对话框中，选中 * 定义筛选规则 * 复选框。
++
+如果您从资源选择对话框的查找器下拉列表中选择了其中一个选项，则会禁用定义筛选器规则复选框。要启用定义筛选器规则，必须将查找器的值设置为 "`None` " 。
+
+. 输入规则的属性，运算符和值。
++
+此值必须在单引号内提供。筛选器规则可以包含一个或多个组。
+
+. 单击 * 确定 * 。
+

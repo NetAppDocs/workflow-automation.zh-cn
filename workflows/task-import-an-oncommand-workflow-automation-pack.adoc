@@ -1,0 +1,25 @@
+---
+permalink: workflows/task-import-an-oncommand-workflow-automation-pack.html 
+sidebar: sidebar 
+keywords: import, workflow, server, oncommand, automation, storage, integration, requirements 
+summary: 您可以将工作流软件包从服务器导入到 OnCommand Workflow Automation （ WFA ），以满足存储自动化和集成要求。 
+---
+= 导入 WFA 工作流软件包
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将工作流软件包从服务器导入到 OnCommand Workflow Automation （ WFA ），以满足存储自动化和集成要求。
+
+您必须有权访问要导入的服务器中的 WFA 内容。
+
+.步骤
+. 通过 Web 浏览器登录到 * WFA* 窗口。
+. 单击 * 内容管理 * > * 包 * 。
+. 单击 * 从服务器导入 * 图标。
+. 在 * 从服务器文件夹导入 * 对话框的 * 服务器系统中的文件夹位置 * 字段中，以字符串格式输入软件包在服务器中的位置，例如 `C ： \work\packs\test.`
+. 单击 * 确定 * 。
+. 验证是否已在 * 包 * 窗口中导入该软件包。
+

@@ -1,0 +1,52 @@
+---
+permalink: workflows/task-create-a-filter.html 
+sidebar: sidebar 
+keywords: create, wfa, filter, search, resources, predefined, suitable, task 
+summary: 您可以创建 WFA 筛选器，以便在没有适合任务的预定义 WFA 筛选器时搜索资源。 
+---
+= 创建筛选器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以创建 WFA 筛选器，以便在没有适合任务的预定义 WFA 筛选器时搜索资源。
+
+要创建筛选器，您必须知道相应的 SQL 语法。
+
+.步骤
+. 单击 * 工作流设计 * > * 筛选器 * 。
+. 单击 image:../media/new_wfa_icon.gif["新建图标"] 在工具栏上。
+. 在 * 新建筛选器 * 对话框的 * 属性 * 选项卡中，在 * 名称 * ， * 字典类型 * 和 * 问题描述 * 字段中输入或选择所需的详细信息。
+. 在 * 查询 * 选项卡中，为筛选器输入相应的 SQL 查询。
++
+您必须输入一个 SQL 查询，并可选择使用输入参数。您应使用以下语法来使用输入参数： ` +$ ｛ parameterName ｝ +` 。
+
++
+[listing]
+----
+SELECT
+	array.ip
+FROM
+	storage.array
+WHERE
+	array.name = '${ArrayName}'
+----
+. 单击 * 刷新 * 以填充 * 输入参数 * 表和 * 返回的属性 * 列表。
++
+此信息是从您输入的 SQL 查询中获取的。例如，如果使用上一步中的 SQL 查询示例，则返回的属性中将显示 IP ，而输入参数中将显示 ArrayName 。您可以编辑 * 标签 * 和 * 问题描述 * 列中的条目。
+
+. * 可选： * 单击 * 测试 * 以测试筛选器。
++
+.. 在 * 测试筛选器 <FilterName>* 对话框中，输入所需的测试参数。
+.. 如果不想使用预留数据测试筛选器，请清除 * 在测试中使用预留数据 * 复选框。
+.. 单击 * 测试 * 。
++
+此时将显示测试结果。
+
+.. 关闭对话框。
+
+
+. 单击 * 保存 * 。
+

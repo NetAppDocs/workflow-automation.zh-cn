@@ -1,0 +1,16 @@
+---
+permalink: help/reference-wfa-store-window.html 
+sidebar: sidebar 
+keywords: storage, automation, store, cotains, netapp-certified, workflow, pack, developed, use, oncommand, download, import, execute 
+summary: 存储自动化商店包含 NetApp 认证的自动化存储工作流软件包，这些软件包专为与 OnCommand Workflow Automation （ WFA ）结合使用而开发。您可以下载这些软件包，然后将其导入到 WFA 中以执行这些软件包。 
+---
+= 存储自动化存储窗口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+存储自动化商店包含 NetApp 认证的自动化存储工作流软件包，这些软件包专为与 OnCommand Workflow Automation （ WFA ）结合使用而开发。您可以下载这些软件包，然后将其导入到 WFA 中以执行这些软件包。
+
+中提供了自动化工作流 https://automationstore.netapp.com["存储自动化存储"^]

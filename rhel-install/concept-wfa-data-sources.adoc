@@ -1,0 +1,22 @@
+---
+permalink: rhel-install/concept-wfa-data-sources.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, data, sources 
+summary: OnCommand Workflow Automation （ WFA ）对从数据源获取的数据进行操作。提供了各种版本的 Active IQ Unified Manager 和 VMware vCenter Server 作为预定义的 WFA 数据源类型。在设置数据源以进行数据采集之前，您必须了解预定义的数据源类型。 
+---
+= OnCommand Workflow Automation 数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation （ WFA ）对从数据源获取的数据进行操作。提供了各种版本的 Active IQ Unified Manager 和 VMware vCenter Server 作为预定义的 WFA 数据源类型。在设置数据源以进行数据采集之前，您必须了解预定义的数据源类型。
+
+数据源是一种只读数据结构，用作与特定数据源类型的数据源对象的连接。例如，数据源可以是与 Active IQ Unified Manager 6.3 数据源类型的 Active IQ Unified Manager 数据库的连接。定义所需的数据源类型后，您可以将自定义数据源添加到 WFA 中。
+
+有关预定义的数据源类型的详细信息，请参见互操作性表。
+
+* 相关信息 *
+
+https://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]

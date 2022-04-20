@@ -1,0 +1,37 @@
+---
+permalink: windows-install/task-configure-your-preferred-perl-interpreter.html 
+sidebar: sidebar 
+keywords: configure, preferred, perl distribution 
+summary: 默认情况下， ActivePerl 随 OnCommand Workflow Automation （ WFA ）一起安装。如果要使用另一个 Perl 分发版，可以将首选 Perl 分发版配置为使用 WFA 。 
+---
+= 配置首选 Perl 分发版
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+默认情况下， ActivePerl 随 OnCommand Workflow Automation （ WFA ）一起安装。如果要使用另一个 Perl 分发版，可以将首选 Perl 分发版配置为使用 WFA 。
+
+您必须已在 WFA 服务器上安装所需的 Perl 分发版。
+
+您不能卸载或覆盖默认的 ActivePerl 安装。您必须在单独的位置安装首选 Perl 版本。
+
+.步骤
+. 打开 Windows 资源管理器并导航到以下目录：
++
+`wfa_install_location\wfA\bin\`
+
+. 双击 ps.cmd 文件。
++
+此时将打开 PowerShell 命令行界面（ CLI ）提示符，其中已加载 ONTAP 和 WFA 模块。
+
+. 在提示符处，输入以下内容：
++
+`sET-WfaConfig -Name CustomPerl -PerlPath CustomPerlPath`
+
++
+`sET-WfaConfig -Name CustomPerl -PerlPath C ： \myperl\perl.exe`
+
+. 出现提示时，重新启动 WFA 服务。
+

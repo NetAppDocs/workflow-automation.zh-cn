@@ -1,0 +1,63 @@
+---
+permalink: workflows/task-create-a-function.html 
+sidebar: sidebar 
+keywords: create, wfa, function, use, utility, predefined, suitable, task 
+summary: 如果没有适合您任务的预定义 WFA 函数，您可以创建可用作实用程序的 WFA 函数。 
+---
+= 创建函数
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果没有适合您任务的预定义 WFA 函数，您可以创建可用作实用程序的 WFA 函数。
+
+要创建函数，您必须知道 MVFLEX 表达式语言（ MVEL ）语法。
+
+您必须在函数定义中包含以下内容：
+
+* name ：函数的名称
++
+不得在 MVEL 语法中使用保留字。每个函数都必须具有唯一的名称。
+
+* MVEL 定义：一个字符串，用于指定函数定义的 MVEL 语法
+
+
+.步骤
+. 单击 * 工作流设计 * > * 功能 * 。
+. 单击 image:../media/new_wfa_icon.gif["新建图标"] 在工具栏上。
+. 在 * 新增功能 * 对话框的 * 功能问题描述 * 和 * 功能定义 * 字段中输入或选择所需的详细信息。
++
+[listing]
+----
+def actualVolumeSize(data_size, snap_pct)
+{
+   if (snap_pct < 0 ) {
+        snap_pct = 0;
+   } else if (snap_pct > 99) {
+        snap_pct = 99;
+   }
+
+   div = 1 - (snap_pct/100);
+   return (int)(data_size/div);
+}
+----
++
+"* 函数名称 * " 字段将使用 MVEL 语法中使用的数据进行填充。
+
+. * 可选： * 单击 * 测试 * 以测试此功能：
++
+.. 在 * 测试 * 对话框的 * 表达式 * 部分中，输入所需的函数表达式。
++
+`实际卷大小（ 600 ， 1 ）`
+
+.. 单击 * 测试 * 。
++
+此时将显示测试结果。
+
+.. 关闭对话框。
+
+
+. 单击 * 保存 * 。
+

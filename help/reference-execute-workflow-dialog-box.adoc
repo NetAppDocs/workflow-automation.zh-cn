@@ -1,0 +1,46 @@
+---
+permalink: help/reference-execute-workflow-dialog-box.html 
+sidebar: sidebar 
+keywords: execute, workflow, dialog box, enable, specify, user, iputs, time, execution, comment 
+summary: 通过执行工作流对话框，您可以为工作流指定所需的用户输入，执行时间和执行注释。 
+---
+= 执行工作流对话框
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过执行工作流对话框，您可以为工作流指定所需的用户输入，执行时间和执行注释。
+
+
+
+== 用户输入
+
+用于指定工作流的输入。必填属性以星号（ * ）标记，框的边框以红色显示。
+
+
+
+== 选项
+
+用于指定执行工作流的时间。
+
+* * 立即执行 *
++
+用于立即执行工作流。
+
+* * 重复执行 *
++
+用于将工作流设置为定期重复。只有在创建计划后，才会显示此选项。
+
+* * 执行一次 *
++
+用于计划工作流的执行。
+
+
+
+
+
+== 执行注释
+
+用于为工作流执行指定注释。此注释将显示在 " 执行状态 " 窗口中。

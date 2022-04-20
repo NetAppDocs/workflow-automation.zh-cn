@@ -1,0 +1,57 @@
+---
+permalink: rhel-install/task-upgrade-mysql-on-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, mysql, linux 
+summary: 您可以在安装了 OnCommand Workflow Automation 的 Linux 服务器上升级到较新版本的 MySQL ，以获取安全漏洞修复。 
+---
+= 升级 Linux 上的 MySQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在安装了 OnCommand Workflow Automation 的 Linux 服务器上升级到较新版本的 MySQL ，以获取安全漏洞修复。
+
+您必须具有安装 WFA 的 Linux 系统的 root 权限。
+
+
+NOTE: 在重新安装 WFA 4.2 之前，如果已卸载 MySQL ，则必须删除 MySQL 数据目录。
+
+您只能升级到 MySQL 5.7 的次要更新，例如 5.7.22 到 5.7.26 。您不能升级到 MySQL 的主要版本，例如 5.8 版。
+
+.步骤
+. 以 root 用户身份登录到 WFA 主机。
+. 在目标系统上下载最新的 MySQL Community Server .rpm 软件包。
+. 将捆绑包解压缩到目标系统上的目录。
+. 取消绑定此软件包后，您将在目录中获得多个 .rpm 软件包，但 WFA 只需要以下 rpm 软件包：
++
+** mysql-commune-client-5.7.x
+** mysql-commune-libs-5.7.x
+** mysql-commune-server-5.7.x
+** mysql-commune-common-5.7.x
+** mysql-commune-libs-compat-5.7.x 删除所有其他 .rpm 软件包。将所有软件包安装在 rpm 软件包中不会出现发生原因 任何问题。
+
+
+. 在 Shell 提示符处，停止 WFA 数据库和服务器服务：
++
+`sservice wfa-db stop`
+
++
+`sservice wfa-server stop`
+
+. 使用以下命令调用 MySQL 升级：
++
+`rpm -Uvh * 。 rpm`
+
++
+` * 。 rpm` 是指下载较新版本 MySQL 的目录中的 .rpm 软件包。
+
+. 启动 WFA 服务：
++
+`sservice wfa-db start`
+
++
+`sservice wfa-server start`
+
+

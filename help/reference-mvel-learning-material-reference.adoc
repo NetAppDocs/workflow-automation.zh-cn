@@ -1,0 +1,16 @@
+---
+permalink: help/reference-mvel-learning-material-reference.html 
+sidebar: sidebar 
+keywords: use, language, guide, learn, expression 
+summary: 您可以使用《 MVEL 语言指南》了解有关 MVFLEX 表达式语言（ MVEL ）的更多信息。 
+---
+= 如何查找有关 MVEL 的信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 _MVEL 语言指南 _ 了解有关 MVFLEX 表达式语言（ MVEL ）的更多信息。
+
+MVEL 是一种基于 Java 语法的表达式语言。您可以在 OnCommand Workflow Automation （ WFA ）工作流中使用 MVEL 表达式语法，例如在函数和变量中。

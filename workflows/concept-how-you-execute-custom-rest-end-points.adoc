@@ -1,0 +1,29 @@
+---
+permalink: workflows/concept-how-you-execute-custom-rest-end-points.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, mechanism, configure, custom, end points, execute, help, architect, configure, easy, understand, intuitive, uniform, resource, identifiers, follow, conventions, post, put, delete, based, semantics, client, code, developers 
+summary: OnCommand Workflow Automation （ WFA ）提供了一种配置自定义 REST 端点以执行工作流的机制。自定义 REST 端点有助于架构师配置易于理解，直观且统一的资源标识符（ URI ）来执行工作流，这些工作流遵循基于工作流语义的 POST ， PUT 或 DELETE 等其余约定。这些 URI 可为客户端开发人员简化客户端代码开发。 
+---
+= 如何执行自定义 REST 端点
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation （ WFA ）提供了一种配置自定义 REST 端点以执行工作流的机制。自定义 REST 端点有助于架构师配置易于理解，直观且统一的资源标识符（ URI ）来执行工作流，这些工作流遵循基于工作流语义的 POST ， PUT 或 DELETE 等其余约定。这些 URI 可为客户端开发人员简化客户端代码开发。
+
+使用 WFA 可以配置自定义 URI 路径，以便通过 API 调用执行工作流。URI 路径中的每个分段都可以是一个字符串，也可以是用户在方括号中输入的工作流的有效名称，例如， ` /DevOps/\ ｛ ProjectName ｝ /clone 。` 可以通过调用 ` https ： //WFAServer 来调用此工作流： HTTPS_port/rest/DevOps/Project1/clone/Jobs 。`
+
+URI 路径验证如下：
+
+* REST 路径必须以 "` /` " 开头。
+* 允许的字符包括字母，数字和下划线。
+* 用户输入名称必须周围有 "` ｛ ｝` " 。
++
+
+NOTE: 您必须检查 "` ｛ ｝` " 周围的值是否为有效的用户输入名称。
+
+* 不应存在空路径分段，例如 // ， / ｛ ｝ / 等。
+* 应同时配置 HTTP 方法配置和自定义 URI 路径配置，也不应配置这两者。
+

@@ -1,0 +1,37 @@
+---
+permalink: workflows/task-create-recurring-schedules.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, schedule, options, execute, specific, time, create, recurring, associate, routinely 
+summary: OnCommand Workflow Automation （ WFA ）为工作流提供了两个计划选项。您可以计划在特定时间执行一次工作流，也可以创建重复计划并将计划与工作流关联起来，以便定期执行工作流。 
+---
+= 创建重复计划
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation （ WFA ）为工作流提供了两个计划选项。您可以计划在特定时间执行一次工作流，也可以创建重复计划并将计划与工作流关联起来，以便定期执行工作流。
+
+您创建的计划可以重复使用，并与多个工作流关联。
+
+.步骤
+. 单击 * 执行 * > * 计划 * 。
+. 单击 image:../media/new_wfa_icon.gif["新建图标"] 在工具栏上。
+. 在 * 新建计划 * 对话框中，输入或选择计划的名称，问题描述 和频率。
++
+对于频率，必须以 24 小时格式输入时间。WFA 服务器时间将应用于计划。
+
+. 单击 * 确定 * 。
+
+
+
+
+== 完成后
+
+* 在执行工作流时，您可以使用 * 重复执行 * 选项将计划与工作流相关联。
+* 您可以单击 * 执行 * > * 重复计划 * 来查看工作流及其与计划的关联的详细信息。
++
+计划执行一次的工作流的资源和执行规划会在工作流为计划时立即完成。但是，重复计划的工作流的资源和执行规划在计划的时间进行，而不是在计划与工作流关联时进行。
+
+

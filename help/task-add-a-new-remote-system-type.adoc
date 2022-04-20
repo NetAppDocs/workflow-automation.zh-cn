@@ -1,0 +1,28 @@
+---
+permalink: help/task-add-a-new-remote-system-type.html 
+sidebar: sidebar 
+keywords: new, remote, system, type, oncommand, Workflow, automation, predefined, meet, requirement, change, configuration, predefined 
+summary: 如果预定义的系统类型不满足您的要求，或者您要更改预定义系统类型的配置，则可以将新的远程系统类型添加到 OnCommand Workflow Automation （ WFA ）中。 
+---
+= 添加新的远程系统类型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果预定义的系统类型不满足您的要求，或者您要更改预定义系统类型的配置，则可以将新的远程系统类型添加到 OnCommand Workflow Automation （ WFA ）中。
+
+* 您需要的内容 *
+
+* 您必须已安装 WFA 。
+* 您必须具有 WFA 的管理员权限或架构师凭据。
+
+
+.步骤
+. 以管理员或架构师身份通过 Web 浏览器登录到 WFA 。
+. 单击 * 数据源设计 * > * 远程系统类型 * 。
+. 单击以创建新的远程系统类型 image:../media/new_wfa_icon.gif["新建图标"] 在工具栏上。
+. 在 * 新建远程系统类型 * 对话框中输入所需信息，例如远程系统类型的名称，类型，问题描述 和实体版本。
+. 单击 * 保存 * 。
+

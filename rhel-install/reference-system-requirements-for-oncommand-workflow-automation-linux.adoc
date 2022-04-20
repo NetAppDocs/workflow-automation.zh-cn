@@ -1,0 +1,115 @@
+---
+permalink: rhel-install/reference-system-requirements-for-oncommand-workflow-automation-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, install, system requirements 
+summary: 在安装 WFA 之前，您必须了解 OnCommand Workflow Automation （ WFA ）的硬件和软件要求。 
+---
+= 安装 OnCommand Workflow Automation 的系统要求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安装 WFA 之前，您必须了解 OnCommand Workflow Automation （ WFA ）的硬件和软件要求。
+
+
+
+== 安装 WFA 的硬件要求
+
+下表列出了 WFA 服务器的最低硬件要求和建议的硬件规格。
+
+[cols="3*"]
+|===
+| 组件 | 最低要求 | 建议的规格 
+
+
+ a| 
+CPU
+ a| 
+2.27 GHz 或更快， 4 核， 64 位
+ a| 
+2.27 GHz 或更快， 4 核， 64 位
+
+
+
+ a| 
+RAM
+ a| 
+4 GB
+ a| 
+8 GB
+
+
+
+ a| 
+可用磁盘空间
+ a| 
+5 GB
+ a| 
+20 GB
+
+|===
+[NOTE]
+====
+如果要在虚拟机（ VM ）上安装 WFA ，则应预留所需的内存和 CPU ，以便 VM 具有足够的资源。安装程序不会验证 CPU 速度。
+
+====
+
+
+== 安装 WFA 的软件要求
+
+下表列出了与 WFA 服务器兼容的所有操作系统版本。
+
+[cols="2*"]
+|===
+| 操作系统 | version 
+
+
+ a| 
+Red Hat Enterprise Linux
+ a| 
+7.0 ， 7.1 ， 7.2 ， 7.3 ， 7.4 ， 7.5 和 7.6 64 位操作系统
+
+
+
+ a| 
+CentOS
+ a| 
+7.1 ， 7.2 ， 7.3 ， 7.4 ， 7.5 和 7.6 64 位操作系统
+
+|===
+[NOTE]
+====
+WFA 应安装在专用物理机或虚拟机上。您不能在运行 WFA 的服务器上安装任何其他应用程序。
+
+====
+* 支持以下浏览器之一：
++
+** Mozilla Firefox
+** Microsoft Internet Explorer
+** Google Chrome
+
+
+* Perl v5.x
++
+您可以使用 ` 。 /WFA-version_number.bin -l` 命令获取有关应安装的 Perl 模块的信息。
+
+
+
+有关详细信息，请参见 https://mysupport.netapp.com/matrix/["互操作性表工具"^]。
+
+
+NOTE: 防病毒应用程序可能会阻止 WFA 服务启动。
+
+要避免此问题描述 ，请为以下 WFA 目录配置防病毒扫描排除项：
+
+* 安装 WFA 的目录
+* 安装 Perl 的目录
+* 安装 OpenJDK 的目录
+* MySQL 数据目录
+
+
+* 相关信息 *
+
+https://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]

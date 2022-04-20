@@ -1,0 +1,26 @@
+---
+permalink: workflows/task-add-approval-points.html 
+sidebar: sidebar 
+keywords: add, approval, point, checkpoint, workflow, pause, execution, resume, points, incremental, sections, certain condition, example, successful, validated 
+summary: 您可以在工作流中添加一个批准点作为检查点，以暂停工作流执行并根据您的批准恢复工作流。您可以使用批准点来增量执行工作流，其中，只有在满足特定条件后才会执行工作流的各个部分，例如，必须批准下一个部分或验证是否成功执行第一个部分。 
+---
+= 添加批准点
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在工作流中添加一个批准点作为检查点，以暂停工作流执行并根据您的批准恢复工作流。您可以使用批准点来增量执行工作流，其中，只有在满足特定条件后才会执行工作流的各个部分，例如，必须批准下一个部分或验证是否成功执行第一个部分。
+
+.步骤
+. 以架构师或管理员身份通过 Web 浏览器登录到 WFA 。
+. 单击 * 工作流设计 * > * 工作流 * 。
+. 在 * 工作流 * 窗口中，双击要修改的工作流。
+. 在 * 工作流 < 工作流名称 >* 窗口中，单击 image:../media/approval_point_disabled.gif["批准点的图像"] 要添加批准点的步骤左侧的图标。
++
+您可以为一个或多个步骤添加批准点。
+
+. 在 * 新批准点 * 对话框中，提供注释和条件详细信息。
+. 单击 * 确定 * 。
+

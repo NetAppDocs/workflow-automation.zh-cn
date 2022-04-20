@@ -1,0 +1,54 @@
+---
+permalink: windows-install/task-configure-authentication-settings.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, configure, authentication settings 
+summary: 您可以将 OnCommand Workflow Automation （ WFA ）配置为使用 Microsoft Active Directory （ AD ）轻型目录访问协议（ LDAP ）服务器进行身份验证和授权。 
+---
+= 配置身份验证设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将 OnCommand Workflow Automation （ WFA ）配置为使用 Microsoft Active Directory （ AD ）轻型目录访问协议（ LDAP ）服务器进行身份验证和授权。
+
+您必须已在环境中配置 Microsoft AD LDAP 服务器。
+
+WFA 仅支持 Microsoft AD LDAP 身份验证。您不能使用任何其他 LDAP 身份验证方法，包括 Microsoft AD 轻型目录服务（ AD LDS ）或 Microsoft 全局目录。
+
+
+NOTE: 在通信期间， LDAP 会以纯文本格式发送用户名和密码。但是， LDAPS （ LDAP 安全）通信已加密且安全。
+
+.步骤
+. 以管理员身份通过 Web 浏览器登录到 WFA 。
+. 单击 * 设置 * ，然后在 * 设置 * 下单击 * 身份验证 * 。
+. 选中 * 启用 Active Directory* 复选框。
+. 在以下字段中输入所需信息：
++
+.. 如果要对域用户使用用户@域格式，请在 * 用户名属性 * 字段中将 sAMAccountName 替换为 userPrincipalName 。
+.. 如果您的环境需要唯一值，请编辑所需字段。
+.. 按如下所示输入 AD 服务器 URI ： `ldap ： //active_directory_server_address\[ ： port\]`
++
+LDAP ： //NB-T01.example.com[:389]
+
++
+如果已启用基于 SSL 的 LDAP ，则可以使用以下 URI 格式： `ldaps ： //active_directory_server_address\[ ： port\]`
+
+.. 添加所需角色的 AD 组名称列表。
++
+
+NOTE: 您可以在 Active Directory 组窗口中为所需角色添加 AD 组名称列表。
+
+
+
+. 单击 * 保存 * 。
+. 如果需要使用 LDAP 连接到阵列，请配置 WFA 服务以所需域用户身份登录：
++
+.. 使用 services.msc 打开 Windows 服务控制台。
+.. 双击 * NetApp WFA Server* 服务。
+.. 在 NetApp WFA 服务器属性对话框中，单击 * 登录 * 选项卡，然后选择 * 此帐户 * 。
+.. 输入域用户名和密码，然后单击 * 确定 * 。
+
+
+

@@ -1,0 +1,39 @@
+---
+permalink: workflows/task-create-a-finder.html 
+sidebar: sidebar 
+keywords: create, wfa, finder, search, resources, predefined, suitable, required 
+summary: 如果没有适合搜索所需资源的预定义 WFA 查找器，您可以创建 WFA 查找器，以便搜索资源。 
+---
+= 创建查找器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果没有适合搜索所需资源的预定义 WFA 查找器，您可以创建 WFA 查找器，以便搜索资源。
+
+您必须已创建查找器中使用的所需筛选器。
+
+.步骤
+. 单击 * 工作流设计 * > * 提醒 * 。
+. 单击 image:../media/new_wfa_icon.gif["新建图标"] 在工具栏上。
+. 在 * 新建查找器 * 对话框的 * 属性 * 选项卡中，在 * 名称 * ， * 类型 * 和 * 问题描述 * 字段中输入或选择所需的详细信息。
+. 在 * 筛选器 * 选项卡中，从 * 可用筛选器 * 列表中选择所需的筛选器，然后单击 image:../media/right_arrow_button.gif["右箭头按钮"]。
++
+您可以根据需要添加或删除筛选器。
+
+. 在返回的属性选项卡中，从 * 可用 * 列表中为筛选器选择所需属性，然后单击 image:../media/right_arrow_button.gif["右箭头按钮"]。
+. * 可选： * 单击 * 测试 * 以测试查找器。
++
+.. 在 * 测试查找器 <FinderName>* 对话框中，输入所需的测试参数。
+.. 如果不想使用预留数据测试查找器，请清除 * 在测试中使用预留数据 * 复选框。
+.. 单击 * 测试 * 。
++
+此时将显示测试结果。
+
+.. 关闭对话框。
+
+
+. 单击 * 保存 * 。
+

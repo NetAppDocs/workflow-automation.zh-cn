@@ -1,0 +1,44 @@
+---
+permalink: help/reference-test-connectivity-dialog-box.html 
+sidebar: sidebar 
+keywords: test, connectivity, dialog box, enable, test, system, associated, credential, operation, trigger, search, path, first, look, exact, match, pattern, service, authentication 
+summary: 通过测试连接对话框，您可以测试与凭据关联的系统的连接。测试连接操作将触发搜索路径，首先查找完全匹配的路径，然后查找模式匹配项，最后查找 LDAP 服务身份验证。 
+---
+= 测试连接对话框
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过测试连接对话框，您可以测试与凭据关联的系统的连接。测试连接操作将触发搜索路径，首先查找完全匹配的路径，然后查找模式匹配项，最后查找 LDAP 服务身份验证。
+
+在测试连接之前，可以使用 Internet 控制消息协议（ Internet Control Message Protocol ， ICMP ）来检查系统是否正在运行。
+
+
+
+== 测试连接参数
+
+* * 类型 *
++
+用于从下拉列表中选择凭据类型。
+
+* * 名称 /IP
++
+用于指定凭据的主机名或 IP 地址。
+
+
+
+
+
+== 命令按钮
+
+* * 测试 *
++
+打开与主机名或 IP 地址的连接尝试。
+
+* * 关闭 *
++
+取消所做的更改（如果有），然后关闭对话框。
+
+

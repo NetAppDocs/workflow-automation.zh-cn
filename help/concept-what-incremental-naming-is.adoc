@@ -1,0 +1,32 @@
+---
+permalink: help/concept-what-incremental-naming-is.html 
+sidebar: sidebar 
+keywords: incremental, naming, algorithm, enable, attribute, workflow, search, results, parameter, attribute, incremental, value, custom, expression, functionality, help, implement, convention, requirement 
+summary: 增量命名是一种算法，可用于根据参数的搜索结果为工作流中的属性命名。您可以根据增量值或自定义表达式来命名属性。增量命名功能可帮助您根据需要实施命名约定。 
+---
+= 什么是增量命名
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+增量命名是一种算法，可用于根据参数的搜索结果为工作流中的属性命名。您可以根据增量值或自定义表达式来命名属性。增量命名功能可帮助您根据需要实施命名约定。
+
+在设计工作流时，您可以使用增量命名功能来动态命名工作流创建的对象。通过此功能，您可以使用资源选择功能为对象指定搜索条件，搜索条件返回的值将用于对象的属性。此外，如果未找到具有指定搜索条件的对象，则可以为此属性指定一个值。
+
+您可以使用以下选项之一为属性命名：
+
+* 提供增量值和后缀
++
+您可以提供一个应使用的值以及搜索条件找到的对象值，并以指定的数字递增。例如，如果您要创建命名约定为 ` filer name_unique number_environment 的卷， _` 您可以使用查找器按名称前缀查找最后一个卷，并将唯一编号递增 1 ，然后将后缀名称添加到卷名称中。如果找到的最后一个卷名称前缀为 _vf_023_prod_ ，而您正在创建三个卷，则创建的卷的名称为 _vf_024_prod ， vf_025_prod ， _ 和 _vf_026 _prod_
+
+* 提供自定义表达式
++
+您可以提供一个应与搜索条件找到的对象值一起使用的值，并根据输入的表达式添加其他值。例如，如果要创建命名约定为 `最后一个卷名称 _environment name padded with 1 的卷，则可以输入表达式 `last_volume.name + "_" + nextName （ "lab1" ）`` 。如果找到的最后一个卷名称为 _vf_023 ，则创建的卷名称为 _vf_023_lab2._
+
+
+
+下图显示了如何提供自定义表达式来指定命名约定：
+
+image::../media/incrmnmgwzd.png[incrmnmgwzd]

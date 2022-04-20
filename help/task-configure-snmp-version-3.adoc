@@ -1,0 +1,55 @@
+---
+permalink: help/task-configure-snmp-version-3.html 
+sidebar: sidebar 
+keywords: configure, oncommand, workflow, automation, simple, network, management, protocol, version 3, traps, about, status, operations 
+summary: 您还可以配置 OnCommand Workflow Automation （ WFA ），以发送有关工作流操作状态的简单网络管理协议（ SNMP ）版本 3 陷阱。 
+---
+= 配置 SNMP 版本 3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您还可以配置 OnCommand Workflow Automation （ WFA ），以发送有关工作流操作状态的简单网络管理协议（ SNMP ）版本 3 陷阱。
+
+* 关于此任务 *
+
+版本 3 提供了两个额外的安全选项：
+
+* 使用身份验证的版本 3
++
+陷阱会通过网络以未加密方式发送。SNMP 管理应用程序使用与 SNMP 陷阱消息相同的身份验证参数进行配置，可以接收陷阱。
+
+* 具有身份验证和加密功能的版本 3
++
+陷阱会通过网络进行加密发送。要接收和解密这些陷阱，您必须为 SNMP 管理应用程序配置与 SNMP 陷阱相同的身份验证参数和加密密钥。
+
+
+
+.步骤
+. 以管理员用户身份通过 Web 浏览器登录到 WFA ，然后访问 WFA 服务器。
+. 单击 * 设置 * ，然后在 * 设置 * 下单击 * SNMP * 。
+. 选中 * 启用 SNMP* 复选框。
+. 在 * 版本 * 下拉列表中，选择以下选项之一：
++
+** 版本 3
+** 使用身份验证的版本 3
+** 具有身份验证和加密功能的版本 3
+
+
+. 选择与您在步骤 4 中选择的特定 SNMP 版本 3 选项对应的 SNMP 配置选项。
+. 输入 IPv4 或 IPv6 地址或主机名以及管理主机的端口号。WFA 将 SNMP 陷阱发送到指定端口号。默认端口号为 162 。
+. 在 * 通知时间 * 部分中，选中以下一个或多个复选框：
++
+** 工作流规划已启动 / 失败 / 已完成
+** 已启动工作流执行
+** 已成功完成工作流执行
+** 工作流执行失败 / 部分成功
+** 正在执行工作流，等待批准
+** 采集失败
+
+
+. 单击 * 发送测试通知 * 以验证设置。
+. 单击 * 保存 * 。
+

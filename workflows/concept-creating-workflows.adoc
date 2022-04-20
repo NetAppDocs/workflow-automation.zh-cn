@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-creating-workflows.html 
+sidebar: sidebar 
+keywords: predefined, workflows, match, requirements, create, understand, capabilities, available, designer, checklist 
+summary: 如果预定义的工作流不符合您的要求，您可以创建所需的工作流。在创建工作流之前，您应了解 WFA 设计器中提供的功能并创建工作流检查清单。 
+---
+= 创建工作流
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果预定义的工作流不符合您的要求，您可以创建所需的工作流。在创建工作流之前，您应了解 WFA 设计器中提供的功能并创建工作流检查清单。

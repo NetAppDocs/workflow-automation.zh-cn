@@ -1,0 +1,135 @@
+---
+permalink: workflows/reference-guidelines-for-sql-in-wfa.html 
+sidebar: sidebar 
+keywords: aware, guidelines, use, sql, oncommand, workflow, automation, write, sql, queries, wfa 
+summary: 您必须了解使用 OnCommand Workflow Automation 中的 SQL （ WFA ）为 WFA 写入 SQL 查询的准则。 
+---
+= WFA 中的 SQL 准则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须了解使用 OnCommand Workflow Automation 中的 SQL （ WFA ）为 WFA 写入 SQL 查询的准则。
+
+SQL 在 WFA 中的以下位置使用：
+
+* 用于填充用户输入以供选择的 SQL 查询
+* 用于创建筛选器以筛选特定词典条目类型的对象的 SQL 查询
+* 实践数据库中的表中的静态数据
+* SQL 类型的自定义数据源类型，其中必须从自定义配置管理数据库（ CMDB ）等外部数据源提取数据。
+* SQL 查询预留和验证脚本
+
+
+[cols="2*"]
+|===
+| 准则 | 示例 
+
+
+ a| 
+SQL 保留关键字必须为大写字符。
+ a| 
+[listing]
+----
+SELECT
+    vserver.name
+FROM
+    cm_storage.vserver vserver
+----
+
+
+ a| 
+表和列名称必须为小写字符。
+ a| 
+表：聚合
+
+列： used_space_MB
+
+
+
+ a| 
+使用下划线（ _ ）字符分隔词语。不允许使用空格。
+ a| 
+array_performance
+
+
+
+ a| 
+表名称以单个形式定义。表是一个或多个条目的集合。
+ a| 
+"`函数` " ，而非 "`函数` "
+
+
+
+ a| 
+在选择查询中使用具有有意义名称的表别名。
+ a| 
+[listing]
+----
+SELECT
+	vserver.name
+FROM
+	cm_storage.cluster cluster,
+	cm_storage.vserver vserver
+WHERE
+	vserver.cluster_id = cluster.id
+	AND cluster.name = '${ClusterName}'
+	AND vserver.type = 'cluster'
+ORDER BY
+	vserver.name ASC
+----
+
+
+ a| 
+如果您必须在筛选器查询或用户查询中引用筛选器输入参数或用户输入参数，请使用以下语法： "$\ ｛ inputVariableName ｝ 。您也可以使用此语法引用预留脚本和验证脚本中的命令定义参数。
+ a| 
+[listing]
+----
+SELECT
+	volume.name AS Name,
+	aggregate.name as Aggregate,
+	volume.size_mb AS 'Total Size (MB)',
+	voulme.used_size_mb AS 'Used Size (MB)',
+	volume.space_guarantee AS 'Space Guarantee'
+FROM
+	cm_storage.cluster,
+	cm_storage.aggregate,
+	cm_storage.vserver,
+	cm_storage.volume
+WHERE
+	cluster.id = vserver.cluster_id
+	AND aggregate.id = volume.aggregate_id
+	AND vserver.id = voulme.vserver_id
+	AND vserver.name = '${VserverName}'
+	AND cluster.name = '${ClusterName}'
+ORDER BY
+	volume.name ASC
+----
+
+
+ a| 
+对复杂查询使用注释。查询中支持的一些注释模式如下：
+
+* "` - -` " ，直到行尾为止
++
+在此注释模式下，第二个连字符后面必须有空格。
+
+* 从 "` #` " 字符到行尾
+* 从 "` /*` " 到以下 "` */` " 序列
+
+ a| 
+[listing]
+----
+/*
+multi-line
+comment
+*/
+--line comment
+SELECT
+	ip as ip, # comment till end of this line
+	NAME as name
+FROM --end of line comment
+	storage.array
+----
+|===

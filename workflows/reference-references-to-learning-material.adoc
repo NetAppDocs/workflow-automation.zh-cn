@@ -1,0 +1,174 @@
+---
+permalink: workflows/reference-references-to-learning-material.html 
+sidebar: sidebar 
+keywords: aware, certain, scripting, programming, practices, create, advanced, workflow, automation, reference, material, learn, option, building blocks 
+summary: 要创建高级工作流自动化（ WFA ）工作流，您应了解某些脚本编写和编程实践。在创建 WFA 组件或工作流之前，您可以使用参考资料了解所需的选项。 
+---
+= 参考学习材料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要创建高级工作流自动化（ WFA ）工作流，您应了解某些脚本编写和编程实践。在创建 WFA 组件或工作流之前，您可以使用参考资料了解所需的选项。
+
+
+
+== Windows PowerShell
+
+WFA 使用 PowerShell 脚本执行工作流操作。下表提供了 PowerShell 学习材料的参考：
+
+[cols="2*"]
+|===
+
+
+ a| 
+Windows PowerShell 入门
+ a| 
+http://msdn.microsoft.com/en-us/library/windows/desktop/aa973757(v=vs.85).aspx[]
+
+
+
+ a| 
+PowerShell 开发—集成脚本环境（ ISE ）
+ a| 
+https://docs.microsoft.com/en-us/powershell/scripting/windows-powershell/ise/introducing-the-windows-powershell-ise?view=powershell-7.2[]
+
+
+
+ a| 
+_.NET Framework Naming Guidelines_
+ a| 
+http://msdn.microsoft.com/en-us/library/xzf533w0%28v=vs.71%29.aspx[]
+
+
+
+ a| 
+PowerShell 代码模式
+ a| 
+http://get-powershell.com/post/2011/04/13/Extra-Points-for-Style-when-writing-PowerShell-Code.aspx[]
+
+
+
+ a| 
+PowerShell 试用 / 捕获最终
+ a| 
+http://technet.microsoft.com/en-us/library/dd315350.aspx[]
+
+
+
+ a| 
+PowerShell 自动变量
+ a| 
+http://technet.microsoft.com/en-us/library/dd347675.aspx[]
+
+
+
+ a| 
+PowerShell 错误报告
+ a| 
+https://docs.microsoft.com/en-us/powershell/scripting/developer/cmdlet/error-reporting-concepts?view=powershell-7.2[]
+
+
+
+ a| 
+PowerShell 通用参数
+ a| 
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7.2[]
+
+|===
+
+
+== Data ONTAP PowerShell 工具包
+
+Data ONTAP PowerShell 工具包与 WFA 捆绑在一起。您可以使用 PowerShell 工具包 cmdlet 从 PowerShell 脚本调用 Data ONTAP 命令。有关详细信息，请参见 _PowerShell Data ONTAP 工具包帮助 _ ，您可以从以下位置访问此帮助： `WFA_INSTALL_location\WFA\late\Modules\Dataontap\WebHelp\index.html 。`
+
+` _wfa_install_location_` 是 WFA 安装目录， `C ： \Program Files\NetApp` 是默认安装目录。
+
+下表引用了有关 Data ONTAP PowerShell 工具包的信息：
+
+[cols="2*"]
+|===
+
+
+ a| 
+ONTAP PowerShell 工具包文章
+ a| 
+https://community.netapp.com/t5/Tech-OnTap-Articles/The-Data-ONTAP-PowerShell-Toolkit/ta-p/85933[]
+
+
+
+ a| 
+ONTAP PowerShell 工具包 NetApp 社区
+ a| 
+https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/microsoft-cloud-and-virtualization-discussions/label-name/powershell%20toolkit[]
+
+|===
+
+
+== Perl
+
+WFA 支持使用 Perl 命令执行工作流操作。安装 WFA 时，所需的 Perl 和 Perl 模块会安装在 WFA 服务器上。
+
+https://docs.activestate.com/activeperl/5.26/perl/["ActivePerl 用户指南"^]
+
+您也可以从以下位置访问 _ActivePerl 用户指南 _ ： `WFA_INSTALL_location\WFA\Perl64\html\index.html 。`
+
+` _wfa_install_location_` 是 WFA 安装目录， `C ： \Program Files\NetApp 是默认安装目录。` ` WFA 使用 Perl 脚本执行工作流操作。下表列出了 Perl 学习材料的参考资料：
+
+[cols="2*"]
+|===
+
+
+ a| 
+Modern Perl ： 2014
+ a| 
+http://modernperlbooks.com/books/modern_perl_2014/index.html[]
+
+
+
+ a| 
+Perl 编程文档
+ a| 
+http://perldoc.perl.org/[]
+
+
+
+ a| 
+Perl 编程语言
+ a| 
+http://www.perl.org/[]
+
+|===
+
+
+== NetApp 易管理性 SDK
+
+NetApp 易管理性 SDK 所需的 Perl 模块与 WFA 捆绑在一起。要在 WFA 中使用 Perl 命令，需要使用这些 Perl 模块。有关详细信息，请参见 NetApp 易管理性 SDK 文档，该文档可从以下位置访问： `WFA_INSTALL_location\WFA\perl\NMSDK\html 。`
+
+`WFA_INSTALL_location` 是 WFA 安装目录， `C ： \Program Files\NetApp` 是默认安装目录。
+
+
+
+== 结构化查询语言（ SQL ）
+
+SQL SELECT 语法用于筛选器和填充用户输入。
+
+http://dev.mysql.com/doc/refman/5.1/en/select.html["MySQL SELECT 语法"^]
+
+
+
+== MVFLEX 表达式语言（ MVEL ）
+
+您可以在 WFA 工作流中使用 MVEL 表达式语法，例如在函数和变量中。
+
+有关详细信息，请参见 _MVEL 语言指南 _ 。
+
+
+
+== 正则表达式
+
+您可以在 WFA 中使用正则表达式（ regex ）。
+
+https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/RegExp.html["使用正则表达式的 ActionScript 3.0"^]

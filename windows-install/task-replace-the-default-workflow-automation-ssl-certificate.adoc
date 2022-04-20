@@ -1,0 +1,53 @@
+---
+permalink: windows-install/task-replace-the-default-workflow-automation-ssl-certificate.html 
+sidebar: sidebar 
+keywords: replace, default, workflow, automation, ssl certificate 
+summary: 如果证书已过期或要延长证书的有效期，则可以替换默认的 Workflow Automation （ WFA ） SSL 证书。 
+---
+= 替换默认的 Workflow Automation SSL 证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果证书已过期或要延长证书的有效期，则可以替换默认的 Workflow Automation （ WFA ） SSL 证书。
+
+您必须对 WFA 服务器具有 Windows 管理员权限。
+
+此操作步骤 将使用默认 WFA 安装路径。如果您在安装期间更改了默认位置，则必须使用自定义 WFA 安装路径。
+
+.步骤
+. 以管理员用户身份登录到 WFA 主机。
+. 使用 Windows 服务控制台停止以下 WFA 服务：
++
+** NetApp WFA 数据库
+** NetApp WFA 服务器
+
+
+. 从以下位置删除 WFA.keystore 文件：
++
+` <wfa_install_location>\wfa\jboss\standalone ， configuration\keystore`
+
+. 在 WFA 服务器上打开命令提示符，然后将目录更改为以下位置： <OpenJDK_INSTALL_location>\bin
+. 获取数据库密钥：
++
+`keytool -keysize 2048 -genkey -alias "ssl keystore" -keyalg rsa -keystore "<wfa_install_location>\wfa\jboss\standal\configuration\keystore\wfa.keystore" -validity xxxx`
+
++
+xxxx 是新证书有效期的天数。
+
+. 出现提示时，请提供密码（默认密码或新密码）。
++
+changeit 是默认密码。如果不想使用默认密码，则必须从以下位置更改 standalone-full.xml 文件中 SSL 元素的密码属性： <wfa_install_location>\wfa\jboss\standalone \configuration\
+
++
+[listing]
+----
+<ssl name="ssl" password="new_password" certificate-key-file="${jboss.server.config.dir}/keystore/wfa.keystore"
+----
+. 输入证书的所需详细信息。
+. 查看显示的信息，然后输入 `是` 。
+. 出现以下消息时按 * Enter * ： Enter key password for <SSL keystorage> <return if same as keystore password> 。
+. 使用 Windows 服务控制台重新启动 WFA 服务。
+

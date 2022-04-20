@@ -1,0 +1,121 @@
+---
+permalink: help/reference-new-data-source-dialog-box.html 
+sidebar: sidebar 
+keywords: new, data, source, dialog box, enable, add 
+summary: '通过 " 新建数据源 " 对话框，您可以添加新的数据源。' 
+---
+= 新建数据源对话框
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过 " 新建数据源 " 对话框，您可以添加新的数据源。
+
+
+
+== 数据源配置属性
+
+* * 名称 *
++
+用于指定数据源的名称。
+
+* * 数据源类型 *
++
+用于选择数据源类型，例如 Active IQ Unified Manager - 6.0 （ MySQL ）。
+
++
+选择数据源类型时，端口，方案，用户名，密码， 间隔（分钟）和超时（秒）字段会填充数据。
+
++
+
+NOTE: 如果要从 Active IQ Unified Manager 服务器执行 OnCommand Workflow Automation （ WFA ）数据保护工作流，则必须在 Active IQ Unified Manager 服务器中设置 WFA 。
+
++
+有关详细信息，请参见 _Unified OnCommand Manager 联机帮助。
+
+* * 主机名 *
++
+用于指定数据源的主机名或 IP 地址（ IPv4 或 IPv6 ）。
+
++
+
+NOTE: Active IQ Unified Manager 数据源类型不支持 IPv6 地址。
+
+* * 端口 *
++
+显示选定数据源类型的关联端口号（如果有）。
+
++
+您可以更改默认端口并为数据源指定其他端口。
+
+* * 方案 *
++
+显示与选定数据源类型关联的方案，例如，对于 Active IQ Unified Manager - 6.0 （ MySQL ），显示 _cm_storage_ 。
+
++
+无法修改此属性。
+
+* * 用户名 *
++
+显示选定数据源类型的关联用户名（如果有）。
+
++
+要覆盖默认用户名，必须为此数据源指定适当的用户名：
+
++
+** 对于 6.0 之前的 Active IQ Unified Manager 版本，您必须输入在运行 ocsetup 时用于覆盖默认凭据的用户名。
+** 对于 Active IQ Unified Manager 6.0 及更高版本，您必须输入在 Active IQ Unified Manager 服务器上创建的数据库用户帐户的用户名。
+** 对于 Performance Advisor ，您必须输入至少具有 GlobalRead 角色的 Active IQ Unified Manager 用户的用户名。
+
+
+* * 密码 *
++
+用于为选定数据源类型指定密码。
+
++
+您必须指定一个密码以覆盖此数据源用户名的默认密码：
+
++
+** 对于 6.0 之前的 Active IQ Unified Manager 版本，您必须输入在运行 ocsetup 时用于覆盖默认凭据的密码。
+** 对于 Active IQ Unified Manager 6.0 及更高版本，您必须输入在 Active IQ Unified Manager 服务器上创建的数据库用户帐户的密码。
+** 对于 Performance Advisor ，您必须输入至少具有 GlobalRead 角色的 Active IQ Unified Manager 用户的密码。
+
+
+* * 数据库 *
+* * 间隔（分钟） *
++
+用于单击该值并使用向上和向下箭头选择间隔（以分钟为单位）。
+
++
+
+NOTE: 如果间隔设置为零（ 0 ），则会禁用自动采样。
+
++
+数据采样的默认间隔为：
+
++
+** 基于脚本的数据源类型： 1440 （性能和 VC ）
+** 基于 SQL 的数据源类型： 30 （ cm_storage ， storage 和 cm_performance ）
+
+
+* * 请参见《设置说明指南》 *
++
+打开设置说明指南对话框，在此可以指定设置数据源的说明。
+
+
+
+
+
+== 命令按钮
+
+* * 保存 *
++
+保存配置设置并关闭对话框。
+
+* * 取消 *
++
+取消所做的更改（如果有），然后关闭对话框。
+
+

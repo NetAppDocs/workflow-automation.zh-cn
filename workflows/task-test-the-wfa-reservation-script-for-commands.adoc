@@ -1,0 +1,37 @@
+---
+permalink: workflows/task-test-the-wfa-reservation-script-for-commands.html 
+sidebar: sidebar 
+keywords: test, reservation, scripts, written, oncommand, workflow, automation, commands, playground, database, ensure, affect, table 
+summary: 您可以在实践数据库上测试为 OnCommand Workflow Automation （ WFA ）命令编写的预留脚本，以确保这些脚本工作正常，不会影响 WFA 数据库表。 
+---
+= 测试预留脚本中的命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在实践数据库上测试为 OnCommand Workflow Automation （ WFA ）命令编写的预留脚本，以确保这些脚本工作正常，不会影响 WFA 数据库表。
+
+此操作步骤 将使用默认 WFA 安装路径。如果您在安装期间更改了默认位置，则必须使用更改后的 WFA 安装路径。
+
+.步骤
+. 在 WFA 服务器上打开命令提示符并将目录更改为以下位置： `c ： \Program Files\NetApp\WFA\mysql\bin`
+. 使用以下命令创建 WFA 数据库的转储： `mysqldump -u WFA -pWfa123 -single 事务 -skip-add-drop-table database_tables> dump_location`
++
+用于创建 cm_storage 数据库表转储的命令： `mysqldump -u WFA -pWfa123 -single 事务 -skip-add-drop-table cm_storage> c ： \tmp\cmSt2.sql`
+
+. 使用以下命令将您创建的转储还原到 WFA 实践数据库： `mysql -u WFA -pWfa123 playground< dump_location`
++
+`mysql -u WFA -pWfa123 playground< c ： \tmp\cmSt2.sql`
+
+. 创建或编辑 WFA 命令，并在 * 预留 * 选项卡中写入预留脚本。
++
+您必须确保预留和验证脚本仅使用实践数据库。
+
+. 创建或编辑工作流，在工作流中包含命令，然后执行此工作流。
+. 验证预留和验证脚本是否按预期工作。
++
+WFA 数据源采集过程不会更新实践数据库。您必须手动删除命令创建的预留。
+
+

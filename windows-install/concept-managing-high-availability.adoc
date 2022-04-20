@@ -1,0 +1,14 @@
+---
+permalink: windows-install/concept-managing-high-availability.html 
+sidebar: sidebar 
+keywords: manage, high availability 
+summary: 您可以配置高可用性设置，以便为网络操作提供持续支持。如果其中一个组件发生故障，则设置中的镜像组件将接管此操作，并提供不间断的网络资源。您还可以备份 WFA 数据库和支持的配置，以便在发生灾难时恢复数据。 
+---
+= 管理高可用性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以配置高可用性设置，以便为网络操作提供持续支持。如果其中一个组件发生故障，则设置中的镜像组件将接管此操作，并提供不间断的网络资源。您还可以备份 WFA 数据库和支持的配置，以便在发生灾难时恢复数据。

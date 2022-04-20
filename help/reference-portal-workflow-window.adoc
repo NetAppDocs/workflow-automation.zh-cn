@@ -1,0 +1,36 @@
+---
+permalink: help/reference-portal-workflow-window.html 
+sidebar: sidebar 
+keywords: workflow, window, displays, ready, production, edit, execute, authorization, access, clicking 
+summary: 工作流窗口将显示标记为可投入生产的工作流。您可以编辑或执行已获得授权的工作流。您可以通过单击工作流选项卡访问此窗口。 
+---
+= 工作流窗口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+工作流窗口将显示标记为可投入生产的工作流。您可以编辑或执行已获得授权的工作流。您可以通过单击工作流选项卡访问此窗口。
+
+
+
+== 类别窗格
+
+通过类别窗格，您可以按类别搜索工作流。未分配给任何类别的工作流列在 "`No category` " 下。类别标题右侧将显示该类别中的工作流总数。此数字包括标记为可投入生产的工作流。例如， " `D数据保护（ 7 ）` " 表示 " `D数据保护` " 类别中有七个工作流已准备好投入生产。
+
+
+
+== 方案
+
+使用方案菜单可以选择方案。
+
+显示的方案取决于管理员在 * 设置 * > * 设置 * > * 设置 * > * 工作流设置 * 下的显示方案内容选项中所做的选择。您可以通过选中或清除复选框来选择要显示的方案。此选择仅对当前会话有效。
+
+
+
+== 工作流窗格
+
+标记为可投入生产的工作流将在 " 工作流 " 窗格上显示为灰色框。工作流框包含工作流的名称和一个图标，用于指示此工作流支持此模式。您可以通过单击工作流框来执行工作流。
+
+如果您是管理员或架构师，则可以通过单击来编辑工作流 image:../media/portal_edit_object_wfa_icon.gif[""] 图标。。 image:../media/info_icon_execute_wfa.gif[""] 图标提供了有关此工作流的详细信息。

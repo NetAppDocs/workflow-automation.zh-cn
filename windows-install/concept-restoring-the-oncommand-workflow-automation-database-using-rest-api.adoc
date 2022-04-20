@@ -1,0 +1,20 @@
+---
+permalink: windows-install/concept-restoring-the-oncommand-workflow-automation-database-using-rest-api.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, wfa, database, rest apis 
+summary: 您可以使用 REST API 还原 OnCommand Workflow Automation （ WFA ）数据库。在故障转移期间，不能使用命令行界面（ CLI ）还原 WFA 数据库。 
+---
+= 使用 REST API 还原 WFA 数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 REST API 还原 OnCommand Workflow Automation （ WFA ）数据库。在故障转移期间，不能使用命令行界面（ CLI ）还原 WFA 数据库。
+
+以下是两种类型的还原：
+
+* 完全还原
+* 定期还原
+

@@ -1,0 +1,36 @@
+---
+permalink: windows-install/task-uninstall-wfa-in-an-mscs-environment.html 
+sidebar: sidebar 
+keywords: uninstall, workflow, automation, mscs environment 
+summary: 您可以通过从集群节点中删除所有 WFA 服务来从集群中卸载 Workflow Automation （ WFA ）。 
+---
+= 在 MSCS 环境中卸载 Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过从集群节点中删除所有 WFA 服务来从集群中卸载 Workflow Automation （ WFA ）。
+
+此任务适用场景 Windows Server 2012 。
+
+.步骤
+. 使用故障转移集群管理器使服务脱机：
++
+.. 右键单击该角色。
+.. 选择 * 停止角色 * 。
+
+
+. 在第一个节点上卸载 WFA ，然后在第二个节点上卸载 WFA 。
++
+link:task-uninstall-oncommand-workflow-automation.html["卸载 OnCommand Workflow Automation"]
+
+. 从故障转移集群管理器中删除集群资源：
++
+.. 右键单击该角色。
+.. 选择 * 删除 * 。
+
+
+. 手动删除共享位置中的数据。
+

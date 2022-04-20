@@ -1,0 +1,16 @@
+---
+permalink: help/reference-oncommand-workflow-automation-designer-features.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, include, various, feature, help, design, storage 
+summary: OnCommand Workflow Automation 包含各种功能，可帮助您设计存储工作流。 
+---
+= OnCommand Workflow Automation 设计器功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation 包含各种功能，可帮助您设计存储工作流。
+
+有关这些功能的详细信息，请参见以下主题。

@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-what-finders-are.html 
+sidebar: sidebar 
+keywords: finders, combination, filters, together, identify, common, results, workflows, select, required, resources, execution 
+summary: 查找器是一个或多个筛选器的组合，这些筛选器可一起用于确定常见结果。您可以在工作流中使用查找器选择执行工作流所需的资源。 
+---
+= 什么是查找器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+查找器是一个或多个筛选器的组合，这些筛选器可一起用于确定常见结果。您可以在工作流中使用查找器选择执行工作流所需的资源。
+
+查找器可能会应用排序顺序来区分适用的结果。查找器会根据选择条件和排序返回最佳资源。
+
+查找器返回一个结果或不返回任何结果；因此，可以使用这些结果来验证是否存在某些存储元素。但是，如果在重复行定义中使用查找器，则会使用结果集来构成组中的成员列表。查找器中使用的筛选器至少会返回词典类型的自然键，但可能会返回其他字段，这些字段的值可以引用。排序顺序可能会应用于筛选器的 SQL 查询中返回的任何字段。
+
+您可以测试查找器的结果。测试查找器时，您可以查看所有 WFA 筛选器的常见结果，其中查找器的有效结果会在结果中突出显示。在工作流中使用查找器时，您可以创建自定义的错误消息，以便向存储操作员传达有意义的信息。

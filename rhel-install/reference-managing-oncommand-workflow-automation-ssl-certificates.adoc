@@ -1,0 +1,16 @@
+---
+permalink: rhel-install/reference-managing-oncommand-workflow-automation-ssl-certificates.html 
+sidebar: sidebar 
+keywords: manage, oncommand, workflow, automation, ssl certificate 
+summary: 您可以将默认 OnCommand Workflow Automation （ WFA ） SSL 证书替换为自签名证书或由证书颁发机构（ CA ）签名的证书。 
+---
+= 管理 OnCommand Workflow Automation SSL 证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将默认 OnCommand Workflow Automation （ WFA ） SSL 证书替换为自签名证书或由证书颁发机构（ CA ）签名的证书。
+
+默认的自签名 WFA SSL 证书是在 WFA 安装期间生成的。升级时，先前安装的证书将替换为新证书。如果您使用的是非默认自签名证书或由 CA 签名的证书，则必须将默认 WFA SSL 证书替换为您的证书。

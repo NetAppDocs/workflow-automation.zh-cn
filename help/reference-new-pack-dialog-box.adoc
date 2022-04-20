@@ -1,0 +1,46 @@
+---
+permalink: help/reference-new-pack-dialog-box.html 
+sidebar: sidebar 
+keywords: new, pack, dialog box, enable, create 
+summary: 通过 New Pack 对话框，您可以创建新软件包。 
+---
+= 新建软件包对话框
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过 New Pack 对话框，您可以创建新软件包。
+
+* * 名称 *
++
+用于输入名称并保存软件包。
+
+* * 版本 *
++
+用于输入版本并保存软件包。
+
+* * 作者 *
++
+用于输入作者姓名并保存软件包。
+
+* * 问题描述 *
++
+用于输入问题描述 并保存软件包。
+
+
+
+
+
+== 命令按钮
+
+* * 保存 *
++
+保存软件包并关闭对话框。
+
+* * 取消 *
++
+关闭对话框而不保存。
+
+

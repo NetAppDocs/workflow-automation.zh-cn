@@ -1,0 +1,151 @@
+---
+permalink: windows-install/task-configure-wfa-with-mscs-using-configuration-scripts.html 
+sidebar: sidebar 
+keywords: configure, workflow, automation, mscs 
+summary: 在 Microsoft 集群服务器（ MSCS ）中安装 Workflow Automation （ WFA ）后，您必须使用配置脚本在 MSCS 中配置 WFA 以实现高可用性。 
+---
+= 使用 MSCS 配置 Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 Microsoft 集群服务器（ MSCS ）中安装 Workflow Automation （ WFA ）后，您必须使用配置脚本在 MSCS 中配置 WFA 以实现高可用性。
+
+您必须已创建 WFA 的备份。
+
+
+NOTE: 在开始配置之前，请确保在两个 MSCS 集群节点上一致地设置 WFA 加密密钥。如果未在两个节点上都设置凭据，则在发生故障转移时，无法在第二个节点上解密凭据，从而导致工作流失败。
+
+.步骤
+. 登录到 MSCS 集群的第一个节点，然后执行以下步骤：
++
+[cols="2*"]
+|===
+| 针对 ... | 执行此操作 ... 
+
+
+ a| 
+Windows 2012 ， Windows 2016 ， Windows 2019
+ a| 
+.. 在故障转移集群管理器中，右键单击 * 服务角色 * 。
+.. 选择 * 创建空服务角色 * ，然后将此角色重命名为 "`WFA` " 。
+.. 将 IP 地址资源添加到新创建的 "`WFA` " 角色：
++
+... 在故障转移集群管理器中，右键单击新创建的 "`WFA` " 角色。
+... 选择 * 资源 * > * 更多资源 * > * IP 地址 * 。
+... 配置集群 IP 地址。
+
+
+
+
+|===
+. 编辑 `mSCS_data_parameters.xml` 文件并设置 MySQL 数据目录的相对路径：
++
+[listing]
+----
+<dir>
+    <description>Data directory</description>
+    <srcpath>..\..\..\..\..\ProgramData\MySQL\MySQLServerData</srcpath>
+    <destpath>wfa</destpath>
+</dir>
+----
+. 编辑 `mSCS_resource_properties.xml` 文件并进行以下更新：
++
+.. 对 `NA_WFA_DB` 服务名称执行查找 / 替换，并将其更新为 `MYSQL57` 。
+.. 将 `vip_res <pertyname>` 设置为虚拟 IP 地址名称：
++
+[listing]
+----
+<resource>
+    <type>essential</type>
+    <id>vip_res</id>
+    <prettyname>WFA IP address</prettyname>
+</resource>
+----
+.. 将 `data_res` 设置为分配给共享磁盘资源的磁盘名称：
++
+[listing]
+----
+<resource>
+    <type>essential</type>
+    <id>datadisk_res</id>
+    <prettyname>Cluster Disk 2</prettyname>
+</resource>
+----
+.. 将 XML 文件从第一个节点复制到第二个节点：
++
+`复制 "\\node1\D$\Program Files\NetApp\WFA\bin\ha\*xml" "D ： \Program Files\NetApp\WFA\bin\ha "`
+
+.. 运行命令将第二个节点加入集群：
++
+`D ： \Program Files\NetApp\WFA\bin\ha>perl ha_setup.pl -join -t MSCS -f E ： \`
+
+
+
+. 在命令提示符处，运行 ha_setup.pl 脚本将 WFA 数据移动到共享位置，并为 WFA 配置 MSCS 以进行故障转移。该脚本可从 WFA_INSTALL_LOA\WFA\bin\ha\ 获得。
++
+`perl ha_setup.pl -first （ -t type_of_cluster_vcs ）（ -g cluster_group_name ）（ -i ip_address_name ）（ -n cluster_name ）（ -k shared_disk_resource_name ）（ -f shared_drive_path] ）`
+
++
+ha_setup.pl 脚本需要使用 MSCS 集群的 IP 地址资源进行输入。在 MSCS 2016 上安装时，需要按名称而非 IP 地址 `WFA IP 地址` 添加资源。例如：
+
++
+`perl ha_setup.pl -first -t MSCS -g WFA -i "WFA IP address" -n WFA_cluster -k "Cluster Disk 2" -f E ： \`
+
+. 通过检查输出中的 "Successfully configured （已成功配置） " 消息，验证是否已创建 MSCS 资源。
++
+[listing]
+----
+Successfully configured MSCS cluster resources on this node
+----
+. 从故障转移集群管理器停止 WFA 服务：
++
+[cols="2*"]
+|===
+| 针对 ... | 执行此操作 ... 
+
+
+ a| 
+Windows 2012 ， Windows 2016 ， Windows 2019
+ a| 
+.. 选择 * 服务角色 * ，然后选择新创建的 "`WFA` " 角色。
+.. 在资源窗格中，右键单击 * MYSQL57* ，然后选择 * 置于脱机状态 * 。
+.. 在资源窗格中，右键单击 * 不适用 WFA_SRV* ，然后选择 * 脱机 * 。
+
+
+|===
+
+
+WFA 数据库服务和 WFA 服务器服务必须脱机。不得从 Windows 服务停止 WFA 服务。
+
+. 手动将 WFA 资源移动到二级节点。
+. 验证是否可从第二个节点访问共享磁盘。
+. 在命令提示符处，在集群的二级节点上运行 ha_setup.pl 脚本，以配置 WFA ，以便使用共享位置中的数据：
++
+`perl ha_setup.pl -join （ -t type_of_cluster_mSCS ）【 -f shared_drive_path]`
+
++
+ha_setup.pl 脚本可从 wfa_install_location\wfA\bin\ha\ 获得。
+
++
+`perl ha_setup.pl -join -t MSCS -f E ： \`
+
+. 在故障转移集群管理器中，使 WFA 资源联机：
++
+[cols="2*"]
+|===
+| 针对 ... | 执行此操作 ... 
+
+
+ a| 
+Windows 2012 ， Windows 2016 ， Windows 2019
+ a| 
+.. 右键单击新创建的 "`WFA` " 角色，然后选择 * 启动角色 * 。角色必须处于运行状态，并且各个资源必须处于联机状态。
+
+
+|===
+. 手动切换到 MSCS 集群的第二个节点。
+. 验证 WFA 服务是否在集群的第二个节点上正确启动。
+

@@ -1,0 +1,114 @@
+---
+permalink: workflows/reference-guidelines-for-logging.html 
+sidebar: sidebar 
+keywords: aware, guidelines, logging, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 在为 OnCommand Workflow Automation （ WFA ）编写 PowerShell 或 Perl 脚本时，您必须了解有关日志记录的准则。 
+---
+= 日志记录准则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在为 OnCommand Workflow Automation （ WFA ）编写 PowerShell 或 Perl 脚本时，您必须了解有关日志记录的准则。
+
+
+
+== PowerShell 日志记录
+
+[cols="2*"]
+|===
+| 准则 | 示例 
+
+
+ a| 
+使用 Get-WFALogger cmdlet 进行日志记录。
+ a| 
+[listing]
+----
+Get-WFALogger -Info -message “Creating volume”
+----
+
+
+ a| 
+记录需要与 Data ONTAP ， VMware 和 PowerCLI 等内部软件包交互的每个操作。所有日志消息均可在工作流的执行状态历史记录的执行日志中找到。
+ a| 
+无
+
+
+
+ a| 
+记录传递到内部软件包的每个相关参数。
+ a| 
+无
+
+
+
+ a| 
+使用 Get-WFALogger cmdlet 时，请根据使用环境使用适当的日志级别。-Info ， -Error ， -warn 和 -Debug 是各种可用的日志级别。如果未指定日志级别，则默认日志级别为调试。
+ a| 
+无
+
+|===
+
+
+== Perl 日志记录
+
+[cols="2*"]
+|===
+| 准则 | 示例 
+
+
+ a| 
+使用 WFAUtil sendLog 进行日志记录。
+ a| 
+[listing]
+----
+my wfa_util = WFAUtil->new();
+eval {
+$wfa_util->sendLog('INFO', "Connecting to the
+cluster: $DestinationCluster");
+}
+----
+
+
+ a| 
+记录需要与命令外部任何内容交互的每个操作，例如 Data ONTAP ， VMware 和 WFA 。使用 WFAUtil sendLog 例程创建的所有日志消息都存储在 WFA 数据库中。这些日志消息可用于已执行的工作流和命令。
+ a| 
+无
+
+
+
+ a| 
+记录传递给调用的例程的每个相关参数。
+ a| 
+无
+
+
+
+ a| 
+使用适当的日志级别。 -Info ， -Error ， -warn 和 -Debug 是各种可用的日志级别。
+ a| 
+无
+
+
+
+ a| 
+在 -Info 级别登录时，请准确而简洁。请勿在日志消息中指定实施详细信息，例如类名称和功能名称。请以简体中文描述确切步骤或确切错误。
+ a| 
+以下代码片段显示了一条好消息和一条坏消息的示例：
+
+[listing]
+----
+$wfa_util->sendLog('WARN', "Removing volume:
+'.$VolumeName);
+# Good Message
+----
+[listing]
+----
+$wfa_util->sendLog('WARN', 'Invoking volume-
+destroy ZAPI: '.$VolumeName);
+# Bad message
+----
+|===

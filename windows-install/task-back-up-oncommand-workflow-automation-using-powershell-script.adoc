@@ -1,0 +1,42 @@
+---
+permalink: windows-install/task-back-up-oncommand-workflow-automation-using-powershell-script.html 
+sidebar: sidebar 
+keywords: back up, wfa, database, powershell script 
+summary: 如果要频繁备份 OnCommand Workflow Automation （ WFA ）数据库，可以使用随 WFA 安装包提供的 PowerShell 脚本。 
+---
+= 使用 PowerShell 脚本备份 WFA 数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果要频繁备份 OnCommand Workflow Automation （ WFA ）数据库，可以使用随 WFA 安装包提供的 PowerShell 脚本。
+
+您必须具有管理员用户凭据，架构师凭据或备份用户凭据。
+
+有关详细信息，请参见 REST 文档。
+
+.步骤
+. 以管理员用户身份打开 Windows PowerShell ，然后备份 WFA 数据库： ` <wfa_install_location\wfa\bin\Backup.ps1> -User user_name -Password password -Path backup_file_path`
++
+** wfa_install_location 是 WFA 安装目录。
+** user_name 是管理员用户，架构师或备份用户的用户名。
+** password 是管理员用户，架构师或备份用户的密码。
+** backup_file_path 是备份文件的完整目录路径。
+
+
+
+
+[NOTE]
+====
+备份文件是一个 zip 文件，其名称采用以下格式： wfa_backup_servername_.zip
+
+====
+* wfa_backup_ 是文件名的固定部分，即备份服务器的名称。
+* servername 从 Windows 服务器的环境中提取。
+* _.zip 是文件名的固定部分。`C ： \Program Files\NetApp\WFA\bin\Backup.ps1 -User backup -Password MyPassword123 -Path C ： \WFA_backups\backup_10_08_12`
++
+备份完成后，将显示以下输出： C ： \WFA_backups\backup_10__08_12\wfa_backup_myserver__.zip 。验证备份文件是否已在指定位置创建。
+
+

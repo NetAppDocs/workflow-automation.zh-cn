@@ -1,0 +1,32 @@
+---
+permalink: help/task-edit-a-scheme.html 
+sidebar: sidebar 
+keywords: edit, display, name, description, entity, version, scheme, create 
+summary: 您可以编辑所创建方案的显示名称，问题描述 和实体版本。 
+---
+= 编辑方案
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以编辑所创建方案的显示名称，问题描述 和实体版本。
+
+* 您需要的内容 *
+
+* 您必须已安装 WFA 。
+* 您必须具有 WFA 的管理员权限或架构师凭据。
+
+
+* 关于此任务 *
+
+您不能修改预定义的方案。
+
+.步骤
+. 以管理员或架构师身份通过 Web 浏览器登录到 WFA 。
+. 单击 * 数据源设计 * > * 方案 * 。
+. 选择要修改的方案，然后单击 image:../media/edit_wfa_icon.gif["编辑图标"] 在工具栏上。
+. 在 * 方案 <SchemeName>* 对话框中修改所需信息。
+. 单击 * 保存 * 。
+

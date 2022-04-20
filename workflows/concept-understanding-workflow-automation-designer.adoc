@@ -1,0 +1,14 @@
+---
+permalink: workflows/concept-understanding-workflow-automation-designer.html 
+sidebar: sidebar 
+keywords: create, workflows, automation, designer, use, building blocks, finders, filters, commands, understanding, important, before, start 
+summary: 您可以使用查找器，筛选器和命令等组件在 Workflow Automation （ WFA ）设计器中创建工作流。在开始创建工作流之前，了解组件和工作流创建过程非常重要。 
+---
+= 了解 Workflow Automation 设计人员
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用查找器，筛选器和命令等组件在 Workflow Automation （ WFA ）设计器中创建工作流。在开始创建工作流之前，了解组件和工作流创建过程非常重要。

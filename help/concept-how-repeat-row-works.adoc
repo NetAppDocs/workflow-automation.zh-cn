@@ -1,0 +1,48 @@
+---
+permalink: help/concept-how-repeat-row-works.html 
+sidebar: sidebar 
+keywords: workflow, contain, command, detail, arrange, row, specify, command, repeat, fix, number, iteration, dynamic, result, search, criteria 
+summary: 工作流包含按行排列的命令和命令详细信息。您可以根据搜索条件的结果为固定迭代数或动态迭代数指定一行中要重复的命令。 
+---
+= 重复行的工作原理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+工作流包含按行排列的命令和命令详细信息。您可以根据搜索条件的结果为固定迭代数或动态迭代数指定一行中要重复的命令。
+
+可以指定一行中的命令详细信息来重复特定次数，也可以指定何时设计工作流。此外，还可以设计此工作流，以便在执行此工作流或计划执行此工作流时指定此行必须重复的次数。您可以为对象指定搜索条件，并且可以将行中的命令设置为重复次数与搜索条件返回的对象相同。也可以将行设置为在满足特定条件时重复。
+
+
+
+== 行重复变量
+
+您可以在变量列表中指定可在行迭代期间操作的变量。对于变量，您可以指定名称，用于初始化变量的值以及在每次重复行后评估的 MVFLEX 表达式语言（ MVEL ）表达式。
+
+下图显示了重复行选项以及行重复变量示例：
+
+image::../media/row_repetition_details.png[行重复详细信息]
+
+
+
+== 具有批准点的行重复
+
+如果为命令指定了重复行的迭代并包含批准点，则在执行批准点之前执行命令的所有迭代。批准批准点后，连续命令的所有迭代将继续执行，直到下一个批准点为止。
+
+下图显示了在工作流中包含批准点时如何执行重复行的迭代：
+
+image::../media/approval_repetition.png[重复批准]
+
+
+
+== 在预定义的工作流中重复行示例
+
+您可以在设计器中打开以下预定义工作流，以了解重复行的使用方式：
+
+* 创建集群模式 Data ONTAP NFS 卷
+* 在集群模式 Data ONTAP 存储上创建 VMware NFS 数据存储库
+* 建立集群对等关系
+* 删除集群模式 Data ONTAP 卷
+

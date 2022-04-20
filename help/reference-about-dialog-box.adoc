@@ -1,0 +1,40 @@
+---
+permalink: help/reference-about-dialog-box.html 
+sidebar: sidebar 
+keywords: about, dialog, box, display, details, current, version, install, application 
+summary: '" 关于 " 对话框显示有关已安装 WFA 应用程序的当前版本的详细信息。' 
+---
+= 关于对话框
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+" 关于 " 对话框显示有关已安装 WFA 应用程序的当前版本的详细信息。
+
+
+
+== WFA 版本信息
+
+* * 版本 *
++
+显示已安装 WFA 应用程序的当前版本号。
+
++
+版本号采用以下格式： `A.B.C.C`
+
++
+`A.B.C` 反映了 MAJLE.Mine.Maintenance 版本号。
+
++
+例如： `2.0.0` 。
+
+* * 系统 ID*
++
+标识 WFA 系统安装，以便进行跟踪和使用 AutoSupport 。
+
++
+这是系统生成的唯一标识符。
+
+

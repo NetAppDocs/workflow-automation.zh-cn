@@ -1,0 +1,23 @@
+---
+permalink: windows-install/task-back-up-full-oncommand-workflow-automation-database-using-rest-api.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, perform, full backup, wfa, database, rest apis 
+summary: 您可以使用 REST API 对 OnCommand Workflow Automation （ WFA ）数据库执行完整备份。在完整备份中，将备份 WFA 数据库， WFA 配置和密钥。 
+---
+= 使用 REST API 对 WFA 数据库执行完整备份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 REST API 对 OnCommand Workflow Automation （ WFA ）数据库执行完整备份。在完整备份中，将备份 WFA 数据库， WFA 配置和密钥。
+
+您必须具有管理员或架构师凭据。
+
+.步骤
+. 在 Web 浏览器中输入以下 URL ： ` +WFA 服务器 /rest/backups 的 https://IP 地址？ full=true+`
++
+有关详细信息，请参见 REST 文档。
+
+

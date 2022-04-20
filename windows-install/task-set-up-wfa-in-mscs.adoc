@@ -1,0 +1,19 @@
+---
+permalink: windows-install/task-set-up-wfa-in-mscs.html 
+sidebar: sidebar 
+keywords: set up, workflow, automation, mscs, high availability 
+summary: 您可以在 Microsoft 集群服务（ MSCS ）环境中安装和配置 Workflow Automation （ WFA ），以设置高可用性并提供故障转移。在安装 WFA 之前，您必须验证是否已正确配置所有必需的组件。 
+---
+= 在 MSCS 中设置 Workflow Automation 以实现高可用性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 Microsoft 集群服务（ MSCS ）环境中安装和配置 Workflow Automation （ WFA ），以设置高可用性并提供故障转移。在安装 WFA 之前，您必须验证是否已正确配置所有必需的组件。
+
+高可用性设置可为应用程序操作提供持续支持。如果其中一个组件发生故障，则设置中的镜像组件将接管此操作，并提供不间断的网络资源。
+
+
+NOTE: MSCS 是 Windows 中 WFA 支持的唯一集群解决方案 。

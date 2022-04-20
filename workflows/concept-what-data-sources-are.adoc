@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-what-data-sources-are.html 
+sidebar: sidebar 
+keywords: data, source, method, establishing, connection, systems, files, databases, order, extract, example, active iq, unified manager 9.4, type 
+summary: 数据源是一种与其他系统，文件和数据库建立连接以提取数据的方法。例如，数据源可以是与 Active IQ Unified Manager 9.4 数据源类型的 Active IQ Unified Manager 数据库的连接。 
+---
+= 什么是数据源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+数据源是一种与其他系统，文件和数据库建立连接以提取数据的方法。例如，数据源可以是与 Active IQ Unified Manager 9.4 数据源类型的 Active IQ Unified Manager 数据库的连接。
+
+通过将缓存方案，所需端口和采集方法与数据源类型关联起来，您可以在定义所需数据源类型后将自定义数据源添加到 OnCommand Workflow Automation （ WFA ）以进行数据采集。
+
+WFA 可通过各种数据源缓存信息。WFA 从数据源收集资源信息，并根据缓存方案对其进行格式化。缓存表是缓存方案中的表，其格式与词典条目对象匹配。在工作流中使用查找器时，它将返回一个词典对象，并从缓存表填充词典对象中的数据。从数据源采集数据的过程称为 _data source acquisium_ 。您可以使用基于脚本的方法或基于驱动程序的方法来采集数据源。这些源可能会彼此不同，数据源采集可能会按不同的时间间隔对其进行采样。然后， WFA 会将该信息合并到数据库中，并叠加预留数据，以便在数据库中维护更新后的资源信息。
+
+WFA 数据库包括多种不同的缓存方案。缓存方案是一组表，每个表包含特定词典条目类型的信息；但是，这些表可能包含特定数据源类型的多个源的综合信息。WFA 使用数据库信息来了解资源的状态，执行计算并对资源执行命令。

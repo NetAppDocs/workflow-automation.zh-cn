@@ -1,0 +1,46 @@
+---
+permalink: rhel-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html 
+sidebar: sidebar 
+keywords: back up, oncommand, workflow, automation, database 
+summary: OnCommand Workflow Automation （ WFA ）数据库的备份包括系统配置设置和缓存信息，包括实践数据库。您可以在同一系统或不同系统上使用备份进行还原。 
+---
+= 备份 OnCommand Workflow Automation 数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation （ WFA ）数据库的备份包括系统配置设置和缓存信息，包括实践数据库。您可以在同一系统或不同系统上使用备份进行还原。
+
+每天凌晨 2 点创建数据库的自动备份并保存为 .zip 文件，位于以下位置： wfa_install_location/wfa-Backups 。
+
+WFA 可在 WFA-Backups 目录中最多保存五个备份，并将最旧的备份替换为最新备份。卸载 WFA 时，不会删除 WFA-Backups 目录。如果在卸载 WFA 时未创建 WFA 数据库的备份，则可以使用自动创建的备份进行还原。
+
+如果您需要保存特定更改以进行还原，也可以手动备份 WFA 数据库；例如，如果您要备份在自动备份之前所做的更改。
+
+[NOTE]
+====
+* 您只能将 WFA 数据库备份还原到运行相同版本或更高版本 WFA 的系统。
++
+例如，如果您在运行 WFA 4.2 的系统上创建了备份，则只能将备份还原到运行 WFA 4.2 或更高版本的系统。
+
+* 在高可用性设置下进行灾难恢复期间，您不能使用 Web UI 备份 WFA 数据库。
+
+
+====
+
+
+== 备份和还原用户凭据
+
+WFA 数据库的备份包括 WFA 用户凭据。
+
+
+NOTE: WFA 数据库也包含在 AutoSupport 数据中；但是，任何 WFA 用户的密码都不包含在 AutoSupport 数据中。
+
+从备份还原 WFA 数据库时，系统会保留以下各项：
+
+* 在当前 WFA 安装期间创建的管理员用户凭据。
+* 如果具有默认管理员用户以外的管理员权限的用户还原数据库，则会同时还原这两个管理员用户的凭据。
+* 当前 WFA 安装的所有其他用户凭据将替换为备份中的用户凭据。
+

@@ -1,0 +1,30 @@
+---
+permalink: workflows/task-create-a-template.html 
+sidebar: sidebar 
+keywords: create, template, use, blueprint, fill, attribute, command, details 
+summary: 您可以创建一个模板，该模板可用作在命令详细信息中填充属性的蓝图。 
+---
+= 创建模板
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以创建一个模板，该模板可用作在命令详细信息中填充属性的蓝图。
+
+.步骤
+. 单击 * 工作流设计 * > * 模板 * 。
+. 单击 image:../media/new_wfa_icon.gif["新建图标"] 在工具栏上。
+. 在 * 新建模板 * 对话框的 * 名称 * ， * 类型 * 和 * 问题描述 * 字段中输入或选择所需的详细信息。
++
+属性表将根据您在 * 类型 * 字段中选择的词典对象进行填充。
+
+. 单击每个属性的值列，然后执行以下操作之一：
++
+** 输入或从列表中选择所需值。
+** 输入用户输入条目—例如，对于大小用户输入，输入 ` $size` 。
+
+
+. 单击 * 保存 * 。
+

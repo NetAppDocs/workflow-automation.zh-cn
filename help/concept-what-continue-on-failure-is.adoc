@@ -1,0 +1,25 @@
+---
+permalink: help/concept-what-continue-on-failure-is.html 
+sidebar: sidebar 
+keywords: continue, failure, feature, help, configure, step, workflow, execution, address, resolve, issue, cause, access, file, icon 
+summary: 失败时继续功能可帮助您配置工作流中的某个步骤，以便即使该步骤失败，也可以继续执行工作流。您可以通过访问 wfa.log 文件或单击图标来解决失败的步骤并解决导致此步骤失败的问题描述 。 
+---
+= 如何在出现故障时继续工作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+失败时继续功能可帮助您配置工作流中的某个步骤，以便即使该步骤失败，也可以继续执行工作流。您可以通过访问 `WFA.log` 文件或单击来解决失败的步骤并解决导致此步骤失败的问题描述 image:../media/info_icon_execute_wfa.gif[""] 图标。
+
+执行完成后，包含一个或多个此类失败步骤的工作流将处于部分成功状态。您可以通过在 <command_name> 参数对话框的高级选项卡中选择所需选项来配置一个步骤，以便即使该步骤失败，工作流仍可继续执行。
+
+如果未将某个步骤配置为在失败时继续执行，则如果该步骤失败，则会中止工作流执行。
+
+如果配置为在失败时继续执行的步骤失败，您可以使用以下选项之一设置要执行的工作流：
+
+* 中止工作流执行（默认选项）
+* 从下一步开始继续执行
+* 从下一行继续执行
+

@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-how-you-use-templates.html 
+sidebar: sidebar 
+keywords: can, use, templates, workflows, reference, adhering, usage policies 
+summary: 您可以在工作流中使用 WFA 模板作为参考或遵循使用策略。 
+---
+= 如何使用模板
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在工作流中使用 WFA 模板作为参考或遵循使用策略。
+
+WFA 模板可用作对象定义的蓝图。您可以通过包含对象属性和对象属性值来定义模板。然后，您可以使用此模板在工作流中填充对象定义的属性。
+
+使用模板时，不能编辑包含从模板获取的值的字段。因此，您可以使用模板设置使用策略和创建对象。如果在应用模板后删除了模板与工作流的关联，则模板中填充的值仍会保留，但您可以编辑这些字段。

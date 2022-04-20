@@ -1,0 +1,16 @@
+---
+layout: astra 
+sidebar: sidebar 
+permalink: index.html 
+lead: Welcome to the OnCommand Workflow Automation 5.1 Information Library. 
+summary: OnCommand Workflow Automation 文档， WFA 文档， 5.1.1 
+---
+= OnCommand Workflow Automation 文档
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+

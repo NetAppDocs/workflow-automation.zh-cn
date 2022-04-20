@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-integrating-the-wfa-pack-with-scm-repository.html 
+sidebar: sidebar 
+keywords: integrate, oncommand, workflow, automation, pack, source control, management, repository 
+summary: 您可以将 OnCommand Workflow Automation （ WFA ）软件包与源控制管理（ SCM ）存储库集成在一起。 
+---
+= 将 WFA 工作流软件包与 SCM 存储库集成
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将 OnCommand Workflow Automation （ WFA ）软件包与源控制管理（ SCM ）存储库集成在一起。
+
+您必须具有管理员或架构师凭据。
+
+GitHub ， Perforce 和 SVN 等 SCM 工具要求您映射本地目录，以便从 SCM 存储库服务器中签出代码。此本地目录映射称为 _SCM 客户端位置。 _ 您必须将文件系统位置设置为客户端区域。
+
+您可以在 WFA 服务器系统上设置 SCM 客户端。要执行 SCM 操作，您必须能够访问 WFA 服务器系统

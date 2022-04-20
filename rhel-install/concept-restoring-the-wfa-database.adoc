@@ -1,0 +1,33 @@
+---
+permalink: rhel-install/concept-restoring-the-wfa-database.html 
+sidebar: sidebar 
+keywords: restore, oncommand, workflow, automation, database 
+summary: 还原 OnCommand Workflow Automation （ WFA ）数据库包括还原系统配置设置和缓存信息，包括实践数据库。 
+---
+= 还原 OnCommand Workflow Automation 数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+还原 OnCommand Workflow Automation （ WFA ）数据库包括还原系统配置设置和缓存信息，包括实践数据库。
+
+* 还原 WFA 数据库将擦除当前 WFA 数据库。
+* 您只能将 WFA 数据库备份还原到运行相同版本或更高版本 WFA 的系统。
++
+例如，如果您在运行 WFA 4.2 的系统上创建了备份，则只能将备份还原到运行 WFA 4.2 或更高版本的系统。
+
+* 还原操作完成后， WFA SSL 证书将替换为备份文件中的 SSL 证书。
+
+
+[NOTE]
+====
+* 在灾难恢复期间，需要对 WFA 数据库和配置执行全面的还原操作，并且可以在独立环境和高可用性环境中使用。
+* 无法使用 Web UI 创建全面的备份。
++
+在灾难恢复期间，您只能使用 CLI 命令或 REST API 全面备份和还原 WFA 数据库。
+
+
+
+====

@@ -1,0 +1,47 @@
+---
+permalink: windows-install/task-upgrade-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: upgrade, oncommand, workflow, automation 
+summary: 如果您已安装早期版本的 OnCommand Workflow Automation （ WFA ），则可以升级到最新版本的 WFA 以使用新功能和增强功能。 
+---
+= 升级 OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您已安装早期版本的 OnCommand Workflow Automation （ WFA ），则可以升级到最新版本的 WFA 以使用新功能和增强功能。
+
+* 您只能从 WFA 5.0 或 4.2 升级到 WFA 5.1 。
++
+如果您当前运行的是 WFA 4.1 或更早版本的 WFA ，则必须先升级到 WFA 5.0 或 4.2 ，然后再升级到 WFA 5.1 。
+
+* 您可以在 WFA 5.1 上还原在 WFA 5.0 或 4.2 上创建的备份。WFA 数据库备份只能还原到运行相同版本或更高版本 WFA 的系统。
++
+例如，如果您在运行 WFA 4.2 的系统上创建了备份，则只能将备份还原到运行 WFA 4.2 或更高版本的系统。
+
+* 从 WFA 4.2 之前的版本升级时，您不能自行安装 MySQL 。
++
+但是，您可以自行安装 MySQL ：
+
++
+** 在全新安装 WFA 4.2 及更高版本或期间
+** 从 WFA 4.2 升级到 WFA 更高版本时。
++
+... 使用以下选项之一备份 WFA 数据库：
+
+
+** WFA Web 门户
+** PowerShell 脚本如果要还原到相同版本的 WFA ，可以使用创建的备份还原 WFA 数据库。
++
+... 卸载现有版本的 WFA 。
+... 安装最新版本的 WFA 。
+... 还原 WFA 数据库。
+
+
+
+
+
+
+您可以查看已还原的内容以了解功能的完整性，例如，您可以检查自定义工作流的运行情况。

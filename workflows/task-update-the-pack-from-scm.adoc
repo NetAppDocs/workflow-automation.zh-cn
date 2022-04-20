@@ -1,0 +1,32 @@
+---
+permalink: workflows/task-update-the-pack-from-scm.html 
+sidebar: sidebar 
+keywords: update, pack, source, control, management, server, import, oncommand, workflow, automation 
+summary: 您可以在源控制管理（ SCM ）服务器中更新软件包，然后将更新后的软件包导入到 OnCommand Workflow Automation （ WFA ）中。 
+---
+= 从 SCM 服务器更新 WFA 工作流软件包
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在源控制管理（ SCM ）服务器中更新软件包，然后将更新后的软件包导入到 OnCommand Workflow Automation （ WFA ）中。
+
+必须设置 SCM ，并且您必须具有管理员或架构师凭据
+
+如果您对 SCM 服务器中的某个软件包进行了任何更改或更新，管理员或架构师需要使用 SCM 提供的比较工具来解决冲突（如果有）。WFA 会对 XML 差异文件进行定制，以便仅显示相关更改。
+
+导入软件包之前，系统会通知您 WFA 软件包内容发生了更改。
+
+.步骤
+. 通过 Web 浏览器登录到 WFA 窗口。
+. 将更新后的软件包导入到 WFA 中。
++
+link:task-import-an-oncommand-workflow-automation-pack.html["导入 WFA 工作流软件包"]
+
++
+
+NOTE: 如果 WFA 数据库已包含同一个软件包，则软件包内容将被覆盖。
+
+

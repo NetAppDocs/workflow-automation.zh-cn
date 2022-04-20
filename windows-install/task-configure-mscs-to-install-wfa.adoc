@@ -1,0 +1,41 @@
+---
+permalink: windows-install/task-configure-mscs-to-install-wfa.html 
+sidebar: sidebar 
+keywords: configure, mscs, install, workflow, automation 
+summary: 在 Microsoft 集群服务器（ MSCS ）中安装 Workflow Automation （ WFA ）之前，必须配置 MSCS 环境。 
+---
+= 配置 MSCS 以安装 Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 Microsoft 集群服务器（ MSCS ）中安装 Workflow Automation （ WFA ）之前，必须配置 MSCS 环境。
+
+* 必须从服务器管理器安装 MSCS 。
+* 可选：必须安装 SnapDrive for Windows 。
++
+支持的最低版本为 Windows 2012 。
+
+* 必须在两个集群节点上使用相同的路径安装相同版本的 WFA 。
+* 必须将两个集群节点添加到同一个域中。
+
+
+您必须在 MSCS 界面中使用集群管理器完成此任务。
+
+.步骤
+. 以域管理员身份登录到集群管理器。
+. 使用以下选项之一验证 LUN 是否可供两个节点访问：
++
+** 本机管理 LUN 。
+** 使用 SnapDrive for Windows ：
++
+... 在两个节点上安装和配置 SnapDrive for Windows 。
+... 使用适用于 Windows 的 SnapDrive 创建 LUN ，并为这两个节点配置 LUN 。
+
+
+
+
+. 在故障转移集群管理器中，将磁盘添加到集群中。
+

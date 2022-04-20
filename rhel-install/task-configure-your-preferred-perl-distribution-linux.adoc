@@ -1,0 +1,27 @@
+---
+permalink: rhel-install/task-configure-your-preferred-perl-distribution-linux.html 
+sidebar: sidebar 
+keywords: configure, preferred, perl distribution 
+summary: OnCommand Workflow Automation 将使用系统上安装的 Perl 软件包。如果要使用另一个 Perl 分发版，可以将首选 Perl 分发版配置为使用 WFA 。 
+---
+= 配置首选 Perl 分发版
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation 将使用系统上安装的 Perl 软件包。如果要使用另一个 Perl 分发版，可以将首选 Perl 分发版配置为使用 WFA 。
+
+您必须已在 WFA 服务器上安装所需的 Perl 分发版。
+
+.步骤
+. 在 Shell 提示符处，导航到 WFA 服务器上的以下目录： wfa_install_location/wfa/bin/
+. 输入以下命令：
++
+` /WFA -custom-perl[=perl_path] -restart=WFA`
+
++
+` /wFA -custom-perl=/usr/local/perl5-11/bin/perl -restart=WFA`
+
+

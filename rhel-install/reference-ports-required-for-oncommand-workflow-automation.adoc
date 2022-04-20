@@ -1,0 +1,184 @@
+---
+permalink: rhel-install/reference-ports-required-for-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: ports, required, workflow, automation 
+summary: 如果您使用的是防火墙，则必须了解 Workflow Automation （ WFA ）所需的端口。 
+---
+= Workflow Automation 所需的端口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您使用的是防火墙，则必须了解 Workflow Automation （ WFA ）所需的端口。
+
+本节列出了默认端口号。如果要使用非默认端口号，则必须打开该端口进行通信。有关详细信息，请参见防火墙上的文档。
+
+下表列出了应在 WFA 服务器上打开的默认端口：
+
+[cols="4*"]
+|===
+| Port | 协议 | 方向 | 目的 
+
+
+ a| 
+80 ， 443
+ a| 
+HTTP ， HTTPS
+ a| 
+传入
+ a| 
+打开 WFA 并登录
+
+
+
+ a| 
+80 ， 443 ， 22
+ a| 
+HTTP ， HTTPS ， SSH
+ a| 
+传出
+ a| 
+命令执行（ ZAPI ， PowerCLI ）
+
+
+
+ a| 
+445 ， 139 ， 389 ， 636
+ a| 
+microsoft-DS ， netbios-ssN ， AD LDAP ， AD LDAPS
+ a| 
+传出
+ a| 
+Microsoft Active Directory LDAP 身份验证
+
+
+
+ a| 
+161.
+ a| 
+SNMP
+ a| 
+传出
+ a| 
+发送有关工作流状态的 SNMP 消息
+
+
+
+ a| 
+3306
+ a| 
+MySQL
+ a| 
+传入
+ a| 
+缓存只读用户
+
+
+
+ a| 
+25.
+ a| 
+SMTP
+ a| 
+传出
+ a| 
+邮件通知
+
+
+
+ a| 
+80 ， 443 ， 25
+ a| 
+HTTP ， HTTPS ， SMTP
+ a| 
+传出
+ a| 
+正在发送 AutoSupport 消息
+
+
+
+ a| 
+514.
+ a| 
+系统日志
+ a| 
+传出
+ a| 
+将日志发送到系统日志服务器
+
+|===
+下表列出了 Unified Manager 服务器上应打开的默认端口：
+
+[cols="4*"]
+|===
+| Port | 协议 | 方向 | 目的 
+
+
+ a| 
+2638
+ a| 
+Sybase
+ a| 
+传入
+ a| 
+从 Active IQ Unified Manager 6.0 之前的版本缓存数据
+
+
+
+ a| 
+3306
+ a| 
+MySQL
+ a| 
+传入
+ a| 
+缓存 Active IQ Unified Manager 6.0 及更高版本中的数据
+
+
+
+ a| 
+8088 ， 8488
+ a| 
+HTTP ， HTTPS
+ a| 
+传入
+ a| 
+从低于 6.0 的 Active IQ Unified Manager 中的 Performance Advisor 缓存数据
+
+|===
+下表列出了应在 VMware vCenter 上打开的默认端口：
+
+[cols="4*"]
+|===
+| Port | 协议 | 方向 | 目的 
+
+
+ a| 
+443.
+ a| 
+HTTPS
+ a| 
+传入
+ a| 
+从 VMware vCenter 缓存数据
+
+|===
+下表列出了应在 SNMP 主机上打开的默认端口：
+
+[cols="4*"]
+|===
+| Port | 协议 | 方向 | 目的 
+
+
+ a| 
+162.
+ a| 
+SNMP
+ a| 
+传入
+ a| 
+接收有关工作流状态的 SNMP 消息
+
+|===

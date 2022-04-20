@@ -1,0 +1,36 @@
+---
+permalink: help/concept-how-reservation-works.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, resource, reservation, capability, require, resource, ensure, available, successful, execution, workflow 
+summary: OnCommand Workflow Automation 资源预留功能可预留所需资源，以确保这些资源可用于成功执行工作流。 
+---
+= 预留的工作原理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation 资源预留功能可预留所需资源，以确保这些资源可用于成功执行工作流。
+
+WFA 命令可以在 WFA 缓存数据库中有可用资源后预留所需资源并删除预留，通常是在缓存采集之后。预留功能可确保在 WFA 配置设置中配置的预留到期期限之前，预留资源可用于工作流。
+
+您可以使用预留功能排除资源选择期间其他工作流所预留的资源。例如，如果计划在一周后执行在聚合上预留了 100 GB 空间的工作流， 您正在执行另一个使用 * 创建卷 * 命令的工作流，则正在执行的工作流不会占用计划的工作流为创建新卷而预留的空间。此外，通过预留功能，可以并行执行工作流。
+
+预览要执行的工作流时， WFA 规划器会考虑所有预留对象，包括缓存数据库中的现有对象。如果已启用预留，则在规划工作流时会考虑已计划工作流和并行执行的工作流的影响以及是否存在存储元素。
+
+下图中的箭头显示已为工作流启用预留：
+
+image::../media/reservation.png[预留]
+
+
+
+== 预定义工作流中的预留示例
+
+您可以在设计器中打开以下预定义工作流，以了解如何使用预留：
+
+* 克隆环境
+* 创建集群模式 Data ONTAP 卷
+* 建立集群对等关系
+* 删除集群模式 Data ONTAP 卷
+

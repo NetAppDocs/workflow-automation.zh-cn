@@ -1,0 +1,18 @@
+---
+permalink: rhel-install/concept-managing-perl-and-perl-modules.html 
+sidebar: sidebar 
+keywords: manage, perl, perl modules 
+summary: OnCommand Workflow Automation （ WFA ）支持使用 Perl 命令执行工作流操作。您可以安装和配置首选 Perl 分发版和 Perl 模块。 
+---
+= 管理 Perl 和 Perl 模块
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation （ WFA ）支持使用 Perl 命令执行工作流操作。您可以安装和配置首选 Perl 分发版和 Perl 模块。
+
+安装 WFA 时，还会安装 NetApp 易管理性 SDK 中所需的 Perl 模块。要成功执行 Perl 命令，需要使用 NetApp 易管理性 SDK Perl 模块。
+
+如果需要，您可以从 Red Hat 软件包存储库或 CPAN 存储库安装其他 Perl 模块。

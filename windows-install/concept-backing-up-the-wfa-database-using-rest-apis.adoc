@@ -1,0 +1,20 @@
+---
+permalink: windows-install/concept-backing-up-the-wfa-database-using-rest-apis.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, wfa, database, rest apis 
+summary: 您可以使用 REST API 备份 OnCommand Workflow Automation （ WFA ）数据库。如果 WFA 在高可用性环境中处于故障转移模式，则可以使用 REST API 创建计划的备份。您不能在故障转移期间使用命令行界面（ CLI ）创建备份。 
+---
+= 使用 REST API 备份 WFA 数据库
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 REST API 备份 OnCommand Workflow Automation （ WFA ）数据库。如果 WFA 在高可用性环境中处于故障转移模式，则可以使用 REST API 创建计划的备份。您不能在故障转移期间使用命令行界面（ CLI ）创建备份。
+
+以下是两种类型的备份：
+
+* 完整备份
+* 定期备份
+

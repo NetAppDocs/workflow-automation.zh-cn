@@ -1,0 +1,62 @@
+---
+permalink: windows-install/task-create-a-certificate-signing-request-for-workflow-automation-windows.html 
+sidebar: sidebar 
+keywords: workflow, automation, wfa, windows, create, certificate, sign, request 
+summary: 您可以在 Windows 中创建证书签名请求（ CSR ），以便使用由证书颁发机构（ CA ）签名的 SSL 证书，而不是 Workflow Automation （ WFA ）的默认 SSL 证书。 
+---
+= 为 Workflow Automation 创建证书签名请求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 Windows 中创建证书签名请求（ CSR ），以便使用由证书颁发机构（ CA ）签名的 SSL 证书，而不是 Workflow Automation （ WFA ）的默认 SSL 证书。
+
+* 您必须对 WFA 服务器具有 Windows 管理员权限。
+* 您必须已替换 WFA 提供的默认 SSL 证书。
+
+
+此操作步骤 将使用默认 WFA 安装路径。如果在安装期间更改了默认路径，则必须使用自定义 WFA 安装路径。
+
+.步骤
+. 以管理员用户身份登录到 WFA 主机。
+. 在 WFA 服务器上打开命令提示符，然后将目录更改为以下位置： + <OpenJDK_install_location>\bin
+. 创建 CSR ：
++
+`keytool -certreq -keystore wfa_install_location\wfA\jboss\standalisate\configuration\keystore\wfa.keystore -alias "ssl keystore" -file C ： \file_name.csr`
+
++
+file_name 是 CSR 文件的名称。
+
+. 出现提示时，请提供密码（默认密码或新密码）。
++
+changeit 是默认密码。如果不想使用默认密码，则必须从 WFA_INSTALL_location\WFA\jboss\standalone \configuration\ 位置更改 standalone-full.xml 文件中 SSL 元素的密码属性。
+
++
+[listing]
+----
+<ssl name="ssl" password="new_password" certificate-key-file="${jboss.server.config.dir}/keystore/wfa.keystore"
+----
+. 将 file_name.csr 文件发送到 CA 以获取签名证书。
++
+有关详细信息，请参见 CA 网站。
+
+. 从 CA 下载链证书，然后将链证书导入到密钥库： `keytool -import -alias "ssl keystore CA certificate" -keystore "WFA_install_location\WFA\jboss\standalonate\configuration\keystore\wfa.keystore" -trustcacers -file C ： \chain_cert.cer`
++
+C ： \chain_cert.cer 是从 CA 收到的链证书文件。此文件必须采用 X.509 格式。
+
+. 导入从 CA 收到的签名证书：
++
+`keytool -import -alias "ssl keystore" -keystore "wfa_install_location\wfA\jboss\standalonate\configuration\keystore\wfa.keystore" -file C ： \certificate.cer`
+
++
+C ： \certification.cer 是从 CA 收到的链证书文件。
+
+. 启动以下 WFA 服务：
++
+** NetApp WFA 数据库
+** NetApp WFA 服务器
+
+
+

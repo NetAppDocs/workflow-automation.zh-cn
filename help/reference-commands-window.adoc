@@ -1,0 +1,161 @@
+---
+permalink: help/reference-commands-window.html 
+sidebar: sidebar 
+keywords: commands, window, display, available, alphabetical order, access, select, workflow, design 
+summary: 命令窗口按字母顺序显示可用命令。您可以通过选择工作流设计命令来访问此窗口。 
+---
+= 命令窗口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+命令窗口按字母顺序显示可用命令。您可以通过选择 * 工作流设计 * > * 命令 * 来访问此窗口。
+
+
+NOTE: 根据您的角色和帐户权限，可能不会显示此窗口。
+
+命令是指在工作流中执行的操作。
+
+* 命令表
+* 工具栏
+
+
+
+
+== 命令表
+
+命令表列出了可用的命令。
+
+您可以使用每个列可用的筛选和排序功能以及重新排列列顺序来自定义表显示。
+
+* image:../media/filter_icon_wfa.gif["筛选器图标"] 启用或禁用筛选整个表。如果禁用了筛选，则图标上方会显示一个红色的 "x" 。
+* 双击 image:../media/filter_icon_wfa.gif["筛选器图标"] 清除并重置筛选选项。
+* image:../media/wfa_filter_icon.gif["筛选器图标"] 在每个列标题上，您可以根据列的内容进行筛选。单击 image:../media/wfa_filter_icon.gif["筛选器图标"] 在列中，您可以从下拉列表中筛选特定项目或所有可用项目。
+* 单击列标题可在排序的升序和降序之间切换。您可以通过排序箭头（image:../media/wfa_sortarrow_up_icon.gif["\"Sort Up \" 图标"] 用于升序和 image:../media/wfa_sortarrow_down_icon.gif["\" 向下排序 \" 图标"] 降序）。
+* 要重新排列列的位置，您可以拖放列，将其按任何所需顺序放置。但是，您不能隐藏或删除其中任何列。
+* 单击 * 搜索 * 筛选器文本框可搜索特定内容。此外，您还可以使用支持的运算符搜索适用的列类型，即字母或数字。
+
+
+命令表包含以下列：
+
+* * 认证 *
++
+指示命令是否由用户创建（image:../media/community_certification.gif[""]）， PS （image:../media/ps_certified_icon_wfa.gif[""]），社区（image:../media/community_certification.gif[""]），用户锁定（image:../media/lock_icon_wfa.gif[""]）或 NetApp 认证的（image:../media/netapp_certified.gif[""]）。
+
+* * 名称 *
++
+显示命令的名称。
+
+* * 方案 *
++
+显示与命令关联的方案。方案表示系统的数据模型。例如， VC 方案包含与虚拟环境相关的数据，例如虚拟机，主机和数据存储库。
+
+* * 实体版本 *
++
+以 `major.minor.revision` format —例如 1.0.0 显示对象的版本号。
+
+* * 问题描述 *
++
+显示命令的问题描述 。
+
++
+您可以通过在 * 搜索 * 筛选器文本框中输入问题描述 来搜索命令。
+
+* * 操作系统兼容性 *
++
+指示命令是否与主机操作系统兼容。
+
+* * 上次更新时间 *
++
+显示上次更新命令的日期和时间。
+
+* * 更新者 *
++
+显示更新命令的用户。
+
+* * 锁定者 *
++
+显示锁定命令的用户。
+
++
+您可以通过在 * 搜索 * 筛选器文本框中输入用户名来搜索命令。
+
+* * 命令语言 *
++
+显示写入命令时使用的编程语言（ Perl 或 PowerShell ）。
+
+* * 最小值软件版本 *
++
+指定执行工作流所需的最低软件版本。例如，该软件可以是集群模式 Data ONTAP 8.2.0 和 vCenter 6.0 。版本以逗号分隔的值显示。
+
+* * 必需参数 *
++
+显示为命令选择的必需参数。
+
+
+
+
+
+== 工具栏
+
+工具栏位于列标题上方。您可以使用工具栏中的图标执行各种操作。也可以从窗口中的右键单击菜单访问这些操作。
+
+* *image:../media/new_wfa_icon.gif["新建图标"] （新增） *
++
+打开新命令定义窗口，在此可以创建命令。
+
+* *image:../media/edit_wfa_icon.gif["编辑图标"] （编辑） *
++
+打开选定命令的编辑命令定义窗口，在此可以编辑命令。您也可以双击命令以打开编辑命令定义窗口。
+
+* *image:../media/clone_wfa_icon.gif["克隆图标"] （克隆） *
++
+打开编辑命令定义 <command_name> - 复制窗口，在此可以创建选定命令的克隆或副本。
+
+* *image:../media/lock_wfa_icon.gif["锁定图标"] （锁定） *
++
+打开锁定命令确认对话框，在此可以锁定选定命令。只有您创建的命令才会启用此选项。
+
+* *image:../media/unlock_wfa_icon.gif["解除锁定图标"] （解锁） *
++
+打开解锁命令确认对话框，在此可以解锁选定命令。只有您锁定的命令才会启用此选项。但是，管理员可以解锁其他用户锁定的命令。
+
+* *image:../media/delete_wfa_icon.gif["删除图标"] （删除） *
++
+打开删除命令确认对话框，在此可以删除选定的用户创建的命令。
+
++
+
+NOTE: 您不能删除 WFA 或 PS 命令。
+
+* *image:../media/export_wfa_icon.gif["导出图标"] （导出） *
++
+用于导出用户创建的选定命令。
+
++
+
+NOTE: 您不能导出 WFA 或 PS 命令。
+
+* *image:../media/test_wfa_icon.gif["测试图标"] （测试） *
++
+打开 <ScriptLanguage > 中的 Testing Command <CommandName> 对话框，在此可以测试选定的命令。
+
+* *image:../media/add_to_pack.png["添加到软件包图标"] （添加到软件包） *
++
+打开添加到软件包命令对话框，在此可以将命令及其可靠实体添加到软件包中，该软件包可编辑。
+
++
+
+NOTE: 只有将认证设置为 * 无 * 的命令才会启用添加到软件包功能
+
+* *image:../media/remove_from_pack.png["从软件包中删除图标"] （从软件包中删除） *
++
+打开选定命令的 Remove from Pack Command 对话框，在此可以从软件包中删除或删除该命令。
+
++
+
+NOTE: 只有将认证设置为 * 无 * 的命令才会启用从软件包中删除功能
+
+

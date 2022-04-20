@@ -1,0 +1,45 @@
+---
+permalink: workflows/reference-guidelines-for-data-source-type.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, data, source, type, use, define, custom, oncommand, workflow, automation 
+summary: 您必须了解用于定义 OnCommand Workflow Automation （ WFA ）自定义数据源的数据源类型的创建准则。 
+---
+= 创建数据源类型的准则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须了解用于定义 OnCommand Workflow Automation （ WFA ）自定义数据源的数据源类型的创建准则。
+
+您可以使用以下方法之一定义数据源类型：
+
+* SQL ：您可以使用 WFA SQL 准则基于外部数据库定义来自数据源的选择查询。
+* 脚本：您可以编写一个 PowerShell 脚本，为词典条目的特定方案提供数据。
+
+
+创建数据源类型的准则如下：
+
+* 您应使用 PowerShell 语言创建脚本。
+* PowerShell 脚本应为其当前工作目录中的每个词典条目提供输出。
+* 数据文件应命名为 `dictional_entry.csv ，` ，其中词典条目的名称应使用小写字符。
++
+从 Performance Advisor 收集信息的预定义数据源类型使用基于脚本的数据源类型。输出文件名为 `array_performation.csv` 和 `aggregate_performation.csv 。`
+
+* ` .csv` 文件中的内容应与词典条目属性中的内容完全相同。
++
+词典条目按以下顺序包括属性： array_IP ，日期，日期，小时， CPU_busy ， 总操作数每秒，磁盘吞吐量每秒
+
++
+PowerShell 脚本会按相同顺序将数据添加到 ` .csv` 文件。
+
++
+[listing]
+----
+$values = get-Array-CounterValueString ([REF]$data)
+Add-Content $arrayFile ([byte[]][char[]] "\N t$arrayIP't$date't$day't$hour't$values'n")
+----
+* 您应使用编码来确保脚本输出的数据准确加载到 WFA 缓存中。
+* 在 ` .csv` 文件中输入空值时，应使用 \N 。
+

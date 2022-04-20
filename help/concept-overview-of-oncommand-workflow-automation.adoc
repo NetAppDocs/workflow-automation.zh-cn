@@ -1,0 +1,52 @@
+---
+permalink: help/concept-overview-of-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, software, solution, help, automate, storage, management, tasks, provision, migration, decommissioning, data, protection, configuration, cloning, complete, specified, process 
+summary: OnCommand Workflow Automation （ WFA ）是一款软件解决方案 ，可帮助自动执行存储管理任务，例如配置，迁移，停用，数据保护配置， 和克隆存储。您可以使用 WFA 构建工作流来完成流程指定的任务。 
+---
+= OnCommand Workflow Automation 概述
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation （ WFA ）是一款软件解决方案 ，可帮助自动执行存储管理任务，例如配置，迁移，停用，数据保护配置， 和克隆存储。您可以使用 WFA 构建工作流来完成流程指定的任务。
+
+工作流是一项重复性的程序性任务，由一系列步骤组成，其中包括以下类型的任务：
+
+* 为数据库或文件系统配置，迁移或停用存储
+* 设置新的虚拟化环境，包括存储交换机和数据存储库
+* 在端到端业务流程中为应用程序设置存储
+
+
+存储架构师可以定义工作流，以遵循最佳实践并满足组织要求，例如：
+
+* 使用所需的命名约定
+* 为存储对象设置唯一选项
+* 选择资源
+* 集成内部配置管理数据库（ CMDB ）和票证应用程序
+
+
+
+
+== WFA 功能
+
+* 用于构建工作流的工作流设计门户
++
+工作流设计门户包括多个组件，例如命令，模板，查找器，筛选器， 和功能，用于创建工作流。设计人员可以为工作流提供高级功能，例如自动资源选择，行重复（循环）和批准点。
+
++
+工作流设计门户还包括用于缓存外部系统中数据的组件，例如词典条目，缓存查询和数据源类型。
+
+* 执行门户，用于执行工作流，验证工作流执行状态和访问日志
+* 用于设置 WFA ，连接到数据源以及配置用户凭据等任务的管理 / 设置选项
+* 用于从外部门户和数据中心业务流程软件调用工作流的 Web 服务界面
+* Storage Automation Store 下载 WFA 软件包
+
+
+
+
+== WFA 许可证信息
+
+使用 OnCommand Workflow Automation 服务器不需要任何许可证。

@@ -1,0 +1,24 @@
+---
+permalink: windows-install/task-configure-a-database-user-on-active-iq-unified-manager.html 
+sidebar: sidebar 
+keywords: configure, database, user, active iq unified manager 
+summary: 您必须在 Active IQ Unified Manager 上创建一个数据库用户，才能配置对 OnCommand Workflow Automation 的 Active IQ Unified Manager 数据库的只读访问权限。 
+---
+= 在 Active IQ Unified Manager 上配置数据库用户
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须在 Active IQ Unified Manager 上创建一个数据库用户，才能配置对 OnCommand Workflow Automation 的 Active IQ Unified Manager 数据库的只读访问权限。
+
+.步骤
+. 使用管理员凭据登录到 Active IQ Unified Manager 。
+. 单击 * 设置 * > * 用户 * 。
+. 单击 * 添加新用户 * 。
+. 选择 * 数据库用户 * 作为用户类型。
++
+在 OnCommand Workflow Automation 中将 Active IQ Unified Manager 添加为数据源时，应在 OnCommand Workflow Automation 中使用同一用户。
+
+

@@ -1,0 +1,117 @@
+---
+permalink: workflows/reference-guidelines-for-comments.html 
+sidebar: sidebar 
+keywords: aware, guidelines, powershell, perl, commnents, scripts, oncommand, workflow, automaion 
+summary: 您必须了解适用于 OnCommand Workflow Automation （ WFA ）的脚本中有关 PowerShell 和 Perl 注释的准则。 
+---
+= 注释准则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须了解适用于 OnCommand Workflow Automation （ WFA ）的脚本中有关 PowerShell 和 Perl 注释的准则。
+
+
+
+== PowerShell 注释
+
+[cols="2*"]
+|===
+| 准则 | 示例 
+
+
+ a| 
+使用 # 字符作为单行注释。
+ a| 
+[listing]
+----
+# Single line comment
+$options=$option.trim();
+----
+
+
+ a| 
+使用 # 字符作为行尾注释。
+ a| 
+[listing]
+----
+$options=$option.trim(); # End of line
+comment
+----
+
+
+ a| 
+使用 <# 和 #> 字符作为块注释。
+ a| 
+[listing]
+----
+<#
+This is
+a
+block comment
+#>
+$options=$option.trim();
+----
+|===
+
+
+== Perl 注释
+
+[cols="2*"]
+|===
+| 准则 | 示例 
+
+
+ a| 
+使用 # 字符表示单行注释。
+ a| 
+[listing]
+----
+# convert from MBytes to Bytes
+my $MaxDirectorySizeBytes = $MaxDirectorySize *
+1024 * 1024;
+----
+
+
+ a| 
+使用 # 字符作为行尾注释。
+ a| 
+[listing]
+----
+my $MaxDirectorySizeBytes = $MaxDirect
+orySiZe * 1024 * 1024; # convert to Bytes
+----
+
+
+ a| 
+在每行中使用 # 字符，并在开头和结尾使用空 # 为多行注释创建注释边框。
+ a| 
+[listing]
+----
+#
+# This is a multi-line comment. Perl 5, unlike
+# Powershell, does not have direct support for
+# multi-line comments. Please use a '#'in every line
+# with an empty '#' at the beginning and end to create
+# a comment border
+#
+----
+
+
+ a| 
+请勿在 WFA 命令中包含注释代码和失效代码。但是，出于测试目的，您可以使用 Plain Old Documentation （ POD ）机制注释掉代码。
+ a| 
+[listing]
+----
+=begin comment
+	# Set deduplication
+	if(defined $Deduplication && $Deduplication eq "enabled")
+	{
+		$wfaUtil->sendLog("Enabling Deduplication");
+	}
+=end comment
+=cut
+----
+|===

@@ -1,0 +1,138 @@
+---
+permalink: workflows/task-create-a-command.html 
+sidebar: sidebar 
+keywords: create, wfa command, complete, specific, task, workflow, predefined, suitable 
+summary: 如果没有适合此任务的预定义 WFA 命令，则可以创建 WFA 命令来完成工作流中的特定任务。 
+---
+= 创建命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果没有适合此任务的预定义 WFA 命令，则可以创建 WFA 命令来完成工作流中的特定任务。
+
+您必须知道如何使用 PowerShell 或 Perl 编写命令所需的代码。
+
+.步骤
+. 单击 * 工作流设计 * > * 命令 * 。
+. 单击 image:../media/new_wfa_icon.gif["新建图标"] 在工具栏上。
+. 在 * 新命令定义 * 对话框的 * 属性 * 选项卡中，在 * 名称 * ， * 问题描述 * 和 * 超时 * 字段中输入或选择所需的详细信息。
++
+.. 在 * 字符串表示 * 字段中，使用 MVEL 语法为命令输入字符串表示。
++
+` + 卷名称 + "=>" + SnapshotName+`
+
++
+命令的字符串表示用于在规划和执行期间显示要在工作流设计中查看的信息。您只能对命令使用字符串表示形式的命令参数。
+
+.. * 可选： * 如果要创建 wait 命令，请在 * 命令类型 * 部分中选择 * 等待条件 * ，并在 * 等待间隔（ s ） * 字段中设置所需值。
+
+
+. 在 * 代码 * 选项卡中，执行以下步骤：
++
+.. 从 * 脚本语言 * 列表中为命令选择所需的脚本语言。
++
+您可以单击 + 并为命令选择其他语言。
+
+.. 在选定语言选项卡中为命令输入相应的代码。
++
+如果要在 PowerShell 脚本中对用户输入使用密码类型，则必须为此参数创建一个别名，并在属性中包含 ` Password` 。对于 Perl 脚本，您可以在 * 参数定义 * 选项卡中将类型指定为 * 密码 * 。
+
++
+
+NOTE: 命令编辑器不支持以下特殊字符： "<" ， "&amp" 和 XML 标记 "<>" 。
+
++
+[listing]
+----
+param (
+  [parameter(Mandatory=$false, HelpMessage="Specify an AD administrator password.")]
+  [Alias("ADAdminPassword_Password")]  [string]$ADAdminPassword
+)
+----
+
+
+. 在 * 参数定义 * 选项卡中，执行以下步骤：
++
+.. 单击 * 发现参数 * 以填充参数定义表。
++
+这些参数及其属性将从代码中提取并显示在表中。例如，将从以下代码提取 Array 和 VolumeName 参数：
+
++
+[listing]
+----
+param (
+  [parameter(Mandatory=$true, HelpMessage="Array name or IP address")]
+  [string]$Array,
+
+  [parameter(Mandatory=$true, HelpMessage="Volume name")]
+  [string]$VolumeName,
+)
+----
+.. 单击参数的问题描述 列以编辑问题描述 。
++
+您不能编辑此选项卡中的任何其他字段。
+
+
+
+. 在 * 参数映射 * 选项卡中，对每个参数执行以下步骤：
++
+.. 从 * 类型 * 列中，选择相应的词典对象。
+.. 在 * 属性 * 列中，输入或从列表中为词典对象选择适当的属性。
++
+输入属性后，您可以输入句点（ . ）并包括该对象的其他属性。
+
++
+输入 `cm_storage.volume` 作为 type ，输入 `aggregate.name` 作为 AggregateName 参数的属性。
+
+.. 在 * 对象名称 * 列中，输入对象名称。
++
+当您在工作流中指定命令详细信息时，对象名称用于在 < 命令 > 的参数 > 对话框的选项卡下对参数进行分组。
+
+
+
++
+在工作流中指定命令详细信息时，未映射的参数将显示在 <command> 的参数对话框的 * 其他参数 * 选项卡中。
+
+. 在 * 预留 * 选项卡中，使用 SQL 查询输入预留脚本，以预留在计划的工作流执行期间命令所需的资源：
++
+.. * 可选： * 在 * 预留表示方式 * 字段中，使用 MVEL 语法输入预留的字符串表示形式。
++
+` " 为 SnapMirror 标签添加规则 `
+
++
+` + SnapMirrorLabel + "[.code]` 至 SnapMirror 策略 `
+
++
+` + PolicyName + "` "`
+
++
+字符串表示用于显示预留窗口中预留的资源的详细信息。
+
+
+
++
+
+NOTE: 预留脚本不能对除 cm_storage ， cm_performance ， storage ， performance ， vc ， 和自定义方案。
+
+. * 可选： * 在 * 验证 * 选项卡中，输入 SQL 查询以验证命令是否按预期影响了数据源和 WFA 缓存，以便可以删除预留。
++
+输入的 SQL 查询只能包含 SQL SELECT 语句。
+
++
+.. 单击 * 测试验证 * 以测试验证脚本。
+.. 在 * 验证 * 对话框中，输入所需的测试参数。
+.. 如果不想使用预留数据测试验证脚本，请清除 * 在 test* 中使用 * 预留数据字段。
+.. 单击 * 测试 * 。
+.. 查看测试结果后，关闭对话框。
+
+
+. 单击 * 测试 * 以测试命令。
+. 在 * 测试命令 <command name>* 对话框中，单击 * 测试 * 。
++
+测试结果将显示在对话框的日志消息部分中。
+
+. 单击 * 保存 * 。
+

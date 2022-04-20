@@ -1,0 +1,123 @@
+---
+permalink: windows-install/task-manage-site-specific-perl-modules.html 
+sidebar: sidebar 
+keywords: manage, site-specific, perl modules 
+summary: 您可以使用 ActiveState Perl 软件包管理器（ PPM ）管理站点特定的 Perl 模块。您必须在 OnCommand Workflow Automation （ WFA ）安装目录之外安装站点专用的 Perl 模块，以避免在 WFA 升级期间删除 Perl 模块。 
+---
+= 管理站点特定的 Perl 模块
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 ActiveState Perl 软件包管理器（ PPM ）管理站点特定的 Perl 模块。您必须在 OnCommand Workflow Automation （ WFA ）安装目录之外安装站点专用的 Perl 模块，以避免在 WFA 升级期间删除 Perl 模块。
+
+使用 PERL5LIB 环境变量，您可以将 WFA 服务器上安装的 Perl 解释器配置为使用 Perl 模块。
+
+在此操作步骤 中，我们将在 c ： \Perl 的用户区域中安装试用 Perl 模块作为一个示例。卸载 WFA 时不会删除此用户区域，您可以在重新安装或升级 WFA 后重复使用此区域。
+
+.步骤
+. 将 PerL5LIB 环境变量设置为要安装 Perl 模块的位置。
++
+`c ： \>echo %perL5LIB%` `c ： \Perl`
+
+. 使用 `PPM Area list` 验证 Perl 模块区域是否未初始化。
++
+`C ： \Program Files\NetApp\WFA\Perl64\bin>PPM 区域列表`
+
++
+[listing]
+----
+┌────────┬──────┬───────────────────────────────────────────────────┐
+│ name   │ pkgs │ lib                                               │
+├────────┼──────┼───────────────────────────────────────────────────┤
+│ (user) │  n/a │ C:/Perl                                           │
+│  site* │  0   │ C:/Program Files/NetApp/WFA/Perl64/site/lib       │
+│  perl  │  229 │ C:/Program Files/NetAPP/WFA/Perl64/lib            │
+└────────┴──────┴───────────────────────────────────────────────────┘
+----
+. 使用 `ppm area init user` 初始化 Perl 模块区域。
++
+`C ： \Program Files\NetApp\WFA\Perl64\bin>PPM Area init user`
+
++
+[listing]
+----
+Syncing user PPM database with .packlists...done
+----
+. 使用 `PPM Area list` 验证 Perl 模块区域是否已初始化。
++
+`C ： \Program Files\NetApp\WFA\Perl64\bin>PPM 区域列表`
+
++
+[listing]
+----
+┌────────┬──────┬───────────────────────────────────────────────────┐
+│ name   │ pkgs │ lib                                               │
+├────────┼──────┼───────────────────────────────────────────────────┤
+│  user  │  0   │ C:/Perl                                           │
+│  site* │  0   │ C:/Program Files/NetApp/WFA/Perl64/site/lib       │
+│  perl  │  229 │ C:/Program Files/NetAPP/WFA/Perl64/lib            │
+└────────┴──────┴───────────────────────────────────────────────────┘
+----
+. 添加所需的存储库并安装所需的软件包。
++
+.. 使用 `pPM repo add` 添加所需的存储库。
++
+` +c ： \Program Files\NetApp\WFA\Perl64\bin>PPM repoadd http://ppm4.activestate.com/MSWin32-x64/5.16/1600/package.xml+`[]
+
++
+[listing]
+----
+Downloading ppm4.activestate.com packlist...done
+Updating ppm4.activestate.com database...done
+Repo 1 added.
+----
+.. 使用 `pPM repo list` 验证是否已添加所需的存储库。
++
+`C ： \Program Files\NetApp\WFA\Perf64\bin>PPM repo list`
+
++
+[listing]
+----
+┌────────┬──────┬────────────────────────────────────────────────┐
+│ id     │ pkgs │ name                                           │
+├────────┼──────┼────────────────────────────────────────────────┤
+│  1     │17180 │ ppmr.activestate.com                           │
+└────────┴──────┴────────────────────────────────────────────────┘
+ (1 enabled repository)
+----
+.. 使用 `PPM install` 安装所需的 Perl 模块。
++
+`C ： \Program Files\NetApp\WFA\Perl64\bin>PPM install try-iny -area user`
+
++
+[listing]
+----
+Downloading ppm4.activestate.com packlist...done
+Updating ppm4.activestate.com database...done
+Downloading Try-Tiny-0.18...done
+Unpacking Try-Tiny-0.18...done
+Generating HTML for Try-Tiny-0.18...done
+Updating files in user area...done
+   2 files installed
+----
+.. 使用 `ppm area list` 确认已安装所需的 Perl 模块。
++
+`C ： \Program Files\NetApp\WFA\Perl64\bin>PPM 区域列表`
+
++
+[listing]
+----
+┌────────┬──────┬────────────────────────────────────────────────┐
+│ name   │ pkgs │ lib                                            │
+├────────┼──────┼────────────────────────────────────────────────┤
+│  user  │  1   │ C:/Perl                                        │
+│  site* │  0   │ C:/Program Files/NetApp/WFA/Perl64/site/lib    │
+│  perl  │  229 │ C:/Program Files/NetAPP/WFA/Perl64/lib         │
+└────────┴──────┴────────────────────────────────────────────────┘
+----
+
+
+

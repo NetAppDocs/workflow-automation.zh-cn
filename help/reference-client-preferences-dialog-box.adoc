@@ -1,0 +1,61 @@
+---
+permalink: help/reference-client-preferences-dialog-box.html 
+sidebar: sidebar 
+keywords: preference, window, enable, view, modify, refresh, logging, options, client, associated specific, workflow, automation, server, access, settings, setup, click 
+summary: 通过首选项窗口，您可以查看和修改与特定 Workflow Automation （ WFA ）服务器关联的所有客户端的刷新和日志记录选项。您可以通过选择设置来访问此窗口，然后在设置下单击首选项。 
+---
+= 首选项窗口
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过首选项窗口，您可以查看和修改与特定 Workflow Automation （ WFA ）服务器关联的所有客户端的刷新和日志记录选项。您可以通过选择 * 设置 * 来访问此窗口，然后在 * 设置 * 下单击 * 首选项 * 。
+
+* * 启用自动刷新 *
++
+用于选择客户端的自动刷新，此刷新由服务器触发。默认情况下，此选项处于选中状态。选中后，以下 WFA 表将自动刷新：
+
++
+** 执行状态
+** 数据源
+** 预留
+
+
+
+
+如果未选择此选项，则只有在单击 * 刷新 * 后，表才会更新。默认情况下，此复选框处于选中状态。
+
+* * 刷新间隔（秒） *
++
+用于选择刷新间隔。默认值为 3 秒。
+
+* * 要显示的最大行数 *
++
+用于单击 * 最大大小 * 列中的值，并修改服务器按列表类型检索并向用户显示的行数。
+
++
+例如， * 工作流执行 * 设置将向用户显示过去执行的历史记录数量。以下是默认值：
+
++
+** 工作流执行： 100
+** 采集历史记录： 30
+** 预留： 100
+** 添加清单行： 1000
++
+用于指定清单应获得的最大结果数。默认值为 1000 。
+
+
+
+
+
+
+
+== 命令按钮
+
+* * 保存 *
++
+保存配置设置。
+
+

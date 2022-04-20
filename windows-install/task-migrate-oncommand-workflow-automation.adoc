@@ -1,0 +1,45 @@
+---
+permalink: windows-install/task-migrate-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: migrate, oncommand, workflow, automation, installation 
+summary: 您可以迁移 OnCommand Workflow Automation （ WFA ）安装以维护 WFA 安装期间安装的唯一 WFA 数据库密钥。例如，您可以将 WFA 安装从 Windows 2012 服务器迁移到 Windows 2016 服务器。 
+---
+= 迁移 OnCommand Workflow Automation 安装
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以迁移 OnCommand Workflow Automation （ WFA ）安装以维护 WFA 安装期间安装的唯一 WFA 数据库密钥。例如，您可以将 WFA 安装从 Windows 2012 服务器迁移到 Windows 2016 服务器。
+
+* 只有在要将包含 WFA 数据库密钥的操作步骤 安装迁移到其他服务器时，才必须执行此 WFA 。
+* WFA 数据库还原不会迁移 WFA 密钥。
+* 迁移 WFA 安装不会迁移 SSL 证书。
+* 此操作步骤 将使用默认 WFA 安装路径。
++
+如果您在安装期间更改了默认位置，则必须使用更改后的 WFA 安装路径。
+
+
+
+.步骤
+. 以管理员身份通过 Web 浏览器访问 WFA 。
+. 备份 WFA 数据库。
+. 在 WFA 服务器上打开命令提示符并将目录更改为以下位置： `c ： \Program Files\NetApp\WFA\bin`
+. 在命令提示符处输入以下命令以获取数据库密钥：
++
+`wfa.cmd -key`
+
+. 记下显示的数据库密钥。
+. 卸载 WFA 。
+. 在所需系统上安装 WFA 。
+. 在新 WFA 服务器上打开命令提示符，并将目录更改为以下位置： `c ： \Program Files\NetApp\WFA\bin`
+. 在命令提示符处输入以下命令以安装数据库密钥：
++
+`wfa.cmd -key=yourdatabasekey`
+
++
+您的数据库密钥是您在先前的 WFA 安装中记下的密钥。
+
+. 从您创建的备份还原 WFA 数据库。
+

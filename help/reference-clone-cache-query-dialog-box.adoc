@@ -1,0 +1,58 @@
+---
+permalink: help/reference-clone-cache-query-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, cache, query, dialog box, enable, associated, dictionary, entry 
+summary: 通过编辑缓存查询对话框，您可以编辑与词典条目关联的缓存查询。 
+---
+= 克隆缓存查询对话框
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过编辑缓存查询对话框，您可以编辑与词典条目关联的缓存查询。
+
+* * 词典条目 *
++
+指定与缓存查询关联的词典条目。
+
+* * 实体版本 *
++
+用于输入缓存查询的版本号，格式为 `major.minor.revision` 格式—例如 1.0.0 。
+
+* * 数据源类型 *
++
+指定与缓存查询关联的数据源类型。
+
+
+
+
+
+== 表结构
+
+显示与词典条目关联的属性和 SQL 语法。
+
+* * SQL 选择查询 *
++
+指定与词典条目关联的 SQL 查询以及选定的数据提供程序类型。
+
+
+
+
+
+== 命令按钮
+
+* * 测试 *
++
+用于测试在 SQL 选择查询字段中输入的 SQL 查询。
+
+* * 保存 *
++
+将缓存查询保存为缓存查询表中的新条目，然后关闭对话框。
+
+* * 取消 *
++
+取消所做的更改（如果有），然后关闭对话框。
+
+

@@ -1,0 +1,48 @@
+---
+permalink: rhel-install/concept-unsupported-features-for-wfa-on-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, limitations 
+summary: OnCommand Workflow Automation （ WFA ） 5.1 包含一些限制和不受支持的功能，您应在安装和配置 WFA 之前了解这些限制和功能。 
+---
+= OnCommand Workflow Automation 的已知限制
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation （ WFA ） 5.1 包含一些限制和不受支持的功能，您应在安装和配置 WFA 之前了解这些限制和功能。
+
+* * LDAP 身份验证 *
++
+** 您只能使用 Microsoft Active Directory 轻型目录访问协议（ Lightweight Directory Access Protocol ， LDAP ）服务器进行 LDAP 身份验证。
+** 要使用 LDAP 身份验证，您必须是 LDAP 组的成员。
+** 您不能使用属于多个域分层结构的 LDAP 用户名进行身份验证或通知。
+
+
+
+
+[NOTE]
+====
+不支持 Microsoft Active Directory 轻型目录服务（ AD LDS ）。
+
+====
+* * WFA 数据源类型 *
++
+OnCommand Unified Manager 6.0 ， 6.1 和 6.2 数据源类型在 WFA 4.1 版本中已弃用，这些数据源类型在未来版本中将不受支持。
+
+* * WFA 安装在 Linux* 上
++
+** 目前不提供在 7- 模式下运行的 Data ONTAP 的认证内容。
+** 仅包含 PowerShell 代码的命令与 Linux 不兼容。
+** 目前， 7- 模式和 VMware 的认证命令不会移植到 Perl ，因此与 Linux 不兼容。
+
+
+* * 正在创建类别名称 *
++
+** 如果在类别名称中使用连字符（ - ），则在保存此类别后，此名称将替换为空格。例如，如果提供了类别名称 "abc-xyz" ，则该类别名称将保存为 "abc xyz" ，并删除连字符。要避免使用此问题描述 ，请勿在类别名称中使用连字符。
+** 如果在类别名称中使用冒号（：），则在保存此类别后，冒号前面的文本字符串将被忽略。例如，如果提供了类别名称 "abc ： xyz" ，则该类别名称将保存为 "xyz" ，并删除 "abc" 字符串。要避免使用此问题描述 ，请勿在类别名称中使用冒号。
+** 不会通过检查来防止两个类别具有相同名称。但是，在从导航窗格中选择这些类别时，这会导致出现问题。要避免此问题描述 ，请确保每个类别名称都是唯一的。
+
+
+

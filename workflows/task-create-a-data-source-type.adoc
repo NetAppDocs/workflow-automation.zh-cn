@@ -1,0 +1,64 @@
+---
+permalink: workflows/task-create-a-data-source-type.html 
+sidebar: sidebar 
+keywords: create, data, source, type, enable, acquisition, predefined, oncommand, workflow, automation 
+summary: 您必须创建数据源类型才能从数据源采集数据，而此数据源在 OnCommand Workflow Automation （ WFA ）中未预定义。 
+---
+= 创建数据源类型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须创建数据源类型才能从数据源采集数据，而此数据源在 OnCommand Workflow Automation （ WFA ）中未预定义。
+
+.您需要什么？ #8217 ；将需要什么
+* 如果要创建的自定义数据源类型在 WFA 中未预定义，则必须已创建所需的词典条目和方案。
+* 要创建使用脚本方法的数据源类型，您必须了解 PowerShell 脚本。
+
+
+.步骤
+. 单击 * 数据源设计 * > * 数据源类型 * 。
+. 单击 image:../media/new_wfa_icon.gif["新建图标"] 在工具栏上。
+. 在 * 新数据源类型 * 对话框的 * 数据源 * ， * 数据源版本 * 和 * 方案 * 字段中输入或选择所需的详细信息。
+. 在 * 默认端口 * 字段中，输入端口号。
++
+`2638`
+
++
+在为数据采集添加此数据源类型时，系统会填充您输入的端口号。默认情况下， WFA 会使用此端口与数据源进行通信，并且此端口应在数据源服务器上打开。
+
+. 从 * 方法 * 列表中，选择 WFA 采集数据必须使用的方法：
++
+[cols="2*"]
+|===
+| 如果您已选择 ... | 那么 ... 
+
+
+ a| 
+SQL/
+ a| 
+从 * 驱动程序类型 * 列表中，选择以下适用于数据源的驱动程序之一：
+
+** * Sybase jConnect3*
+** * MySQL Connector/J*
+** * MySQL Server JDBC 驱动程序 3.0*
+** * Oracle JDBC 驱动程序 11.2.0.3*
+
+
+
+
+ a| 
+脚本
+ a| 
+在 * 脚本 * 字段中，输入用于从数据源连接和检索数据的 PowerShell 脚本。
+
+[NOTE]
+====
+与词典条目等效的 CSV 文件中的数据应包含用作字段分隔符的选项卡。例如，请参见 VMware vCenter 数据源类型的 PowerShell 脚本。
+
+====
+|===
+. 单击 * 保存 * 。
+

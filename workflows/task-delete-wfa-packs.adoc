@@ -1,0 +1,32 @@
+---
+permalink: workflows/task-delete-wfa-packs.html 
+sidebar: sidebar 
+keywords: delete, pack, oncommand, workflow, automation, require, entities, associated 
+summary: 如果您不再需要某个软件包，可以从 OnCommand Workflow Automation （ WFA ）中将其删除。如果删除某个软件包，则会删除与该软件包关联的所有实体。 
+---
+= 删除 OnCommand Workflow Automation 软件包
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您不再需要某个软件包，可以从 OnCommand Workflow Automation （ WFA ）中将其删除。如果删除某个软件包，则会删除与该软件包关联的所有实体。
+
+.关于此任务
+* 如果某个软件包中的实体存在任何依赖关系，则不能删除该软件包。
++
+例如，如果您尝试删除包含自定义工作流中的命令的软件包，则删除操作将失败，因为自定义工作流依赖于该软件包。只有在删除自定义工作流后，才能删除此软件包。
+
+* 不能单独删除属于某个软件包的实体。
++
+要删除属于某个软件包一部分的实体，必须删除包含该实体的软件包。如果某个实体属于多个软件包的一部分，则只有在删除包含该实体的所有软件包后，该实体才会从 WFA 服务器中删除。
+
+
+
+.步骤
+. 以管理员身份通过 Web 浏览器登录到 WFA 。
+. 单击 * 内容管理 * > * 包 * 。
+. 选择要删除的软件包，然后单击 image:../media/delete_wfa_icon.gif["删除图标"]。
+. 在 * 删除软件包 * 确认对话框中，单击 * 确定 * 。
+

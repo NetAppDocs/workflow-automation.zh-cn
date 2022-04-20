@@ -1,0 +1,12 @@
+---
+permalink: rhel-install/index.html 
+sidebar: sidebar 
+keywords: installation, setup, linux 
+summary: 适用于 Linux 的安装和设置 
+---
+= 适用于 Linux 的安装和设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

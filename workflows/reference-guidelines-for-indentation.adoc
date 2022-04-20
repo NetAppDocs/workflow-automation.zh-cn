@@ -1,0 +1,64 @@
+---
+permalink: workflows/reference-guidelines-for-indentation.html 
+sidebar: sidebar 
+keywords: aware, guidelines, indentation, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 在为 OnCommand Workflow Automation （ WFA ）编写 PowerShell 或 Perl 脚本时，您必须了解缩进准则。 
+---
+= 缩进准则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在为 OnCommand Workflow Automation （ WFA ）编写 PowerShell 或 Perl 脚本时，您必须了解缩进准则。
+
+[cols="2*"]
+|===
+| 准则 | 示例 
+
+
+ a| 
+一个选项卡等于四个空空格。
+ a| 
+
+
+
+ a| 
+使用制表符和花括号显示块的开始和结束。
+ a| 
+PowerShell 脚本
+
+[listing]
+----
+if
+($pair.length-ne 2)
+{
+throw "Got wrong input data"
+}
+----
+Perl 脚本
+
+[listing]
+----
+if
+(defined $MaxDirectorySize)
+{
+# convert from MBytes to Bytes
+my $MaxDirectorySizeBytes = $MaxDirectorySize *
+1024 * 1024;
+}
+----
+
+
+ a| 
+在操作集或代码块之间添加空白行。
+ a| 
+[listing]
+----
+$options=$option.trim();
+$pair=$option.split(" ");
+Get-WFAlogger -Info -messages $("split options: "+
+$Pair)
+----
+|===

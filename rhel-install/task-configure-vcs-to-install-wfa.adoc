@@ -1,0 +1,58 @@
+---
+permalink: rhel-install/task-configure-vcs-to-install-wfa.html 
+sidebar: sidebar 
+keywords: configure, vcs, install, oncommand, workflow, automation 
+summary: 在 Veritas 集群服务器（ VCS ）中安装 OnCommand Workflow Automation （ WFA ）之前，必须确保已正确配置集群节点以支持 WFA 。 
+---
+= 配置 VCS 以安装 OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 Veritas 集群服务器（ VCS ）中安装 OnCommand Workflow Automation （ WFA ）之前，必须确保已正确配置集群节点以支持 WFA 。
+
+* 必须按照 _Veritas Cluster Server 6.1.1 安装指南中的说明在集群的两个节点上安装 VCS 。
+* 要接收有关集群事件的通知，必须按照 _Veritas Cluster Server 管理员指南 _ 中的说明为 VCS 软件配置 SNMP 和 SMTP 。
+* 必须符合 VCS 文档中有关配置集群服务器的所有要求和准则。
+* 如果要使用 SnapDrive for UNIX 创建 LUN ，则必须安装 SnapDrive for UNIX 。
+* 两个集群节点都必须运行受支持的操作系统版本。
++
+支持的最低操作系统为 Red Hat Enterprise Linux 7.0 和 VCS 6.1.1 。
+
+* 必须在两个集群节点上使用相同的路径安装相同版本的 WFA 。
+* WFA 服务器必须通过光纤通道（ FC ）或 iSCSI 连接到存储系统。
+* WFA 服务器和存储系统之间的延迟必须最小。
+* FC 链路必须处于活动状态，并且所创建的 LUN 必须可供两个集群节点访问。
+* 必须在每个系统上至少设置两个网络接口：一个用于节点到节点通信，另一个用于节点到客户端通信。
+* 用于节点到客户端通信的网络接口名称在两个系统上都应相同。
+* 必须在集群节点之间建立单独的检测信号链路；否则，将使用网络接口在集群节点之间进行通信。
+* 必须创建共享位置以实现高可用性。
++
+您可以使用适用于 UNIX 的 SnapDrive 创建共享位置。
+
++
+您还可以使用 SnapDrive 或存储系统命令行界面管理 LUN 。有关详细信息，请参见 SnapDrive for UNIX 兼容性列表。
+
+
+
+.步骤
+. 验证是否已正确安装 VCS ： `hastatus – summary`
++
+两个节点必须处于联机状态，并且 VCS 服务必须同时在两个节点上运行。
+
+. 使用以下选项之一验证 LUN 是否可供两个节点访问：
++
+** 本机管理 LUN 。
+** 使用适用于 UNIX 的 SnapDrive ：
++
+... 在两个节点上安装 SnapDrive for UNIX 。
+... 在两个节点上配置适用于 UNIX 的 SnapDrive 。
+... 从第一个节点中，运行 `lun storage create` 命令创建 SnapDrive 。
+... 运行 `lun storage show – all` 命令，验证在第一个节点上创建的 SnapDrive 在第二个节点上是否可见。
+
+
+
+
+

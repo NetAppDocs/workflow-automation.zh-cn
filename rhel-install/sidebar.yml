@@ -1,0 +1,173 @@
+---
+section: rhel-install
+title: 适用于 Linux 的安装和设置
+entries:
+- title: OnCommand Workflow Automation 概述
+  url: "/rhel-install/concept-overview-of-oncommand-workflow-automation.html"
+  entries:
+  - title: OnCommand Workflow Automation 部署架构
+    url: "/rhel-install/concept-oncommand-workflow-automation-deployment-architecture.html"
+  - title: OnCommand Workflow Automation 安装和设置概述
+    url: "/rhel-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html"
+  - title: OnCommand Workflow Automation 的已知限制
+    url: "/rhel-install/concept-unsupported-features-for-wfa-on-linux.html"
+- title: 安装 OnCommand Workflow Automation 的系统要求
+  url: "/rhel-install/reference-system-requirements-for-oncommand-workflow-automation-linux.html"
+  entries:
+  - title: Workflow Automation 所需的端口
+    url: "/rhel-install/reference-ports-required-for-oncommand-workflow-automation.html"
+- title: 安装 Workflow Automation 的前提条件
+  url: "/rhel-install/reference-prerequisites-for-installing-workflow-automation.html"
+  entries:
+  - title: 在 CentOS 和 RHEL 上安装 Perl 模块
+    url: "/rhel-install/task-install-perl-module-on-centos-and-rhel.html"
+- title: 管理高可用性
+  url: "/rhel-install/concept-managing-high-availability.html"
+  entries:
+  - title: 在 VCS 中设置 Workflow Automation 以实现高可用性
+    url: "/rhel-install/task-set-up-wfa-in-vcs.html"
+    entries:
+    - title: 配置 VCS 以安装 OnCommand Workflow Automation
+      url: "/rhel-install/task-configure-vcs-to-install-wfa.html"
+    - title: 在 Linux 上安装 OnCommand Workflow Automation
+      url: "/rhel-install/task-install-oncommand-workflow-automation.html"
+    - title: 在 VCS 中配置 Workflow Automation
+      url: "/rhel-install/task-configure-wfa-with-vcs-using-configuration-scripts-linux.html"
+  - title: 配置早期版本的 OnCommand Workflow Automation 以实现高可用性
+    url: "/rhel-install/task-configure-an-earlier-version-of-wfa-to-high-availability.html"
+  - title: 在 VCS 环境中卸载 Workflow Automation
+    url: "/rhel-install/task-uninstall-wfa-in-a-vcs-environment.html"
+  - title: 在 Linux 上备份和还原 OnCommand Workflow Automation 数据库和配置
+    url: "/rhel-install/task-back-up-the-wfa-database-and-configurations-linux.html"
+- title: 设置 OnCommand Workflow Automation
+  url: "/rhel-install/concept-setting-up-oncommand-workflow-automation.html"
+  entries:
+  - title: 访问 OnCommand Workflow Automation
+    url: "/rhel-install/task-access-oncommand-workflow-automation.html"
+  - title: OnCommand Workflow Automation 数据源
+    url: "/rhel-install/concept-wfa-data-sources.html"
+    entries:
+    - title: 在 DataFabric Manager 上配置数据库用户
+      url: "/rhel-install/reference-configuring-a-database-user-on-datafabric-manager.html"
+      entries:
+      - title: 通过在 Windows 上运行 ocsetup 来配置数据库用户
+        url: "/rhel-install/task-configure-a-database-user-by-running-ocsetup-on-windows.html"
+      - title: 通过在 Linux 上运行 ocsetup 来配置数据库用户
+        url: "/rhel-install/task-configure-a-database-user-by-running-ocsetup-on-linux.html"
+    - title: 设置数据源
+      url: "/rhel-install/task-set-up-a-data-source.html"
+    - title: 将升级后的 Unified Manager 服务器添加为数据源
+      url: "/rhel-install/task-add-an-upgraded-unified-manager-server-data-source.html"
+  - title: 创建本地用户
+    url: "/rhel-install/task-create-local-users.html"
+  - title: 配置目标系统的凭据
+    url: "/rhel-install/task-configure-the-credentials-of-a-target-system.html"
+  - title: 正在配置 OnCommand Workflow Automation
+    url: "/rhel-install/concept-advanced-configuring-oncommand-workflow-automation.html"
+    entries:
+    - title: 配置 AutoSupport
+      url: "/rhel-install/task-configure-autosupport.html"
+    - title: 配置身份验证设置
+      url: "/rhel-install/task-configure-authentication-settings.html"
+    - title: 添加 Active Directory 组
+      url: "/rhel-install/task-add-active-directory-group-names.html"
+    - title: 配置电子邮件通知
+      url: "/rhel-install/task-configure-mail.html"
+    - title: 配置 SNMP
+      url: "/rhel-install/task-configure-snmp.html"
+    - title: 配置系统日志
+      url: "/rhel-install/task-configure-syslog.html"
+    - title: 配置用于连接到远程系统的协议
+      url: "/rhel-install/task-configure-protocols-for-connecting-to-remote-systems.html"
+  - title: 禁用默认密码策略
+    url: "/rhel-install/task-disable-the-default-password-policy-linux.html"
+  - title: 修改默认密码策略
+    url: "/rhel-install/task-modify-the-default-password-policy-linux.html"
+  - title: 启用或禁用对 OnCommand Workflow Automation 数据库的远程访问
+    url: "/rhel-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database-linux.html"
+  - title: 修改 OnCommand Workflow Automation 的事务超时设置
+    url: "/rhel-install/task-modify-the-transaction-timeout-setting-of-oncommand-workflow-automation-linux.html"
+  - title: 配置 Workflow Automation 的超时值
+    url: "/rhel-install/task-configure-the-timeout-value-for-linux.html"
+  - title: 启用密码并添加新密码
+    url: "/rhel-install/concept-enabling-ciphers-and-adding-new-ciphers.html"
+- title: 从 OnCommand Workflow Automation 3.1 或更高版本升级
+  url: "/rhel-install/task-upgrade-from-wfa-4-2.html"
+  entries:
+  - title: 升级期间的软件包标识
+    url: "/rhel-install/reference-pack-identification-during-upgrade.html"
+- title: 升级第三方产品
+  url: "/rhel-install/concept-upgrading-third-party-products-in-linux.html"
+  entries:
+  - title: 升级 OpenJDK
+    url: "/rhel-install/task-upgrade-openjdk-on-linux-wfa.html"
+  - title: 升级 Linux 上的 MySQL
+    url: "/rhel-install/task-upgrade-mysql-on-linux.html"
+- title: 备份 OnCommand Workflow Automation 数据库
+  url: "/rhel-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html"
+  entries:
+  - title: 从 Web 门户备份 WFA 数据库
+    url: "/rhel-install/task-back-up-oncommand-workflow-automation-database-using-the-web-portal.html"
+  - title: 使用命令行界面备份 WFA 数据库
+    url: "/rhel-install/concept-backing-up-the-wfa-database-using-the-command-line-interface.html"
+    entries:
+    - title: 使用命令行界面备份（完整） WFA 数据库
+      url: "/rhel-install/task-back-up-full-the-wfa-database-using-perl-script-linux.html"
+    - title: 使用命令行界面备份（常规） WFA 数据库
+      url: "/rhel-install/task-back-up-regular-the-wfa-database-using-perl-script-linux.html"
+  - title: 使用 REST API 备份 WFA 数据库
+    url: "/rhel-install/concept-backing-up-the-wfa-database-using-rest-apis.html"
+    entries:
+    - title: 使用 REST API 对 WFA 数据库执行完整备份
+      url: "/rhel-install/task-back-up-full-oncommand-workflow-automation-database-using-rest-api.html"
+    - title: 使用 REST API 定期备份 WFA 数据库
+      url: "/rhel-install/task-back-up-regular-oncommand-workflow-automation-database-using-rest-api.html"
+- title: 还原 OnCommand Workflow Automation 数据库
+  url: "/rhel-install/concept-restoring-the-wfa-database.html"
+  entries:
+  - title: 还原 WFA 数据库
+    url: "/rhel-install/task-restore-oncommand-workflow-automation-database-using-web-portal.html"
+  - title: 使用命令行界面还原 WFA 数据库
+    url: "/rhel-install/concept-restoring-the-oncommand-workflow-automation-database-using-cli.html"
+    entries:
+    - title: 使用命令行界面还原（完全） WFA 数据库
+      url: "/rhel-install/task-restore-full-the-oncommand-workflow-automation-database-and-configurations-linux.html"
+    - title: 使用命令行界面还原（常规） WFA 数据库
+      url: "/rhel-install/task-restore-regular-the-oncommand-workflow-automation-database-and-configurations-linux.html"
+  - title: 使用 REST API 还原 WFA 数据库
+    url: "/rhel-install/concept-restoring-the-oncommand-workflow-automation-database-using-rest-api.html"
+    entries:
+    - title: 使用 REST API 还原（完全） WFA 数据库
+      url: "/rhel-install/task-restore-full-the-oncommand-workflow-automation-database-using-rest-apis.html"
+    - title: 使用 REST API 还原（常规） WFA 数据库
+      url: "/rhel-install/task-restore-regular-the-oncommand-workflow-automation-database-using-rest-apis.html"
+- title: 重置在安装期间创建的管理员密码
+  url: "/rhel-install/task-reset-the-admin-password-created-during-installation-linux.html"
+- title: 导入 OnCommand Workflow Automation 内容
+  url: "/rhel-install/task-import-oncommand-workflow-automation-content.html"
+  entries:
+  - title: 导入 OnCommand Workflow Automation 内容时的注意事项
+    url: "/rhel-install/reference-considerations-of-importing-wfa-content.html"
+- title: 迁移 OnCommand Workflow Automation 安装
+  url: "/rhel-install/task-migrate-the-oncommand-workflow-automation-installation-linux.html"
+- title: 卸载 OnCommand Workflow Automation
+  url: "/rhel-install/task-uninstall-oncommand-workflow-automation-linux.html"
+- title: 管理 OnCommand Workflow Automation SSL 证书
+  url: "/rhel-install/reference-managing-oncommand-workflow-automation-ssl-certificates.html"
+  entries:
+  - title: 替换默认的 Workflow Automation SSL 证书
+    url: "/rhel-install/task-replace-the-default-workflow-automation-ssl-certificate-linux.html"
+  - title: 为 Workflow Automation 创建证书签名请求
+    url: "/rhel-install/task-create-a-certificate-signing-request-for-workflow-automation-linux.html"
+- title: 管理 Perl 和 Perl 模块
+  url: "/rhel-install/concept-managing-perl-and-perl-modules.html"
+  entries:
+  - title: 配置首选 Perl 分发版
+    url: "/rhel-install/task-configure-your-preferred-perl-distribution-linux.html"
+- title: 对安装和配置问题进行故障排除
+  url: "/rhel-install/reference-troubleshooting.html"
+  entries:
+  - title: 无法在 WFA 中查看 Performance Advisor 数据
+    url: "/rhel-install/reference-cannot-view-performance-advisor-data-in-wfa.html"
+- title: OnCommand Workflow Automation 的相关文档
+  url: "/rhel-install/reference-related-documentation-for-oncommand-workflow-automation.html"

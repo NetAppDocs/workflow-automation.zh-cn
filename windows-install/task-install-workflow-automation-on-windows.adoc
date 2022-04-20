@@ -1,0 +1,252 @@
+---
+permalink: windows-install/task-install-workflow-automation-on-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, install, windows 
+summary: 您可以安装 OnCommand Workflow Automation （ WFA ）来创建和自定义存储工作流，以自动执行在环境中执行的存储任务。 
+---
+= 在 Windows 上安装 OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以安装 OnCommand Workflow Automation （ WFA ）来创建和自定义存储工作流，以自动执行在环境中执行的存储任务。
+
+* 您必须已查看安装前提条件。
++
+xref:reference-prerequisites-for-installing-workflow-automation.adoc[安装 Workflow Automation 的前提条件]
+
+* 如果要在先前安装并卸载了 WFA 的系统上安装 WFA ，则必须确保该系统上没有 WFA 服务。
+* 您必须已从 NetApp 支持站点下载 WFA 安装程序。
+* 如果要在虚拟机（ VM ）上安装 WFA ，则虚拟机名称不能包含下划线（ _ ）字符。
+* 在安装 WFA 之前安装 ActiveState ActivePerl 。
++
+此安装不会影响 WFA 服务器上安装的任何其他 ActivePerl 实例。
+
+* 在重新安装 WFA 4.2 或更高版本之前，如果已卸载 MySQL ，则必须删除 MySQL 数据目录。
+
+
+.步骤
+. 使用具有管理权限的帐户登录到 Windows 。
+. 打开 Windows 资源管理器，然后导航到安装文件所在的目录。
+. 安装 WFA ：
++
+** 交互式安装
++
+... 右键单击并以管理员用户身份运行 WFA 安装程序可执行文件（ .exe ）。
+... 单击 * 下一步 * 。
+... 输入默认管理员用户的凭据，然后单击 * 下一步 * 。
++
+默认管理员密码必须满足以下条件：
+
++
+**** 至少 8 个字符
+**** 一个大写字符
+**** 一个小写字符
+**** 一个数字
+**** 一个特殊字符
+**** 密码和发生原因 安装失败时不支持以下特殊字符：
++
+` " ； < > ， = & ｛ caret ｝ ...
+
++
+[NOTE]
+====
+您必须记下管理员用户的凭据。
+
+====
+
+
+... 输入 WFA 服务登录的用户名和密码。对于域用户，请提供格式为 domain\user 的用户名。对于本地系统用户，格式仅为用户名。默认用户名为 "WFA" 。
++
+如果不存在本地用户，则 WFA 安装程序会创建一个本地用户。如果存在本地用户，并且输入的密码与现有密码不同，则 WFA 将更新此密码。
+
++
+[NOTE]
+====
+确保密码符合为系统上的本地用户配置的密码策略。如果密码不符合密码策略，安装将失败。
+
+====
+... 选择 WFA 配置的端口，然后单击 * 下一步 * 。
+... 输入站点名称和公司名称，然后单击 * 下一步 * 。
++
+站点名称可以包括 WFA 安装位置，例如匹兹堡，宾夕法尼亚州。
+
+... 如果要更改默认安装位置，请选择要安装 WFA 的位置，然后单击 * 下一步 * 。
+... 如果要更改第三方产品的默认安装位置，请选择要安装第三方产品的位置，然后单击 * 下一步 * 。
+... 如果不想更改 WFA 数据库的默认位置，请单击 * 下一步 * 。
+... 单击 * 安装 * 继续安装。
+... 单击 * 完成 * 完成安装。
+... 选择以下操作之一，验证是否已成功安装 WFA ：
++
+**** 通过 Web 浏览器访问 WFA 。
+**** 使用 Windows 服务控制台验证 NetApp WFA Server 服务和 NetApp WFA 数据库服务是否正在运行。
+
+
+
+
+** 静默安装（从命令提示符处）：
++
+ WFA-version_number-build_number.exe /s /v"WFA_ADMIN_USERNAME=wfa_username WFA_ADMIN_PASSWORD=password WFA_ADMIN_CONFIRM_PASSWORD=confirm admin password / WFA_MYSQL_PASS=password CONFIRM_WFA_MYSQL_PASS=confirm MySQL password WFA_INSTALL_SITE=site WFA_INSTALL_ORGANIZATION=organization_name WFA_HTTP_PORT=port WFA_HTTPS_PORT=port INSTALLDIR=install_directory JDKINSTALLDIR=jdk_directory PerlDir=perl_directory MySqlInstallDir=mysql_directory WFA_SERVICE_LOGON_USERNAME=wfa service logon username WFA_SERVICE_LOGON_PASSWORD=wfa service logon user password MYSQL_DATA_DIR= mysql data directory /qr /l*v C:\install.log"
++
+* 示例 *
+
++
+WFA-x64-V5.1.0.0.1-B5355278.exe /s /v"WFA_admin_username=admin WFA_admin_password=Company * 123 WFA_admin_confirm_password=Company * 123 WFA_mysql_pass=MyS* 123 WFA_mysql_site=NB WFA_install_site=STAWFA_DI'ODI=WFA\WAFA\WAFA\">PS_Programme\WFA\">MySql_Name\WAFA\WFA\">MySql_Name=WFA\WFA\WAFA\">\WAFA\WAFA\J\WAFA\J\WAFA\WAFA\N\WAFA\N\WAFA\J\N\J\WAFA\WAFA\N\N\WAFA\WAFA\N\N\N\J\JVM_Name\WAFA\WAFA\N\WAFA\N\J\J\WAFA\N\WAFA\N\N\N\WAFA\WAFA\N\N\JAPE\
+
++
+[NOTE]
+====
+WFA 不支持 /qn 选项。
+
+====
++
+命令参数如下：
+
++
+[cols="2*"]
+|===
+| 参数 | Description 
+
+
+ a| 
+wfa_admin_username
+ a| 
+管理员用户名可选参数。如果不指定值，则默认值为 admin 。
+
+
+
+ a| 
+wfa_admin_password
+ a| 
+管理员用户密码必填参数。默认管理员密码必须满足以下条件：
+
+*** 至少 8 个字符
+*** 一个大写字符
+*** 一个小写字符
+*** 一个数字
+*** 一个特殊字符
+*** 不允许使用以下字符，并且发生原因 密码输入将失败：
++
+` " ； < > ， = & ｛ caret ｝ ...
+
+
+
+
+
+ a| 
+wfa_admin_confirm_password
+ a| 
+管理员用户密码必填参数
+
+
+
+ a| 
+wfa_mysql_pass
+ a| 
+MySQL 用户密码必填参数
+
+
+
+ a| 
+confirm_wfa_mysql_pass
+ a| 
+MySQL 用户密码必填参数
+
+
+
+ a| 
+wfa_install_site
+ a| 
+安装 WFA 的组织单位 Mandatory 参数
+
+
+
+ a| 
+wfa_install_Organization
+ a| 
+要安装 WFA 的组织或公司名称 Mandatory 参数
+
+
+
+ a| 
+wfa_http_port
+ a| 
+HTTP 端口可选参数。如果不指定值，则默认值为 80 。
+
+
+
+ a| 
+wfa_HTTPS_port
+ a| 
+HTTPS 端口可选参数。如果不指定值，则默认值为 443 。
+
+
+
+ a| 
+INSTALLDIR
+ a| 
+安装目录路径可选参数。如果未指定值，则路径默认为 C ： \Program Files\NetApp\WFA\ 。
+
+
+
+ a| 
+JDKINSTALLDIR
+ a| 
+JDK 安装目录路径可选参数。如果未指定值，则路径默认为 C ： \Program Files\NetApp" 。
+
+
+
+ a| 
+PerlDir
+ a| 
+Perl 安装目录路径可选参数。如果未指定值，则路径默认为 C ： \Perl64\ 。
+
+
+
+ a| 
+MySqlInstallDir
+ a| 
+MySQL 安装目录路径可选参数。如果未指定值，则路径默认为 C ： \Program Files\MySQL\ 。
+
+
+
+ a| 
+wfa_service_login_username
+ a| 
+WFA 服务登录可选参数的用户名。如果不指定值，则默认用户名为 "WFA" 。
+
+对于域用户，请提供格式为 domain\user 的用户名。对于本地系统用户，格式仅为用户名。
+
+如果不存在本地用户，则 WFA 安装程序会创建一个本地用户。如果存在本地用户，并且输入的密码与现有密码不同，则 WFA 将更新此密码。
+
+[NOTE]
+====
+确保密码符合为系统上的本地用户配置的密码策略。如果密码不符合密码策略，安装将失败。
+
+====
+
+
+ a| 
+wfa_service_login_password
+ a| 
+WFA 服务登录强制参数的密码
+
+
+
+ a| 
+mysql_data_DIR
+ a| 
+MySQL 数据可选参数的目录。如果未指定值，则路径默认为 C ： \ProgramData\MySQLServerData
+
+仅适用于全新安装。
+
+|===
+
+
+
+
+* 相关信息 *
+
+https://mysupport.netapp.com/site/["NetApp 支持"^]

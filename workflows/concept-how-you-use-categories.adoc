@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-how-you-use-categories.html 
+sidebar: sidebar 
+keywords: categorize, workflows, better, organize, apply, access, control, capability 
+summary: 您可以对工作流进行分类，以便更好地组织工作流并对工作流应用访问控制功能。 
+---
+= 如何使用类别
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以对工作流进行分类，以便更好地组织工作流并对工作流应用访问控制功能。
+
+您可以对工作流进行分类，使其显示在 WFA 门户上的特定组中。您还可以对工作流类别应用访问控制功能。例如，您只能允许特定存储操作员或审批者查看特定类别的工作流。存储操作员或审批者只能执行其已获得访问权限的类别中的工作流。
+
+此外，还可以使用 Active Directory 组来控制对类别的访问。

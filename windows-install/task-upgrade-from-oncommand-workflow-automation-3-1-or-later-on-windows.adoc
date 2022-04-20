@@ -1,0 +1,62 @@
+---
+permalink: windows-install/task-upgrade-from-oncommand-workflow-automation-3-1-or-later-on-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, later versions 
+summary: 您可以从 OnCommand Workflow Automation （ WFA ） 3.1 或更高版本原位升级到最新可用的 WFA 版本，以使用新功能和增强功能。 
+---
+= 从 OnCommand Workflow Automation 3.1 或更高版本升级
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从 OnCommand Workflow Automation （ WFA ） 3.1 或更高版本原位升级到最新可用的 WFA 版本，以使用新功能和增强功能。
+
+您必须已将 .exe 二进制文件从 NetApp 支持站点下载到 WFA 主机。
+
+WFA 5.1 集群连接需要接受 SSL 证书。从早期版本的 WFA 更新到 WFA 5.1 时，您需要对集群连接进行认证。原位升级后，保存集群连接详细信息以进行集群认证。
+
+从早期版本的 WFA 升级时，您不能自行安装 MySQL 。但是，您可以自行安装 MySQL ：
+
+* 在全新安装 WFA 4.2 及更高版本或期间
+* 从 WFA 4.2 升级到 WFA 更高版本时。
+
+
+.步骤
+. 选择以下方法之一，从 WFA 3.1 或更高版本升级：
++
+** 交互式安装
++
+... 导航到 WFA 主机中的 .exe 二进制文件，然后运行该文件。
+... 按照向导中的屏幕说明完成升级。
+
+
+** 静默安装
++
+在命令提示符处输入以下命令：
+
++
+`WFA-version_number-build_number.exe /s /v"WFA_admin_username_up=WFA 用户名 WFA_admin_password_up=password /QR /l* v C ： \upgrade.log"`
+
++
+* 示例 * ：
+
++
+`WFA-x64-v4.2.0.0.0-B2973881.exe /s /v"wfa_admin_username_up=admin wfa_admin_password_up=password* 123 /QR /l* v C ： \upgrade.log"`
+
++
+
+NOTE: WFA 不支持 /qn 选项。
+
++
+如果要执行静默升级，则必须包括所有命令参数的值：
+
++
+*** wfa_admin_username_up 是有权创建 WFA 数据库备份的 WFA 用户的用户名。
+*** wfa_admin_password_up 是用户的密码。
+
+
+
+
+

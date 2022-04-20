@@ -1,0 +1,152 @@
+---
+permalink: workflows/reference-guidelines-for-commands.html 
+sidebar: sidebar 
+keywords: must, aware, guidelines, create, commands, oncommand, workflow, automation 
+summary: 您必须了解在 OnCommand Workflow Automation （ WFA ）中创建命令的准则。 
+---
+= 命令准则
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须了解在 OnCommand Workflow Automation （ WFA ）中创建命令的准则。
+
+[cols="2*"]
+|===
+| 准则 | 示例 
+
+
+ a| 
+使用可轻松识别的命令名称。
+ a| 
+`创建 qtree`
+
+
+
+ a| 
+请使用空格分隔单词，并且每个词都必须以大写字符开头。
+ a| 
+`创建卷`
+
+
+
+ a| 
+提供问题描述 以说明命令的功能，包括可选参数的预期结果。
+ a| 
+无
+
+
+
+ a| 
+默认情况下，标准命令的超时时间为 600 秒。创建命令时会设置默认超时时间。只有在命令可能需要较长时间才能完成时，才更改默认值。
+ a| 
+`Create Volume` 命令
+
+
+
+ a| 
+对于长时间运行的操作，请创建两个命令：一个用于调用长时间运行的操作，另一个用于定期报告操作进度。第一个命令应为 `Standard Execution` 命令类型，第二个命令应为 `wait for condition` command 类型。
+ a| 
+`Create VSM` and `Wait for VSM` commands.
+
+
+
+ a| 
+为 `Wait for condition` 命令名称添加前缀 "`wait` " ，以便于识别。
+ a| 
+`等待 CM 卷移动`
+
+
+
+ a| 
+对 "`wait for condition` " 命令使用适当的等待间隔。指定值用于控制执行轮询命令以检查长时间运行的操作是否已完成的间隔。
+ a| 
+`wait for VSM` 命令的 60 秒采样间隔
+
+
+
+ a| 
+对于 `wait for condition` 命令，请根据长时间运行操作的预期完成时间使用适当的超时时间。如果操作涉及通过网络传输数据，则预期时间可能会显著延长。
+ a| 
+完成 VSM 基线传输可能需要数天时间。因此，指定的超时为 6 天。
+
+|===
+
+
+== 字符串表示
+
+命令的字符串表示形式可在规划和执行期间在工作流设计中显示命令的详细信息。命令的字符串表示只能使用命令参数。
+
+[cols="2*"]
+|===
+| 准则 | 示例 
+
+
+ a| 
+避免使用不具有任何值的属性。不带值的属性显示为 NA 。
+ a| 
+volname 10.68.66.212[NA]aggr1/testVol7.
+
+
+
+ a| 
+使用以下分隔符分隔字符串表示形式中的不同条目： [ ] ， / ：
+ a| 
+` ArrayName[ArrayIp]_`
+
+
+
+ a| 
+以字符串表示形式为每个值提供有意义的标签。
+ a| 
+` 卷名称 = 卷名称 _`
+
+|===
+
+
+== 命令定义语言
+
+可以使用以下受支持的脚本语言编写命令：
+
+* PowerShell
+* Perl
+
+
+
+
+== 命令参数定义
+
+命令参数通过名称，问题描述 ，类型，参数的默认值以及参数是否为必填项进行说明。参数类型可以是字符串，布尔值，整数，长，双， 枚举，日期时间，容量，阵列，可哈希， 密码或 XlDocument 。虽然大多数类型的值都是直观的，但 Array 和 Hastable 的值应采用如下表所述的特定格式：
+
+[cols="2*"]
+|===
+| 准则 | 示例 
+
+
+ a| 
+确保 Array 输入类型的值是一个值列表，以逗号分隔。
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,
+HelpMessage="Months in which the schedule executes.")]
+[array]$CronMonths
+----
+输入的传递方式如下： 0 ， 3 ， 6 ， 9
+
+
+
+ a| 
+确保可哈希表输入类型的值为 key=value 对的列表，以分号分隔。
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,
+HelpMessage="Volume names and size (in MB)")]
+[hashtable]$VolumeNamesAndSize
+----
+输入的传递方式如下： volume1=100 ； Volume2=250 ； Volume3=50
+
+|===

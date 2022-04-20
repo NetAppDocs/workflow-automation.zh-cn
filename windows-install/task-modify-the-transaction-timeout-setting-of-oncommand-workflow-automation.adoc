@@ -1,0 +1,37 @@
+---
+permalink: windows-install/task-modify-the-transaction-timeout-setting-of-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: modify, transaction, timeout, set, oncommand, workflow, automation 
+summary: 默认情况下， OnCommand Workflow Automation （ WFA ）数据库事务在 300 秒内超时。在从备份还原大型 WFA 数据库时，您可以增加默认超时持续时间，以避免数据库还原可能失败。 
+---
+= 修改 OnCommand Workflow Automation 的事务超时设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+默认情况下， OnCommand Workflow Automation （ WFA ）数据库事务在 300 秒内超时。在从备份还原大型 WFA 数据库时，您可以增加默认超时持续时间，以避免数据库还原可能失败。
+
+您必须以管理员身份登录到 WFA 主机系统。
+
+此操作步骤 将使用默认 WFA 安装路径。如果您在安装期间更改了默认位置，则必须使用更改后的 WFA 安装路径。
+
+.步骤
+. 打开 Windows 资源管理器并导航到以下目录：
++
+`wfa_install_location\wfA\bin`
+
+. 双击 ps.cmd 文件。
++
+此时将打开 PowerShell 命令行界面（ CLI ）提示符，其中已加载 ONTAP 和 WFA 模块。
+
+. 在提示符处，输入以下内容：
++
+`sET-WfaConfig -Name TransactionTimeOut -seconds NumbericValue`
+
++
+`sET-WfaConfig -Name TransactionTimeOut -seconds 1000`
+
+. 出现提示时，重新启动 WFA 服务。
+

@@ -1,0 +1,21 @@
+---
+permalink: help/task-disable-cache-acquisition-for-dictionary-entries.html 
+sidebar: sidebar 
+keywords: necessary, cache, dictionary, objects, oncommand, workflow, automation, disable, reduce, time, complete, data, source, acquisition 
+summary: 如果不需要在 OnCommand Workflow Automation （ WFA ）中缓存词典对象，则可以禁用这些对象的缓存。禁用不需要的对象缓存可以缩短 WFA 完成数据源采集所需的时间。 
+---
+= 禁用词典条目的缓存采集
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果不需要在 OnCommand Workflow Automation （ WFA ）中缓存词典对象，则可以禁用这些对象的缓存。禁用不需要的对象缓存可以缩短 WFA 完成数据源采集所需的时间。
+
+.步骤
+. 单击 * 数据源设计 * > * 字典 * 。
+. 选择要禁用数据采集的词典条目。
+. 单击 image:../media/disable_acquisition_wfa_icon.gif["禁用采集图标"] 在工具栏上，然后单击 * 是 * 。
+. 如果您看到错误消息 ` 无法禁用词典条目的缓存采集，则 _` 请为错误消息中列出的词典条目禁用缓存采集，然后重试禁用当前词典对象的缓存采集。
+

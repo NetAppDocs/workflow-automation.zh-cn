@@ -1,0 +1,31 @@
+---
+permalink: windows-install/task-repair-the-activeperl-installation.html 
+sidebar: sidebar 
+keywords: repair, activeperl, installation 
+summary: 安装 WFA 时， ActiveState ActivePerl 会安装在 OnCommand Workflow Automation （ WFA ）服务器上。执行 Perl 命令需要 ActivePerl 。如果无意中从 WFA 服务器卸载 ActivePerl ，或者 ActivePerl 安装已损坏，则可以手动修复 ActivePerl 安装。 
+---
+= 修复 ActivePerl 安装
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安装 WFA 时， ActiveState ActivePerl 会安装在 OnCommand Workflow Automation （ WFA ）服务器上。执行 Perl 命令需要 ActivePerl 。如果无意中从 WFA 服务器卸载 ActivePerl ，或者 ActivePerl 安装已损坏，则可以手动修复 ActivePerl 安装。
+
+.步骤
+. 使用以下选项之一备份 WFA 数据库：
++
+** WFA Web 门户
+** PowerShell 脚本
+
+
+. 卸载 WFA 。
+. 安装已卸载的 WFA 版本。
++
+安装 WFA 时会安装 ActivePerl 。
+
+. 还原 WFA 数据库。
+
+
+您可以查看已还原的内容以了解功能的完整性，例如自定义工作流的运行情况。
