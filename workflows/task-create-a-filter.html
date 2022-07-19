@@ -169,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/workflow-automation/issues/new?body=Page%3A%20[创建筛选器](https://docs.netapp.com/zh-cn/workflow-automation/workflows/task-create-a-filter.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/workflow-automation/images/discuss-sm.svg" class="github-icon" />请求文档变更</a><a target="_blank" href="https://github.com/NetAppDocs/workflow-automation/blob/main/workflows/task-create-a-filter.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/workflow-automation/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/workflow-automation/images/article-sm.svg" class="github-icon" />提供者指南</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/workflow-automation/issues/new?body=Page%3A%20[创建筛选器](https://docs.netapp.com/zh-cn/workflow-automation/workflows/task-create-a-filter.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/workflow-automation/images/discuss-sm.svg" alt="" class="github-icon" />请求文档变更</a><a target="_blank" href="https://github.com/NetAppDocs/workflow-automation/blob/main/workflows/task-create-a-filter.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/workflow-automation/images/edit-sm.svg" alt="" class="github-icon" />在 GitHub 上编辑</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/workflow-automation/images/article-sm.svg" alt="" class="github-icon" />提供者指南</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">在此页面上</div>
@@ -258,11 +258,13 @@
           <div id="react-search" 
           data-search-html="/zh-cn/workflow-automation/search.html"
           data-type="widget" 
-          data-placeholder="搜索文档" 
-          data-no-results-found="未找到与 {query} 匹配的结果。" 
-          data-did-you-mean="搜索 {suggestion}。" 
-          data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
-          data-results-found="找到 {hitCount} 个结果"  
+          data-placeholder="搜索文档"
+          data-no-results-found="未找到与 {query} 匹配的结果。"
+          data-did-you-mean="搜索 {suggestion}。"
+          data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?"
+          data-results-found="找到 {hitCount} 个结果"
+          data-error-message="We're sorry, an issue occurred when fetching your results. Please try again."
+          data-error-reset="Reset Search"
           data-sk-es-pf-indexes=""
           data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
@@ -277,35 +279,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">简体中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">简体中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/workflow-automation/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/workflow-automation/workflows/task-create-a-filter.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/workflow-automation/workflows/task-create-a-filter.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/workflow-automation/workflows/task-create-a-filter.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/workflow-automation/workflows/task-create-a-filter.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-create-a-filter.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-cn/workflow-automation/workflows/task-create-a-filter.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/workflow-automation/workflows/task-create-a-filter.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/workflow-automation/workflows/task-create-a-filter.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/workflow-automation/workflows/task-create-a-filter.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/workflow-automation/workflows/task-create-a-filter.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -349,7 +343,7 @@
   <div class="col-md-3" id="sidebar-height">
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
-    <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
+    <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>可用的 PDF<span>
     </span>
   </a>
 </div>
@@ -359,7 +353,7 @@
         
         
         <a target="_blank" href="/zh-cn/workflow-automation/pdfs/fullsite-sidebar/OnCommand_Workflow_Automation_文档.pdf" >
-          <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>此文档站点的 PDF</a>
+          <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>此文档站点的 PDF</a>
 
 
 
@@ -376,7 +370,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/适用于_Linux_的安装和设置.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             适用于 Linux 的安装和设置
           </a>
           
@@ -392,7 +386,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/OnCommand_Workflow_Automation_概述.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             OnCommand Workflow Automation 概述
           </a>
           
@@ -402,8 +396,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -423,14 +415,12 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/安装_OnCommand_Workflow_Automation_的系统要求.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             安装 OnCommand Workflow Automation 的系统要求
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -450,14 +440,12 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/安装_Workflow_Automation_的前提条件.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             安装 Workflow Automation 的前提条件
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -477,7 +465,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/管理高可用性.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             管理高可用性
           </a>
           
@@ -493,7 +481,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/在_VCS_中设置_Workflow_Automation_以实现高可用性.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             在 VCS 中设置 Workflow Automation 以实现高可用性
           </a>
           
@@ -503,8 +491,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -518,8 +504,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -539,7 +523,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/设置_OnCommand_Workflow_Automation.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             设置 OnCommand Workflow Automation
           </a>
           
@@ -557,7 +541,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/OnCommand_Workflow_Automation_数据源.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             OnCommand Workflow Automation 数据源
           </a>
           
@@ -573,7 +557,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/在_DataFabric_Manager_上配置数据库用户.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             在 DataFabric Manager 上配置数据库用户
           </a>
           
@@ -581,8 +565,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -594,8 +576,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -619,7 +599,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/正在配置_OnCommand_Workflow_Automation.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             正在配置 OnCommand Workflow Automation
           </a>
           
@@ -637,8 +617,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -658,8 +636,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -679,14 +655,12 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/从_OnCommand_Workflow_Automation_3_1_或更高版本升级.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             从 OnCommand Workflow Automation 3.1 或更高版本升级
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -706,7 +680,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/升级第三方产品.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             升级第三方产品
           </a>
           
@@ -714,8 +688,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -735,7 +707,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/备份_OnCommand_Workflow_Automation_数据库.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             备份 OnCommand Workflow Automation 数据库
           </a>
           
@@ -753,7 +725,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/使用命令行界面备份_WFA_数据库.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用命令行界面备份 WFA 数据库
           </a>
           
@@ -761,8 +733,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -782,7 +752,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/使用_REST_API_备份_WFA_数据库.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用 REST API 备份 WFA 数据库
           </a>
           
@@ -790,8 +760,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -799,8 +767,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -820,7 +786,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/还原_OnCommand_Workflow_Automation_数据库.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             还原 OnCommand Workflow Automation 数据库
           </a>
           
@@ -838,7 +804,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/使用命令行界面还原_WFA_数据库.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用命令行界面还原 WFA 数据库
           </a>
           
@@ -846,8 +812,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -867,7 +831,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/使用_REST_API_还原_WFA_数据库.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用 REST API 还原 WFA 数据库
           </a>
           
@@ -875,8 +839,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -884,8 +846,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -907,14 +867,12 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/导入_OnCommand_Workflow_Automation_内容.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             导入 OnCommand Workflow Automation 内容
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -938,7 +896,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/管理_OnCommand_Workflow_Automation_SSL_证书.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             管理 OnCommand Workflow Automation SSL 证书
           </a>
           
@@ -946,8 +904,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -967,14 +923,12 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/管理_Perl_和_Perl_模块.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             管理 Perl 和 Perl 模块
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -994,14 +948,12 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/对安装和配置问题进行故障排除.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             对安装和配置问题进行故障排除
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1011,8 +963,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1032,7 +982,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/适用于_Windows_的安装和设置.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             适用于 Windows 的安装和设置
           </a>
           
@@ -1048,7 +998,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/OnCommand_Workflow_Automation_概述.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             OnCommand Workflow Automation 概述
           </a>
           
@@ -1058,8 +1008,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1079,14 +1027,12 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/安装_OnCommand_Workflow_Automation_的系统要求.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             安装 OnCommand Workflow Automation 的系统要求
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1108,7 +1054,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/管理高可用性.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             管理高可用性
           </a>
           
@@ -1124,7 +1070,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/在_MSCS_中设置_Workflow_Automation_以实现高可用性.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             在 MSCS 中设置 Workflow Automation 以实现高可用性
           </a>
           
@@ -1134,8 +1080,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1149,8 +1093,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1170,7 +1112,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/设置_OnCommand_Workflow_Automation.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             设置 OnCommand Workflow Automation
           </a>
           
@@ -1188,7 +1130,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/OnCommand_Workflow_Automation_数据源.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             OnCommand Workflow Automation 数据源
           </a>
           
@@ -1204,7 +1146,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/在_DataFabric_Manager_上配置数据库用户.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             在 DataFabric Manager 上配置数据库用户
           </a>
           
@@ -1212,8 +1154,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1227,8 +1167,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1252,7 +1190,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/正在配置_OnCommand_Workflow_Automation.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             正在配置 OnCommand Workflow Automation
           </a>
           
@@ -1276,7 +1214,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/配置_SNMP.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             配置 SNMP
           </a>
           
@@ -1284,8 +1222,17 @@
 
 
 
+        </li>
+      </ul>
+    
 
-          
+  
+
+
+
+
+
+
         </li>
       </ul>
     
@@ -1298,12 +1245,6 @@
 
 
 
-          
-        </li>
-      </ul>
-    
-
-  
 
 
 
@@ -1313,15 +1254,6 @@
 
 
 
-
-
-
-
-
-
-
-
-          
         </li>
       </ul>
     
@@ -1341,7 +1273,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/升级_OnCommand_Workflow_Automation.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             升级 OnCommand Workflow Automation
           </a>
           
@@ -1357,14 +1289,12 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/从_OnCommand_Workflow_Automation_3_1_或更高版本升级.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             从 OnCommand Workflow Automation 3.1 或更高版本升级
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1372,8 +1302,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1393,7 +1321,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/升级第三方产品.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             升级第三方产品
           </a>
           
@@ -1403,8 +1331,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1424,7 +1350,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/备份_OnCommand_Workflow_Automation_数据库.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             备份 OnCommand Workflow Automation 数据库
           </a>
           
@@ -1444,7 +1370,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/使用命令行界面备份_WFA_数据库.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用命令行界面备份 WFA 数据库
           </a>
           
@@ -1452,8 +1378,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1473,7 +1397,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/使用_REST_API_备份_WFA_数据库.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用 REST API 备份 WFA 数据库
           </a>
           
@@ -1481,8 +1405,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1490,8 +1412,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1511,7 +1431,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/还原_OnCommand_Workflow_Automation_数据库.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             还原 OnCommand Workflow Automation 数据库
           </a>
           
@@ -1529,7 +1449,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/使用命令行界面还原_WFA_数据库.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用命令行界面还原 WFA 数据库
           </a>
           
@@ -1537,8 +1457,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1558,7 +1476,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/使用_REST_API_还原_WFA_数据库.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用 REST API 还原 WFA 数据库
           </a>
           
@@ -1566,8 +1484,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1575,8 +1491,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1598,14 +1512,12 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/导入_OnCommand_Workflow_Automation_内容.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             导入 OnCommand Workflow Automation 内容
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1629,7 +1541,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/管理_OnCommand_Workflow_Automation_SSL_证书.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             管理 OnCommand Workflow Automation SSL 证书
           </a>
           
@@ -1637,8 +1549,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1658,7 +1568,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/管理_Perl_和_Perl_模块.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             管理 Perl 和 Perl 模块
           </a>
           
@@ -1668,8 +1578,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1689,7 +1597,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/对安装和配置问题进行故障排除.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             对安装和配置问题进行故障排除
           </a>
           
@@ -1699,8 +1607,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1710,8 +1616,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1731,7 +1635,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/工作流.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             工作流
           </a>
           
@@ -1749,7 +1653,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/了解_Workflow_Automation_设计人员.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             了解 Workflow Automation 设计人员
           </a>
           
@@ -1765,7 +1669,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/使用_OnCommand_Workflow_Automation_中的组件.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             使用 OnCommand Workflow Automation 中的组件
           </a>
           
@@ -1791,8 +1695,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1802,8 +1704,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1823,7 +1723,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/管理工作流.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             管理工作流
           </a>
           
@@ -1839,14 +1739,12 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/自定义预定义的工作流.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             自定义预定义的工作流
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1866,7 +1764,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/创建工作流.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             创建工作流
           </a>
           
@@ -1912,14 +1810,12 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/创建工作流.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             创建工作流
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1927,8 +1823,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1948,7 +1842,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/创建_WFA_工作流软件包.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             创建 WFA 工作流软件包
           </a>
           
@@ -1966,8 +1860,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1987,7 +1879,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/将_WFA_工作流软件包与_SCM_存储库集成.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             将 WFA 工作流软件包与 SCM 存储库集成
           </a>
           
@@ -2003,8 +1895,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2012,8 +1902,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -2033,7 +1921,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/为工作流创建组件.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             为工作流创建组件
           </a>
           
@@ -2051,14 +1939,12 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/创建命令.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             创建命令
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -2068,14 +1954,7 @@
 
 
 
-    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
-  <a target="_blank" href="/zh-cn/workflow-automation/pdfs/pages/workflows/task-create-a-filter.pdf" >
-    <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
-    PDF of this page
-  </a>
-</li>
-
-</ul>
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
   
 
 
@@ -2093,8 +1972,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2114,7 +1991,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/WFA_编码准则.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             WFA 编码准则
           </a>
           
@@ -2140,14 +2017,12 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/WFA_的一般_PowerShell_和_Perl_约定.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             WFA 的一般 PowerShell 和 Perl 约定
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -2175,7 +2050,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/WFA_组件准则.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             WFA 组件准则
           </a>
           
@@ -2193,8 +2068,13 @@
 
 
 
+        </li>
+      </ul>
+    
 
-          
+  
+
+
         </li>
       </ul>
     
@@ -2203,12 +2083,6 @@
 
 
 
-          
-        </li>
-      </ul>
-    
-
-  
 
 
 
@@ -2216,11 +2090,6 @@
 
 
 
-
-
-
-
-          
         </li>
       </ul>
     
@@ -2240,7 +2109,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/联机帮助.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             联机帮助
           </a>
           
@@ -2260,7 +2129,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/正在配置_OnCommand_Workflow_Automation.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             正在配置 OnCommand Workflow Automation
           </a>
           
@@ -2280,7 +2149,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/配置_SNMP.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             配置 SNMP
           </a>
           
@@ -2288,8 +2157,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2305,8 +2172,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2330,7 +2195,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/OnCommand_Workflow_Automation_设计器功能.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             OnCommand Workflow Automation 设计器功能
           </a>
           
@@ -2356,8 +2221,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2387,7 +2250,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/设置数据源.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             设置数据源
           </a>
           
@@ -2397,8 +2260,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2422,7 +2283,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/如何查找有关_MVEL_的信息.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             如何查找有关 MVEL 的信息
           </a>
           
@@ -2430,8 +2291,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2483,7 +2342,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/用户窗口.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             用户窗口
           </a>
           
@@ -2491,8 +2350,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2514,7 +2371,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/Active_Directory_组窗口.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             Active Directory 组窗口
           </a>
           
@@ -2524,8 +2381,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2545,7 +2400,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/数据源窗口.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             数据源窗口
           </a>
           
@@ -2553,8 +2408,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2574,7 +2427,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/凭据窗口.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             凭据窗口
           </a>
           
@@ -2584,8 +2437,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2615,14 +2466,12 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/计划窗口.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             计划窗口
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -2642,7 +2491,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/工作流窗口.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             工作流窗口
           </a>
           
@@ -2658,7 +2507,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/新建工作流窗口.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             新建工作流窗口
           </a>
           
@@ -2670,8 +2519,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2693,8 +2540,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2714,7 +2559,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/查找器窗口.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             查找器窗口
           </a>
           
@@ -2724,8 +2569,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2745,7 +2588,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/筛选器窗口.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             筛选器窗口
           </a>
           
@@ -2755,8 +2598,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2776,7 +2617,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/命令窗口.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             命令窗口
           </a>
           
@@ -2786,8 +2627,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2809,7 +2648,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/模板窗口.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             模板窗口
           </a>
           
@@ -2819,8 +2658,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2842,7 +2679,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/词典窗口.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             词典窗口
           </a>
           
@@ -2852,8 +2689,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2875,7 +2710,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/远程系统类型窗口.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             远程系统类型窗口
           </a>
           
@@ -2883,8 +2718,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2904,7 +2737,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/缓存查询窗口.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             缓存查询窗口
           </a>
           
@@ -2914,8 +2747,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2935,7 +2766,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/软件包窗口.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             软件包窗口
           </a>
           
@@ -2943,8 +2774,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2964,7 +2793,7 @@
               href="/zh-cn/workflow-automation/pdfs/sidebar/类别窗口.pdf" 
             
           >
-            <img src="/zh-cn/workflow-automation/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/workflow-automation/images/pdf.png" alt="" width="16" height="16"/>
             类别窗口
           </a>
           
@@ -2974,8 +2803,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2985,21 +2812,18 @@
 
 
 
-
-          
         </li>
       </ul>
     
 
   
-
 
 
 
 </li></ul>
   <div class="zip-pdf-link-container" style="display: none;">   
     <a href="#" id="zipPdf">
-      <img src="/zh-cn/workflow-automation/images/pdf-zip.png" width="16" height="16"/>
+      <img src="/zh-cn/workflow-automation/images/pdf-zip.png" alt="" width="16" height="16"/>
       <pre>收集单独的 PDF 文档<span class="zip-size"></span></pre>
     </a><div id="zip-link-popup" class="hide">
     <div class="inner-modal">
@@ -3032,7 +2856,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-cn/workflow-automation/index.html">
         OnCommand Workflow Automation 5.1 文档
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/workflow-automation/reference-releasenotes.html">
@@ -3943,6 +3767,9 @@
     
   
 
+<span>提供者
+</span>
+
 
 </p>
 
@@ -4159,4 +3986,5 @@ WHERE
     </script>
     <script src='/zh-cn/workflow-automation/js/www-ntap.js'></script>
     <script src='/zh-cn/workflow-automation/js/tabbed-blocks.js'></script>
+    <script src='/zh-cn/workflow-automation/js/sidebar.js'></script>
   </body></html>
