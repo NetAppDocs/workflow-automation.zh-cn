@@ -1776,7 +1776,6 @@
   <block id="7a8ab8ac2c56e6f34c324ef46934febb" category="paragraph">`keytool -certreq -keystore wfa_install_location\wfA\jboss\standalisate\configuration\keystore\wfa.keystore -alias "ssl keystore" -file C ： \file_name.csr`</block>
   <block id="1b692d8ce3a9756491906af1588b0dbb" category="paragraph">file_name 是 CSR 文件的名称。</block>
   <block id="0ba86baa537a49c243693784fe078f3a" category="list-text">出现提示时，请提供密码（默认密码或新密码）。</block>
-  <block id="5bd63fe363277cc90830a1ce41a120ec" category="paragraph">changeit 是默认密码。如果不想使用默认密码，则必须从 WFA_INSTALL_location\WFA\jboss\standalone \configuration\ 位置更改 standalone-full.xml 文件中 SSL 元素的密码属性。</block>
   <block id="fe03521c92b31a8e81464a71fb956de3" category="list-text">将 file_name.csr 文件发送到 CA 以获取签名证书。</block>
   <block id="b9081db92ef5ba8dd5340d434e22aa46" category="paragraph">有关详细信息，请参见 CA 网站。</block>
   <block id="dd8ea64d9da5f718f0917812d35a5441" category="list-text">从 CA 下载链证书，然后将链证书导入到密钥库： `keytool -import -alias "ssl keystore CA certificate" -keystore "WFA_install_location\WFA\jboss\standalonate\configuration\keystore\wfa.keystore" -trustcacers -file C ： \chain_cert.cer`</block>
@@ -2268,7 +2267,6 @@
   <block id="cbc2b286f99fc7ff9dffc1d348f4aecc" category="list-text">获取数据库密钥：</block>
   <block id="5c4a32f768ee405b0ef150103b7c03a1" category="paragraph">`keytool -keysize 2048 -genkey -alias "ssl keystore" -keyalg rsa -keystore "&lt;wfa_install_location&gt;\wfa\jboss\standal\configuration\keystore\wfa.keystore" -validity xxxx`</block>
   <block id="24eb76b4a609daff4b7d34ec8fea1231" category="paragraph">xxxx 是新证书有效期的天数。</block>
-  <block id="9312759233ae7e3d8807257f39f2c937" category="paragraph">changeit 是默认密码。如果不想使用默认密码，则必须从以下位置更改 standalone-full.xml 文件中 SSL 元素的密码属性： &lt;wfa_install_location&gt;\wfa\jboss\standalone \configuration\</block>
   <block id="49cdce6603c61a9fdaf58048badc131a" category="list-text">输入证书的所需详细信息。</block>
   <block id="a7bc3b0a6af3ae4d153d1aa15dc13038" category="list-text">查看显示的信息，然后输入 `是` 。</block>
   <block id="58effb4a43109824b15167c9d51ce13d" category="list-text">出现以下消息时按 * Enter * ： Enter key password for &lt;SSL keystorage&gt; &lt;return if same as keystore password&gt; 。</block>
@@ -2743,7 +2741,6 @@
   <block id="9d3b93b64542c3185ef72792923a0566" category="list-text">在 WFA 服务器上打开 Shell 提示符，然后将目录更改为以下位置： &lt;OpenJDK_INSTALL_location&gt;/bin</block>
   <block id="2e36003b3ed3383918391cfc1756fb42" category="paragraph">`keytool -keysize 2048 -genkey -alias "ssl keystore" -keyalg rsa -keystore "WFA_install_location/wfa/jboss/standalon/configuration/keystore/wfa.keystore" -validity xxxx`</block>
   <block id="4e25be9af98efc24491bc23eb51fe397" category="paragraph">xxxx 是新证书有效期的天数。</block>
-  <block id="1385c2e0aed85120d56290938615b4f1" category="paragraph">changeit 是默认密码。如果不想使用默认密码，则必须从以下位置更改 standalone-full.xml 文件中 SSL 元素的密码属性： wfa_install_location/wfa/jboss/standalone</block>
   <block id="fca9c78eaaf4f232ed66e16fe0b0a863" category="list-text">查看显示的信息，然后输入 `是` 。</block>
   <block id="1e2a60c38cbc5c1f05b368454bd4ec81" category="list-text">重新启动 WFA 服务：</block>
   <block id="6d7d2b1c33f41da438e95176cb2d4066" category="paragraph">` 。 /WFA -start=DB`</block>
@@ -2820,10 +2817,6 @@
   <block id="354bf06ee6e3e07537ff6dbc96cf775a" category="summary">您可以在 Linux 中创建证书签名请求（ CSR ），以便使用由证书颁发机构（ CA ）签名的 SSL 证书，而不是 Workflow Automation （ WFA ）的默认 SSL 证书。</block>
   <block id="fd185480985b4ef8b6154a1feac6f1de" category="list-text">创建 CSR 文件：</block>
   <block id="a7dfb160996bda6203e920e289688735" category="paragraph">`keytool -certreq -keystore wfa_install_location/wfa/jboss/standalon/configuration/keystore/wfa.keystore -alias "ssl keystore" -file /root/file_name.csr`</block>
-  <block id="5936dd0758642a5d725f4b55781a3240" category="paragraph">changeit 是默认密码。如果您不想使用默认密码，则必须从 WFA_INSTALL_location/WFA/jboss/standal/configuration 位置更改 standalone-full.xml 文件中 SSL 元素的密码属性。</block>
-  <block id="df16dddedaadc143538f023e2bf5d825" category="list-text">从 CA 下载链证书，然后将链证书导入到密钥库： `keytool -import -alias "ssl keystore CA certificate" -keystore wfa_install_location/wfa/jboss/standalon/configuration/keystore/wfa.keystore" -trustcacers -file C ： \chain_cert.cer`</block>
-  <block id="8dc114841258ab97b68704f3043286ea" category="paragraph">`keytool -import -alias "ssl keystore" -keystore wfa_install_location/wfa/jboss/standalon/configuration/keystore/wfa.keystore" -trustcacers -file C ： \certificate.cer`</block>
-  <block id="e6a734aff93b795f8c98facc0c4b08d9" category="paragraph">` 。 /WFA -start=DB` 。 /WFA -start=WFA</block>
   <block id="fd573fd5b277bcca66415058d9bf17a6" category="summary">默认情况下，适用于 Linux 的 Perl 软件包不包含某些 Perl 模块。</block>
   <block id="59e7c7af805e16be9a6ba6a0605bf8dc" category="doc">在 CentOS 和 RHEL 上安装 Perl 模块</block>
   <block id="c85496c8dc8808251b4456d7474d3cc8" category="paragraph">在 WFA 安装期间， WFA 安装程序会验证系统中的所有 Perl 模块是否可用，然后在满足此要求后继续操作。在安装 OnCommand Workflow Automation （ WFA ）之前，必须先安装 Perl 模块。</block>
@@ -4860,4 +4853,13 @@
   <block id="bdd5a3f80c76cd6be7561a6b8af3bab6" category="sidebar">使用 REST API 备份 WFA 数据库</block>
   <block id="a528b31693a2bb82696535274c613fc7" category="sidebar">联机帮助</block>
   <block id="9af2f59c7f6e2e7dc584af7ea83ef4d7" category="sidebar">Workflow &lt;Workflow name&gt; 窗口</block>
+  <block id="39c8e45e8c5488974d577e97d7caf377" category="paragraph">默认密码是随机生成的加密密码。</block>
+  <block id="79f8c04dcf857d037344f9d9dabdd852" category="inline-link-macro">如何在WFA 5.1.0.4上续订自签名证书</block>
+  <block id="87ccc6f892e2d061c66d8db893b6cf53" category="paragraph">要获取默认密码并对其进行解密、请按照知识库文章中的步骤进行操作 <block ref="536d0b111e268de01ae3e50326105f6b" category="inline-link-macro-rx"></block></block>
+  <block id="9f795dd2a5faa77418e156a57e8b6f58" category="list-text">从 CA 下载链证书，然后将链证书导入到密钥库：</block>
+  <block id="02247662d3b59cc3126dc9e1b18ac422" category="paragraph">`keytool -import -alias "ssl keystore CA certificate"-keystore wfa_install_location/wfa/jboss/standalstandalon/configuration/keystore/wfa.keystore"-trustcacers -file chain_cert.cer`</block>
+  <block id="1695f6295e3d5d83711e11691faea1d1" category="paragraph">`chain_cert.cer`是从CA收到的链证书文件。此文件必须采用 X.509 格式。</block>
+  <block id="f46bbcf0f5db88b0dfbce832f8d83da7" category="paragraph">`keytool -import -alias "ssl keystore"-keystore wfa_install_location/wfa/jboss/standalon/configuration/keystore/wfa.keystore"-trucacerts-file certificate.cer`</block>
+  <block id="14d1486cc2546eace3658fcaa213829e" category="paragraph">`certification.cer`是从CA收到的链证书文件。</block>
+  <block id="d37ffdcd23286306f4a566096ad812cb" category="sidebar">管理OnCommand Workflow Automation SSL证书Linux</block>
 </blocks>

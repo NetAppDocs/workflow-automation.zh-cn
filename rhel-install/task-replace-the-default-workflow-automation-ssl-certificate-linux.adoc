@@ -38,13 +38,11 @@ xxxx 是新证书有效期的天数。
 
 . 出现提示时，请提供密码（默认密码或新密码）。
 +
-changeit 是默认密码。如果不想使用默认密码，则必须从以下位置更改 standalone-full.xml 文件中 SSL 元素的密码属性： wfa_install_location/wfa/jboss/standalone
+默认密码是随机生成的加密密码。
 
 +
-[listing]
-----
-<ssl name="ssl" password="new_password" certificate-key-file="${jboss.server.config.dir}/keystore/wfa.keystore"
-----
+要获取默认密码并对其进行解密、请按照知识库文章中的步骤进行操作 link:https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FOnCommand_Suite%2FHow_to_renew_the_self-signed_certificate_on_WFA_5.1.1.0.4%253F["如何在WFA 5.1.0.4上续订自签名证书"^]
+
 . 输入证书的所需详细信息。
 . 查看显示的信息，然后输入 `是` 。
 . 出现以下消息时按 * Enter * ： Enter key password for <SSL keystorage> <return if same as keystore password> 。
