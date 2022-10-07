@@ -2,10 +2,11 @@
 permalink: help/reference-mvel-enabled-fields-in-wfa.html 
 sidebar: sidebar 
 keywords: field, oncommand, workflow, automation, enable, expression, language, syntax, design 
-summary: 已为 OnCommand Workflow Automation \ （ WFA\ ）中的多个字段启用 MVFLEX 表达式语言 \ （ MVEL\ ）。在设计工作流时，您可以在这些字段中使用 MVEL 语法。 
+summary: OnCommand Workflow Automation （ WFA ）中的多个字段已为 MVFLEX 表达式语言（ MVEL ）启用。在设计工作流时，您可以在这些字段中使用 MVEL 语法。 
 ---
 = OnCommand Workflow Automation 中已启用 MVEL 的字段
 :allow-uri-read: 
+:experimental: 
 :icons: font
 :imagesdir: ../media/
 
@@ -23,8 +24,8 @@ OnCommand Workflow Automation （ WFA ）中的多个字段已为 MVFLEX 表达�
  a| 
 创建或编辑工作流
  a| 
-* * ； Workflow_* > * 详细信息 * > * 返回参数 * > * 参数值 *
-* * ； Workflow_* > * 详细信息 * > * 常量 * > * 值 *
+* 菜单：Workflow_[详细信息>返回参数>参数值]
+* 菜单：Workflow_[详细信息>常量>值]
 
 
 
@@ -32,11 +33,11 @@ OnCommand Workflow Automation （ WFA ）中的多个字段已为 MVFLEX 表达�
  a| 
 在工作流中创建或编辑命令详细信息
  a| 
-* * 命令 * > 参数 parameter_name* > * 输入搜索条件 * > * 资源选择 * > * 查找器 * > * 参数 *
-* * 命令 * > * 参数 _parameter_name_* > * 输入搜索条件 * > * 资源选择 * > * 高级 * > * 只有在以下表达式计算为 true 时执行搜索
-* * 命令 * > * 参数 _parameter_name_* > * 高级 * > * 如果以下表达式为 true *
-* * 命令 * > * 参数 _parameter_name_* > * 其他参数 *
-* * 命令 * > * 参数名称 _* > * 属性 *
+* 菜单：命令[参数_parameter_name_>输入搜索条件>资源选择>查找器>参数]
+* 菜单：命令[参数_parameter_name_>输入搜索条件>资源选择>高级>仅在以下表达式评估为true时执行搜索]
+* 菜单：命令[参数_parameter_name_>高级>如果以下表达式为true
+* 菜单：命令[参数_parameter_name_>其他参数]
+* 菜单：命令[_parameter_name_>属性]
 
 
 
@@ -44,7 +45,7 @@ OnCommand Workflow Automation （ WFA ）中的多个字段已为 MVFLEX 表达�
  a| 
 创建或编辑命令
  a| 
-* * 命令 * > * 命令定义 _command_name_* > * 属性 * > * 字符串表示 *
+* 菜单：命令[命令定义_command_name_>属性>字符串表示形式]
 
 
 
@@ -52,7 +53,7 @@ OnCommand Workflow Automation （ WFA ）中的多个字段已为 MVFLEX 表达�
  a| 
 创建或编辑功能
  a| 
-* * 函数 * > * 函数 _Function_name_* > * 函数定义 *
+* 菜单：功能[Function _Function_name_>函数定义]
 
 
 
@@ -60,7 +61,7 @@ OnCommand Workflow Automation （ WFA ）中的多个字段已为 MVFLEX 表达�
  a| 
 创建或编辑模板
  a| 
-* * 模板 * > * 参数 _parameter_name_* > * 模板 _template_name_* > * 属性 * > * 值 *
+* 菜单：模板[参数_parameter_name_>模板_template_name_>属性>值]
 
 
 
@@ -68,10 +69,10 @@ OnCommand Workflow Automation （ WFA ）中的多个字段已为 MVFLEX 表达�
  a| 
 编辑行
  a| 
-* *_Workflow_* > * 工作流 * > * 重复行 * > * 重复 * > * 次数 *
-* * ；工作流 _* > * 工作流 * > * 重复行 * > * 变量 * > * 初始值和表达式的变量 *
-* * 工作流 * > * 工作流 * > * 重复行 * > * 重复 * > * 针对组中的每个资源 * > * 资源搜索条件 * > * 要筛选的参数 *
-* * 工作流 _* > * 工作流 * > * 添加条件 * > * 如果以下表达式为 true *
+* _menu：Workflow_[工作流>重复行>重复>次数]
+* _menu：Workflow_[Workflow > repeat row > Variables > Variables for _initial_value_ and _expression_]
+* _menu：Workflow_[Workflow > repeat row > repeats > for every resource in a group > Resource Search Criteria > Parameters to filter]
+* _menu：Workflow_[工作流>添加条件>如果以下表达式为true
 
 
 |===

@@ -26,7 +26,6 @@
   <block id="67e906e41e25f2160dff7ec37a4025c8" category="paragraph"><block ref="67e906e41e25f2160dff7ec37a4025c8" category="inline-link-macro-rx"></block></block>
   <block id="be1eea5d445cbbf31758e65db5dba3ec" category="inline-link-macro">《 OnCommand Workflow Automation 5.1 发行说明》</block>
   <block id="2c688079bed052f6b40f9d8df8fcddc1" category="paragraph"><block ref="2c688079bed052f6b40f9d8df8fcddc1" category="inline-link-macro-rx"></block></block>
-  <block id="07884dfac557d29be5fb2167529438a5" category="summary">OnCommand Workflow Automation 文档， WFA 文档， 5.1.1</block>
   <block id="7ece5ae8480b81ef1aaa2de7d1f71262" category="doc">OnCommand Workflow Automation 文档</block>
   <block id="d706a245ee8a4b6f4f004dca1b5be3e8" category="summary">您可以导入用户创建的 OnCommand Workflow Automation （ WFA ）内容，例如工作流，查找器和命令。您还可以导入从其他 WFA 安装导出的内容，从存储自动化商店或 WFA 社区下载的内容以及软件包，包括 Data ONTAP PowerShell 工具包和 Perl NMSDK 工具包。</block>
   <block id="649910a23319770e50d4bb34ddaec849" category="doc">导入 OnCommand Workflow Automation 内容</block>
@@ -4298,32 +4297,17 @@
   <block id="2fc0b10549bfff9e2c1499f6d32abe07" category="admonition">只有已将认证设置为 * 无 * 的查找器才会启用添加到软件包功能</block>
   <block id="92721e5a56649f74b6be707ee733811e" category="paragraph">打开选定查找器的从软件包中删除对话框，在此可以从软件包中删除或删除查找器。</block>
   <block id="28f57540e79da86fdfc494352f7f4ddd" category="admonition">只有已将认证设置为 * 无 * 的查找器才会启用从软件包中删除功能</block>
-  <block id="26f71037727e92c19f597ea61fa09148" category="summary">已为 OnCommand Workflow Automation \ （ WFA\ ）中的多个字段启用 MVFLEX 表达式语言 \ （ MVEL\ ）。在设计工作流时，您可以在这些字段中使用 MVEL 语法。</block>
   <block id="8b1806050a6283e2581e71a8036235e9" category="doc">OnCommand Workflow Automation 中已启用 MVEL 的字段</block>
   <block id="02289c7b4839797a435cf30c19dd66f2" category="paragraph">OnCommand Workflow Automation （ WFA ）中的多个字段已为 MVFLEX 表达式语言（ MVEL ）启用。在设计工作流时，您可以在这些字段中使用 MVEL 语法。</block>
   <block id="e2914a88f4f36296dd031348150732e0" category="paragraph">下表说明了在 WFA 接口中何时以及在何处可以使用 MVEL 语法：</block>
   <block id="8511c4001793616e826f431d372c36ea" category="cell">何时 ...</block>
   <block id="54377962b50e25adb510199fd77b31aa" category="cell">如何使用 ...</block>
   <block id="8d58f82b81e1a97f29b99e8d5f76b413" category="paragraph">创建或编辑工作流</block>
-  <block id="d720046d016f9ef672934f52a1f68830" category="list-text">* ； Workflow_* &gt; * 详细信息 * &gt; * 返回参数 * &gt; * 参数值 *</block>
-  <block id="965a147812b44e4490473f6c074d0ff9" category="list-text">* ； Workflow_* &gt; * 详细信息 * &gt; * 常量 * &gt; * 值 *</block>
   <block id="8978b74e9bc69d7826050c861874bff7" category="paragraph">在工作流中创建或编辑命令详细信息</block>
-  <block id="e84ac7147bf99455f042f5f98f2fb185" category="list-text">* 命令 * &gt; 参数 parameter_name* &gt; * 输入搜索条件 * &gt; * 资源选择 * &gt; * 查找器 * &gt; * 参数 *</block>
-  <block id="c1a9b63145539065e71ea6c5d340f04c" category="list-text">* 命令 * &gt; * 参数 _parameter_name_* &gt; * 输入搜索条件 * &gt; * 资源选择 * &gt; * 高级 * &gt; * 只有在以下表达式计算为 true 时执行搜索</block>
-  <block id="fc071da2ff083e3e188bebd97decff61" category="list-text">* 命令 * &gt; * 参数 _parameter_name_* &gt; * 高级 * &gt; * 如果以下表达式为 true *</block>
-  <block id="3ba0f6d5f325e082833e35ae957fccdb" category="list-text">* 命令 * &gt; * 参数 _parameter_name_* &gt; * 其他参数 *</block>
-  <block id="591288174e056862fb5a04c55a266fda" category="list-text">* 命令 * &gt; * 参数名称 _* &gt; * 属性 *</block>
   <block id="45e88f295aea0d4399f95cc907b913ad" category="paragraph">创建或编辑命令</block>
-  <block id="c6a06eb9e880b44ee23a849e9f4ca45a" category="list-text">* 命令 * &gt; * 命令定义 _command_name_* &gt; * 属性 * &gt; * 字符串表示 *</block>
   <block id="e1f6cca30e155f98efa1cd5ddd6beb02" category="paragraph">创建或编辑功能</block>
-  <block id="6243fce90b7b1c591ef656da319db5a0" category="list-text">* 函数 * &gt; * 函数 _Function_name_* &gt; * 函数定义 *</block>
   <block id="2abb9444b1cff1e64b38fe2094ced662" category="paragraph">创建或编辑模板</block>
-  <block id="4636b0962a07f4f69bac4cead49b9e91" category="list-text">* 模板 * &gt; * 参数 _parameter_name_* &gt; * 模板 _template_name_* &gt; * 属性 * &gt; * 值 *</block>
   <block id="98a0c172ca4ee8c4f54b9c1ef7659a9c" category="paragraph">编辑行</block>
-  <block id="de1fd1898422a264949b4b3b2aa827b8" category="list-text">*_Workflow_* &gt; * 工作流 * &gt; * 重复行 * &gt; * 重复 * &gt; * 次数 *</block>
-  <block id="40995b6430616f92c5f5a3a1d1087af7" category="list-text">* ；工作流 _* &gt; * 工作流 * &gt; * 重复行 * &gt; * 变量 * &gt; * 初始值和表达式的变量 *</block>
-  <block id="8628f2d23d7b975af7b61ec323d9c1eb" category="list-text">* 工作流 * &gt; * 工作流 * &gt; * 重复行 * &gt; * 重复 * &gt; * 针对组中的每个资源 * &gt; * 资源搜索条件 * &gt; * 要筛选的参数 *</block>
-  <block id="67f88baa578817506c5a7ed56d019acb" category="list-text">* 工作流 _* &gt; * 工作流 * &gt; * 添加条件 * &gt; * 如果以下表达式为 true *</block>
   <block id="c8a19e0c6f8235a4716345ca36be8589" category="doc">克隆缓存查询对话框</block>
   <block id="8593cd784525be3b362252bd597bd30d" category="paragraph">指定与词典条目关联的 SQL 查询以及选定的数据提供程序类型。</block>
   <block id="75e337786c26880cd61433f3ce7a2bdb" category="paragraph">用于测试在 SQL 选择查询字段中输入的 SQL 查询。</block>
@@ -4844,14 +4828,10 @@
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">发行说明</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">入门</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">发行说明</block>
-  <block id="7ff4995c299eff1168d2cf4a88aff450" category="sidebar">Install and setup</block>
-  <block id="8a0de2bf3cb50a3973ef621bd527d6e8" category="sidebar">在 Linux 系统上安装 OnCommand Workflow Automation</block>
   <block id="27229f9694d6bd63f4cb0106223a04bf" category="sidebar">构建和管理工作流</block>
-  <block id="30027cf267532429435367703cf3d996" category="sidebar">适用于 Windows 的安装和设置</block>
   <block id="5c63e687919646507b87a2d170dc2448" category="sidebar">在 Linux 上备份和还原 OnCommand Workflow Automation 数据库和配置</block>
   <block id="cae3bdcda42868550dd0adf4f9e5e215" category="sidebar">启用或禁用对 OnCommand Workflow Automation 数据库的远程访问</block>
   <block id="bdd5a3f80c76cd6be7561a6b8af3bab6" category="sidebar">使用 REST API 备份 WFA 数据库</block>
-  <block id="a528b31693a2bb82696535274c613fc7" category="sidebar">联机帮助</block>
   <block id="9af2f59c7f6e2e7dc584af7ea83ef4d7" category="sidebar">Workflow &lt;Workflow name&gt; 窗口</block>
   <block id="39c8e45e8c5488974d577e97d7caf377" category="paragraph">默认密码是随机生成的加密密码。</block>
   <block id="79f8c04dcf857d037344f9d9dabdd852" category="inline-link-macro">如何在WFA 5.1.0.4上续订自签名证书</block>
@@ -4864,4 +4844,67 @@
   <block id="602d16825004ce219753fcf90527ea2b" category="paragraph">要获取默认密码并对其进行解密、请按照知识库文章中的步骤进行操作 <block ref="536d0b111e268de01ae3e50326105f6b" category="inline-link-macro-rx"></block></block>
   <block id="f7c31e99f63d1684df59ded2ed730939" category="inline-link-macro">如何在WFA中更新密钥库的新密码。</block>
   <block id="6dca537f5982139dea9ab40120845f4f" category="paragraph">要使用新密码、请按照知识库文章中的步骤进行操作 <block ref="f6321aee87e47aef0fd11d8e384d0375" category="inline-link-macro-rx"></block></block>
+  <block id="c7e75af2dc15266c660fa3fa84790295" category="list-text">菜单：Workflow_[详细信息&gt;返回参数&gt;参数值]</block>
+  <block id="1db0c29e35ee6c5d79d9592ea2f53286" category="list-text">菜单：Workflow_[详细信息&gt;常量&gt;值]</block>
+  <block id="2cbb7881a3c59695b8b41fbbb297567f" category="list-text">菜单：命令[参数_parameter_name_&gt;输入搜索条件&gt;资源选择&gt;查找器&gt;参数]</block>
+  <block id="13887deb5706e7f00f1f12189f9527cb" category="list-text">菜单：命令[参数_parameter_name_&gt;输入搜索条件&gt;资源选择&gt;高级&gt;仅在以下表达式评估为true时执行搜索]</block>
+  <block id="becf55e6ef81b0c725f7d4ba114db64e" category="list-text">菜单：命令[参数_parameter_name_&gt;高级&gt;如果以下表达式为true</block>
+  <block id="aa620521a49916f887834b541db825a7" category="list-text">菜单：命令[参数_parameter_name_&gt;其他参数]</block>
+  <block id="1209a23c199aa49eefc3c1a7a6f4a2a7" category="list-text">菜单：命令[_parameter_name_&gt;属性]</block>
+  <block id="738e7b7f2c920db89371601ef52832f7" category="list-text">菜单：命令[命令定义_command_name_&gt;属性&gt;字符串表示形式]</block>
+  <block id="cccb38da73ff3f4099789936965bb60f" category="list-text">菜单：功能[Function _Function_name_&gt;函数定义]</block>
+  <block id="306b4b7edc3ce0c945e0c87fc1c1c5c9" category="list-text">菜单：模板[参数_parameter_name_&gt;模板_template_name_&gt;属性&gt;值]</block>
+  <block id="378f2ffe9abf743b9800314f61858134" category="list-text">_menu：Workflow_[工作流&gt;重复行&gt;重复&gt;次数]</block>
+  <block id="8666bc51a1cc870e3888000988b65ced" category="list-text">_menu：Workflow_[Workflow &gt; repeat row &gt; Variables &gt; Variables for _initial_value_ and _expression_]</block>
+  <block id="ff7e63fadbe3949bbe931dd3956edfd1" category="list-text">_menu：Workflow_[Workflow &gt; repeat row &gt; repeats &gt; for every resource in a group &gt; Resource Search Criteria &gt; Parameters to filter]</block>
+  <block id="f5eda7302a1f97f3b71b6295177f729d" category="list-text">_menu：Workflow_[工作流&gt;添加条件&gt;如果以下表达式为true</block>
+  <block id="562a6d1120aee31e227b66e7502dbdb1" category="summary">欢迎使用OnCommand Workflow Automation 5.1信息库。</block>
+  <block id="2467bfc6c6cd804b03a619e2813c521d" category="sidebar">在Linux系统上安装和设置</block>
+  <block id="d80211c60d95fc7a669027dbc95df964" category="sidebar">管理高可用性</block>
+  <block id="9fe21fedf7305d77031a6284024994ea" category="sidebar">设置 OnCommand Workflow Automation</block>
+  <block id="d1d620cdca4fd3ee2a7f5ba3f7d23a73" category="sidebar">备份OnCommand Workflow Automation 数据库</block>
+  <block id="4cff4a2c9a1452488e559bf938b403d6" category="sidebar">还原OnCommand Workflow Automation 数据库</block>
+  <block id="c0213fcd6464ab8f814b9da0e6ad4d36" category="sidebar">对安装和配置问题进行故障排除</block>
+  <block id="9fcb113dfa1e09e6c2f64ea81f8a97a7" category="sidebar">在Windows系统上安装和设置</block>
+  <block id="ab066b3292d8ab61ef3b5c77169cdd19" category="sidebar">更多信息</block>
+  <block id="a310588c148d934b9b30c31802d4a30b" category="sidebar">NetApp 社区</block>
+  <block id="f85b28a0b2341fcd92cc4d1f17c30a6f" category="sidebar">安装和设置Windows</block>
+  <block id="f36cdb533b1a206036ca20816d6b2f6d" category="sidebar">OnCommand Workflow Automation Windows概述</block>
+  <block id="5f8b1302a7ff1cfa2564f0f00b82f930" category="sidebar">安装OnCommand Workflow Automation Windows的系统要求</block>
+  <block id="ab4072a9d7a781f74b6d7abc7b6af67d" category="sidebar">管理高可用性Windows</block>
+  <block id="8af225bab7fd87a80e44a400006df844" category="sidebar">设置OnCommand Workflow Automation Windows</block>
+  <block id="6d39d23a70b326890bb600ae4076c318" category="sidebar">OnCommand Workflow Automation 数据源Windows</block>
+  <block id="3721e05cc106e68ef49b3ed90a765573" category="sidebar">在DataFabric Manager Windows上配置数据库用户</block>
+  <block id="951e6a12c54f1067e62b5eff434c0ad7" category="sidebar">正在配置OnCommand Workflow Automation Windows</block>
+  <block id="dfa0c7624f614cee2fee36d4404e65f8" category="sidebar">配置SNMP Windows</block>
+  <block id="e403b8ccbf88a2d30f0e310368dff32e" category="sidebar">升级第三方产品Windows</block>
+  <block id="405062ad96ee9e6a5b38291b241d9f5f" category="sidebar">备份OnCommand Workflow Automation 数据库Windows</block>
+  <block id="65fa399d8a0037afbb407df888fcec32" category="sidebar">使用命令行界面Windows备份WFA数据库</block>
+  <block id="edff036622e928011488a33fab0c5122" category="sidebar">还原OnCommand Workflow Automation 数据库Windows</block>
+  <block id="7d538af2a2822b3f24019f017b86432b" category="sidebar">使用命令行界面Windows还原WFA数据库</block>
+  <block id="55aad635b84190dc6612067c3eb0d444" category="sidebar">使用REST API Windows还原WFA数据库</block>
+  <block id="58a941ac8b9a1584bf1ba84718a3fd25" category="sidebar">导入OnCommand Workflow Automation 内容Windows</block>
+  <block id="9ed898de1871da28a2ae5317dc3c252c" category="sidebar">管理Perl和Perl模块Windows</block>
+  <block id="2074288e509f3c7ce4cefe22472ec63f" category="sidebar">对安装和配置问题进行故障排除Windows</block>
+  <block id="9ca261be0541f3aee5c4d041ef411f7f" category="sidebar">管理和配置</block>
+  <block id="4c14da102137cfdc0846add51f76dd18" category="sidebar">配置OnCommand Workflow Automation 帮助</block>
+  <block id="492ccb4e44088a9740d152295f938bfb" category="sidebar">配置SNMP帮助</block>
+  <block id="ebc427c970dac2d030391a702a36f25a" category="sidebar">安装和设置Linux</block>
+  <block id="5d716cf3fbe5b8b27f3cacab3f49df8e" category="sidebar">OnCommand Workflow Automation Linux概述</block>
+  <block id="2051f66608681fe705d396a5b953acf2" category="sidebar">安装OnCommand Workflow Automation Linux的系统要求</block>
+  <block id="96a55135b4b4902fb1f4eed0e954cb32" category="sidebar">管理高可用性Linux</block>
+  <block id="2e038ddcd343fb39158d859f7d760ed6" category="sidebar">设置OnCommand Workflow Automation Linux</block>
+  <block id="f1bcad00dce062e9abfb3780cf274ac7" category="sidebar">OnCommand Workflow Automation 数据源Linux</block>
+  <block id="af5875c5498ba7bd1e82a2fb759df1ce" category="sidebar">在DataFabric Manager Linux上配置数据库用户</block>
+  <block id="ddaa4ac23a39eaeb731b69adea63f8f9" category="sidebar">正在配置OnCommand Workflow Automation Linux</block>
+  <block id="27d78b21f84989c9bb73c82222583b34" category="sidebar">配置SNMP Linux</block>
+  <block id="bdb55ab47056d2a848aa7c21f29078cc" category="sidebar">升级第三方产品Linux</block>
+  <block id="596f93ad48ec568b9032d9ac03036a83" category="sidebar">备份OnCommand Workflow Automation 数据库Linux</block>
+  <block id="edda537a62943aef7d5aa96001b97f1f" category="sidebar">使用命令行界面Linux备份WFA数据库</block>
+  <block id="a7903a007298fced7a5893fa3d89f40e" category="sidebar">还原OnCommand Workflow Automation 数据库Linux</block>
+  <block id="d7c1ac623ffff8cf5cdda53e0c1b3b5c" category="sidebar">使用命令行界面Linux还原WFA数据库</block>
+  <block id="554c099bea2e58f1586f4ba38af96840" category="sidebar">使用REST API Linux还原WFA数据库</block>
+  <block id="b1ec5ea9940a86d6bf0a14350ec171fd" category="sidebar">导入OnCommand Workflow Automation 内容Linux</block>
+  <block id="01603a0b39ac003e0beb5f886b4b4d0a" category="sidebar">管理Perl和Perl模块Linux</block>
+  <block id="bc5f3059c890d2356e892a982265bfb1" category="sidebar">排除Linux中的安装和配置问题</block>
 </blocks>

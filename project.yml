@@ -25,13 +25,45 @@ homepage:
     links:
     - title: 发行说明
       url: reference-releasenotes.html
-  - title: Install and setup
+  - title: 在Linux系统上安装和设置
     links:
-    - title: 在 Linux 系统上安装 OnCommand Workflow Automation
-      url: rhel-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html
+    - title: 安装 OnCommand Workflow Automation 的系统要求
+      url: rhel-install/reference-system-requirements-for-oncommand-workflow-automation-linux.html
+    - title: 管理高可用性
+      url: rhel-install/concept-managing-high-availability.html
+    - title: 设置 OnCommand Workflow Automation
+      url: rhel-install/concept-setting-up-oncommand-workflow-automation.html
+    - title: 备份OnCommand Workflow Automation 数据库
+      url: rhel-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html
+    - title: 还原OnCommand Workflow Automation 数据库
+      url: rhel-install/concept-restoring-the-wfa-database.html
+    - title: 卸载 OnCommand Workflow Automation
+      url: rhel-install/task-uninstall-oncommand-workflow-automation-linux.html
+    - title: 对安装和配置问题进行故障排除
+      url: rhel-install/reference-troubleshooting.html
+  - title: 在Windows系统上安装和设置
+    links:
+    - title: 安装 OnCommand Workflow Automation 的系统要求
+      url: windows-install/reference-system-requirements-for-oncommand-workflow-automation-windows.html
     - title: 在 Windows 上安装 OnCommand Workflow Automation
-      url: windows-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html
+      url: windows-install/task-install-workflow-automation-on-windows.html
+    - title: 设置 OnCommand Workflow Automation
+      url: windows-install/concept-setting-up-oncommand-workflow-automation.html
+    - title: 备份OnCommand Workflow Automation 数据库
+      url: windows-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html
+    - title: 还原OnCommand Workflow Automation 数据库
+      url: windows-install/concept-restoring-the-wfa-database.html
+    - title: 卸载 OnCommand Workflow Automation
+      url: windows-install/task-uninstall-oncommand-workflow-automation.html
+    - title: 对安装和配置问题进行故障排除
+      url: windows-install/reference-troubleshooting.html
   - title: 构建和管理工作流
     links:
     - title: 管理工作流
       url: workflows/concept-managing-workflows.html
+  - title: 更多信息
+    links:
+    - title: NetApp 社区
+      url: http://community.netapp.com/t5/OnCommand-Storage-Management-Software-Articles-and-Resources/tkb-p/oncommand-storage-management-software-articles-and-resources/label-name/workflow%20automation%20%28wfa%29?labels=workflow+automation+%28wfa%29
+    - title: 互操作性表
+      url: http://mysupport.netapp.com/matrix/

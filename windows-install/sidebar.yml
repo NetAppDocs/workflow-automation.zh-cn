@@ -1,8 +1,9 @@
 ---
 section: windows-install
-title: 适用于 Windows 的安装和设置
+title: 安装和设置Windows
 entries:
 - title: OnCommand Workflow Automation 概述
+  pdf-filename: OnCommand Workflow Automation Windows概述
   url: "/windows-install/concept-overview-of-oncommand-workflow-automation.html"
   entries:
   - title: OnCommand Workflow Automation 部署架构
@@ -12,6 +13,7 @@ entries:
   - title: 已知限制和增强功能
     url: "/windows-install/concept-known-limitations-and-enhancements.html"
 - title: 安装 OnCommand Workflow Automation 的系统要求
+  pdf-filename: 安装OnCommand Workflow Automation Windows的系统要求
   url: "/windows-install/reference-system-requirements-for-oncommand-workflow-automation-windows.html"
   entries:
   - title: Workflow Automation 所需的端口
@@ -19,6 +21,7 @@ entries:
 - title: 安装 Workflow Automation 的前提条件
   url: "/windows-install/reference-prerequisites-for-installing-workflow-automation.html"
 - title: 管理高可用性
+  pdf-filename: 管理高可用性Windows
   url: "/windows-install/concept-managing-high-availability.html"
   entries:
   - title: 在 MSCS 中设置 Workflow Automation 以实现高可用性
@@ -37,14 +40,17 @@ entries:
   - title: 在 Windows 上备份和还原 OnCommand Workflow Automation 数据库和配置
     url: "/windows-install/task-back-up-and-restore-the-wfa-database-and-configurations-windows.html"
 - title: 设置 OnCommand Workflow Automation
+  pdf-filename: 设置OnCommand Workflow Automation Windows
   url: "/windows-install/concept-setting-up-oncommand-workflow-automation.html"
   entries:
   - title: 访问 OnCommand Workflow Automation
     url: "/windows-install/task-access-oncommand-workflow-automation.html"
   - title: OnCommand Workflow Automation 数据源
+    pdf-filename: OnCommand Workflow Automation 数据源Windows
     url: "/windows-install/concept-wfa-data-sources.html"
     entries:
     - title: 在 DataFabric Manager 上配置数据库用户
+      pdf-filename: 在DataFabric Manager Windows上配置数据库用户
       url: "/windows-install/reference-configuring-a-database-user-on-datafabric-manager.html"
       entries:
       - title: 通过在 Windows 上运行 ocsetup 来配置数据库用户
@@ -62,6 +68,7 @@ entries:
   - title: 配置目标系统的凭据
     url: "/windows-install/task-configure-the-credentials-of-a-target-system.html"
   - title: 正在配置 OnCommand Workflow Automation
+    pdf-filename: 正在配置OnCommand Workflow Automation Windows
     url: "/windows-install/concept-advanced-configuring-oncommand-workflow-automation.html"
     entries:
     - title: 配置 AutoSupport
@@ -73,6 +80,7 @@ entries:
     - title: 配置电子邮件通知
       url: "/windows-install/task-configure-mail.html"
     - title: 配置 SNMP
+      pdf-filename: 配置SNMP Windows
       url: "/windows-install/task-configure-snmp.html"
       entries:
       - title: 配置 SNMP 版本 1
@@ -106,6 +114,7 @@ entries:
     - title: 升级期间的软件包标识
       url: "/windows-install/reference-pack-identification-during-upgrade.html"
 - title: 升级第三方产品
+  pdf-filename: 升级第三方产品Windows
   url: "/windows-install/concept-upgrading-third-party-products-in-windows.html"
   entries:
   - title: 升级 OpenJDK
@@ -115,6 +124,7 @@ entries:
   - title: 升级 ActiveState Perl
     url: "/windows-install/task-upgrade-active-state-perl-on-windows.html"
 - title: 备份 OnCommand Workflow Automation 数据库
+  pdf-filename: 备份OnCommand Workflow Automation 数据库Windows
   url: "/windows-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html"
   entries:
   - title: 从 Web 门户备份 WFA 数据库
@@ -122,6 +132,7 @@ entries:
   - title: 使用 PowerShell 脚本备份 WFA 数据库
     url: "/windows-install/task-back-up-oncommand-workflow-automation-using-powershell-script.html"
   - title: 使用命令行界面备份 WFA 数据库
+    pdf-filename: 使用命令行界面Windows备份WFA数据库
     url: "/windows-install/concept-backing-up-the-wfa-database-using-the-command-line-interface.html"
     entries:
     - title: 使用命令行界面备份（完整） WFA 数据库
@@ -136,11 +147,13 @@ entries:
     - title: 使用 REST API 定期备份 WFA 数据库
       url: "/windows-install/task-back-up-regular-oncommand-workflow-automation-database-using-rest-api.html"
 - title: 还原 OnCommand Workflow Automation 数据库
+  pdf-filename: 还原OnCommand Workflow Automation 数据库Windows
   url: "/windows-install/concept-restoring-the-wfa-database.html"
   entries:
   - title: 还原 WFA 数据库
     url: "/windows-install/task-restore-oncommand-workflow-automation-database-using-web-portal.html"
   - title: 使用命令行界面还原 WFA 数据库
+    pdf-filename: 使用命令行界面Windows还原WFA数据库
     url: "/windows-install/concept-restoring-the-oncommand-workflow-automation-database-using-cli.html"
     entries:
     - title: 使用命令行界面还原（完整） WFA 数据库
@@ -148,6 +161,7 @@ entries:
     - title: 使用命令行界面还原（常规） WFA 数据库
       url: "/windows-install/task-regular-restore-of-the-oncommand-workflow-automation-database-using-clis-windows.html"
   - title: 使用 REST API 还原 WFA 数据库
+    pdf-filename: 使用REST API Windows还原WFA数据库
     url: "/windows-install/concept-restoring-the-oncommand-workflow-automation-database-using-rest-api.html"
     entries:
     - title: 使用 REST API 还原（完全） WFA 数据库
@@ -157,6 +171,7 @@ entries:
 - title: 重置在安装期间创建的管理员密码
   url: "/windows-install/task-reset-the-admin-password-created-during-installation.html"
 - title: 导入 OnCommand Workflow Automation 内容
+  pdf-filename: 导入OnCommand Workflow Automation 内容Windows
   url: "/windows-install/task-import-oncommand-workflow-automation-content.html"
   entries:
   - title: 导入 OnCommand Workflow Automation 内容时的注意事项
@@ -173,6 +188,7 @@ entries:
   - title: 为 Workflow Automation 创建证书签名请求
     url: "/windows-install/task-create-a-certificate-signing-request-for-workflow-automation-windows.html"
 - title: 管理 Perl 和 Perl 模块
+  pdf-filename: 管理Perl和Perl模块Windows
   url: "/windows-install/reference-managing-perl-and-perl-modules.html"
   entries:
   - title: 配置首选 Perl 分发版
@@ -182,6 +198,7 @@ entries:
   - title: 修复 ActivePerl 安装
     url: "/windows-install/task-repair-the-activeperl-installation.html"
 - title: 对安装和配置问题进行故障排除
+  pdf-filename: 对安装和配置问题进行故障排除Windows
   url: "/windows-install/reference-troubleshooting.html"
   entries:
   - title: 无法打开 OnCommand Workflow Automation 登录页面

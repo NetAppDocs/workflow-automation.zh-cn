@@ -1,12 +1,13 @@
 ---
 section: help
-title: 联机帮助
+title: 管理和配置
 entries:
 - title: OnCommand Workflow Automation 概述
   url: "/help/concept-overview-of-oncommand-workflow-automation.html"
 - title: 创建本地用户
   url: "/help/task-create-local-users.html"
 - title: 正在配置 OnCommand Workflow Automation
+  pdf-filename: 配置OnCommand Workflow Automation 帮助
   url: "/help/concept-advanced-configuring-oncommand-workflow-automation.html"
   entries:
   - title: 配置身份验证设置
@@ -14,6 +15,7 @@ entries:
   - title: 配置电子邮件通知
     url: "/help/task-configure-mail.html"
   - title: 配置 SNMP
+    pdf-filename: 配置SNMP帮助
     url: "/help/task-configure-snmp.html"
     entries:
     - title: 配置 SNMP 版本 1
