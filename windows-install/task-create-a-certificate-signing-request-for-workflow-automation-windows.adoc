@@ -36,6 +36,9 @@ file_name 是 CSR 文件的名称。
 +
 要获取默认密码并对其进行解密、请按照知识库文章中的步骤进行操作 link:https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FOnCommand_Suite%2FHow_to_renew_the_self-signed_certificate_on_WFA_5.1.1.0.4%253F["如何在WFA 5.1.0.4上续订自签名证书"^]
 
++
+要使用新密码、请按照知识库文章中的步骤进行操作 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_update_a_new_password_for_the_keystore_in_WFA["如何在WFA中更新密钥库的新密码。"^]
+
 . 将 file_name.csr 文件发送到 CA 以获取签名证书。
 +
 有关详细信息，请参见 CA 网站。

@@ -4855,11 +4855,13 @@
   <block id="9af2f59c7f6e2e7dc584af7ea83ef4d7" category="sidebar">Workflow &lt;Workflow name&gt; 窗口</block>
   <block id="39c8e45e8c5488974d577e97d7caf377" category="paragraph">默认密码是随机生成的加密密码。</block>
   <block id="79f8c04dcf857d037344f9d9dabdd852" category="inline-link-macro">如何在WFA 5.1.0.4上续订自签名证书</block>
-  <block id="87ccc6f892e2d061c66d8db893b6cf53" category="paragraph">要获取默认密码并对其进行解密、请按照知识库文章中的步骤进行操作 <block ref="536d0b111e268de01ae3e50326105f6b" category="inline-link-macro-rx"></block></block>
   <block id="9f795dd2a5faa77418e156a57e8b6f58" category="list-text">从 CA 下载链证书，然后将链证书导入到密钥库：</block>
   <block id="02247662d3b59cc3126dc9e1b18ac422" category="paragraph">`keytool -import -alias "ssl keystore CA certificate"-keystore wfa_install_location/wfa/jboss/standalstandalon/configuration/keystore/wfa.keystore"-trustcacers -file chain_cert.cer`</block>
   <block id="1695f6295e3d5d83711e11691faea1d1" category="paragraph">`chain_cert.cer`是从CA收到的链证书文件。此文件必须采用 X.509 格式。</block>
   <block id="f46bbcf0f5db88b0dfbce832f8d83da7" category="paragraph">`keytool -import -alias "ssl keystore"-keystore wfa_install_location/wfa/jboss/standalon/configuration/keystore/wfa.keystore"-trucacerts-file certificate.cer`</block>
   <block id="14d1486cc2546eace3658fcaa213829e" category="paragraph">`certification.cer`是从CA收到的链证书文件。</block>
   <block id="d37ffdcd23286306f4a566096ad812cb" category="sidebar">管理OnCommand Workflow Automation SSL证书Linux</block>
+  <block id="602d16825004ce219753fcf90527ea2b" category="paragraph">要获取默认密码并对其进行解密、请按照知识库文章中的步骤进行操作 <block ref="536d0b111e268de01ae3e50326105f6b" category="inline-link-macro-rx"></block></block>
+  <block id="f7c31e99f63d1684df59ded2ed730939" category="inline-link-macro">如何在WFA中更新密钥库的新密码。</block>
+  <block id="6dca537f5982139dea9ab40120845f4f" category="paragraph">要使用新密码、请按照知识库文章中的步骤进行操作 <block ref="f6321aee87e47aef0fd11d8e384d0375" category="inline-link-macro-rx"></block></block>
 </blocks>
