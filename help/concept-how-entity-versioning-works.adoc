@@ -162,7 +162,7 @@ NOTE: 您不能有选择地从 ` .dar` 文件导入实体。
 
 
 
-== 导入的子实体版本如何影响父版本的示例
+== 导入的子实体版本如何影响父实体版本的示例
 
 请考虑 WFA 中的以下工作流： "`Create Volume and export using NFS - Custom` " 1.0.0 。
 

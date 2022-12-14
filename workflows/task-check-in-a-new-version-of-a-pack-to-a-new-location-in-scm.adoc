@@ -13,6 +13,7 @@ summary: 您可以在 OnCommand Workflow Automation （ WFA ）中更新软件�
 [role="lead"]
 您可以在 OnCommand Workflow Automation （ WFA ）中更新软件包版本，然后将更新后的软件包签入源控制管理（ SCM ）服务器中的新位置。
 
+.您需要的内容
 必须设置 SCM ，并且您必须具有管理员或架构师凭据。
 
 .步骤

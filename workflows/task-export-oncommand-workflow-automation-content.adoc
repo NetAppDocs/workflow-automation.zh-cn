@@ -13,7 +13,7 @@ summary: 您可以将用户创建的 OnCommand Workflow Automation （ WFA ）�
 [role="lead"]
 您可以将用户创建的 OnCommand Workflow Automation （ WFA ）内容另存为 ` .dar` 文件，并与其他用户共享该内容。WFA 内容可以包括用户创建的整个内容或特定项目，例如工作流，查找器，命令和词典术语。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * 您必须有权访问要导出的 WFA 内容。
 * 如果要导出的内容包含对认证内容的引用，则在导入此内容时，系统上必须提供相应的认证内容包。
 +

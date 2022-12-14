@@ -13,6 +13,7 @@ summary: 您可以在实践数据库上测试为 OnCommand Workflow Automation �
 [role="lead"]
 您可以在实践数据库上测试为 OnCommand Workflow Automation （ WFA ）命令编写的预留脚本，以确保这些脚本工作正常，不会影响 WFA 数据库表。
 
+.关于此任务
 此操作步骤 将使用默认 WFA 安装路径。如果您在安装期间更改了默认位置，则必须使用更改后的 WFA 安装路径。
 
 .步骤

@@ -13,7 +13,7 @@ summary: 您可以导入用户创建的 OnCommand Workflow Automation （ WFA �
 [role="lead"]
 您可以导入用户创建的 OnCommand Workflow Automation （ WFA ）内容，例如工作流，查找器和命令。您还可以导入从其他 WFA 安装导出的内容，从存储自动化商店或 WFA 社区下载的内容以及软件包，包括 Data ONTAP PowerShell 工具包和 Perl NMSDK 工具包。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * 您必须有权访问要导入的 WFA 内容。
 * 要导入的内容必须已在运行相同版本或早期版本 WFA 的系统上创建。
 +

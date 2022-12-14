@@ -29,7 +29,6 @@
   <block id="7ece5ae8480b81ef1aaa2de7d1f71262" category="doc">OnCommand Workflow Automation 文档</block>
   <block id="d706a245ee8a4b6f4f004dca1b5be3e8" category="summary">您可以导入用户创建的 OnCommand Workflow Automation （ WFA ）内容，例如工作流，查找器和命令。您还可以导入从其他 WFA 安装导出的内容，从存储自动化商店或 WFA 社区下载的内容以及软件包，包括 Data ONTAP PowerShell 工具包和 Perl NMSDK 工具包。</block>
   <block id="649910a23319770e50d4bb34ddaec849" category="doc">导入 OnCommand Workflow Automation 内容</block>
-  <block id="a711863513c11f3a6d86294acc7be0ba" category="list-title">您需要什么？ #8217 ；将需要什么</block>
   <block id="fdaf80a9b32ec199dc51b91b91bc4c12" category="list-text">您必须有权访问要导入的 WFA 内容。</block>
   <block id="ab3d58a55553a731af9ebeb3e49812d2" category="list-text">要导入的内容必须已在运行相同版本或早期版本 WFA 的系统上创建。</block>
   <block id="6e6ce514623d1bcdb12233505d4103d7" category="paragraph">例如，如果您运行的是 WFA 2.2 ，则无法导入使用 WFA 3.0 创建的内容。</block>
@@ -1334,7 +1333,6 @@
   <block id="4cbfde3a19f5d005cf8261b0bb430b7f" category="paragraph">父版本的修订部分将递增。</block>
   <block id="d7d1e94040d0db242bd0715e18936312" category="list-text">对于导入的父实体，如果一个子实体发生重大更改，而另一个子实体发生轻微更改，则此重大更改将应用于父实体。</block>
   <block id="f9fa8cd679701244506f03bb27d3e6bd" category="paragraph">父版本的次要部分将递增。</block>
-  <block id="68ffa545cfbbcadb199c9d2611a48489" category="section-title">导入的子实体版本如何影响父版本的示例</block>
   <block id="23abdafa0b89fdf1d3f675e40785b94c" category="paragraph">请考虑 WFA 中的以下工作流： "`Create Volume and export using NFS - Custom` " 1.0.0 。</block>
   <block id="a5e5a0545f86d8ee001df235dbe1a17d" category="paragraph">此工作流中包含的现有命令如下所示：</block>
   <block id="7e507227bcca2d438ffdf48b933be1c1" category="list-text">"`创建导出策略 - 自定义` " 1.0.0</block>
@@ -4907,4 +4905,6 @@
   <block id="b1ec5ea9940a86d6bf0a14350ec171fd" category="sidebar">导入OnCommand Workflow Automation 内容Linux</block>
   <block id="01603a0b39ac003e0beb5f886b4b4d0a" category="sidebar">管理Perl和Perl模块Linux</block>
   <block id="bc5f3059c890d2356e892a982265bfb1" category="sidebar">排除Linux中的安装和配置问题</block>
+  <block id="639ca019cb526012d0366b7ba96c7dde" category="section-title">导入的子实体版本如何影响父实体版本的示例</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">您需要的内容</block>
 </blocks>

@@ -13,8 +13,10 @@ summary: 设计工作流的 OnCommand Workflow Automation （ WFA ）管理员�
 [role="lead"]
 设计工作流的 OnCommand Workflow Automation （ WFA ）管理员和架构师可以为工作流创建帮助内容并将其包含在工作流中。
 
+.您需要的内容
 您必须了解如何使用 HTML 创建网页。
 
+.关于此任务
 该帮助应向执行该工作流的存储操作员提供有关该工作流和用户输入的信息。
 
 .步骤

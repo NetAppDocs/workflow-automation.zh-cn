@@ -13,6 +13,7 @@ summary: 您可以将软件包回滚到源控制管理（ SCM ）中的先前版
 [role="lead"]
 您可以将软件包回滚到源控制管理（ SCM ）中的先前版本，并将其导入到 OnCommand Workflow Automation （ WFA ）中。
 
+.您需要的内容
 必须设置 SCM ，并且您必须具有管理员或架构师凭据。
 
 .步骤

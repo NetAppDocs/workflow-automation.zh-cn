@@ -13,6 +13,7 @@ summary: OnCommand Workflow Automation （ WFA ）为工作流提供了两个计
 [role="lead"]
 OnCommand Workflow Automation （ WFA ）为工作流提供了两个计划选项。您可以计划在特定时间执行一次工作流，也可以创建重复计划并将计划与工作流关联起来，以便定期执行工作流。
 
+.关于此任务
 您创建的计划可以重复使用，并与多个工作流关联。
 
 .步骤

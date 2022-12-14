@@ -13,6 +13,7 @@ summary: 您可以将工作流软件包从服务器导入到 OnCommand Workflow 
 [role="lead"]
 您可以将工作流软件包从服务器导入到 OnCommand Workflow Automation （ WFA ），以满足存储自动化和集成要求。
 
+.您需要的内容
 您必须有权访问要导入的服务器中的 WFA 内容。
 
 .步骤

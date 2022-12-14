@@ -13,6 +13,7 @@ summary: 您可以使用 OnCommand Workflow Automation （ WFA ）创建一个�
 [role="lead"]
 您可以使用 OnCommand Workflow Automation （ WFA ）创建一个新的工作流软件包，并将其签入源控制管理（ SCM ）。
 
+.您需要的内容
 必须设置 SCM ，并且您必须具有管理员或架构师凭据。
 
 .步骤

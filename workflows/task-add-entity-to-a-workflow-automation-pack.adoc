@@ -13,6 +13,7 @@ summary: 您可以将一个或多个实体添加到 OnCommand Workflow Automatio
 [role="lead"]
 您可以将一个或多个实体添加到 OnCommand Workflow Automation （ WFA ）中的工作流软件包中，以满足存储自动化和集成要求。
 
+.关于此任务
 您可以从以下实体中删除软件包：
 
 * 工作流

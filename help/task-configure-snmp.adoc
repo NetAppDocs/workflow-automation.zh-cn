@@ -13,6 +13,7 @@ summary: 您可以将 OnCommand Workflow Automation （ WFA ）配置为发送�
 [role="lead"]
 您可以将 OnCommand Workflow Automation （ WFA ）配置为发送有关工作流操作状态的简单网络管理协议（ Simple Network Management Protocol ， SNMP ）陷阱。
 
+.关于此任务
 WFA 现在支持 SNMP v1 和 SNMP v3 协议。SNMP v3 可提供其他安全功能。
 
 WFA ` .mib` 文件提供了有关 WFA 服务器发送的陷阱的信息。` .mib` 文件位于 WFA 服务器上的 ` <wfa_install_location>\wfa\bin\wfa.mib` 目录中。

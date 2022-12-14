@@ -13,8 +13,10 @@ summary: 您可以从 OnCommand Workflow Automation 中的实体（ WFA ）中�
 [role="lead"]
 您可以从 OnCommand Workflow Automation 中的实体（ WFA ）中删除软件包，并将更新后的软件包签入源控制管理（ SCM ）服务器。
 
+.您需要的内容
 必须设置 SCM ，并且您必须具有管理员或架构师凭据。
 
+.关于此任务
 您可以从以下实体中删除软件包：
 
 * 工作流
