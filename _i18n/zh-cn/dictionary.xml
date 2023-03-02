@@ -1000,7 +1000,6 @@
   <block id="c1325f6903ebb5ebb2bb519a73ddb1b0" category="cell">那么 ...</block>
   <block id="9778840a0100cb30c982876741b0b5a2" category="paragraph">SQL/</block>
   <block id="88381311eb47da741a4d0f73ef520fb1" category="paragraph">从 * 驱动程序类型 * 列表中，选择以下适用于数据源的驱动程序之一：</block>
-  <block id="5e20823f83b63582726b65a7ea629ed8" category="list-text">* Sybase jConnect3*</block>
   <block id="9985bfec1629ffdbc2501ffe2c6009aa" category="list-text">* MySQL Connector/J*</block>
   <block id="21cd4f6fe21a7a1a50297203f1801051" category="list-text">* MySQL Server JDBC 驱动程序 3.0*</block>
   <block id="65b0ace1e497208f5d6fed9f4cdd1392" category="list-text">* Oracle JDBC 驱动程序 11.2.0.3*</block>
@@ -1633,12 +1632,7 @@
   <block id="6da6e44dc9987246944fdf9de3d4e794" category="paragraph">系统日志</block>
   <block id="2975351d18f6b6cc0f00ab465dbb31ef" category="paragraph">将日志发送到系统日志服务器</block>
   <block id="886093243084825f398ae29b24861ceb" category="paragraph">下表列出了 Unified Manager 服务器上应打开的默认端口：</block>
-  <block id="06c284d3f757b15c02f47f3ff06dc275" category="paragraph">2638</block>
-  <block id="4e6ac8e997ca8f5896cbc28cad3ede24" category="paragraph">Sybase</block>
-  <block id="97d22c4200c50a78603b99f64abefbd5" category="paragraph">从 Active IQ Unified Manager 6.0 之前的版本缓存数据</block>
   <block id="7fd34732c43ed1c77aa28c7cebea1acf" category="paragraph">缓存 Active IQ Unified Manager 6.0 及更高版本中的数据</block>
-  <block id="c2431245e313e6c2fb21537cf8c60e15" category="paragraph">8088 ， 8488</block>
-  <block id="7b19e159d97af652b6091979fc7173f5" category="paragraph">从低于 6.0 的 Active IQ Unified Manager 中的 Performance Advisor 缓存数据</block>
   <block id="42ad4e935313e6d8619faa0c109c4b92" category="paragraph">下表列出了应在 VMware vCenter 上打开的默认端口：</block>
   <block id="13f3cf8c531952d72e5847c4183e6910" category="paragraph">443.</block>
   <block id="0e8433f9a404f1f3ba601c14b026d321" category="paragraph">HTTPS</block>
@@ -2460,7 +2454,6 @@
   <block id="244a63707430b7a4560069a38420f436" category="paragraph">`sET-WfaConfig -Name PasswordPolicy -Enable $false`</block>
   <block id="24856dbc0a3b9e55bf33f94ba0bc7792" category="summary">您必须在 OnCommand Workflow Automation （ WFA ）中设置与数据源的连接，才能从数据源获取数据。</block>
   <block id="fa9021218f4bfd84ad59e7452d519f2d" category="doc">设置数据源</block>
-  <block id="63280af4d8cba0858ac1dff86ceeed0c" category="list-text">对于 6.0 之前的 Active IQ Unified Manager 版本，您必须已在 Unified Manager 服务器上运行最新版本的 ocsetup 工具，才能启用和配置对数据库的远程只读访问。</block>
   <block id="f03b31ab5e7ee797f31fba5695a8e7a4" category="list-text">对于 Active IQ Unified Manager 6.0 及更高版本，您必须已在 Unified Manager 服务器上创建数据库用户帐户。</block>
   <block id="731d8fd16ef341f5ba2ee8e6445885f1" category="paragraph">有关 OnCommand 详细信息，请参见 _Unified Manager 联机帮助。</block>
   <block id="1aeeceb7211593642d7ca1f8a79dde77" category="list-text">Unified Manager 服务器上用于传入连接的 TCP 端口必须处于打开状态。</block>
@@ -2468,8 +2461,6 @@
   <block id="1475d72dae12d2f3edff1276e81ef17a" category="paragraph">以下是默认 TCP 端口号：</block>
   <block id="7d2578b5ef3fcde7596cf509d8c62bd1" category="cell">TCP 端口号</block>
   <block id="b95aa9b32e368a8ea35037d171bb7505" category="cell">Unified Manager 服务器版本</block>
-  <block id="fbb954d1cb26c988d8f75dff9ba7ee7d" category="paragraph">5.x</block>
-  <block id="6ef6d5474ca30598a3bfe534f33c9c81" category="paragraph">Sybase SQL Anywhere 数据库服务器</block>
   <block id="4b482edf238f3e07a3e0c730e500a608" category="paragraph">6.x</block>
   <block id="df55d916b5a005baf61e609993b7a1d3" category="paragraph">MySQL 数据库服务器</block>
   <block id="23628462c384be0f669955210d825d30" category="list-text">对于 Performance Advisor ，您必须已创建一个至少具有 GlobalRead 角色的 Active IQ Unified Manager 用户帐户。</block>
@@ -2489,12 +2480,8 @@
   <block id="40e0fad18a1686d6ba45af89fbc4fd5a" category="paragraph">如果已将 Unified Manager 服务器数据源添加到 WFA 中，然后升级了 Unified Manager 服务器的版本，则 WFA 将无法识别升级后的 Unified Manager 服务器版本。您必须删除 Unified Manager 服务器的先前版本，然后将 Unified Manager 服务器的升级版本添加到 WFA 。</block>
   <block id="d6904816f2de30b1c0a34644d52e49b3" category="list-text">在新建数据源对话框中，选择所需的数据源类型，然后输入数据源的名称和主机名。</block>
   <block id="4bf06b7c0419db9c339b3ad9943b84d5" category="list-text">选择适当的操作：</block>
-  <block id="9b81833dee31a4fba0f609d1219a5f57" category="paragraph">Active IQ Unified Manager 6.0 之前的版本</block>
-  <block id="95f0b5290415893233cc34de5758d586" category="paragraph">输入在运行 ocsetup 工具时用于覆盖默认凭据的用户名和密码。</block>
   <block id="667785fae0085225c5366c4a23da8190" category="paragraph">Active IQ Unified Manager 6.3 及更高版本</block>
   <block id="f4e2003dab44b20be7ebbdc4d0aca893" category="paragraph">输入您在 Unified Manager 服务器上创建的数据库用户帐户的凭据。有关创建数据库用户帐户的详细信息，请参见 _Unified OnCommand Manager 联机帮助。</block>
-  <block id="8e98ef93e911e1cfc94baedd532e1d80" category="paragraph">Performance Advisor （ Active IQ Unified Manager 6.0 之前的版本）</block>
-  <block id="5b7c5e612c4bc4c6daf1f284fc0eaf76" category="paragraph">输入至少具有 GlobalRead 角色的 Active IQ Unified Manager 用户的凭据。</block>
   <block id="c4d0dc56b9499d93190e5d1eeb6a770a" category="paragraph">您不能提供使用命令行界面或 ocsetup 工具创建的 Active IQ Unified Manager 数据库用户帐户的凭据。</block>
   <block id="3e393ea987c85f12dc4d4200230d1e61" category="paragraph">VMware vCenter Server （仅适用于 Windows ）</block>
   <block id="35b1154e1618e5e619ad933951972c37" category="paragraph">（仅适用于 Windows ）输入您在 VMware vCenter 服务器上创建的用户的用户名和密码。</block>
@@ -3120,12 +3107,10 @@
   <block id="3b57547caa3754998fa617bd92514f25" category="list-text">* 用户名 *</block>
   <block id="52b05e16a9a17b06bf497ba0b43f97f1" category="paragraph">显示选定数据源类型的关联用户名（如果有）。</block>
   <block id="fad77f4cfa7f6147e14a8144a2223548" category="paragraph">要覆盖默认用户名，必须为此数据源指定适当的用户名：</block>
-  <block id="01824cdc73f1bb9f3a0db8ad9f278350" category="list-text">对于 6.0 之前的 Unified Manager 版本，您必须输入在运行 ocsetup 时用于覆盖默认凭据的用户名。</block>
   <block id="1be837a80c4ac40aee1c47275a875d4e" category="list-text">对于 Unified Manager 6.0 及更高版本，必须输入在 Unified Manager 服务器上创建的数据库用户帐户的用户名。</block>
   <block id="c8b27eb46c2a5c0fb13ef146da5d7275" category="list-text">对于 Performance Advisor ，您必须输入至少具有 GlobalRead 角色的 Active IQ Unified Manager 用户的用户名。</block>
   <block id="c19285b1dc2d9b23f090a9dcd3410350" category="paragraph">用于为选定数据源类型指定密码。</block>
   <block id="762c1006bd5346ccb3d6a361bc396180" category="paragraph">您必须指定一个密码以覆盖此数据源用户名的默认密码：</block>
-  <block id="d4a1a1ffb5e2a4b4635dad41af54ad29" category="list-text">对于 6.0 之前的 Unified Manager 版本，您必须输入在运行 ocsetup 时用于覆盖默认凭据的密码。</block>
   <block id="072827f4a25b9a1ce3d7e6ce73b02d67" category="list-text">对于 Unified Manager 6.0 及更高版本，必须输入在服务器上创建的数据库用户帐户的密码。</block>
   <block id="ecfba22e42f64033dc9376f578c73ffb" category="list-text">对于 Performance Advisor ，您必须输入 Unified Manager 用户的密码，并且角色至少为 GlobalRead 。</block>
   <block id="7a8d3dc7f0e719542e9e706dbca4f3ec" category="list-text">* 数据库 *</block>
@@ -3798,7 +3783,6 @@
   <block id="3ed5cf9138651eebf7029c7ee19828c1" category="paragraph">如果要查看这些参数的计算值或选定值是什么，可以在工作流中指定所需的返回参数。例如，在使用资源选择逻辑选择工作流中的聚合时，您可以指定 `aggregate` 作为返回参数，以便查看在规划工作流期间选择了哪个聚合。</block>
   <block id="7c0452a44785f9c17bb51b522806f371" category="summary">通过缓存查询窗口，您可以管理 WFA 词典条目的缓存查询及其关联的数据源类型。</block>
   <block id="fe934c5c006c32e2f5a1eddc16c8312d" category="doc">缓存查询窗口</block>
-  <block id="3d6f64a6ca1bcff688912eefa7f9bbed" category="paragraph">缓存查询是一种 SQL 查询，用于从查询中指定的表中检索所需数据。缓存查询与一个词典条目以及一个或多个数据源类型相关联—例如， * 卷（存储） * 的缓存查询与 Active IQ Unified Manager 5.1 和 5.2 数据源类型相关联。您可以在需要检索某些信息时定义缓存查询，例如从数据源 Active IQ Unified Manager 6.0 的表中将卷检索到 WFA 的缓存中。</block>
   <block id="182669ed4820368e35e16bb8ff900501" category="list-text">缓存查询表</block>
   <block id="0f46985dd4907e3a7315a59939693c1a" category="section-title">缓存查询列表</block>
   <block id="dedb53beee8d0629f134068ea225f74b" category="paragraph">缓存查询表列出了词典条目及其关联的数据源类型。您可以使用每个列可用的筛选和排序功能以及重新排列列顺序来自定义表显示。</block>
@@ -3991,9 +3975,7 @@
   <block id="03f7b3e56f9a4a1d0486e4dbd2218749" category="paragraph">您可以更改默认端口并为数据源指定其他端口。</block>
   <block id="299023258a447a9925099e3b666f411e" category="paragraph">显示与选定数据源类型关联的方案，例如，对于 Active IQ Unified Manager - 6.0 （ MySQL ），显示 _cm_storage_ 。</block>
   <block id="92a3898c45164517cd39085ac8ca6f75" category="paragraph">无法修改此属性。</block>
-  <block id="94cd2dc12c886407b83df24073c3fbaf" category="list-text">对于 6.0 之前的 Active IQ Unified Manager 版本，您必须输入在运行 ocsetup 时用于覆盖默认凭据的用户名。</block>
   <block id="6994d1382a97ce24d633fe0364fe4baa" category="list-text">对于 Active IQ Unified Manager 6.0 及更高版本，您必须输入在 Active IQ Unified Manager 服务器上创建的数据库用户帐户的用户名。</block>
-  <block id="9ca1092f012d395fbc5dac7a2b872f58" category="list-text">对于 6.0 之前的 Active IQ Unified Manager 版本，您必须输入在运行 ocsetup 时用于覆盖默认凭据的密码。</block>
   <block id="1993c51f1b9689c14f75481a9d7f5f44" category="list-text">对于 Active IQ Unified Manager 6.0 及更高版本，您必须输入在 Active IQ Unified Manager 服务器上创建的数据库用户帐户的密码。</block>
   <block id="ff2d9c6d918b6522d94d56fa170d4144" category="list-text">对于 Performance Advisor ，您必须输入至少具有 GlobalRead 角色的 Active IQ Unified Manager 用户的密码。</block>
   <block id="fb5864e754f2712674ea29bdc8f4b920" category="list-text">基于脚本的数据源类型： 1440 （性能和 VC ）</block>
@@ -4907,4 +4889,6 @@
   <block id="bc5f3059c890d2356e892a982265bfb1" category="sidebar">排除Linux中的安装和配置问题</block>
   <block id="639ca019cb526012d0366b7ba96c7dde" category="section-title">导入的子实体版本如何影响父实体版本的示例</block>
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">您需要的内容</block>
+  <block id="95b047c12d2722d91f1fa5029054c1c1" category="list-text">对于Active IQ Unified Manager 6.0及更高版本、您必须已在Unified Manager服务器上创建数据库用户帐户。</block>
+  <block id="2a80a7250b34ee4443310c696c4d77fa" category="paragraph">缓存查询是一种 SQL 查询，用于从查询中指定的表中检索所需数据。缓存查询与词典条目以及一个或多个数据源类型相关联。您可以在需要检索某些信息时定义缓存查询、例如从数据源OnCommand Unified Manager 6.0的表中将卷检索到WFA缓存中。</block>
 </blocks>

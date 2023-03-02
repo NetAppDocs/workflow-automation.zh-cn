@@ -15,7 +15,6 @@ summary: 您必须在 OnCommand Workflow Automation （ WFA ）中设置与数�
 
 * 您需要的内容 *
 
-* 对于 6.0 之前的 Active IQ Unified Manager 版本，您必须已在 Unified Manager 服务器上运行最新版本的 ocsetup 工具，才能启用和配置对数据库的远程只读访问。
 * 对于 Active IQ Unified Manager 6.0 及更高版本，您必须已在 Unified Manager 服务器上创建数据库用户帐户。
 +
 有关 OnCommand 详细信息，请参见 _Unified Manager 联机帮助。
@@ -34,16 +33,6 @@ summary: 您必须在 OnCommand Workflow Automation （ WFA ）中设置与数�
 
 
  a| 
-2638
- a| 
-5.x
- a| 
-Sybase SQL Anywhere 数据库服务器
-
-
-
- a| 
-3306
  a| 
 6.x
  a| 
@@ -107,23 +96,9 @@ NOTE: 在使用 WFA 设置数据源时，您必须注意， WFA 4.0 版已弃用
 
 
  a| 
-Active IQ Unified Manager 6.0 之前的版本
- a| 
-输入在运行 ocsetup 工具时用于覆盖默认凭据的用户名和密码。
-
-
-
- a| 
 Active IQ Unified Manager 6.3 及更高版本
  a| 
 输入您在 Unified Manager 服务器上创建的数据库用户帐户的凭据。有关创建数据库用户帐户的详细信息，请参见 _Unified OnCommand Manager 联机帮助。
-
-
-
- a| 
-Performance Advisor （ Active IQ Unified Manager 6.0 之前的版本）
- a| 
-输入至少具有 GlobalRead 角色的 Active IQ Unified Manager 用户的凭据。
 
 [NOTE]
 ====

@@ -41,7 +41,6 @@ SQL/
  a| 
 从 * 驱动程序类型 * 列表中，选择以下适用于数据源的驱动程序之一：
 
-** * Sybase jConnect3*
 ** * MySQL Connector/J*
 ** * MySQL Server JDBC 驱动程序 3.0*
 ** * Oracle JDBC 驱动程序 11.2.0.3*

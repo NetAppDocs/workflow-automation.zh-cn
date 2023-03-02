@@ -117,17 +117,6 @@ HTTP ， HTTPS ， SMTP
 
 
  a| 
-2638
- a| 
-Sybase
- a| 
-传入
- a| 
-从 Active IQ Unified Manager 6.0 之前的版本缓存数据
-
-
-
- a| 
 3306
  a| 
 MySQL
@@ -135,17 +124,6 @@ MySQL
 传入
  a| 
 缓存 Active IQ Unified Manager 6.0 及更高版本中的数据
-
-
-
- a| 
-8088 ， 8488
- a| 
-HTTP ， HTTPS
- a| 
-传入
- a| 
-从低于 6.0 的 Active IQ Unified Manager 中的 Performance Advisor 缓存数据
 
 |===
 下表列出了应在 VMware vCenter 上打开的默认端口：

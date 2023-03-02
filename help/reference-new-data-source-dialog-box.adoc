@@ -65,7 +65,6 @@ NOTE: Active IQ Unified Manager 数据源类型不支持 IPv6 地址。
 要覆盖默认用户名，必须为此数据源指定适当的用户名：
 
 +
-** 对于 6.0 之前的 Active IQ Unified Manager 版本，您必须输入在运行 ocsetup 时用于覆盖默认凭据的用户名。
 ** 对于 Active IQ Unified Manager 6.0 及更高版本，您必须输入在 Active IQ Unified Manager 服务器上创建的数据库用户帐户的用户名。
 ** 对于 Performance Advisor ，您必须输入至少具有 GlobalRead 角色的 Active IQ Unified Manager 用户的用户名。
 
@@ -78,7 +77,6 @@ NOTE: Active IQ Unified Manager 数据源类型不支持 IPv6 地址。
 您必须指定一个密码以覆盖此数据源用户名的默认密码：
 
 +
-** 对于 6.0 之前的 Active IQ Unified Manager 版本，您必须输入在运行 ocsetup 时用于覆盖默认凭据的密码。
 ** 对于 Active IQ Unified Manager 6.0 及更高版本，您必须输入在 Active IQ Unified Manager 服务器上创建的数据库用户帐户的密码。
 ** 对于 Performance Advisor ，您必须输入至少具有 GlobalRead 角色的 Active IQ Unified Manager 用户的密码。
 
