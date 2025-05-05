@@ -4804,7 +4804,6 @@
   <block id="15e5ef44c219fd76f62b5fee5d9033a6" category="admonition">只有证书设置为 * 无 * 的词典条目才会启用从软件包中删除功能</block>
   <block id="8c2e3142ac2ce539c753b2911f29e36d" category="list-text">*<block ref="53d0266f4a9fc0d3f81f95508b3710ac" category="inline-image-macro-rx" type="image"></block> （清单） *</block>
   <block id="d72ed78b7465fa867896267e03d318fe" category="paragraph">打开选定词典条目的清单对话框，在此可以查看表数据。</block>
-  <block id="95026804993f8a9226db7022cae41c9f" category="sidebar">OnCommand Workflow Automation 5.1 文档</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">发行说明</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">入门</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">发行说明</block>
@@ -4891,4 +4890,5 @@
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">您需要的内容</block>
   <block id="95b047c12d2722d91f1fa5029054c1c1" category="list-text">对于Active IQ Unified Manager 6.0及更高版本、您必须已在Unified Manager服务器上创建数据库用户帐户。</block>
   <block id="2a80a7250b34ee4443310c696c4d77fa" category="paragraph">缓存查询是一种 SQL 查询，用于从查询中指定的表中检索所需数据。缓存查询与词典条目以及一个或多个数据源类型相关联。您可以在需要检索某些信息时定义缓存查询、例如从数据源OnCommand Unified Manager 6.0的表中将卷检索到WFA缓存中。</block>
+  <block id="0d47320e619045e2de820e0c0e5fbcf0" category="sidebar">OnCommand Workflow Automation文档</block>
 </blocks>

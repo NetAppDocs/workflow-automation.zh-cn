@@ -1,6 +1,6 @@
 ---
 settings:
-  name: OnCommand Workflow Automation 5.1
+  name: OnCommand Workflow Automation
   internal:
     pdf_enabled: true
   prod:
@@ -9,7 +9,7 @@ settings:
   langs: zh-cn,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-tw
 sidebar:
   entries:
-  - title: OnCommand Workflow Automation 5.1 文档
+  - title: OnCommand Workflow Automation文档
     url: "/index.html"
   - title: 发行说明
     url: "/reference-releasenotes.html"
